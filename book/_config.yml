@@ -1,0 +1,6 @@
+title: Uncertainty 2
+author: The MUDE Team
+logo: _static/MUDE_Logo-small.png
+
+execute:
+  execute_notebooks: force
