@@ -20,7 +20,7 @@ defaults:
 
 jobs:
   build-book:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
 
@@ -68,7 +68,7 @@ jobs:
   deploy-book:
     if: github.ref == 'refs/heads/main'
     needs: build-book
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
 
       # Download artifact
