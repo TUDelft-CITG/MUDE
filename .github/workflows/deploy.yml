@@ -20,13 +20,12 @@ defaults:
 
 jobs:
   build-book:
-    if: (github.event.pull_request) && !contains(github.head_ref, 'all-contributors')
+    runs-on: self-hosted
     strategy:
       matrix:
         python-version: ["3.10"]
       fail-fast: false
 
-    runs-on: self-hosted
 
     steps:
       - name: Checkout repository
