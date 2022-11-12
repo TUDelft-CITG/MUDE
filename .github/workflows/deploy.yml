@@ -59,6 +59,6 @@ jobs:
           jupyter-book build .
 
       - name: GitHub Pages actions
-        uses: JamesIvis/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: book/_build/html/
