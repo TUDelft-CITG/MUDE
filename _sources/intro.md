@@ -1,3 +1,3 @@
-# MUDE week 2.7-2.8: Risk and Reliability
+# Welcome 
 
-Blablabla
+Welcome to the homepage of weeks 2.7 and 2.8 on Risk and Reliability. Blablabla...
