@@ -6,11 +6,11 @@ This repository hosts the source code of the Jupyter Book that is used in weeks 
 
 1. Clone the repository:
  
-        git@github.com:TUDelft-CITG/TUDelft-CITG.github.io.git
+        git@github.com:TUDelft-CITG/mude.git
 
 2. Enter the repository:
    
-        cd TUDelft-CITG.github.io
+        cd mude
 
 3. Install dependencies
 
