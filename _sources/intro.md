@@ -1,3 +1,3 @@
-# MUDE: Uncertainty
+# MUDE week 2.7-2.8: Risk and Reliability
 
-This is the homepage of the site. The contents are located in `book/intro.md`.
+Blablabla
