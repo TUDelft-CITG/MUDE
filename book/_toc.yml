@@ -1,8 +1,8 @@
 format: jb-book
 root: intro.md
 parts:
-  - caption: Introduction
-    sections:
+  - caption: Contents
+    chapters:
     - file: 1-introduction/overview.md
       sections:
       - file: 1-introduction/1-1-river-system-example.md
