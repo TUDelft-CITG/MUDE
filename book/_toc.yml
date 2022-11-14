@@ -7,3 +7,4 @@ parts:
       sections:
       - file: 1-introduction/1-1-river-system-example.md
       - file: 1-introduction/1-2-fragility-curves.md
+      - file: 1-introduction/1-3-quiz.ipynb
