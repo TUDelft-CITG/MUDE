@@ -1,2 +1,6 @@
 format: jb-book
 root: intro.md
+parts:
+  - caption: Introduction
+    chapters:
+    - file: 1-introduction/overview.md
