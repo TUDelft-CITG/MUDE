@@ -15,9 +15,6 @@ defaults:
 jobs:
   build-book:
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-
 
     steps:
       - name: Checkout repository
