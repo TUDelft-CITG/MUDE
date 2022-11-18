@@ -1,6 +1,12 @@
+# General settings
 title: Modelling, Uncertainty and Data for Engineers (MUDE)
 author: the MUDE Team
 logo: _static/MUDE_Logo-small.png
 
+# Notebook execution on compiling
 execute:
-  execute_notebooks: force
+  execute_notebooks: auto
+
+# Bibliography file
+bibtex_bibfiles:
+  - _bibliography/references.bib

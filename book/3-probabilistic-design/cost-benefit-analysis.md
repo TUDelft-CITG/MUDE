@@ -1,0 +1,3 @@
+# Application of economic optimization: optimal dike heightening
+
+Before the major floods of 1953, dikes in the Netherlands were not designed for a specified safety level but mainly strengthened based on practical experience. One of the main questions after the disaster was the optimal dike height and the “acceptable” probability of flooding. Van Dantzig was  a  professor  in  mathematics  and  a  member  of  the  first  Delta  committee.  He  developed aneconometric  approach  to  determine  the  optimal  probability  of  flooding  (or protection  level)  and the corresponding dike height {cite:p}`vandantzig1965`
