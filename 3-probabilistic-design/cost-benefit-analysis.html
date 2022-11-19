@@ -1,0 +1,454 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Application of economic optimization: optimal dike heightening &#8212; Modelling, Uncertainty and Data for Engineers (MUDE)</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="References" href="../references.html" />
+    <link rel="prev" title="Quiz example" href="../1-introduction/1-3-quiz.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/MUDE_Logo-small.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Modelling, Uncertainty and Data for Engineers (MUDE)</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../1-introduction/overview.html">
+   Introduction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1-introduction/1-1-river-system-example.html">
+     Example: River system
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1-introduction/1-2-fragility-curves.html">
+     Example: fragility curves
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../1-introduction/1-3-quiz.html">
+     Quiz example
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Application of economic optimization: optimal dike heightening
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../references.html">
+   References
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/3-probabilistic-design/cost-benefit-analysis.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Application of economic optimization: optimal dike heightening</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="application-of-economic-optimization-optimal-dike-heightening">
+<h1>Application of economic optimization: optimal dike heightening<a class="headerlink" href="#application-of-economic-optimization-optimal-dike-heightening" title="Permalink to this headline">#</a></h1>
+<p>Before the major floods of 1953, dikes in the Netherlands were not designed for a specified safety level but mainly strengthened based on practical experience. One of the main questions after the disaster was the optimal dike height and the “acceptable” probability of flooding. Van Dantzig was  a  professor  in  mathematics  and  a  member  of  the  first  Delta  committee.  He  developed an econometric  approach  to  determine  the  optimal  probability  of  flooding  (or protection  level) and the corresponding dike height <span id="id1">[<a class="reference internal" href="../references.html#id2" title="D. van Dantzig. Economic decision problems for flood prevention. Econometrica, 1956.">van Dantzig, 1956</a>]</span>.</p>
+<p>The approach only considers failure of the dikes due to overtopping. The probability distribution of water levels along the Dutch coast can be approximated by an exponential distribution.</p>
+<div class="math notranslate nohighlight" id="equation-prob-dist-water-levels">
+<span class="eqno">(1)<a class="headerlink" href="#equation-prob-dist-water-levels" title="Permalink to this equation">#</a></span>\[
+    F(h) = 1 - e^{(-\frac{h-A}{B})}
+\]</div>
+<p>In which:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(h\)</span> the water level [m]</p></li>
+<li><p><span class="math notranslate nohighlight">\(A,B\)</span> constants of the exponential ditribution [m]</p></li>
+</ul>
+<p>Neglecting wave run-up, the probability of failure of the dikes - leading to flooding -  can be approximated by the probability of exceedance of the dike height <span class="math notranslate nohighlight">\(h_d\)</span>, i.e.</p>
+<div class="math notranslate nohighlight" id="equation-exceedence-dike-height">
+<span class="eqno">(2)<a class="headerlink" href="#equation-exceedence-dike-height" title="Permalink to this equation">#</a></span>\[
+    P_f = P(h&gt;h_d) = e^{(-\frac{h_d - A}{B})}
+\]</div>
+<p>It is assumed that there is total damage   to all objects and infrastructures in the flooded area if the dikes fail. For the discount rate Van Dantzig applied a reduced interest rate  <span class="math notranslate nohighlight">\(r^\prime\)</span> = economic growth – inflation. The net present value of the expected damages, i.e. the risk is found as follows (assuming an infinite time horizon).</p>
+<div class="math notranslate nohighlight" id="equation-risk">
+<span class="eqno">(3)<a class="headerlink" href="#equation-risk" title="Permalink to this equation">#</a></span>\[
+    R = \frac{P_fD}{r^\prime} = \frac{e^{-\frac{h_d-A}{B}}D}{r^\prime}
+\]</div>
+<p>Note that the risk is thus dependent on the dike height. To limit the failure probability and thus risks, the dikes can be heightened further. The investments in dike heightening are determined by initial costs for mobilization and variable costs that are dependent on the level of dike heightening (see also <a class="reference internal" href="#dike-heightening-schematic"><span class="std std-numref">Fig. 1</span></a>):</p>
+<div class="math notranslate nohighlight" id="equation-dike-investments">
+<span class="eqno">(4)<a class="headerlink" href="#equation-dike-investments" title="Permalink to this equation">#</a></span>\[
+    I = I_0 + I(h_d - h0)
+\]</div>
+<figure class="align-default" id="dike-heightening-schematic">
+<a class="reference internal image-reference" href="../_images/dike_heightening_schematic.png"><img alt="../_images/dike_heightening_schematic.png" src="../_images/dike_heightening_schematic.png" style="height: 200px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Schematic view of dike heightening</span><a class="headerlink" href="#dike-heightening-schematic" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Now, the total costs <span class="math notranslate nohighlight">\(C_{tot}\)</span> are the sum of the investment costs and the risk.</p>
+<div class="math notranslate nohighlight" id="equation-total-costs">
+<span class="eqno">(5)<a class="headerlink" href="#equation-total-costs" title="Permalink to this equation">#</a></span>\[
+    C_{tot} = I_0 + I(h_d - h_0) + \frac{e^{-\frac{h_d-A}{B}}D}{r^\prime}
+\]</div>
+<p>The optimal dike height is found when the total costs are minimal. This is the case when <span class="math notranslate nohighlight">\(dC_{tot}/dh_d=0\)</span>.</p>
+<div class="math notranslate nohighlight" id="equation-optimal-dike-costs">
+<span class="eqno">(6)<a class="headerlink" href="#equation-optimal-dike-costs" title="Permalink to this equation">#</a></span>\[
+    \frac{dC_{tot}}{dh_d} = I - \frac{e^{-\frac{h_d-A}{B}}D}{Br^\prime} = 0
+\]</div>
+<p>Since the <span class="math notranslate nohighlight">\(P_f = e^{-(h_d-A)/B}\)</span>, we can find the optimal flooding probability <span class="math notranslate nohighlight">\(P_{f,opt}\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-optimal-flooding-prob">
+<span class="eqno">(7)<a class="headerlink" href="#equation-optimal-flooding-prob" title="Permalink to this equation">#</a></span>\[
+    P_{f,opt} = \frac{IBr^\prime}{D}
+\]</div>
+<p>The larger the damage <span class="math notranslate nohighlight">\(D\)</span>, the smaller the optimal failure probability and thus the higher the level of protection. If incremental protection is expensive – i.e. for high values of <span class="math notranslate nohighlight">\(I\)</span> – a higher optimal failure probability and thus a lower level of optimal safety will be found. The optimal failure probability is also dependent on the discount rate . Combination with <a class="reference internal" href="#equation-exceedence-dike-height">(2)</a> gives the optimal dike height <span class="math notranslate nohighlight">\(h_{d,opt}\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-optimal-dike-height">
+<span class="eqno">(8)<a class="headerlink" href="#equation-optimal-dike-height" title="Permalink to this equation">#</a></span>\[
+    h_{d,opt} = A - B \cdot \ln(P_{f,opt})
+\]</div>
+<p>In addition to the determination of the optimal dike height the cost benefit criterion should still be verified. It is checked whether the benefits of risk reduction are larger than the costs of the dike heightening.</p>
+<div class="math notranslate nohighlight" id="equation-risk-reduction-check">
+<span class="eqno">(9)<a class="headerlink" href="#equation-risk-reduction-check" title="Permalink to this equation">#</a></span>\[
+    I(h_{d,opt})&lt;\frac{(P_{f,0} - P_{f,opt})D}{r^\prime}
+\]</div>
+<p>Where <span class="math notranslate nohighlight">\(P_{f,0}\)</span> the flooding probability in the initial situation. It can be easily shown that this is equivalent to a check of whether the total costs in the optimal situation are smaller than those in the original situation. The first Delta committee used the following values for South Holland:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(D\)</span> = fl 24.2<span class="math notranslate nohighlight">\(\cdot 10^9\)</span> [unit is Dutch guilders]</p></li>
+<li><p><span class="math notranslate nohighlight">\(r^\prime\)</span> = 0.015</p></li>
+<li><p><span class="math notranslate nohighlight">\(I\)</span> = 40.1<span class="math notranslate nohighlight">\(\cdot 10^6\)</span> fl/m</p></li>
+<li><p><span class="math notranslate nohighlight">\(A\)</span> = 1.96 m</p></li>
+<li><p><span class="math notranslate nohighlight">\(B\)</span> = 0.33 m</p></li>
+<li><p><span class="math notranslate nohighlight">\(h_0\)</span> = 3.25 m</p></li>
+<li><p><span class="math notranslate nohighlight">\(I_0\)</span> = fl 110<span class="math notranslate nohighlight">\(\cdot 10^6\)</span></p></li>
+</ul>
+<p>Using these values, the following optimal dike height and optimal failure probability were derived:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(h_{d,opt}\)</span> = 5.83 m</p></li>
+<li><p><span class="math notranslate nohighlight">\(P_{f,opt}\)</span> = <span class="math notranslate nohighlight">\(8 \cdot 10^{-6}\)</span> per year</p></li>
+</ul>
+<p>Although the optimal safety level was determined at a failure probability of <span class="math notranslate nohighlight">\(P_{f,opt}\)</span> =  1/125,000 per year, in later political derivation a value of 1/10,000 per year was determined for the probability of exceedance of design water levels. This implied that the dikes of South Holland would need to be designed for hydraulic conditions (water levels and waves) with a probability of exceedance of – on average – 1/10,000 per year. In later decision-making safety standards have been derived for other dike rings (see <a class="reference internal" href="#dike-rings"><span class="std std-numref">Fig. 2</span></a>). For example, flood defenses in the river system are designed for a safety standard of 1/1250 per year.</p>
+<figure class="align-default" id="dike-rings">
+<a class="reference internal image-reference" href="../_images/dike_rings.jpg"><img alt="../_images/dike_rings.jpg" src="../_images/dike_rings.jpg" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Dike Rings in the Netherlands, showing probability of exceedance of the design water levels per dike ring. Note that dike rings along the River Meuse are not shown on this map. Most of these dike rings have a safety standard of 1/250 per year.</span><a class="headerlink" href="#dike-rings" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>It was expected that the actual failure probability for dikes designed for this design load, would be smaller than 1/10,000 per year.  Recent risk analysis in the project VNK have shown that this is not the case due to the geotechnical failure mechanisms. For most dike rings the estimated failure probabilities are larger than the probability of exceeding the design loads. For example, for riverine dike rings that have been designed for design levels with a probability of exceedance of 1/1250 per year, failure probabilities are often in the order of magnitude of 1/100 per year <span id="id2">[<a class="reference internal" href="../references.html#id3">Veiligheid Nederland in Kaart, 2014</a>]</span>.</p>
+<p>Several extensions of and additions to the model have been proposed. For example, the inclusion of sea level rise <span id="id3">[<a class="reference internal" href="../references.html#id4" title="J.K. Vrijling and J.A. van Beurden. Sealevel rise: a probabilistic design problem. Proceedings of the International Conference on Coastal Engineering, 1990.">Vrijling and van Beurden, 1990</a>]</span>, modelling of the damage as dependent on the water depth in the polder <span id="id4">[<a class="reference internal" href="../references.html#id2" title="D. van Dantzig. Economic decision problems for flood prevention. Econometrica, 1956.">van Dantzig, 1956</a>]</span>, the inclusion of the economic value of loss of life as part of the damage, and inclusion of risk aversion by giving quadratic weight to the damages <span id="id5">[<a class="reference internal" href="../references.html#id5" title="P.H.A.J.M. Van Gelder, J.K. Vrijling, and K.A.H. Slijkhuis. Coping with uncertainty in the economical optimization of a dike design. Water for a Changing Global Community, pages 554-559, 1997.">Gelder <em>et al.</em>, 1997</a>]</span>.</p>
+<p>The model by van Dantzig was primarily focused on finding what the optimal safety at that time (when van Dantzig published his model in the 1960’s) should have been. However, a single optimal level is not always the best solution. While considering longer timescales and changing conditions, such as economic growth and sea level rise, the model needs to address the possibility of multiple interventions during the period considered. This leads to questions regarding the timing of interventions (when? At which intervals?), as well as the optimal strengthening or raising of the dikes (how much?).  <span id="id6">Eijgenraam [<a class="reference internal" href="../references.html#id6" title="C.J.J. Eijgenraam. Optimal safety standards for dike ring areas. CPB discussion paper, 2006.">2006</a>]</span> developed an economic decision model that takes into account both questions.</p>
+<p><a class="reference internal" href="#periodic-investments"><span class="std std-numref">Fig. 3</span></a> below depicts the “saw-tooth” curve that shows the periodic interventions: both the extent of the intervention (vertical) as well as the timing between interventions (horizontal). In between interventions, the safety will gradually decrease due to sea level rise and / or subsidence of the dike. Over a longer period of time, the dike heightening (or strengthening) should follow sea level rise. Additional dike heightening (lower the failure probability even further) could be considered in case of economic growth, which will lead to an increase of damages and increase of protection standards. The length of the optimal interval between interventions is largely dependent on the initial or mobilization costs. If these are high, for example in the case of structural interventions such as storm surge barriers, a long interval or life time of almost 100 years can be chosen. For regular dike reinforcements this interval will be more in the range of several decades (e.g. 50 years). For interventions with no or very small initial costs, such as nourishments along the coast, it is optimal to intervene more frequently.</p>
+<figure class="align-default" id="periodic-investments">
+<a class="reference internal image-reference" href="../_images/periodic_investments.png"><img alt="../_images/periodic_investments.png" src="../_images/periodic_investments.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Periodic investments in dike reinforcement for a situation with sea level rise.</span><a class="headerlink" href="#periodic-investments" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./3-probabilistic-design"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../1-introduction/1-3-quiz.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Quiz example</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../references.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">References</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By the MUDE Team<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
