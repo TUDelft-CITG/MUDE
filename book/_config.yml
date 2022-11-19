@@ -7,6 +7,11 @@ logo: _static/MUDE_Logo-small.png
 execute:
   execute_notebooks: auto
 
+sphinx:
+  config:
+    bibtex_reference_style: author_year
+    mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
 # Bibliography file
 bibtex_bibfiles:
   - _bibliography/references.bib
