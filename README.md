@@ -12,7 +12,7 @@ Inside the repository, the contents of the book can be found in `book/`. Inside 
 
 ## Building the website locally
 
-For testing your changes/additions to the website, it is recommended to build the website on your local machine. This is for three main reasons: 1) it is faster than waiting for the CI/CD pipeline to complete, 2) the amount of CI/CD minuted are limited, 3) no broken/incomplete pages will be presented to the students. In order to build the website locally, follow these steps:
+For testing your changes/additions to the website, it is recommended to build the website on your local machine. This is for three main reasons: 1) it is faster than waiting for the CI/CD pipeline to complete, 2) the amount of CI/CD minutes are limited, 3) no broken/incomplete pages will be presented to the students. In order to build the website locally, follow these steps:
 
 1. Change into the root directory of the repository.
    
