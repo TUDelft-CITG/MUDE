@@ -3,10 +3,15 @@ root: intro.md
 parts:
   - caption: Contents
     chapters:
-    - file: 1-introduction/overview.md
+    - file: intro/overview.md
       sections:
-      - file: 1-introduction/1-1-river-system-example.md
-      - file: 1-introduction/1-2-fragility-curves.md
-      - file: 1-introduction/1-3-quiz.ipynb
-    - file: 3-probabilistic-design/cost-benefit-analysis.md
+      - file: intro/1-1-river-system-example.md
+      - file: intro/1-2-fragility-curves.md
+      - file: intro/1-3-quiz.ipynb
+    - file: risk/overview.md
+      sections:
+      - file: risk/example-dike-heightening.md
+    - file: prob-design/overview.md
+    - file: reliability-component/overview.md
+    - file: reliability-system/overview.md
     - file: references.md
