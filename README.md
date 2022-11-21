@@ -1,6 +1,6 @@
 # Jupyter Book project for weeks 2.7 and 2.8
 
-This repository hosts the source code of the Jupyter Book that is used in weeks 2.7 and 2.8 of the course Modelling, Uncertainty and Data for Engineers (CEGM1000).
+This repository hosts the source code of the Jupyter Book that is used in weeks 2.7 and 2.8 of the course Modelling, Uncertainty and Data for Engineers (CEGM1000). The website is currently hosted via GitHub pages at [tudelft-citg.github.io/MUDE](https://tudelft-citg.github.io/MUDE).
 
 ## Contributing to the website
 
