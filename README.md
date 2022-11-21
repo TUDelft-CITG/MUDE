@@ -18,7 +18,7 @@ For testing your changes/additions to the website, it is recommended to build th
    
 2. Install dependencies:
 
-        pip install requirements.txt
+        pip install -r requirements.txt
 
 3. Build the book:
    
