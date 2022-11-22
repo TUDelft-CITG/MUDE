@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Probabilistic Design" href="../prob-design/overview.html" />
+    <link rel="next" title="Component Reliability" href="../reliability-component/overview.html" />
     <link rel="prev" title="Risk Analysis" href="overview.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -122,8 +122,8 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../intro/overview.html">
-   Introduction
+  <a class="reference internal" href="../prob-design/overview.html">
+   Probabilistic Design
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -132,17 +132,27 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../intro/1-1-river-system-example.html">
+    <a class="reference internal" href="../prob-design/01-one-random-variable.html">
+     One random variable
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../prob-design/02-two-random-variables.html">
+     Two random variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../prob-design/xx-river-system-example.html">
      Example: River system
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../intro/1-2-fragility-curves.html">
+    <a class="reference internal" href="../prob-design/xx-fragility-curves.html">
      Example: fragility curves
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../intro/1-3-quiz.html">
+    <a class="reference internal" href="../prob-design/xx-quiz.html">
      Quiz example
     </a>
    </li>
@@ -164,11 +174,6 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
   </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../prob-design/overview.html">
-   Probabilistic Design
-  </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../reliability-component/overview.html">
@@ -321,7 +326,7 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="application-of-economic-optimization-optimal-dike-heightening">
 <h1>Application of economic optimization: optimal dike heightening<a class="headerlink" href="#application-of-economic-optimization-optimal-dike-heightening" title="Permalink to this headline">#</a></h1>
-<p>Before the major floods of 1953, dikes in the Netherlands were not designed for a specified safety level but mainly strengthened based on practical experience. One of the main questions after the disaster was the optimal dike height and the “acceptable” probability of flooding. Van Dantzig was  a  professor  in  mathematics  and  a  member  of  the  first  Delta  committee.  He  developed an econometric  approach  to  determine  the  optimal  probability  of  flooding  (or protection  level) and the corresponding dike height <span id="id1">[<a class="reference internal" href="../references.html#id2" title="D. van Dantzig. Economic decision problems for flood prevention. Econometrica, 1956.">van Dantzig, 1956</a>]</span>.</p>
+<p>Before the major floods of 1953, dikes in the Netherlands were not designed for a specified safety level but mainly strengthened based on practical experience. One of the main questions after the disaster was the optimal dike height and the “acceptable” probability of flooding. Van Dantzig was  a  professor  in  mathematics  and  a  member  of  the  first  Delta  committee.  He  developed an econometric  approach  to  determine  the  optimal  probability  of  flooding  (or protection  level) and the corresponding dike height <span id="id1">[<a class="reference internal" href="../references.html#id6" title="D. van Dantzig. Economic decision problems for flood prevention. Econometrica, 1956.">van Dantzig, 1956</a>]</span>.</p>
 <p>The approach only considers failure of the dikes due to overtopping. The probability distribution of water levels along the Dutch coast can be approximated by an exponential distribution.</p>
 <div class="math notranslate nohighlight" id="equation-prob-dist-water-levels">
 <span class="eqno">(1)<a class="headerlink" href="#equation-prob-dist-water-levels" title="Permalink to this equation">#</a></span>\[
@@ -400,9 +405,9 @@ title="Print to PDF"
 <p><span class="caption-number">Fig. 2 </span><span class="caption-text">Dike Rings in the Netherlands, showing probability of exceedance of the design water levels per dike ring. Note that dike rings along the River Meuse are not shown on this map. Most of these dike rings have a safety standard of 1/250 per year.</span><a class="headerlink" href="#dike-rings" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>It was expected that the actual failure probability for dikes designed for this design load, would be smaller than 1/10,000 per year.  Recent risk analysis in the project VNK have shown that this is not the case due to the geotechnical failure mechanisms. For most dike rings the estimated failure probabilities are larger than the probability of exceeding the design loads. For example, for riverine dike rings that have been designed for design levels with a probability of exceedance of 1/1250 per year, failure probabilities are often in the order of magnitude of 1/100 per year <span id="id2">[<a class="reference internal" href="../references.html#id3">Veiligheid Nederland in Kaart, 2014</a>]</span>.</p>
-<p>Several extensions of and additions to the model have been proposed. For example, the inclusion of sea level rise <span id="id3">[<a class="reference internal" href="../references.html#id4" title="J.K. Vrijling and J.A. van Beurden. Sealevel rise: a probabilistic design problem. Proceedings of the International Conference on Coastal Engineering, 1990.">Vrijling and van Beurden, 1990</a>]</span>, modelling of the damage as dependent on the water depth in the polder <span id="id4">[<a class="reference internal" href="../references.html#id2" title="D. van Dantzig. Economic decision problems for flood prevention. Econometrica, 1956.">van Dantzig, 1956</a>]</span>, the inclusion of the economic value of loss of life as part of the damage, and inclusion of risk aversion by giving quadratic weight to the damages <span id="id5">[<a class="reference internal" href="../references.html#id5" title="P.H.A.J.M. Van Gelder, J.K. Vrijling, and K.A.H. Slijkhuis. Coping with uncertainty in the economical optimization of a dike design. Water for a Changing Global Community, pages 554-559, 1997.">Gelder <em>et al.</em>, 1997</a>]</span>.</p>
-<p>The model by van Dantzig was primarily focused on finding what the optimal safety at that time (when van Dantzig published his model in the 1960’s) should have been. However, a single optimal level is not always the best solution. While considering longer timescales and changing conditions, such as economic growth and sea level rise, the model needs to address the possibility of multiple interventions during the period considered. This leads to questions regarding the timing of interventions (when? At which intervals?), as well as the optimal strengthening or raising of the dikes (how much?).  <span id="id6">Eijgenraam [<a class="reference internal" href="../references.html#id6" title="C.J.J. Eijgenraam. Optimal safety standards for dike ring areas. CPB discussion paper, 2006.">2006</a>]</span> developed an economic decision model that takes into account both questions.</p>
+<p>It was expected that the actual failure probability for dikes designed for this design load, would be smaller than 1/10,000 per year.  Recent risk analysis in the project VNK have shown that this is not the case due to the geotechnical failure mechanisms. For most dike rings the estimated failure probabilities are larger than the probability of exceeding the design loads. For example, for riverine dike rings that have been designed for design levels with a probability of exceedance of 1/1250 per year, failure probabilities are often in the order of magnitude of 1/100 per year <span id="id2">[<a class="reference internal" href="../references.html#id7" title="Veiligheid Nederland in Kaart. De veiligheid van nederland in kaart. Rijkswaterstaat, 2014. URL: https://www.helpdeskwater.nl/publish/pages/131663/eindrapport_vnk.pdf.">Veiligheid Nederland in Kaart, 2014</a>]</span>.</p>
+<p>Several extensions of and additions to the model have been proposed. For example, the inclusion of sea level rise <span id="id3">[<a class="reference internal" href="../references.html#id8" title="J.K. Vrijling and J.A. van Beurden. Sealevel rise: a probabilistic design problem. Proceedings of the International Conference on Coastal Engineering, 1990.">Vrijling and van Beurden, 1990</a>]</span>, modelling of the damage as dependent on the water depth in the polder <span id="id4">[<a class="reference internal" href="../references.html#id6" title="D. van Dantzig. Economic decision problems for flood prevention. Econometrica, 1956.">van Dantzig, 1956</a>]</span>, the inclusion of the economic value of loss of life as part of the damage, and inclusion of risk aversion by giving quadratic weight to the damages <span id="id5">[<a class="reference internal" href="../references.html#id9" title="P.H.A.J.M. Van Gelder, J.K. Vrijling, and K.A.H. Slijkhuis. Coping with uncertainty in the economical optimization of a dike design. Water for a Changing Global Community, pages 554-559, 1997.">Gelder <em>et al.</em>, 1997</a>]</span>.</p>
+<p>The model by van Dantzig was primarily focused on finding what the optimal safety at that time (when van Dantzig published his model in the 1960’s) should have been. However, a single optimal level is not always the best solution. While considering longer timescales and changing conditions, such as economic growth and sea level rise, the model needs to address the possibility of multiple interventions during the period considered. This leads to questions regarding the timing of interventions (when? At which intervals?), as well as the optimal strengthening or raising of the dikes (how much?).  <span id="id6">Eijgenraam [<a class="reference internal" href="../references.html#id4" title="C.J.J. Eijgenraam. Optimal safety standards for dike ring areas. CPB discussion paper, 2006.">2006</a>]</span> developed an economic decision model that takes into account both questions.</p>
 <p><a class="reference internal" href="#periodic-investments"><span class="std std-numref">Fig. 3</span></a> below depicts the “saw-tooth” curve that shows the periodic interventions: both the extent of the intervention (vertical) as well as the timing between interventions (horizontal). In between interventions, the safety will gradually decrease due to sea level rise and / or subsidence of the dike. Over a longer period of time, the dike heightening (or strengthening) should follow sea level rise. Additional dike heightening (lower the failure probability even further) could be considered in case of economic growth, which will lead to an increase of damages and increase of protection standards. The length of the optimal interval between interventions is largely dependent on the initial or mobilization costs. If these are high, for example in the case of structural interventions such as storm surge barriers, a long interval or life time of almost 100 years can be chosen. For regular dike reinforcements this interval will be more in the range of several decades (e.g. 50 years). For interventions with no or very small initial costs, such as nourishments along the coast, it is optimal to intervene more frequently.</p>
 <figure class="align-default" id="periodic-investments">
 <a class="reference internal image-reference" href="../_images/periodic_investments.png"><img alt="../_images/periodic_investments.png" src="../_images/periodic_investments.png" style="width: 400px;" /></a>
@@ -446,10 +451,10 @@ title="Print to PDF"
             <p class="prev-next-title">Risk Analysis</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../prob-design/overview.html" title="next page">
+    <a class='right-next' id="next-link" href="../reliability-component/overview.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Probabilistic Design</p>
+        <p class="prev-next-title">Component Reliability</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
