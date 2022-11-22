@@ -5,9 +5,11 @@ parts:
     chapters:
     - file: prob-design/overview.md
       sections:
-      - file: prob-design/1-1-river-system-example.md
-      - file: prob-design/1-2-fragility-curves.md
-      - file: prob-design/1-3-quiz.ipynb
+      - file: prob-design/01-one-random-variable.md
+      - file: prob-design/02-two-random-variables.ipynb
+      - file: prob-design/xx-river-system-example.md
+      - file: prob-design/xx-fragility-curves.md
+      - file: prob-design/xx-quiz.ipynb
     - file: risk/overview.md
       sections:
       - file: risk/example-dike-heightening.md
