@@ -33,6 +33,7 @@ jobs:
           pip install -r requirements.txt
         if: steps.cache-virtualenv.outputs.cache-hit != 'true'
 
-      - name: Test notebooks 
+      - name: Test build
         run: |
-          pytest --nbmake 
+          cd book
+          jupyter book build . -n -W
