@@ -6,3 +6,4 @@ pandas
 jupyterquiz
 pytest
 seaborn
+sympy
