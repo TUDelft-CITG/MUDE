@@ -6,6 +6,8 @@ Probabilistic design means using probability to design something. Really it's no
 - sometimes there are clear criteria
 - others not
 
+A little bit about the design process: there's an assessment, it's iterative, you eventually find something that meets a set of criteria. In probabilistic design, at least one of those criteria is a probability.
+
 Consider the safety factor approach, which compares load[^solicitation], $S$, to resistance, $R$, such that $FS=S/R$.
 
 There is also a safety margin.
