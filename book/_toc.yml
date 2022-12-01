@@ -13,6 +13,7 @@ parts:
     - file: risk/overview.md
       sections:
       - file: risk/example-dike-heightening.md
+      - file: risk/example-types-of-risk.ipynb
     - file: reliability-component/overview.md
     - file: reliability-system/overview.md
     - file: references.md
