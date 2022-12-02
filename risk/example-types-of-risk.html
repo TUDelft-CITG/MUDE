@@ -377,87 +377,11 @@ title="Print to PDF"
 <p>For a given number of inhabitants and potential fatalities  for a dike ring, the acceptable failure probability can be determined. For dike rings with between 1 and 10 fatalities –generally small areas- the individual  risk  criterion  is  the  most  stringent. For dike rings with large numbers of fatalities, the risk averse societal risk criterion becomes dominant.</p>
 <p>Several extensions of this model are possible. One can consider to add the economic value of life loss or consider a different distribution of the nationally acceptable societal risk over dike rings with different sizes.
 The limit line for societal risk becomes <span class="math notranslate nohighlight">\(1-F_{N}(n) \leq 0.11 / n^{2}\)</span> . Both the individual and societal risk criteria are plotted in the figure below. As a third criterion the  economic optimization can be added. The optimal or acceptable  probability of failure depends on the damage and investment costs. A relationship with the graph below can be established by assuming that the number of fatalities is related to the economic damages. A dike ring with many inhabitants and potential fatalities will generally also represent a large economic value. For the sake of the example we assume that every fatality corresponds to an economic damage of <span class="math notranslate nohighlight">\(5 \cdot 10^{7}\)</span> (note: this is simply used as a way to approximate the value of infrastructure in more densely populated regions, and is <em>not</em> equal to the value of a human life). To calculate the economic optimum for the example we assume arbitrary values of <span class="math notranslate nohighlight">\(r = 0.025\)</span>, <span class="math notranslate nohighlight">\(I = 5 \cdot 10^{6}\)</span>; <span class="math notranslate nohighlight">\(B = 0.33\)</span>. The figure below shows the combination for the three criteria.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import numpy as np
-import matplotlib.pyplot as plt
-</pre></div>
+<div class="cell tag_remove-input docutils container">
 </div>
+<div class="cell tag_remove-input docutils container">
 </div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># TUD Color Palette
-
-def set_TUDstyle():
-    TUcolor = {&quot;cyan&quot;: &quot;#00A6D6&quot;, &quot;darkgreen&quot;: &quot;#009B77&quot;, &quot;purple&quot;: &quot;#6F1D77&quot;,
-               &quot;darkred&quot;: &quot;#A50034&quot;, &quot;darkblue&quot;: &quot;#0C2340&quot;,
-               &quot;orange&quot;: &quot;#EC6842&quot;, &quot;green&quot;: &quot;#6CC24A&quot;,
-               &quot;lightcyan&quot;: &quot;#00B8C8&quot;, &quot;red&quot;: &quot;#E03C31&quot;, &quot;pink&quot;: &quot;#EF60A3&quot;,
-               &quot;yellow&quot;: &quot;#FFB81C&quot;, &quot;blue&quot;: &quot;#0076C2&quot;}
-    plt.rcParams.update({&#39;axes.prop_cycle&#39;: plt.cycler(color=TUcolor.values()),
-                         &#39;font.size&#39;: 16, &quot;lines.linewidth&quot;: 4})
-    return TUcolor
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Given Parameters
-
-N_fatalities = np.linspace(1,1000,1000)  # fatalities
-
-P_df = 0.1; beta = 0.1
-
-alpha = 2
-k = 3
-N_A = 100
-
-r= 0.025
-I = 5*10**6
-B = 0.33
-
-# Individual Risk
-
-Pf_ind_risk = (beta*(10**-4))/P_df  # per year
-
-# print(&#39;Acceptable Failure Probability: &#39;, Pf_ind_risk)
-
-# Societal Risk
-
-C = ((beta*100)/(k*np.sqrt(N_A)))**2  # binomial distribution
-
-Pf_SR = (C/(N_fatalities**alpha))
-
-# Economic Risk
-
-D_damage = (5*10**7)*N_fatalities
-
-Pf_ER = (I*B*r)/(D_damage)
-
-# Visualize
-
-my_linewidth = 4
-
-plt.figure(figsize=(8,6))
-
-set_TUDstyle()
-
-plt.yscale(&#39;log&#39;)
-plt.xscale(&#39;log&#39;)
-plt.plot(N_fatalities, Pf_SR, linewidth=my_linewidth, label=&#39;Societal Risk&#39;)
-plt.plot(N_fatalities,Pf_ER, linewidth=my_linewidth, color=&#39;r&#39;, label=&#39;Economic Risk&#39;)
-plt.axhline(Pf_ind_risk, linewidth=my_linewidth, color=&#39;g&#39;, label=&#39;Individual Risk&#39;)
-
-plt.ylabel(&#39;Probability of Exceedance, $1-F_N(n)$&#39;)
-plt.xlabel(&#39;Fatalities, N&#39;)
-plt.ylim(10**(-7),1)
-
-plt.legend(loc=&#39;upper right&#39;);
-</pre></div>
-</div>
-</div>
+<div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <img alt="../_images/example-types-of-risk_4_0.png" src="../_images/example-types-of-risk_4_0.png" />
 </div>
