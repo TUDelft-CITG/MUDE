@@ -14,6 +14,10 @@ parts:
       sections:
       - file: risk/example-dike-heightening.md
       - file: risk/example-types-of-risk.ipynb
+      - file: risk/safety-standards.md
+        sections:
+        - file: risk/introduction.ipynb
+        - file: risk/limits-for-individual-and-societal-risk.ipynb
     - file: reliability-component/overview.md
     - file: reliability-system/overview.md
     - file: references.md
