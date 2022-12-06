@@ -1,6 +1,6 @@
 # Example: River system
 
-Illustrating all components of the problem.
+Illustrating all components of the problem (continue from Welcome page).
 
 - hazard
 - levee failure, conditional on the hazard
