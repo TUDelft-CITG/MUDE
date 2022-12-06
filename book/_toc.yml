@@ -14,6 +14,7 @@ parts:
       sections:
       - file: risk/example-dike-heightening.md
       - file: risk/example-types-of-risk.ipynb
+      - file: risk/cost-benefit-analysis.ipynb
     - file: reliability-component/overview.md
     - file: reliability-system/overview.md
     - file: references.md
