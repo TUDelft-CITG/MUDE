@@ -5,16 +5,22 @@ parts:
     chapters:
     - file: prob-design/overview.md
       sections:
+      - file: prob-design/xx-river-system-example.md
       - file: prob-design/01-one-random-variable.md
       - file: prob-design/02-two-random-variables.ipynb
-      - file: prob-design/xx-river-system-example.md
-      - file: prob-design/xx-fragility-curves.md
       - file: prob-design/xx-quiz.ipynb
-    - file: risk/overview.md
+    - file: risk-analysis/overview.md
       sections:
       - file: risk/example-dike-heightening.md
       - file: risk/example-types-of-risk.ipynb
       - file: risk/safety-standards.ipynb
+      - file: risk-analysis/risk-analysis.md
     - file: reliability-component/overview.md
     - file: reliability-system/overview.md
+    - file: risk-assessment/overview.md
+      sections:
+      - file: risk-assessment/example-dike-heightening.md
+      - file: risk-assessment/cost-benefit-analysis.ipynb
+      - file: risk-assessment/example-types-of-risk.ipynb
+    - file: other-topics/overview.md
     - file: references.md
