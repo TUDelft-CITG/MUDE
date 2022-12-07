@@ -11,5 +11,5 @@ Sometimes the distinction is made because components are very different. Sometim
 
 Table of contents:
 
-```{tableofcontents}
-```
+% ```{tableofcontents}
+% ```

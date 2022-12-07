@@ -1,4 +1,4 @@
-# Risk and Risk Analysis
+# Risk Analysis
 
 This chapter introduces the concept of risk and steps of a risk analysis. The following two chapters introduce quantitative analysis (step 3) and the final chapter covers risk assessment.
 
@@ -14,5 +14,5 @@ This chapter already has a really cool example calculation!
 
 Table of contents:
 
-```{tableofcontents}
-```
+%```{tableofcontents}
+%```

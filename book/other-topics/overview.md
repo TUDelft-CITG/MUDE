@@ -7,5 +7,5 @@ T
 
 Table of contents:
 
-```{tableofcontents}
-```
+% ```{tableofcontents}
+% ```
