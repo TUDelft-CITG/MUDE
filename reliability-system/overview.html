@@ -52,7 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="References" href="../references.html" />
+    <link rel="next" title="Risk Assessment" href="../risk-assessment/overview.html" />
     <link rel="prev" title="Component Reliability" href="../reliability-component/overview.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -130,6 +130,11 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../prob-design/xx-river-system-example.html">
+     Example: River system
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../prob-design/01-one-random-variable.html">
      One random variable
     </a>
@@ -140,16 +145,6 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../prob-design/xx-river-system-example.html">
-     Example: River system
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../prob-design/xx-fragility-curves.html">
-     Example: fragility curves
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../prob-design/xx-quiz.html">
      Quiz example
     </a>
@@ -157,7 +152,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../risk/overview.html">
+  <a class="reference internal" href="../risk-analysis/overview.html">
    Risk Analysis
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
@@ -167,18 +162,8 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk/example-dike-heightening.html">
-     Application of economic optimization: optimal dike heightening
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../risk/example-types-of-risk.html">
-     Combination of individual, societal and economic risk for a dike ring area
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../risk/cost-benefit-analysis.html">
-     Cost benefit analysis
+    <a class="reference internal" href="../risk-analysis/risk-analysis.html">
+     Risk analysis and risk evaluation
     </a>
    </li>
   </ul>
@@ -191,6 +176,38 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    System Reliability
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../risk-assessment/overview.html">
+   Risk Assessment
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../risk-assessment/example-dike-heightening.html">
+     Application of economic optimization: optimal dike heightening
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../risk-assessment/cost-benefit-analysis.html">
+     Cost benefit analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../risk-assessment/example-types-of-risk.html">
+     Combination of individual, societal and economic risk for a dike ring area
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../other-topics/overview.html">
+   Other topics
   </a>
  </li>
  <li class="toctree-l1">
@@ -336,9 +353,9 @@ title="Print to PDF"
 <h1>System Reliability<a class="headerlink" href="#system-reliability" title="Permalink to this headline">#</a></h1>
 <p>Just a few simple examples to illustrate: series and parallel systems, influence of dependence</p>
 <p>Example illustrating difference in failure probability in reality versus model (flooding?).</p>
+<p><em>Note that ‘system’ in the title of this chapter refers to a particular set of reliability analyses made up of more than one distinct components. It may or may not be the same as the system for which the risk analysis is being done. For example (the flood risk case), we look at a levee ring, which is a system of levee segments (trajectory, or traject in Dutch), and each segment can be modeled as a series system.</em></p>
+<p>Sometimes the distinction is made because components are very different. Sometimes it is a matter of convenience, as two components may share a number of random variables through their respective limit-state functions that influence failure.</p>
 <p>Table of contents:</p>
-<p>=======
-Table of contents:</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -375,10 +392,10 @@ Table of contents:</p>
             <p class="prev-next-title">Component Reliability</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../references.html" title="next page">
+    <a class='right-next' id="next-link" href="../risk-assessment/overview.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">References</p>
+        <p class="prev-next-title">Risk Assessment</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

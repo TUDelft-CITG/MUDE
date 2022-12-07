@@ -1,12 +1,11 @@
 # Probabilistic Design
 
-Probabilistic design means using probability to design something. Really it's no different than a deterministic design.
-- sometimes it's obvious
-- others not
-- sometimes there are clear criteria
-- others not
+Probabilistic design means using probability to design something. In terms of the design process, there are not many differences with a deterministic approach...A little bit about the design process: there's an assessment, it's iterative, you eventually find something that meets a set of criteria. In probabilistic design, at least one of those criteria is a probability. Why use such an approach? Using probability allows us to account for:
+1. randomness in some of our important design variables
+2. imprecise measurements or models
+3. risk-based design criteria and safety standards
 
-A little bit about the design process: there's an assessment, it's iterative, you eventually find something that meets a set of criteria. In probabilistic design, at least one of those criteria is a probability.
+Sometimes we have criteria, sometimes we do not.
 
 Consider the safety factor approach, which compares load[^solicitation], $S$, to resistance, $R$, such that $FS=S/R$.
 
@@ -22,6 +21,8 @@ For many things, however, a deterministic analysis is not wise because we cannot
 ## An overview of this chapter
 
 Terms and definitions first?? Then a series of patterns[^pattern] examples to illustrate key concepts.
+
+Aleatoric and epistemic.
 
 Sometimes we don't have a structure. Then we can consider just the *hazard*.
 

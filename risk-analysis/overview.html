@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Combination of individual, societal and economic risk for a dike ring area &#8212; Modelling, Uncertainty and Data for Engineers (MUDE)</title>
+    <title>Risk Analysis &#8212; Modelling, Uncertainty and Data for Engineers (MUDE)</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,12 +50,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Cost benefit analysis" href="cost-benefit-analysis.html" />
-    <link rel="prev" title="Application of economic optimization: optimal dike heightening" href="example-dike-heightening.html" />
+    <link rel="next" title="Risk analysis and risk evaluation" href="risk-analysis.html" />
+    <link rel="prev" title="Quiz example" href="../prob-design/xx-quiz.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -132,6 +130,11 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
+    <a class="reference internal" href="../prob-design/xx-river-system-example.html">
+     Example: River system
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="../prob-design/01-one-random-variable.html">
      One random variable
     </a>
@@ -142,16 +145,6 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../prob-design/xx-river-system-example.html">
-     Example: River system
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../prob-design/xx-fragility-curves.html">
-     Example: fragility curves
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../prob-design/xx-quiz.html">
      Quiz example
     </a>
@@ -159,7 +152,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="overview.html">
+  <a class="current reference internal" href="#">
    Risk Analysis
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
@@ -167,20 +160,10 @@ const thebe_selector_output = ".output, .cell_output"
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="example-dike-heightening.html">
-     Application of economic optimization: optimal dike heightening
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Combination of individual, societal and economic risk for a dike ring area
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="cost-benefit-analysis.html">
-     Cost benefit analysis
+    <a class="reference internal" href="risk-analysis.html">
+     Risk analysis and risk evaluation
     </a>
    </li>
   </ul>
@@ -193,6 +176,38 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../reliability-system/overview.html">
    System Reliability
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../risk-assessment/overview.html">
+   Risk Assessment
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../risk-assessment/example-dike-heightening.html">
+     Application of economic optimization: optimal dike heightening
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../risk-assessment/cost-benefit-analysis.html">
+     Cost benefit analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../risk-assessment/example-types-of-risk.html">
+     Combination of individual, societal and economic risk for a dike ring area
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../other-topics/overview.html">
+   Other topics
   </a>
  </li>
  <li class="toctree-l1">
@@ -251,35 +266,6 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/risk/example-types-of-risk.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -302,7 +288,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/risk/example-types-of-risk.ipynb"
+        <a href="../_sources/risk-analysis/overview.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -313,7 +299,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.ipynb</span>
+<span class="headerbtn__text-container">.md</span>
 </a>
 
       </li>
@@ -351,7 +337,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Combination of individual, societal and economic risk for a dike ring area</h1>
+                <h1>Risk Analysis</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -363,37 +349,25 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="combination-of-individual-societal-and-economic-risk-for-a-dike-ring-area">
-<h1>Combination of individual, societal and economic risk for a dike ring area<a class="headerlink" href="#combination-of-individual-societal-and-economic-risk-for-a-dike-ring-area" title="Permalink to this headline">#</a></h1>
-<p><strong>Example 3.9</strong></p>
-<p>We consider application of the three criteria to the case of dike rings in the Netherlands. There are about  100  dike  rings  in  the  Netherlands  of  different  sizes.  A  dike  ring  is  a  flood  prone  area protected from flooding by flood defences and high grounds. The conditional probability of death given  flooding depends on the depth of the polder and flood characteristics. Research on loss of life due to floods shows that a conservative estimate would lead to
-<span class="math notranslate nohighlight">\(P_{d|f} = 0.1\)</span></p>
-<p>First, we consider the individual risk. A value of <span class="math notranslate nohighlight">\(\beta = 0.1\)</span> is proposed as being exposed is considered as an involuntary acctivity with some benefit (i.e. living in a prosperous delta).  This leads to an acceptable individual risk value of <span class="math notranslate nohighlight">\(10^{-5}\)</span> per year. This limit has also been proposed by the Dutch government in the year 2014 (“basisveiligheid”).</p>
-<p>The acceptable flooding probability according to the individual risk becomes:</p>
-<p><span class="math notranslate nohighlight">\(P_{f} \leq \beta \cdot 10^{-4} / P_{d|f} = 0.1 \cdot 10^{-4} / 0.1 = 10^{-4}\)</span> per year.</p>
-<p>First, we consider the individual risk. A value of <span class="math notranslate nohighlight">\(\beta = 0.1\)</span> is proposed as being exposed is considered as an involuntary acctivity with some benefit (i.e. living in a prosperous delta). This leads to an acceptable individual risk value of <span class="math notranslate nohighlight">\(10^{-5}\)</span> per year. This limit has also been proposed by the Dutch government in the year 2014 (“basisveiligheid”).</p>
-<p>The acceptable flooding probability according to the individual risk becomes:</p>
-<p><span class="math notranslate nohighlight">\(P_{f} \leq \beta \cdot 10^{-4} / P_{d|f} = 0.1 \cdot 10^{-4} / 0.1 = 10^{-4}\)</span> per year</p>
-<p>The societal risk criterion can be determined according to the equation above. Assuming a risk averse criterion <span class="math notranslate nohighlight">\(\alpha = 2\)</span>. We can determine the constant C of the limit line for <span class="math notranslate nohighlight">\(N_{A} = 100\)</span> installations and <span class="math notranslate nohighlight">\(\beta = 0.1\)</span>.</p>
-<p><span class="math notranslate nohighlight">\(C=\left(\frac{\beta \cdot 100}{k \sqrt{N_A}}\right)^2=\left(\frac{0.1 \cdot 100}{3 \sqrt{100}}\right)^2 = 0.11\)</span>The societal risk criterion can be determined according to the equation above. Assuming a risk averse criterion <span class="math notranslate nohighlight">\(\alpha = 2\)</span>. We can determine the constant C of the limit line for <span class="math notranslate nohighlight">\(N_{A} = 100\)</span> installations and <span class="math notranslate nohighlight">\(\beta = 0.1\)</span>.</p>
-<p><span class="math notranslate nohighlight">\(C=\left(\frac{\beta \cdot 100}{k \sqrt{N_A}}\right)^2=\left(\frac{0.1 \cdot 100}{3 \sqrt{100}}\right)^2 = 0.11\)</span></p>
-<p>The limit line for societal risk becomes <span class="math notranslate nohighlight">\(1-F_{N}(n) \leq 0.11 / n^{2}\)</span> . Both the individual and societal risk criteria are  plotted in the figure below. As a third criterion the  economic optimization can be added. The optimal or acceptable  probability of failure depends on the damage and investment costs. A relationship with the graph below can be established by assuming that the number of fatalities is related to the economic damages. A dike ring with many inhabitants and potential fatalities will generally also represent a large economic value. For the sake of the example we assume that every fatality corresponds to an economic damage of <span class="math notranslate nohighlight">\(5 \cdot 10^{7}\)</span> (note: this is not equal to the value of a human life). To calculate the economic optimum for the example we assume arbitrary values of r = 0.025 and <span class="math notranslate nohighlight">\(I = 5 \cdot 10^{6}\)</span>; B = 0.33. The figure below shows the combination for the three criteria.</p>
-<p>For a given number of fatalities in a dike ring the acceptable failure probability according to the three criteria can be  derived. The individual risk criterion is independent on the  number of fatalities. The economic criterion shows a linear  relation between the failure probability  and damage or  number of fatalities. The societal criterion is risk averse  so shows a decreasing quadratic relationship between acceptable failure probability and consequences.</p>
-<p>For a given number of inhabitants and potential fatalities  for a dike ring, the acceptable failure probability can be determined. For dike rings with between 1 and 10 fatalities –generally small areas- the individual  risk  criterion  is  the  most  stringent. For dike rings with large numbers of fatalities, the risk averse societal risk criterion becomes dominant.</p>
-<p>Several extensions of this model are possible. One can consider to add the economic value of life loss or consider a different distribution of the nationally acceptable societal risk over dike rings with different sizes.
-The limit line for societal risk becomes <span class="math notranslate nohighlight">\(1-F_{N}(n) \leq 0.11 / n^{2}\)</span> . Both the individual and societal risk criteria are plotted in the figure below. As a third criterion the  economic optimization can be added. The optimal or acceptable  probability of failure depends on the damage and investment costs. A relationship with the graph below can be established by assuming that the number of fatalities is related to the economic damages. A dike ring with many inhabitants and potential fatalities will generally also represent a large economic value. For the sake of the example we assume that every fatality corresponds to an economic damage of <span class="math notranslate nohighlight">\(5 \cdot 10^{7}\)</span> (note: this is simply used as a way to approximate the value of infrastructure in more densely populated regions, and is <em>not</em> equal to the value of a human life). To calculate the economic optimum for the example we assume arbitrary values of <span class="math notranslate nohighlight">\(r = 0.025\)</span>, <span class="math notranslate nohighlight">\(I = 5 \cdot 10^{6}\)</span>; <span class="math notranslate nohighlight">\(B = 0.33\)</span>. The figure below shows the combination for the three criteria.</p>
-<div class="cell tag_remove-input docutils container">
+  <section class="tex2jax_ignore mathjax_ignore" id="risk-analysis">
+<h1>Risk Analysis<a class="headerlink" href="#risk-analysis" title="Permalink to this headline">#</a></h1>
+<p>This chapter introduces the concept of risk and steps of a risk analysis. The following two chapters introduce quantitative analysis (step 3) and the final chapter covers risk assessment.</p>
+<p>Pages will be:</p>
+<ul class="simple">
+<li><p>Risk:</p>
+<ul>
+<li><p>definition quantification (integral)</p></li>
+<li><p>steps in a risk analysis (maybe also in probabilistic design part?)</p></li>
+<li><p>units, illustrated with…</p></li>
+<li><p>examples of risk (metrics)</p></li>
+</ul>
+</li>
+<li><p>Types of risk used in MUDE / flood risk example</p></li>
+</ul>
+<p>This chapter already has a really cool example calculation!</p>
+<p>Table of contents:</p>
+<div class="toctree-wrapper compound">
 </div>
-<div class="cell tag_remove-input docutils container">
-</div>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<img alt="../_images/example-types-of-risk_4_0.png" src="../_images/example-types-of-risk_4_0.png" />
-</div>
-</div>
-<p>For a given number of fatalities in a dike ring the acceptable failure probability according to the three criteria can be  derived. The individual risk criterion is independent on the  number of fatalities. The economic criterion shows a linear relation between the failure probability and damage or number of fatalities. The societal criterion is risk averse so shows a decreasing quadratic relationship between acceptable failure probability and consequences.</p>
-<p>For a given number of inhabitants and potential fatalities for a dike ring, the acceptable failure probability can be determined. For dike rings with between 1 and 10 fatalities-–generally small areas–the individual risk  criterion is the most stringent. For dike rings with large numbers of fatalities, the risk averse societal risk criterion becomes dominant.</p>
-<p>Several extensions of this model are possible. One can consider to add the economic value of life loss or consider a different distribution of the nationally acceptable societal risk over dike rings with different sizes.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -409,7 +383,7 @@ The limit line for societal risk becomes <span class="math notranslate nohighlig
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./risk"
+            path: "./risk-analysis"
         },
         predefinedOutput: true
     }
@@ -423,17 +397,17 @@ The limit line for societal risk becomes <span class="math notranslate nohighlig
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="example-dike-heightening.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../prob-design/xx-quiz.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Application of economic optimization: optimal dike heightening</p>
+            <p class="prev-next-title">Quiz example</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="cost-benefit-analysis.html" title="next page">
+    <a class='right-next' id="next-link" href="risk-analysis.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Cost benefit analysis</p>
+        <p class="prev-next-title">Risk analysis and risk evaluation</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

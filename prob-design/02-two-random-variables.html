@@ -50,9 +50,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Example: River system" href="xx-river-system-example.html" />
+    <link rel="next" title="Quiz example" href="xx-quiz.html" />
     <link rel="prev" title="One random variable" href="01-one-random-variable.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -130,6 +132,11 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul class="current">
    <li class="toctree-l2">
+    <a class="reference internal" href="xx-river-system-example.html">
+     Example: River system
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="01-one-random-variable.html">
      One random variable
     </a>
@@ -140,16 +147,6 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="xx-river-system-example.html">
-     Example: River system
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="xx-fragility-curves.html">
-     Example: fragility curves
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="xx-quiz.html">
      Quiz example
     </a>
@@ -157,7 +154,7 @@ const thebe_selector_output = ".output, .cell_output"
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../risk/overview.html">
+  <a class="reference internal" href="../risk-analysis/overview.html">
    Risk Analysis
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
@@ -167,18 +164,8 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk/example-dike-heightening.html">
-     Application of economic optimization: optimal dike heightening
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../risk/example-types-of-risk.html">
-     Combination of individual, societal and economic risk for a dike ring area
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../risk/cost-benefit-analysis.html">
-     Cost benefit analysis
+    <a class="reference internal" href="../risk-analysis/risk-analysis.html">
+     Risk analysis and risk evaluation
     </a>
    </li>
   </ul>
@@ -191,6 +178,38 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../reliability-system/overview.html">
    System Reliability
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../risk-assessment/overview.html">
+   Risk Assessment
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../risk-assessment/example-dike-heightening.html">
+     Application of economic optimization: optimal dike heightening
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../risk-assessment/cost-benefit-analysis.html">
+     Cost benefit analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../risk-assessment/example-types-of-risk.html">
+     Combination of individual, societal and economic risk for a dike ring area
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../other-topics/overview.html">
+   Other topics
   </a>
  </li>
  <li class="toctree-l1">
@@ -372,17 +391,9 @@ title="Print to PDF"
 </ul>
 <p>Then we will consider:</p>
 <ul class="simple">
-<li><p>joint / and</p></li>
-<li><p>union / or</p></li>
-<li><p>joint exceedance</p></li>
-<li><p>other</p>
-<ul>
-<li><p>R-S</p></li>
-<li><p>Z = R + S</p></li>
-<li><p>non-linear</p></li>
-<li><p>most of these should probably go in the component reliability chapter</p></li>
-</ul>
-</li>
+<li><p>joint / and (discrete)</p></li>
+<li><p>union / or (discrete)</p></li>
+<li><p>Brief illustration: <span class="math notranslate nohighlight">\(Z = R - S\)</span></p></li>
 </ul>
 <div class="alert alert-block alert-success"><b>CSS formatted boxes</b>
 <p>This is created using HTML. Copy everything you see between the <code>&amp;ltdiv …&amp;gt</code> and <code>&amp;lt/div&amp;gt</code> tags. The <code>alert</code> class allows changing the box color from green to yellow or red by changing the word <code>success</code> in the first <code>div</code> tag to <code>warning</code> and <code>danger</code>, respectively. You can only use HTML formatting within the colored box, Markdown does not work inside an HTML tag (this is also true in Jupyter notebooks).</p>
@@ -584,10 +595,10 @@ def p_K(t, rho, N=1000):
             <p class="prev-next-title">One random variable</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="xx-river-system-example.html" title="next page">
+    <a class='right-next' id="next-link" href="xx-quiz.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Example: River system</p>
+        <p class="prev-next-title">Quiz example</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
