@@ -22,5 +22,6 @@ parts:
       - file: risk-assessment/cost-benefit-analysis.ipynb
       - file: risk-assessment/example-dike-heightening.md
       - file: risk-assessment/example-types-of-risk.ipynb
+      - file: risk-assessment/safety-standards.ipynb
     - file: other-topics/overview.md
     - file: references.md
