@@ -11,7 +11,9 @@ Pages will be:
 - Types of risk used in MUDE / flood risk example
 
 
-
+```{warning}
+Point out how a single risk value can used as a design criteria, which links to probability. Can also consider illustrating risk types.
+```
 
 It is noted that a (probabilistic) risk analysis is different  from a (deterministic) scenario analysis. A risk analysis is based on quantitative analysis of all (known) undesired events and their probabilities and consequences. A scenario analysis considers one (or a limited number) of design scenarios, often without considering its failure probability. Both approaches are complementary, as a scenario analysis considers one of the scenarios from the risk analysis. 
 
