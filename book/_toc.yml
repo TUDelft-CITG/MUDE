@@ -11,13 +11,18 @@ parts:
       - file: prob-design/xx-quiz.ipynb
     - file: risk-analysis/overview.md
       sections:
-      - file: risk-analysis/risk-analysis.md
+      - file: risk-analysis/definition.md
+      - file: risk-analysis/steps.md
+      - file: risk-analysis/risk-analysis-old.md
     - file: reliability-component/overview.md
     - file: reliability-system/overview.md
     - file: risk-assessment/overview.md
       sections:
-      - file: risk-assessment/example-dike-heightening.md
+      - file: risk-assessment/decision-making.md
       - file: risk-assessment/cost-benefit-analysis.ipynb
+      - file: risk-assessment/example-dike-heightening.md
+      - file: risk-assessment/safety-standards.ipynb
+      - file: risk-assessment/example-FN-curve.ipynb
       - file: risk-assessment/example-types-of-risk.ipynb
     - file: other-topics/overview.md
     - file: references.md
