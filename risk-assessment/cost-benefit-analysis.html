@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Combination of individual, societal and economic risk for a dike ring area" href="example-types-of-risk.html" />
-    <link rel="prev" title="Application of economic optimization: optimal dike heightening" href="example-dike-heightening.html" />
+    <link rel="next" title="Application of economic optimization: optimal dike heightening" href="example-dike-heightening.html" />
+    <link rel="prev" title="Decision-making under uncertainty" href="decision-making.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -164,8 +164,18 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-analysis/risk-analysis.html">
-     Risk analysis and risk evaluation
+    <a class="reference internal" href="../risk-analysis/definition.html">
+     Definition of risk
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../risk-analysis/steps.html">
+     Steps in a Risk Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../risk-analysis/risk-analysis-old.html">
+     OLD: Risk analysis and risk evaluation
     </a>
    </li>
   </ul>
@@ -191,13 +201,28 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="example-dike-heightening.html">
-     Application of economic optimization: optimal dike heightening
+    <a class="reference internal" href="decision-making.html">
+     Decision-making under uncertainty
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Cost benefit analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="example-dike-heightening.html">
+     Application of economic optimization: optimal dike heightening
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="safety-standards.html">
+     Safety standards
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="example-FN-curve.html">
+     Calculation of an FN curve
     </a>
    </li>
    <li class="toctree-l2">
@@ -508,9 +533,9 @@ For investments that focus on prevention (i.e. reducing the failure probability 
 <li><p><span class="math notranslate nohighlight">\(D_{new}\)</span> the damage after investments in reducing the consequences [€]</p></li>
 </ul>
 <p>The foregoing assumes that both the costs and benefits are expressed in the same unit, generally in the form of a present value [€].The nett present value represents the sum of the present values of the benefit and cost cash flows over a period of time. In engineering we often deal with situations with larger initial investments, whereas the risk reduction benefits are spread out over a longer time period. For example, when a government invests this year in flood protection, the costs are made in year 0, but the benefits will be spread over the coming decades.
-For such situations the failure probability is generally expressed per unit of time, mostly per year. That means that the risk (reduction) is expressed in terms of € per year, whereas the initial investments  have the unit of €. The nett present value of cost or benefit values over a future range of years can be calculated with <a class="reference internal" href="#equation-npv">(10)</a>. To calculate the nett present value NPV [€] a discount rate  should be used. The discount rate represents a required return on an investment.</p>
+For such situations the failure probability is generally expressed per unit of time, mostly per year. That means that the risk (reduction) is expressed in terms of € per year, whereas the initial investments  have the unit of €. The nett present value of cost or benefit values over a future range of years can be calculated with <a class="reference internal" href="#equation-npv">(1)</a>. To calculate the nett present value NPV [€] a discount rate  should be used. The discount rate represents a required return on an investment.</p>
 <div class="math notranslate nohighlight" id="equation-npv">
-<span class="eqno">(10)<a class="headerlink" href="#equation-npv" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(1)<a class="headerlink" href="#equation-npv" title="Permalink to this equation">#</a></span>\[
   NPV = \sum_{t=1}^{T} \frac{C_t}{(1+r)^t}
 \]</div>
 <p>where:</p>
@@ -518,7 +543,7 @@ For such situations the failure probability is generally expressed per unit of t
 <li><p><span class="math notranslate nohighlight">\(C_t\)</span> the costs in year <span class="math notranslate nohighlight">\(t\)</span> [€]</p></li>
 <li><p><span class="math notranslate nohighlight">\(T\)</span> the reference period [years]</p></li>
 </ul>
-<p>The contribution of costs in a certain year to the nett present value depend on the discount rate and the reference year. Costs or benefits closest to the present will have the greatest contribution. <a class="reference internal" href="#cost-contribution"><span class="std std-numref">Fig. 4</span></a> below shows the value of <span class="math notranslate nohighlight">\(1/(1+r)^t\)</span> for a given year <span class="math notranslate nohighlight">\(t\)</span> for different discount rates. The higher the discount rate, the smaller the contribution to the net present value of costs or benefits that are far away from the present. For an infinite time horizon it can be shown that <span class="math notranslate nohighlight">\(\sum 1/(1+r)^t \approx 1/r\)</span>. This approximation can be used in evaluating engineering projects with a long life time.</p>
+<p>The contribution of costs in a certain year to the nett present value depend on the discount rate and the reference year. Costs or benefits closest to the present will have the greatest contribution. <a class="reference internal" href="#cost-contribution"><span class="std std-numref">Fig. 1</span></a> below shows the value of <span class="math notranslate nohighlight">\(1/(1+r)^t\)</span> for a given year <span class="math notranslate nohighlight">\(t\)</span> for different discount rates. The higher the discount rate, the smaller the contribution to the net present value of costs or benefits that are far away from the present. For an infinite time horizon it can be shown that <span class="math notranslate nohighlight">\(\sum 1/(1+r)^t \approx 1/r\)</span>. This approximation can be used in evaluating engineering projects with a long life time.</p>
 <div class="cell tag_remove-input docutils container">
 </div>
 <div class="cell tag_hide-input tag_remove-output docutils container">
@@ -547,7 +572,7 @@ plt.xlabel(&#39;Year&#39;)
 <img alt="../_images/cost-benefit-analysis_3_0.png" src="../_images/cost-benefit-analysis_3_0.png" />
 </div>
 <figcaption>
-<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Normalized present value of a cost or benefit in year <span class="math notranslate nohighlight">\(t\)</span> for different discount rates.</span><a class="headerlink" href="#cost-contribution" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">Normalized present value of a cost or benefit in year <span class="math notranslate nohighlight">\(t\)</span> for different discount rates.</span><a class="headerlink" href="#cost-contribution" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="economic-valuation-of-human-life">
@@ -638,17 +663,17 @@ In the economic optimization the total costs (<span class="math notranslate nohi
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="example-dike-heightening.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="decision-making.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Application of economic optimization: optimal dike heightening</p>
+            <p class="prev-next-title">Decision-making under uncertainty</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="example-types-of-risk.html" title="next page">
+    <a class='right-next' id="next-link" href="example-dike-heightening.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Combination of individual, societal and economic risk for a dike ring area</p>
+        <p class="prev-next-title">Application of economic optimization: optimal dike heightening</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

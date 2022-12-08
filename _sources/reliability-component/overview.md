@@ -1,5 +1,7 @@
 # Component Reliability
 
+This is a key part of step 3 in a risk analysis: quantitative analysis.
+
 Component reliability Analysis:  
 - limit states (servicability, ultimate) and limit-state functions; failure definition
 - Design frameworks 
