@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Probabilistic Design" href="prob-design/overview.html" />
@@ -375,14 +377,46 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="welcome">
 <h1>Welcome<a class="headerlink" href="#welcome" title="Permalink to this headline">#</a></h1>
-<p>Welcome to the homepage of weeks 2.7 and 2.8 on Risk and Reliability. Blablabla…</p>
-<p>Learning objectives of this chapter:</p>
+<p>Welcome to the lecture notes for weeks 2.7 and 2.8 which provides an introduction to risk and reliability.</p>
+<p><em>Risk</em> is often defined simply as the combination of probability and consequences; it is a measure of how bad something can be (the consequence) combined with the chance that it can happen. In mathematical form:</p>
+<div class="math notranslate nohighlight">
+\[\text{Risk}_\text{bad thing}=\text{Consequence}_\text{bad thing}\cdot\text{Probability}_\text{bad thing}\]</div>
+<p>As engineers we are typically concerned with making sure bad things don’t happen, or, stated more precisely for our purposes: <em>reducing the <strong>probability</strong> of a bad thing happening to an <strong>acceptable</strong> level.</em> Although much of this document focuses on calculating <span class="math notranslate nohighlight">\(\text{Probability}_\text{bad thing}\)</span>, we call this a reliability analysis, where <em>reliability</em> is simply</p>
+<div class="math notranslate nohighlight">
+\[\text{Reliability}=1-\text{Probability}_\text{bad thing}\]</div>
+<p>So in fact, as engineers we are optimistic, otherwise this chapter would be called Risk and <em>Un</em>reliability.</p>
+<div class="dropdown admonition note">
+<p class="admonition-title">Note</p>
+<p>Why are the variables above written using words? Because this document and many others use a variety of different terms to talk about the same concepts, for example, failure probability, <span class="math notranslate nohighlight">\(p_f\)</span>, is often used when reliability analyses are done for structural components; however, this term is misleading in the situation where we want to estimate the probability that the concentration of a solute in groundwater exceeds a certain value, or the discharge of a river falling below a regularotry threshold for ship traffic or fish migration.</p>
+</div>
+<p>In short, risk and reliability cannot be defined without <em>probability</em>. These concepts are necessary in order to quantify uncertainty and take it into account when making decisions, regardless of whether our specific task is to investigate, assess, design or create policy for a particular engineering problem. Probability theory is a powerful tool because it provides a way to quantify many aspects of uncertainty, for example:</p>
 <ul class="simple">
-<li><p>Basic concepts of risk, risk analysis, decision analysis</p></li>
-<li><p>Assessment and quantification of risks for a (simplified) system with different risk metrics  (individual, societal risk / FN curve, economic risk)</p></li>
-<li><p>Application of (simplified) cost benefit analysis, decision analysis and economic optimization for engineering projects</p></li>
-<li><p>Apply and derive safety standards for individual and societal risk</p></li>
+<li><p>precision of measurements</p></li>
+<li><p>variability in data</p></li>
+<li><p>accuracy and precision of data-driven or physics-based models</p></li>
+<li><p>stochastic processes</p></li>
+<li><p>unknown conditions due to lack of data or</p></li>
+<li><p>inability to predict the outcome of future events with sufficient accuracy or precision</p></li>
+<li><p>and many more</p></li>
 </ul>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Exam Information</p>
+<p>Key concepts from these lecture notes that will be assessed on the MUDE exam are:</p>
+<ul class="simple">
+<li><p>Definitions of risk and steps of a risk analysis</p></li>
+<li><p>Schematize simple systems; evaluate system and component reliability (quantitative risk analysis methods)</p></li>
+<li><p>Use of probability to design and assess engineering systems and components</p></li>
+<li><p>Decision analysis, cost-benefit analysis and economic optimization (risk assessment methods)</p></li>
+<li><p>Assessment and quantification of risks for a system with three different risk metrics: individual, societal and economic</p></li>
+<li><p>Application and derivation of safety standards for human safety (based on individual and societal risk)</p></li>
+<li><p>Application and derivation of standards based on economic risk</p></li>
+</ul>
+<p>Although the list is long, the methods are introduced in a simple form and are applied to simplified systems of engineering problems within Civil and Environmental Engineering and Geosciences.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This digital document is prepared for CEGM1000: Modeling, Uncertainty and Data for Engineers, a first year MSc course in the Civil Engineering and Geosciences faculty at TU Delft.</p>
+</div>
 <div class="toctree-wrapper compound">
 </div>
 </section>
