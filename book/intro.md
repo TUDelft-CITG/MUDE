@@ -12,9 +12,12 @@ $$\text{Reliability}=1-\text{Probability}_\text{bad thing}$$
 
 So in fact, as engineers we are optimistic, otherwise this chapter would be called Risk and *Un*reliability.
 
+```{note}
+:class: dropdown
 Why are the variables above written using words? Because this document and many others use a variety of different terms to talk about the same concepts, for example, failure probability, $p_f$, is often used when reliability analyses are done for structural components; however, this term is misleading in the situation where we want to estimate the probability that the concentration of a solute in groundwater exceeds a certain value, or the discharge of a river falling below a regularotry threshold for ship traffic or fish migration.
+```
 
-In short, risk and reliability are both concerned with probability; these concepts are necessary in order to quantify uncertainty and take it into account in our decision-making, regardless of whether our current task is to investigate, assess, design or create policy for a particular engineering problem. Probability theory is a powerful tool because it provides a way to quantify many aspects of uncertainty, for example:
+In short, risk and reliability cannot be defined without *probability*. These concepts are necessary in order to quantify uncertainty and take it into account when making decisions, regardless of whether our specific task is to investigate, assess, design or create policy for a particular engineering problem. Probability theory is a powerful tool because it provides a way to quantify many aspects of uncertainty, for example:
 - precision of measurements
 - variability in data
 - accuracy and precision of data-driven or physics-based models
@@ -23,9 +26,11 @@ In short, risk and reliability are both concerned with probability; these concep
 - inability to predict the outcome of future events with sufficient accuracy or precision
 - and many more
 
+```{admonition} Exam Information
+:class: tip, dropdown
 Key concepts from these lecture notes that will be assessed on the MUDE exam are:
 - Definitions of risk and steps of a risk analysis
-- Schematize simple systems and evaluate system and component (quantitative risk analysis methods)
+- Schematize simple systems; evaluate system and component reliability (quantitative risk analysis methods)
 - Use of probability to design and assess engineering systems and components
 - Decision analysis, cost-benefit analysis and economic optimization (risk assessment methods)
 - Assessment and quantification of risks for a system with three different risk metrics: individual, societal and economic
@@ -33,6 +38,7 @@ Key concepts from these lecture notes that will be assessed on the MUDE exam are
 - Application and derivation of standards based on economic risk
 
 Although the list is long, the methods are introduced in a simple form and are applied to simplified systems of engineering problems within Civil and Environmental Engineering and Geosciences.
+```
 
 ```{note}
 This digital document is prepared for CEGM1000: Modeling, Uncertainty and Data for Engineers, a first year MSc course in the Civil Engineering and Geosciences faculty at TU Delft.
