@@ -425,31 +425,32 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="definition-of-risk">
 <h1>Definition of risk<a class="headerlink" href="#definition-of-risk" title="Permalink to this headline">#</a></h1>
-<div style="text-align: justify">Almost all activities in life are characterized by some level of risk. Especially in the design and management of engineering systems risk and safety are key concepts and need to be taken into account explicitly. In social discussions no unambiguous meaning is assigned to the concept of risk. Two definitions given in the Oxford dictionary are: 1) a situation involving exposure to danger; 2) the possibility that something unpleasant or unwelcome will happen.</div>
-<div style="text-align: justify">The first definition focuses on the consequences, the second on the possibility or probability. Quantifying and evaluating risks based on merely the probabilities or consequences is less realistic. For example, the risk of losing € 100 with a probability of 50% is different than the risk of losing € 1000 with the same probability. Also, the risk associated with losing a given sum of money will depend on the probability of the event.</div>
-An often-used definition considers risk as expected value:<br>
-<br>
-<div style="text-align: center"><em> Risk is the probability of an undesired event multiplied by the consequences</em></div>
+<p>Almost all activities in life are characterized by some level of risk. Especially in the design and management of engineering systems risk and safety are key concepts and need to be taken into account explicitly. In social discussions no unambiguous meaning is assigned to the concept of risk. Two definitions given in the Oxford dictionary are: 1) a situation involving exposure to danger; 2) the possibility that something unpleasant or unwelcome will happen.</p>
+<p>The first definition focuses on the consequences, the second on the possibility or probability. Quantifying and evaluating risks based on merely the probabilities or consequences is less realistic. For example, the risk of losing € 100 with a probability of 50% is different than the risk of losing € 1000 with the same probability. Also, the risk associated with losing a given sum of money will depend on the probability of the event.
+An often-used definition considers risk as expected value:
+<br></p>
+<div style="text-align: center"><em> Risk is the probability of an undesired event multiplied by the consequences.</em></div>
 <br>
 <p>The unit of risk now depends on the units of probability and consequences. The probability of an event is generally expressed as the probability per unit time, for example per year. The consequences of an undesired event are often multi-dimensional, i.e. they can consist of different types of consequences, such as material, ecological damages, injuries and fatalities (see section 3.2.2 for further details). In many applications in engineering consequences are expressed by means of a monetary value. The unit of the risk (or expected value <span class="math notranslate nohighlight">\(
  E(d)\)</span> ) then becomes € per year. For a case with one event scenario <em>i</em>  with probability <em><span class="math notranslate nohighlight">\(p_{i}\)</span> </em> it yields:
 $<span class="math notranslate nohighlight">\(
- E(d) = p_{i}d_{i}                                         (3.1) 
- \)</span>$										
-A more general definition of risk has been given by Kaplan and Garrick (1981):</p>
-<blockquote>
-<div><p><em>Risk is a set of scenarios (<em><span class="math notranslate nohighlight">\(s_{i}\)</span> </em> ), each of which has a probability (<em><span class="math notranslate nohighlight">\(p_{i}\)</span> </em> ) and a consequence (<em><span class="math notranslate nohighlight">\(d_{i}\)</span> </em>)</em><br></p>
-</div></blockquote>
+ E(d) = p_{i}d_{i} 
+ \)</span>$ (risk_definition)</p>
+<p>A more general definition of risk has been given by Kaplan and Garrick (1981):<br>
+<br></p>
+<div style="text-align: center"><em> Risk is a set of scenarios ($s_{i}$), each of which has a probability ($p_{i}$) and a consequence ($d_{i}$).</em></div>
+<br>
 <p>This definition of Kaplan and Garrick allows the use of various so-called risk metrics (or risk measures) to quantify or depict the risk. The expected value of the damage for a set of multiple discrete scenarios{1,….,<em>n</em>} , can be expressed as:
 $<span class="math notranslate nohighlight">\(
-	E(d) = \sum_{S_{i=1}}^{n}p_{i}d_{i}								(3.2)
-    \)</span>$</p>
- <br> 
-   <figure>
-<center><img src="1.png" style="width: 300px; height: 200px;"/></figure><br>Figure 3.1 FN curve, showing the probability of exceedance of a certain number of fatalities N on Log-Log scale.</center>
-<figcaption align = "center"></figcaption>                               
-<br>       
-The expected value does not give insight in the magnitude of probability and consequences and the contribution of individual scenarios. Therefore, an often-used alternative risk metric is the risk curve. It shows the probability of exceedance of a certain magnitude of consequences. A well-known example of such a risk curve is the FN curve, which displays the probability of exceedance of <em>N</em> fatalities. The values on both axes are generally shown on a logarithmic scale, see Figure 3.1Figure 3.1 for an example. The FN curve was originally introduced for the assessment of the risks in the nuclear industry (Farmer, 1967; Kendall et al., 1977) and is now used to display and limit risks in various countries and sectors. Further information on the use of FN curves and a simple example of how to construct such a curve are included in section 3.5.1. 
+E(d) = \sum_{S_{i=1}}^{n}p_{i}d_{i}
+\)</span>$ (risk_definition_sum)</p>
+<figure class="align-default" id="fn-curve">
+<a class="reference internal image-reference" href="figures/1.png"><img alt="figures/1.png" src="figures/1.png" style="height: 200px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">FN curve, showing the probability of exceedance of a certain number of fatalities N on Log-Log scale.</span><a class="headerlink" href="#fn-curve" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The expected value does not give insight in the magnitude of probability and consequences and the contribution of individual scenarios. Therefore, an often-used alternative risk metric is the risk curve. It shows the probability of exceedance of a certain magnitude of consequences. A well-known example of such a risk curve is the FN curve, which displays the probability of exceedance of <em>N</em> fatalities. The values on both axes are generally shown on a logarithmic scale, see Figure 3.1Figure 3.1 for an example. The FN curve was originally introduced for the assessment of the risks in the nuclear industry (Farmer, 1967; Kendall et al., 1977) and is now used to display and limit risks in various countries and sectors. Further information on the use of FN curves and a simple example of how to construct such a curve are included in section 3.5.1.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="other-risk-definitions">
 <h1>Other risk definitions<a class="headerlink" href="#other-risk-definitions" title="Permalink to this headline">#</a></h1>
@@ -499,16 +500,12 @@ The expected value does not give insight in the magnitude of probability and con
 </tr>
 </tbody>
 </table>
-<p>The definitions applied in the research on natural hazards, often define risk in terms of more qualitative concepts such as hazard, vulnerability and exposure<br></p>
-<blockquote>
-<div><blockquote>
-<div><ul class="simple">
-<li><p>Hazard: A dangerous phenomenon, substance, human activity or condition that may cause loss of life, injury or other health impacts, property damage, loss of livelihoods and services, social and economic disruption, or environmental damage<br></p></li>
-<li><p>Vulnerability: The characteristics and circumstances of a community, system or asset that make it susceptible to the damaging effects of a hazard<br></p></li>
-<li><p>People, property, systems, or other elements present in hazard zones that are thereby subject to potential losses<br></p></li>
+<p>The definitions applied in the research on natural hazards, often define risk in terms of more qualitative concepts such as hazard, vulnerability and exposure</p>
+<ul class="simple">
+<li><p>Hazard: A dangerous phenomenon, substance, human activity or condition that may cause loss of life, injury or other health impacts, property damage, loss of livelihoods and services, social and economic disruption, or environmental damage</p></li>
+<li><p>Vulnerability: The characteristics and circumstances of a community, system or asset that make it susceptible to the damaging effects of a hazard</p></li>
+<li><p>People, property, systems, or other elements present in hazard zones that are thereby subject to potential losses</p></li>
 </ul>
-</div></blockquote>
-</div></blockquote>
 </section>
 
     <script type="text/x-thebe-config">
