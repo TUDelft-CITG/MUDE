@@ -1,6 +1,6 @@
 # Markdown and Notebook recipes for the MUDE Jupyter Book
 
-## Figures
+## Figures 
 
 To add a figure, just copy the figure to the correct directory. Then, in your markdown file, include the figure as follows:
 
@@ -45,6 +45,37 @@ To number the equations and refer in text, you need to provide a label to the eq
     $$
         F = m \cdot a
     $$ (newtons_second_law)
+
+## Code blocks that produce figures
+
+This can be done with notebooks, but it's not easy to make references to figures in notebooks. You can also place the code that produces and saves the figure in a separate `.py` file, and include that in a markdown file. Let's say we want to make a simple sine wave:
+
+1. Place the code of the figure in a `.py` file. In this case, `sinewave.py` produces our figure. The code looks like this:
+   
+        import numpy as np
+        import matplotlib.pyplot as plt
+
+        x = np.linspace(0, 2*np.pi, endpoint=True)
+        y = np.sin(x)
+
+        plt.figure()
+        plt.plot(x, y)
+        plt.title('$y=\sin(x)$')
+        plt.xlabel('$x$')
+        plt.ylabel('$y$')
+        plt.savefig('sinewave.svg')
+
+2. Run the code and make sure it saves a figure in `.svg` format to the directory of the markdown file.
+3. Now include the code file by using the following directives:
+   
+        ````{toggle}
+        ```{eval-rst}
+        .. literalinclude:: sinewave.py
+           :language: python
+        ```
+        ````
+4. Include the figure like described above
+
 
 ## References
 
