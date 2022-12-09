@@ -30,4 +30,4 @@ clean:
 	rm -f book/figures/*.svg
 	jupyter book clean book/
 
-.PHONY: figures all clean
+.PHONY: figures all clean test
