@@ -293,35 +293,6 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/risk-assessment/example-FN-curve.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -344,7 +315,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/risk-assessment/example-FN-curve.ipynb"
+        <a href="../_sources/risk-assessment/example-FN-curve.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -355,7 +326,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.ipynb</span>
+<span class="headerbtn__text-container">.md</span>
 </a>
 
       </li>
@@ -407,144 +378,190 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="calculation-of-an-fn-curve">
 <h1>Calculation of an FN curve<a class="headerlink" href="#calculation-of-an-fn-curve" title="Permalink to this headline">#</a></h1>
-<figure>
-  <IMG SRC="https://raw.githubusercontent.com/mbakker7/exploratory_computing_with_python/master/tudelft_logo.png" WIDTH=200 ALIGN="right">
-</figure>
-<p><strong>Example 3.6</strong></p>
 <p>The following example shows the composition of an FN curve for a system with two mutually exclusive event scenarios.</p>
 <p>Accident 1 with <span class="math notranslate nohighlight">\(N_{1}=10\)</span> fatalities and a probability of <span class="math notranslate nohighlight">\(P_{1} = 10^{-2}\)</span> per year
 Accident 2 with <span class="math notranslate nohighlight">\(N_{2}=100\)</span> fatalities and a probability of <span class="math notranslate nohighlight">\(P_{1} = 10^{-3}\)</span> per year</p>
 <p>Based on this information the probability mass function can  be formed (first graph). Consequently, the cumulative  distribution function can be made (second graph). Finally, the probability of exceedance or the FN curve is made (third graph).</p>
 <p>Finally, we note that the expected value of the number of fatalities equals:</p>
 <p><span class="math notranslate nohighlight">\(E(N) = P_{1}N_{1} + P_{2}N_{2} = 0.2\)</span> fatalities per year</p>
-<div class="cell tag_remove-input docutils container">
-</div>
-<div class="cell tag_remove-input docutils container">
-</div>
-<div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Probability density/mass function
+<div class="toggle docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">mpl_toolkits.axisartist.axislines</span> <span class="kn">import</span> <span class="n">AxesZero</span>
 
-fig = plt.figure(figsize=(8,6))
-ax = fig.add_subplot(axes_class=AxesZero)
+<span class="c1"># TUD Color Palette</span>
 
-for direction in [&quot;xzero&quot;, &quot;yzero&quot;]:
-    ax.axis[direction].set_axisline_style(&quot;-|&gt;&quot;) # add arrows
-    ax.axis[direction].set_visible(True) # x and y from origin
+<span class="k">def</span> <span class="nf">set_TUDstyle</span><span class="p">():</span>
+    <span class="n">TUcolor</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;cyan&quot;</span><span class="p">:</span> <span class="s2">&quot;#00A6D6&quot;</span><span class="p">,</span> <span class="s2">&quot;darkgreen&quot;</span><span class="p">:</span> <span class="s2">&quot;#009B77&quot;</span><span class="p">,</span> <span class="s2">&quot;purple&quot;</span><span class="p">:</span> <span class="s2">&quot;#6F1D77&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;darkred&quot;</span><span class="p">:</span> <span class="s2">&quot;#A50034&quot;</span><span class="p">,</span> <span class="s2">&quot;darkblue&quot;</span><span class="p">:</span> <span class="s2">&quot;#0C2340&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;orange&quot;</span><span class="p">:</span> <span class="s2">&quot;#EC6842&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">:</span> <span class="s2">&quot;#6CC24A&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;lightcyan&quot;</span><span class="p">:</span> <span class="s2">&quot;#00B8C8&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">:</span> <span class="s2">&quot;#E03C31&quot;</span><span class="p">,</span> <span class="s2">&quot;pink&quot;</span><span class="p">:</span> <span class="s2">&quot;#EF60A3&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;yellow&quot;</span><span class="p">:</span> <span class="s2">&quot;#FFB81C&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">:</span> <span class="s2">&quot;#0076C2&quot;</span><span class="p">}</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;axes.prop_cycle&#39;</span><span class="p">:</span> <span class="n">plt</span><span class="o">.</span><span class="n">cycler</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">TUcolor</span><span class="o">.</span><span class="n">values</span><span class="p">()),</span>
+                         <span class="s1">&#39;font.size&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> <span class="s2">&quot;lines.linewidth&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">})</span>
+    <span class="k">return</span> <span class="n">TUcolor</span>
+
+<span class="c1"># Probability density/mass function</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">axes_class</span><span class="o">=</span><span class="n">AxesZero</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">direction</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;xzero&quot;</span><span class="p">,</span> <span class="s2">&quot;yzero&quot;</span><span class="p">]:</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="n">direction</span><span class="p">]</span><span class="o">.</span><span class="n">set_axisline_style</span><span class="p">(</span><span class="s2">&quot;-|&gt;&quot;</span><span class="p">)</span> <span class="c1"># add arrows</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="n">direction</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># x and y from origin</span>
     
-for direction in [&quot;left&quot;, &quot;right&quot;, &quot;bottom&quot;, &quot;top&quot;]:
-    ax.axis[direction].set_visible(False) # hide borders
+<span class="k">for</span> <span class="n">direction</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="s2">&quot;right&quot;</span><span class="p">,</span> <span class="s2">&quot;bottom&quot;</span><span class="p">,</span> <span class="s2">&quot;top&quot;</span><span class="p">]:</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="n">direction</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span> <span class="c1"># hide borders</span>
 
-N_fatalities = [&#39;0&#39;, &#39;10&#39;, &#39;100&#39;]
-N_fatalities_loc = [0.05, 0.30, 0.66]
+<span class="n">N_fatalities</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;100&#39;</span><span class="p">]</span>
+<span class="n">N_fatalities_loc</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.30</span><span class="p">,</span> <span class="mf">0.66</span><span class="p">]</span>
 
-pdf = [&#39;0.989&#39;, &#39;$10^{-2}$&#39;, &#39;$10^{-3}$&#39;]
-pdf_loc = [0.99, 0.66, 0.33]
+<span class="n">pdf</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;0.989&#39;</span><span class="p">,</span> <span class="s1">&#39;$10^{-2}$&#39;</span><span class="p">,</span> <span class="s1">&#39;$10^{-3}$&#39;</span><span class="p">]</span>
+<span class="n">pdf_loc</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.99</span><span class="p">,</span> <span class="mf">0.66</span><span class="p">,</span> <span class="mf">0.33</span><span class="p">]</span>
 
-set_TUDstyle()
-ax.bar(N_fatalities_loc, pdf_loc, width=0.05, color= &#39;lightcyan&#39;, edgecolor=&#39;k&#39;)
+<span class="n">set_TUDstyle</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">N_fatalities_loc</span><span class="p">,</span> <span class="n">pdf_loc</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span> <span class="s1">&#39;lightcyan&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
 
-ax.set_xticks(N_fatalities_loc)
-ax.set_xticklabels(N_fatalities)
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">N_fatalities_loc</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">N_fatalities</span><span class="p">)</span>
 
-ax.set_yticks(pdf_loc)
-ax.set_yticklabels(pdf)
+<span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">pdf_loc</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">(</span><span class="n">pdf</span><span class="p">)</span>
 
-ax.set_title(&#39;Probability density/mass function, $f_{N}(n)$&#39;, x=0.6, y=1.0)
-ax.set_xlabel(&#39;Fatalities&#39;)
-ax.set_ylabel(&#39;Probability&#39;)
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Probability density/mass function, $f_</span><span class="si">{N}</span><span class="s1">(n)$&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Fatalities&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Probability&#39;</span><span class="p">)</span>
 
-ax.axhline(y=0.66, xmin= 0.01, xmax= 0.40, linewidth=1, linestyle=&#39;dashed&#39;, color=&#39;k&#39;) # add dashed horizontal lines
-ax.axhline(y=0.33, xmin= 0.01, xmax= 0.90, linewidth=1, linestyle=&#39;dashed&#39;, color=&#39;k&#39;)
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mf">0.66</span><span class="p">,</span> <span class="n">xmin</span><span class="o">=</span> <span class="mf">0.01</span><span class="p">,</span> <span class="n">xmax</span><span class="o">=</span> <span class="mf">0.40</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span> <span class="c1"># add dashed horizontal lines</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mf">0.33</span><span class="p">,</span> <span class="n">xmin</span><span class="o">=</span> <span class="mf">0.01</span><span class="p">,</span> <span class="n">xmax</span><span class="o">=</span> <span class="mf">0.90</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;ex_FN_curve_step_01.svg&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.lines.Line2D at 0x7f2525bbcf40&gt;
-</pre></div>
-</div>
-<img alt="../_images/example-FN-curve_4_1.png" src="../_images/example-FN-curve_4_1.png" />
-</div>
-</div>
-<div class="cell tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Cumulative Distribution Function 
+<figure class="align-default" id="ex-fn-curve-step-01">
+<a class="reference internal image-reference" href="../_images/ex_FN_curve_step_01.svg"><img alt="../_images/ex_FN_curve_step_01.svg" src="../_images/ex_FN_curve_step_01.svg" width="400" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 10 </span><span class="caption-text">Example FN-curve calculation: probability mass function (PMF).</span><a class="headerlink" href="#ex-fn-curve-step-01" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="toggle docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">mpl_toolkits.axisartist.axislines</span> <span class="kn">import</span> <span class="n">AxesZero</span>
 
-fig = plt.figure(figsize=(8,6))
-ax = fig.add_subplot(axes_class=AxesZero)
+<span class="c1"># TUD Color Palette</span>
 
-for direction in [&quot;xzero&quot;, &quot;yzero&quot;]:
-    ax.axis[direction].set_axisline_style(&quot;-|&gt;&quot;) # add arrows
-    ax.axis[direction].set_visible(True) # x and y from origin
+<span class="k">def</span> <span class="nf">set_TUDstyle</span><span class="p">():</span>
+    <span class="n">TUcolor</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;cyan&quot;</span><span class="p">:</span> <span class="s2">&quot;#00A6D6&quot;</span><span class="p">,</span> <span class="s2">&quot;darkgreen&quot;</span><span class="p">:</span> <span class="s2">&quot;#009B77&quot;</span><span class="p">,</span> <span class="s2">&quot;purple&quot;</span><span class="p">:</span> <span class="s2">&quot;#6F1D77&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;darkred&quot;</span><span class="p">:</span> <span class="s2">&quot;#A50034&quot;</span><span class="p">,</span> <span class="s2">&quot;darkblue&quot;</span><span class="p">:</span> <span class="s2">&quot;#0C2340&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;orange&quot;</span><span class="p">:</span> <span class="s2">&quot;#EC6842&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">:</span> <span class="s2">&quot;#6CC24A&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;lightcyan&quot;</span><span class="p">:</span> <span class="s2">&quot;#00B8C8&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">:</span> <span class="s2">&quot;#E03C31&quot;</span><span class="p">,</span> <span class="s2">&quot;pink&quot;</span><span class="p">:</span> <span class="s2">&quot;#EF60A3&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;yellow&quot;</span><span class="p">:</span> <span class="s2">&quot;#FFB81C&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">:</span> <span class="s2">&quot;#0076C2&quot;</span><span class="p">}</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;axes.prop_cycle&#39;</span><span class="p">:</span> <span class="n">plt</span><span class="o">.</span><span class="n">cycler</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">TUcolor</span><span class="o">.</span><span class="n">values</span><span class="p">()),</span>
+                         <span class="s1">&#39;font.size&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> <span class="s2">&quot;lines.linewidth&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">})</span>
+    <span class="k">return</span> <span class="n">TUcolor</span>
+
+<span class="c1"># Cumulative Distribution Function </span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">axes_class</span><span class="o">=</span><span class="n">AxesZero</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">direction</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;xzero&quot;</span><span class="p">,</span> <span class="s2">&quot;yzero&quot;</span><span class="p">]:</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="n">direction</span><span class="p">]</span><span class="o">.</span><span class="n">set_axisline_style</span><span class="p">(</span><span class="s2">&quot;-|&gt;&quot;</span><span class="p">)</span> <span class="c1"># add arrows</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="n">direction</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># x and y from origin</span>
     
-for direction in [&quot;left&quot;, &quot;right&quot;, &quot;bottom&quot;, &quot;top&quot;]:
-    ax.axis[direction].set_visible(False) # hide borders
+<span class="k">for</span> <span class="n">direction</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="s2">&quot;right&quot;</span><span class="p">,</span> <span class="s2">&quot;bottom&quot;</span><span class="p">,</span> <span class="s2">&quot;top&quot;</span><span class="p">]:</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="n">direction</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span> <span class="c1"># hide borders</span>
 
-N_fatalities = [&#39;0&#39;, &#39;10&#39;, &#39;100&#39;, &#39;&#39;]
-N_fatalities_loc = [0.03, 0.33, 0.76, 0.95]
+<span class="n">N_fatalities</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;100&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">]</span>
+<span class="n">N_fatalities_loc</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.03</span><span class="p">,</span> <span class="mf">0.33</span><span class="p">,</span> <span class="mf">0.76</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">]</span>
 
-pdf = [&#39;0&#39;, &#39;0.989&#39;, &#39;0.999&#39;, &#39;1&#39;]
-pdf_loc = [0.03, 0.66, 0.86, 0.99]
+<span class="n">pdf</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="s1">&#39;0.989&#39;</span><span class="p">,</span> <span class="s1">&#39;0.999&#39;</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">]</span>
+<span class="n">pdf_loc</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.03</span><span class="p">,</span> <span class="mf">0.66</span><span class="p">,</span> <span class="mf">0.86</span><span class="p">,</span> <span class="mf">0.99</span><span class="p">]</span>
 
-ax.step(N_fatalities_loc, pdf_loc, color= &#39;darkblue&#39;,linewidth=4)
+<span class="n">ax</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">N_fatalities_loc</span><span class="p">,</span> <span class="n">pdf_loc</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span> <span class="s1">&#39;darkblue&#39;</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
 
-ax.set_xticks(N_fatalities_loc)
-ax.set_xticklabels(N_fatalities)
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">N_fatalities_loc</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">N_fatalities</span><span class="p">)</span>
 
-ax.set_yticks(pdf_loc)
-ax.set_yticklabels(pdf)
+<span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">pdf_loc</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">(</span><span class="n">pdf</span><span class="p">)</span>
 
-ax.set_title(&#39;Cumulative distribution function, $f_{N}(x) = P(N \leq n)$&#39;, x=0.55, y=1.1)
-ax.set_xlabel(&#39;Fatalities&#39;)
-ax.set_ylabel(&#39;Probability&#39;)
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Cumulative distribution function, $f_</span><span class="si">{N}</span><span class="s1">(x) = P(N \leq n)$&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mf">0.55</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.1</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Fatalities&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Probability&#39;</span><span class="p">)</span>
 
-ax.text(0.8, 0.9, r&#39;} $10^{-3}$&#39;, fontsize=20)
-ax.text(0.4, 0.725, r&#39;} $10^{-2}$&#39;, fontsize=30);
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/example-FN-curve_5_0.png" src="../_images/example-FN-curve_5_0.png" />
-</div>
-</div>
-<div class="cell tag_hide-output tag_hide-input docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># FN curve
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;} $10^{-3}$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.725</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;} $10^{-2}$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
 
-fig = plt.figure(figsize=(8,6))
-ax = fig.add_subplot(axes_class=AxesZero)
-
-for direction in [&quot;xzero&quot;, &quot;yzero&quot;]:
-    ax.axis[direction].set_axisline_style(&quot;-|&gt;&quot;) # add arrows
-    ax.axis[direction].set_visible(True) # x and y from origin
-    
-for direction in [&quot;left&quot;, &quot;right&quot;, &quot;bottom&quot;, &quot;top&quot;]:
-    ax.axis[direction].set_visible(False) # hide borders
-    
-N_fatalities = [&#39;0&#39;, &#39;10&#39;, &#39;100&#39;,&#39;100&#39;]
-N_fatalities_loc = [0.03,0.33, 0.95, 0.95]
-
-pdf = [&#39;0&#39;,&#39;$1.1 * 10^{-2}$&#39;, &#39;$10^{-3}$&#39;,&#39;0&#39;]
-pdf_loc = [0.03,0.99, 0.66, 0.03]
-
-ax.step(N_fatalities_loc, pdf_loc, color= &#39;darkblue&#39;,linewidth=4)
-
-ax.set_xticks(N_fatalities_loc)
-ax.set_xticklabels(N_fatalities)
-
-ax.set_yticks(pdf_loc)
-ax.set_yticklabels(pdf)
-
-ax.set_title(&#39;FN curve, $f_{N}(x) = P(N \leq n)$&#39;, x=0.75, y=1.1)
-ax.set_xlabel(&#39;Fatalities&#39;)
-ax.set_ylabel(&#39;Probability&#39;);
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;ex_FN_curve_step_02.svg&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/example-FN-curve_6_0.png" src="../_images/example-FN-curve_6_0.png" />
+<figure class="align-default" id="ex-fn-curve-step-02">
+<a class="reference internal image-reference" href="../_images/ex_FN_curve_step_02.svg"><img alt="../_images/ex_FN_curve_step_02.svg" src="../_images/ex_FN_curve_step_02.svg" width="400" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Example FN-curve calculation: cumulative probability function (CDF).</span><a class="headerlink" href="#ex-fn-curve-step-02" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="toggle docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">mpl_toolkits.axisartist.axislines</span> <span class="kn">import</span> <span class="n">AxesZero</span>
+
+<span class="c1"># TUD Color Palette</span>
+
+<span class="k">def</span> <span class="nf">set_TUDstyle</span><span class="p">():</span>
+    <span class="n">TUcolor</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;cyan&quot;</span><span class="p">:</span> <span class="s2">&quot;#00A6D6&quot;</span><span class="p">,</span> <span class="s2">&quot;darkgreen&quot;</span><span class="p">:</span> <span class="s2">&quot;#009B77&quot;</span><span class="p">,</span> <span class="s2">&quot;purple&quot;</span><span class="p">:</span> <span class="s2">&quot;#6F1D77&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;darkred&quot;</span><span class="p">:</span> <span class="s2">&quot;#A50034&quot;</span><span class="p">,</span> <span class="s2">&quot;darkblue&quot;</span><span class="p">:</span> <span class="s2">&quot;#0C2340&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;orange&quot;</span><span class="p">:</span> <span class="s2">&quot;#EC6842&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">:</span> <span class="s2">&quot;#6CC24A&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;lightcyan&quot;</span><span class="p">:</span> <span class="s2">&quot;#00B8C8&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">:</span> <span class="s2">&quot;#E03C31&quot;</span><span class="p">,</span> <span class="s2">&quot;pink&quot;</span><span class="p">:</span> <span class="s2">&quot;#EF60A3&quot;</span><span class="p">,</span>
+               <span class="s2">&quot;yellow&quot;</span><span class="p">:</span> <span class="s2">&quot;#FFB81C&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">:</span> <span class="s2">&quot;#0076C2&quot;</span><span class="p">}</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;axes.prop_cycle&#39;</span><span class="p">:</span> <span class="n">plt</span><span class="o">.</span><span class="n">cycler</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">TUcolor</span><span class="o">.</span><span class="n">values</span><span class="p">()),</span>
+                         <span class="s1">&#39;font.size&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> <span class="s2">&quot;lines.linewidth&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">})</span>
+    <span class="k">return</span> <span class="n">TUcolor</span>
+
+<span class="c1"># FN curve</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">axes_class</span><span class="o">=</span><span class="n">AxesZero</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">direction</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;xzero&quot;</span><span class="p">,</span> <span class="s2">&quot;yzero&quot;</span><span class="p">]:</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="n">direction</span><span class="p">]</span><span class="o">.</span><span class="n">set_axisline_style</span><span class="p">(</span><span class="s2">&quot;-|&gt;&quot;</span><span class="p">)</span> <span class="c1"># add arrows</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="n">direction</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># x and y from origin</span>
+    
+<span class="k">for</span> <span class="n">direction</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="s2">&quot;right&quot;</span><span class="p">,</span> <span class="s2">&quot;bottom&quot;</span><span class="p">,</span> <span class="s2">&quot;top&quot;</span><span class="p">]:</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="n">direction</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span> <span class="c1"># hide borders</span>
+    
+<span class="n">N_fatalities</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;100&#39;</span><span class="p">,</span><span class="s1">&#39;100&#39;</span><span class="p">]</span>
+<span class="n">N_fatalities_loc</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.03</span><span class="p">,</span><span class="mf">0.33</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">]</span>
+
+<span class="n">pdf</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">,</span><span class="s1">&#39;$1.1 * 10^{-2}$&#39;</span><span class="p">,</span> <span class="s1">&#39;$10^{-3}$&#39;</span><span class="p">,</span><span class="s1">&#39;0&#39;</span><span class="p">]</span>
+<span class="n">pdf_loc</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.03</span><span class="p">,</span><span class="mf">0.99</span><span class="p">,</span> <span class="mf">0.66</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">]</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">N_fatalities_loc</span><span class="p">,</span> <span class="n">pdf_loc</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span> <span class="s1">&#39;darkblue&#39;</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">N_fatalities_loc</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">N_fatalities</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">pdf_loc</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">(</span><span class="n">pdf</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;FN curve, $f_</span><span class="si">{N}</span><span class="s1">(x) = P(N \leq n)$&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.1</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Fatalities&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Probability&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;ex_FN_curve_step_03.svg&#39;</span><span class="p">)</span>
+</pre></div>
 </div>
 </div>
+<figure class="align-default" id="ex-fn-curve-step-03">
+<a class="reference internal image-reference" href="../_images/ex_FN_curve_step_03.svg"><img alt="../_images/ex_FN_curve_step_03.svg" src="../_images/ex_FN_curve_step_03.svg" width="400" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Example FN-curve calculation: exceedance probability (FN curve).</span><a class="headerlink" href="#ex-fn-curve-step-03" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 
     <script type="text/x-thebe-config">

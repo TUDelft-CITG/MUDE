@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Two random variables &#8212; Modelling, Uncertainty and Data for Engineers (MUDE)</title>
+    <title>&lt;no title&gt; &#8212; Modelling, Uncertainty and Data for Engineers (MUDE)</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,12 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Quiz example" href="xx-quiz.html" />
-    <link rel="prev" title="One random variable" href="01-one-random-variable.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -120,34 +116,34 @@ const thebe_selector_output = ".output, .cell_output"
   Contents
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="overview.html">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../prob-design/overview.html">
    Probabilistic Design
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="xx-river-system-example.html">
+    <a class="reference internal" href="../prob-design/xx-river-system-example.html">
      Example: River system
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="01-one-random-variable.html">
+    <a class="reference internal" href="../prob-design/01-one-random-variable.html">
      One random variable
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../prob-design/02-two-random-variables.html">
      Two random variables
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="xx-quiz.html">
+    <a class="reference internal" href="../prob-design/xx-quiz.html">
      Quiz example
     </a>
    </li>
@@ -301,7 +297,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/prob-design/02-two-random-variables.ipynb"
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/code/test_fig_risk.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -344,7 +340,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/prob-design/02-two-random-variables.ipynb"
+        <a href="../_sources/code/test_fig_risk.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -381,23 +377,50 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Two random variables</h1>
+                <h1><no title></h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -405,186 +428,36 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="two-random-variables">
-<h1>Two random variables<a class="headerlink" href="#two-random-variables" title="Permalink to this headline">#</a></h1>
-<p>This becomes much more interesting, but already a lot more complex.</p>
-<p>Start with two loads. Illustrated using</p>
-<ul class="simple">
-<li><p>intuition</p></li>
-<li><p>Venn diagrams</p></li>
-<li><p>bivariate plot</p></li>
-</ul>
-<p>Then we will consider:</p>
-<ul class="simple">
-<li><p>joint / and (discrete)</p></li>
-<li><p>union / or (discrete)</p></li>
-<li><p>Brief illustration: <span class="math notranslate nohighlight">\(Z = R - S\)</span></p></li>
-</ul>
-<div class="alert alert-block alert-success"><b>CSS formatted boxes</b>
-<p>This is created using HTML. Copy everything you see between the <code>&amp;ltdiv …&amp;gt</code> and <code>&amp;lt/div&amp;gt</code> tags. The <code>alert</code> class allows changing the box color from green to yellow or red by changing the word <code>success</code> in the first <code>div</code> tag to <code>warning</code> and <code>danger</code>, respectively. You can only use HTML formatting within the colored box, Markdown does not work inside an HTML tag (this is also true in Jupyter notebooks).</p>
-</div><div class="cell docutils container">
+  <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import matplotlib.pyplot as plt
-import seaborn as sns
-import numpy as np
-import scipy.stats as st
-import pandas as pd
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from scipy.stats import multivariate_normal as mvn
-import sympy as sym
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def norm_copula(u: float, v: float, rho: float) -&gt; float:
-    means = [0, 0]
-    cov_matrix = [[1, rho], [rho, 1]]
-    c = mvn(means, cov_matrix)
-    return c.cdf([st.norm.ppf(u), st.norm.ppf(v)])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>norm_copula(1, 0.5, 0.8)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import ex_FN_curve_step_01
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.5
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def p_and(u: float, v: float, rho=0):
-    c = norm_copula(u, v, rho)
-    return 1-u-v+c
-
-def p_or(u, v, rho):
-    c = norm_copula(u, v, rho)
-    return 1 - c
-
-def p_cond1(u, v, rho):
-    c = norm_copula(u, v, rho)
-    return (1-u)*(1-u-v+c)
-
-def p_cond2(u, v, rho):
-    c = norm_copula(u, v, rho)
-    return 1 - c/u
-
-def p_cond3(u, v, rho):
-    &#39;&#39;&#39; Dirty way: only works for bivariate normal &#39;&#39;&#39;
-    x = st.norm.ppf(u)
-    y = st.norm.ppf(v)
-    mu_x = rho*y
-    sigma_x = np.sqrt(1-rho**2)
-    return 1-st.norm.cdf(x, mu_x, sigma_x)
-    
-def p_K(t, rho, N=1000):
-    u = np.random.uniform(0, 1, size=N)
-    v = np.random.uniform(0, 1, size=N) 
-    k = 0
-    for i in range(N):
-        if norm_copula(u[i], v[i], rho)&gt;t:
-            k += 1
-    return k/N
-</pre></div>
-</div>
+<img alt="../_images/test_fig_risk_0_0.png" src="../_images/test_fig_risk_0_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>p_K(0.7, 0)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import ex_FN_curve_step_02
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.053
-</pre></div>
-</div>
+<img alt="../_images/test_fig_risk_1_0.png" src="../_images/test_fig_risk_1_0.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>p_and(0.5, 0.5, 0.5)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import ex_FN_curve_step_03
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.3333333333333333
-</pre></div>
+<img alt="../_images/test_fig_risk_2_0.png" src="../_images/test_fig_risk_2_0.png" />
 </div>
 </div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def plot_figures(u, v, rho):
-    f, ax = plt.subplots(6, figsize=(13,10))
-    # Figure p_AND
-    ax[0].vlines(u, ymin=0, ymax=v, colors=&#39;k&#39;, linestyles=&quot;dashed&quot;)
-    ax[0].hlines(v, xmin=0, xmax=u, colors=&#39;k&#39;, linestyles=&quot;dashed&quot;)
-    ax[0].fill_between([u, 1], v, 1, color=&quot;grey&quot;, linewidth=2, edgecolor=&quot;k&quot;, alpha=1)
-    ax[0].axvspan(0,1,0,1, edgecolor=&quot;k&quot;, linewidth=4, facecolor=&quot;None&quot;)
-    ax[0].set_title(&quot;$p_{AND}$&quot;)
-    
-    #Figure p_OR
-    ax[1].vlines(u, ymin=v, ymax=1, colors=&#39;k&#39;, linestyles=&quot;dashed&quot;)
-    ax[1].hlines(v, xmin=u, xmax=1, colors=&#39;k&#39;, linestyles=&quot;dashed&quot;)
-    ax[1].fill_between(np.array([0, u, u, 1]), np.array([v, v, 0, 0]), 1, color=&quot;grey&quot;, linewidth=2, edgecolor=&quot;k&quot;, alpha=1) 
-    ax[1].axvspan(0,1,0,1, edgecolor=&quot;k&quot;, linewidth=4, facecolor=&quot;None&quot;)
-    ax[1].set_title(&quot;$p_{OR}$&quot;)
-    
-    #Figure p_cond1
-    ax[2].vlines([0, u, 1], ymin=0, ymax=1, colors=&#39;k&#39;, linestyles=&quot;dashed&quot;)
-    ax[2].hlines([0, v, 1], xmin=0, xmax=u, colors=&#39;k&#39;, linestyles=&quot;dashed&quot;)
-    ax[2].fill_between([u, 1], v, 1, color=&quot;grey&quot;, linewidth=2, edgecolor=&quot;k&quot;, alpha=1)
-    ax[2].axvspan(u,1,0,1, edgecolor=&quot;k&quot;, linewidth=4, facecolor=&quot;None&quot;)
-    ax[2].set_title(&quot;$p_{COND1}$&quot;)
-    
-    # Figure p_cond2
-    ax[3].vlines([0, u, 1], ymin=0, ymax=1, colors=&#39;k&#39;, linestyles=&quot;dashed&quot;)
-    ax[3].hlines([0, v, 1], xmin=0, xmax=1, colors=&#39;k&#39;, linestyles=&quot;dashed&quot;)
-    ax[3].fill_between([0, u], v, 1, color=&quot;grey&quot;, linewidth=2, edgecolor=&quot;k&quot;, alpha=1)
-    ax[3].axvspan(0,u,0,1, edgecolor=&quot;k&quot;, linewidth=4, facecolor=&quot;None&quot;)
-    ax[3].set_title(&quot;$p_{COND2}$&quot;)
-    
-    # Figure p_cond3
-    ax[4].vlines([0, u, 1], ymin=0, ymax=1, colors=&#39;k&#39;, linestyles=&quot;dashed&quot;)
-    ax[4].hlines([0, v, 1], xmin=0, xmax=1, colors=&#39;k&#39;, linestyles=&quot;dashed&quot;)
-    ax[4].vlines([u, u], ymin=[0, v], ymax=[v, 1], colors=[&quot;black&quot;, &quot;grey&quot;], linewidth=3, alpha=1)
-    ax[4].set_title(&quot;$p_{COND3}$&quot;)
-    
-    for i in range(6):
-        ax[i].axis(&quot;scaled&quot;)
-    plt.setp(ax, xlim=(0,1), ylim=(0,1))
-    plt.tight_layout()
-    plt.show()
-    return None
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>plot_figures(0.75, 0.2, 0.7)
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/02-two-random-variables_9_0.png" src="../_images/02-two-random-variables_9_0.png" />
-</div>
-</div>
-</section>
 
     <script type="text/x-thebe-config">
     {
@@ -599,7 +472,7 @@ def p_K(t, rho, N=1000):
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./prob-design"
+            path: "./code"
         },
         predefinedOutput: true
     }
@@ -613,20 +486,6 @@ def p_K(t, rho, N=1000):
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="01-one-random-variable.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">One random variable</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="xx-quiz.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Quiz example</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>
