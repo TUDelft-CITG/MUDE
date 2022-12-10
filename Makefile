@@ -24,7 +24,7 @@ book/_build/html/index.html: $(SVGS) $(NBS) $(MDS)
 	jupyter book build book/
 
 test: $(SVGS) $(NBS) $(MDS)
-	jupyter book build -n -W book/
+	jupyter book build -n -W --keep-going book/
 
 clean:
 	rm -f book/figures/*.svg
