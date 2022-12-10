@@ -33,3 +33,6 @@ MANIFEST
 .spyproject
 .vscode
 open_book.sh
+
+# Images from Python code
+*.svg
