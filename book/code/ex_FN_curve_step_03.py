@@ -44,4 +44,4 @@ ax.set_title('FN curve, $f_{N}(x) = P(N \leq n)$', x=0.75, y=1.1)
 ax.set_xlabel('Fatalities')
 ax.set_ylabel('Probability')
 
-plt.savefig('../figures/ex_FN_curve_step_03.svg')
+plt.savefig('ex_FN_curve_step_03.svg')
