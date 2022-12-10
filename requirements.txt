@@ -8,4 +8,3 @@ jupyterquiz
 pytest
 seaborn
 sympy
-mpl_toolkits
