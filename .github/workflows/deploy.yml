@@ -46,8 +46,7 @@ jobs:
       # Build the Jupyter Book
       - name: Build book
         run: |
-          cd book/
-          jupyter-book build .
+          make book
 
       - name: GitHub Pages actions
         uses: JamesIves/github-pages-deploy-action@v4
