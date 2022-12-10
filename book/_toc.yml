@@ -22,7 +22,7 @@ parts:
       - file: risk-assessment/cost-benefit-analysis.ipynb
       - file: risk-assessment/example-dike-heightening.md
       - file: risk-assessment/safety-standards.ipynb
-      - file: risk-assessment/example-FN-curve.ipynb
+      - file: risk-assessment/example-FN-curve.md
       - file: risk-assessment/example-types-of-risk.ipynb
     - file: other-topics/overview.md
     - file: references.md
