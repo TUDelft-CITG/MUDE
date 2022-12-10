@@ -3,6 +3,10 @@ SVGS = $(patsubst book/code/%.py,book/figures/%.svg, $(FIGCODES))
 NBS = $(wildcard book/**/*.ipynb)
 MDS = $(wildcard book/*.md) $(wildcard book/*/*.md)
 
+BASEDIR = $(CURDIR)
+
+export MPLCONFIGDIR := $(CURDIR)/config/
+
 help:
 	@echo 'Makefile for the MUDE Jupyter Book'
 	@echo ''
@@ -10,6 +14,7 @@ help:
 	@echo '   make figures          generate figures'
 	@echo '   make book             generate the Jupyter Book'
 	@echo '   make clean            remove generated files'
+	@echo '   make test             test the Jupyter Book on errors'
 
 all: $(SVGS) book/_build/html/index.html
 
