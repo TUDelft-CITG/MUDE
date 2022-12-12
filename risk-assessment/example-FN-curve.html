@@ -389,18 +389,6 @@ Accident 2 with <span class="math notranslate nohighlight">\(N_{2}=100\)</span> 
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">from</span> <span class="nn">mpl_toolkits.axisartist.axislines</span> <span class="kn">import</span> <span class="n">AxesZero</span>
 
-<span class="c1"># TUD Color Palette</span>
-
-<span class="k">def</span> <span class="nf">set_TUDstyle</span><span class="p">():</span>
-    <span class="n">TUcolor</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;cyan&quot;</span><span class="p">:</span> <span class="s2">&quot;#00A6D6&quot;</span><span class="p">,</span> <span class="s2">&quot;darkgreen&quot;</span><span class="p">:</span> <span class="s2">&quot;#009B77&quot;</span><span class="p">,</span> <span class="s2">&quot;purple&quot;</span><span class="p">:</span> <span class="s2">&quot;#6F1D77&quot;</span><span class="p">,</span>
-               <span class="s2">&quot;darkred&quot;</span><span class="p">:</span> <span class="s2">&quot;#A50034&quot;</span><span class="p">,</span> <span class="s2">&quot;darkblue&quot;</span><span class="p">:</span> <span class="s2">&quot;#0C2340&quot;</span><span class="p">,</span>
-               <span class="s2">&quot;orange&quot;</span><span class="p">:</span> <span class="s2">&quot;#EC6842&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">:</span> <span class="s2">&quot;#6CC24A&quot;</span><span class="p">,</span>
-               <span class="s2">&quot;lightcyan&quot;</span><span class="p">:</span> <span class="s2">&quot;#00B8C8&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">:</span> <span class="s2">&quot;#E03C31&quot;</span><span class="p">,</span> <span class="s2">&quot;pink&quot;</span><span class="p">:</span> <span class="s2">&quot;#EF60A3&quot;</span><span class="p">,</span>
-               <span class="s2">&quot;yellow&quot;</span><span class="p">:</span> <span class="s2">&quot;#FFB81C&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">:</span> <span class="s2">&quot;#0076C2&quot;</span><span class="p">}</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;axes.prop_cycle&#39;</span><span class="p">:</span> <span class="n">plt</span><span class="o">.</span><span class="n">cycler</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">TUcolor</span><span class="o">.</span><span class="n">values</span><span class="p">()),</span>
-                         <span class="s1">&#39;font.size&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> <span class="s2">&quot;lines.linewidth&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">})</span>
-    <span class="k">return</span> <span class="n">TUcolor</span>
-
 <span class="c1"># Probability density/mass function</span>
 
 <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
@@ -419,7 +407,6 @@ Accident 2 with <span class="math notranslate nohighlight">\(N_{2}=100\)</span> 
 <span class="n">pdf</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;0.989&#39;</span><span class="p">,</span> <span class="s1">&#39;$10^{-2}$&#39;</span><span class="p">,</span> <span class="s1">&#39;$10^{-3}$&#39;</span><span class="p">]</span>
 <span class="n">pdf_loc</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.99</span><span class="p">,</span> <span class="mf">0.66</span><span class="p">,</span> <span class="mf">0.33</span><span class="p">]</span>
 
-<span class="n">set_TUDstyle</span><span class="p">()</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">N_fatalities_loc</span><span class="p">,</span> <span class="n">pdf_loc</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span> <span class="s1">&#39;lightcyan&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
 
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">N_fatalities_loc</span><span class="p">)</span>
@@ -449,18 +436,6 @@ Accident 2 with <span class="math notranslate nohighlight">\(N_{2}=100\)</span> 
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">from</span> <span class="nn">mpl_toolkits.axisartist.axislines</span> <span class="kn">import</span> <span class="n">AxesZero</span>
-
-<span class="c1"># TUD Color Palette</span>
-
-<span class="k">def</span> <span class="nf">set_TUDstyle</span><span class="p">():</span>
-    <span class="n">TUcolor</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;cyan&quot;</span><span class="p">:</span> <span class="s2">&quot;#00A6D6&quot;</span><span class="p">,</span> <span class="s2">&quot;darkgreen&quot;</span><span class="p">:</span> <span class="s2">&quot;#009B77&quot;</span><span class="p">,</span> <span class="s2">&quot;purple&quot;</span><span class="p">:</span> <span class="s2">&quot;#6F1D77&quot;</span><span class="p">,</span>
-               <span class="s2">&quot;darkred&quot;</span><span class="p">:</span> <span class="s2">&quot;#A50034&quot;</span><span class="p">,</span> <span class="s2">&quot;darkblue&quot;</span><span class="p">:</span> <span class="s2">&quot;#0C2340&quot;</span><span class="p">,</span>
-               <span class="s2">&quot;orange&quot;</span><span class="p">:</span> <span class="s2">&quot;#EC6842&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">:</span> <span class="s2">&quot;#6CC24A&quot;</span><span class="p">,</span>
-               <span class="s2">&quot;lightcyan&quot;</span><span class="p">:</span> <span class="s2">&quot;#00B8C8&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">:</span> <span class="s2">&quot;#E03C31&quot;</span><span class="p">,</span> <span class="s2">&quot;pink&quot;</span><span class="p">:</span> <span class="s2">&quot;#EF60A3&quot;</span><span class="p">,</span>
-               <span class="s2">&quot;yellow&quot;</span><span class="p">:</span> <span class="s2">&quot;#FFB81C&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">:</span> <span class="s2">&quot;#0076C2&quot;</span><span class="p">}</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;axes.prop_cycle&#39;</span><span class="p">:</span> <span class="n">plt</span><span class="o">.</span><span class="n">cycler</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">TUcolor</span><span class="o">.</span><span class="n">values</span><span class="p">()),</span>
-                         <span class="s1">&#39;font.size&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> <span class="s2">&quot;lines.linewidth&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">})</span>
-    <span class="k">return</span> <span class="n">TUcolor</span>
 
 <span class="c1"># Cumulative Distribution Function </span>
 
@@ -509,18 +484,6 @@ Accident 2 with <span class="math notranslate nohighlight">\(N_{2}=100\)</span> 
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">from</span> <span class="nn">mpl_toolkits.axisartist.axislines</span> <span class="kn">import</span> <span class="n">AxesZero</span>
-
-<span class="c1"># TUD Color Palette</span>
-
-<span class="k">def</span> <span class="nf">set_TUDstyle</span><span class="p">():</span>
-    <span class="n">TUcolor</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;cyan&quot;</span><span class="p">:</span> <span class="s2">&quot;#00A6D6&quot;</span><span class="p">,</span> <span class="s2">&quot;darkgreen&quot;</span><span class="p">:</span> <span class="s2">&quot;#009B77&quot;</span><span class="p">,</span> <span class="s2">&quot;purple&quot;</span><span class="p">:</span> <span class="s2">&quot;#6F1D77&quot;</span><span class="p">,</span>
-               <span class="s2">&quot;darkred&quot;</span><span class="p">:</span> <span class="s2">&quot;#A50034&quot;</span><span class="p">,</span> <span class="s2">&quot;darkblue&quot;</span><span class="p">:</span> <span class="s2">&quot;#0C2340&quot;</span><span class="p">,</span>
-               <span class="s2">&quot;orange&quot;</span><span class="p">:</span> <span class="s2">&quot;#EC6842&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">:</span> <span class="s2">&quot;#6CC24A&quot;</span><span class="p">,</span>
-               <span class="s2">&quot;lightcyan&quot;</span><span class="p">:</span> <span class="s2">&quot;#00B8C8&quot;</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">:</span> <span class="s2">&quot;#E03C31&quot;</span><span class="p">,</span> <span class="s2">&quot;pink&quot;</span><span class="p">:</span> <span class="s2">&quot;#EF60A3&quot;</span><span class="p">,</span>
-               <span class="s2">&quot;yellow&quot;</span><span class="p">:</span> <span class="s2">&quot;#FFB81C&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">:</span> <span class="s2">&quot;#0076C2&quot;</span><span class="p">}</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;axes.prop_cycle&#39;</span><span class="p">:</span> <span class="n">plt</span><span class="o">.</span><span class="n">cycler</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="n">TUcolor</span><span class="o">.</span><span class="n">values</span><span class="p">()),</span>
-                         <span class="s1">&#39;font.size&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span> <span class="s2">&quot;lines.linewidth&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">})</span>
-    <span class="k">return</span> <span class="n">TUcolor</span>
 
 <span class="c1"># FN curve</span>
 
