@@ -14,7 +14,7 @@ Key concept: system reliability analysis can look very similar to component reli
 
 ```{admonition} Exam Information
 :class: tip, dropdown
-For the exam, you will be expected to be able to recognize and solve simple series and parallel systems, and describe the influence that dependence between components may have on the calculated probability of interest.
+For the exam, you should be able to recognize and solve simple series and parallel systems, as well as describe the influence dependence between components may have on the calculated probability of interest.
 ```
 
 Table of contents:

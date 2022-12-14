@@ -18,8 +18,9 @@ parts:
     - file: reliability-system/overview.md
     - file: risk-assessment/overview.md
       sections:
-      - file: risk-assessment/decision-making.md
-      - file: risk-assessment/cost-benefit-analysis.ipynb
+      - file: risk-assessment/decision.md
+      - file: risk-assessment/cost-benefit.ipynb
+      - file: risk-assessment/econ-optimization.ipynb
       - file: risk-assessment/example-dike-heightening.md
       - file: risk-assessment/safety-standards.ipynb
       - file: risk-assessment/example-FN-curve.md
