@@ -2,7 +2,7 @@
 
 Decision-making under uncertain conditions is part of everyday life, e.g. when choosing to buy a lottery ticket or choosing to take an umbrella during cloudy weather. In contrast to the rather intuitive decision making in everyday matters, a structured analysis of different alternatives with associated risks, costs and benefits is very useful for decisions in (civil) engineering. This chapter offers a very basic introduction into the decision theory with applications to decision problems in the civil engineering domain. Further reference is made to the work by other scholars for more rigorous and detailed treatment of this topic, see for example (Raiffa and Schlaifer, (1961); Benjamin and Cornell, (1970 ).
 
-### Introduction and basics
+## Introduction and basics
 
 Making a decision is in fact choosing from alternatives. The decision theory  is based on the classic “Homo Economicus” model. The Homo Economicus:
 
@@ -22,10 +22,14 @@ Within a decision problem the following characteristics can be distinguished:
 
 The actions, natural circumstances and the outcomes can be shown in a so-called decision tree (Figure 3.3).
 
-<figure>
-<center><img src="../figures/decision-3.png" style="width: 600px; height: 300px;"/></center></figure>
-<figcaption align = "center">Figure 3.3 Decision tree .
-</figcaption><br>
+```{figure} ../figures/decision-tree-blank.png
+---
+height: 300px
+name: decision-tree-blank
+---
+Decision tree.
+```
+
 Based on the possible results a choice is made for an action. To be able to assess the different results, a numerical value is assigned to each outcome of $\omega$ , which can be used to establish the benefit of each outcome. This number can be a monetary value, a number on an arbitrary scale or utility - as long as the decision maker(s) can establish a consistent ranking of the outcomes with it. In the last two cases the benefit has no absolute value, but only gives the relative value of the different outcomes. Utility <em> (u)</em>  is a concept used to rank the possible outcomes according to the preferences of the decision maker. Utility <em> (u) </em> values are between $0\leq\textit u ({\omega})\leq 1$ . A utility function can be used to characterize the relative utility of various outcomes. The elaborations below are based on the monetary values as a measure for the outcomes and assume a risk neutral decision maker. This is a decision maker who is indifferent between choices with equal expected outcomes, even if one choice is riskier than the other. For example, a risk neutral decision maker would have the same preference for a € 400 pay out, or a 50/50 bet with a coin toss with outcomes of € 0 (head) or € 800 (tail). Utility and risk aversion are further discussed in section 3.3.3.<br>  
 
 **3.3.2 Decision rules**
@@ -69,9 +73,14 @@ Table 3.3 Outcomes given the decisions (a1,a2) and market conditions ($\theta_{1
   |$a_{1}$: buy shares|-2 %|1 %|4 %|
   |$a_{2}$: buy bonds |1 %|1 %|1 %|
 
-<figure>
-<center><img src="../figures/decision-4.png" style="width: 600px; height: 300px;"/></center></figure>
-<figcaption align = "center">Figure 3.4 Decision tree for the example of buying shares (a_{1}) or bonds ($a_{2}$).</figcaption><br> 
+```{figure} ../figures/decision-tree-example.png
+---
+height: 300px
+name: decision-tree-example
+---
+Decision tree for the example of buying shares ($a_{1}$) or bonds ($a_{2}$).
+```
+
 The deterministic decision rules can be applied to this example. Minimax would result in investing in bonds ($a_{2}$), maximax would result in buying shares.
 The optimal decision can be found by taking into account the probabilities of the market circumstances. These three circumstances are assumed to be exhaustive and mutually exclusive (i.e. outcomes cannot overlap and the sum of probabilities equals 1). The probabilities are estimated at $P(\theta_{1})$ = 0.2; $P(\theta_{2})$ = 0.3; $P(\theta_{3})$ = 0.5. These probabilities can now be included in the decision tree.   The expected value of the return of the actions is as follows:
 
@@ -102,19 +111,26 @@ The probability of failure $\textit P(Z<0)$ for this situation can be found by c
    $$
    \sigma_z=\left(\rho_{\mathrm{c}}^2 \sigma_{\mathrm{c}}^2+\rho_{\mathrm{w}}{ }^2 \sigma_{\mathrm{h}}^2\right)^{0.5}=8.5 \mathrm{kN} / \mathrm{m}^2                                                                                                                                                         (3.7)
    $$           
-According to Chapter 2.6.1, we find  $\textit P(Z<0)=\Phi\left(-\mu_z / \sigma_z\right)=\Phi(-1.17)=0.12$. This is indicated as the initial failure probability $P_{f, 0}$   .
+According to Chapter 2.6.1, we find  $\textit P(Z<0)=\Phi\left(-\mu_z / \sigma_z\right)=\Phi(-1.17)=0.12$. This is indicated as the initial failure probability $P_{f, 0}$.
 
-<figure>
-<center><img src="../figures/decision-5.png" style="width: 400px; height: 200px;"/></center></figure>
+```{figure} ../figures/example-river-excavation.png
+---
+height: 300px
+name: example-river-excavation
+---
+Cross-section of excavation near a river.
+```
 
-<figcaption align = "center">Figure 3.5 Situation: Excavation near a river </figcaption>  
-<br>
 The effect of a drainage system in the construction site (see Figure 3.6) on the groundwater levels has been reviewed using groundwater flow calculations. It appears that it reduces the mean value of the maximum water levels to $\mu _{h}$ = 3.52m and the standard deviation remains the same. In this case the failure probability is reduced to 0.04. Such a drainage system costs EUR 150,000.
  
-<figure>
-<center><img src="../figures/decision-6.png" style="width: 400px; height: 200px;"/></center></figure>
-<figcaption align = "center">Figure 3.6 Drainage around the excavation. </figcaption>
-<br>
+```{figure} ../figures/example-river-excavation-2.png
+---
+height: 300px
+name: example-river-excavation-2
+---
+Cross-section of excavation and river.
+```
+
 The flooding of the construction site will result in the buoyancy of the basement resulting in damages are estimated at EUR 5,000,000. The designer of the construction site is faced with the choice whether or not to include drainage facilities in the design of the construction site. 
 To provide insight the decision problem is illustrated with a decision tree. For this, the sets of actions, circumstances and outcomes have to be defined first:   
 
@@ -134,9 +150,13 @@ Without drainage, the risk, defined as the expected value of the loss, is: 0.12 
 
 This implies that the construction of the drainage system is rationally speaking the best decision for a risk neutral decision maker.
  
-<figure>
-<center><img src="../figures/decision-7.png" style="width: 600px; height: 300px;"/></center></figure>
-<figcaption align = "center">Figure 3.7 Decision tree with probabilities and costs.</figcaption><br>
+```{figure} ../figures/decision-tree-filled.png
+---
+height: 300px
+name: decision-tree-filled
+---
+Decision tree with probabilities and costs.
+```
 
 **3.3.3 Utility functions**
 
@@ -144,11 +164,13 @@ The elaborations in the previous sections were based on monetary values as a met
 
 Utility is a concept used to rank the possible outcomes according to the preferences of the decision maker. Utility $(\textit u)$ values are between $0\leq \textit{u}(\omega)\leq 1$. A utility function can be used to characterize the relative utility of various outcomes. The utility function depends on the preferences and attitude of the decision maker. An example of three different utility functions is given in Figure 3.8 for an example of an activity with potential monetary benefits between € 0 and € 1000. In the case of a risk neutral decision maker the utility increases linearly with the benefits. In the case of the risk aversion relatively small benefits are already given a high utility. A risk seeking decision maker gives a relatively low value to smaller benefits, but high utility values to larger incomes. 
 
-<figure>
-<center><img src="../figures/decision-8.png" style="width: 600px; height: 300px;"/></center></figure><figcaption align = "center">
-Figure 3.8 Example of a utility function for monetary benefits.
-</figcaption>  
-<br>
+```{figure} ../figures/utility-example.png
+---
+height: 300px
+name: utility-example
+---
+Example of a utility function for monetary benefits.
+```
 
  **Example 3.3: a bet**
 
