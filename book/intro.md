@@ -30,9 +30,8 @@ In short, risk and reliability cannot be defined without *probability*. These co
 :class: tip, dropdown
 Key concepts from these lecture notes that will be assessed on the MUDE exam are:
 - Definitions of risk and steps of a risk analysis
-- Schematize simple systems and evaluate system reliability (quantitative risk analysis methods)
-- Component reliability (quantitative risk analysis methods)
-- Use probability to design and assess engineering systems and components
+- Simple system and component reliability (quantitative risk analysis methods)
+- Use of probability to design and assess engineering systems and components
 - Influence of dependence on simple systems and components
 - Decision analysis, cost-benefit analysis and economic optimization (risk assessment methods)
 - Assessment and quantification of risks for a system with three different risk metrics: individual, societal and economic
@@ -45,9 +44,10 @@ Although the list is long, the methods are introduced in a simple form and are a
 ```{admonition} Not-exam Information
 :class: tip, dropdown
 The following concepts or methods are used in this document to illustrate key subjects and examples, but you will *not* be asked to do them on the exam:
-- list from memory the steps of a risk analysis and describe all aspects in detail
-- set up a decision tree yourself (note that you may be given a tree with values filled in and asked to interpret it)
-- define a limit-state function yourself and calculate failure probability
+- List from memory the steps of a risk analysis and describe all aspects in detail
+- Set up a decision tree yourself (note that you may be given a tree with values filled in and asked to interpret it)
+- Schematize system reliability problems (we will give you one)
+- Define a limit-state function yourself and calculate failure probability
 - 
 ```
 

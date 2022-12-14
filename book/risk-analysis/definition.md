@@ -4,27 +4,26 @@ Almost all activities in life are characterized by some level of risk. Especiall
 
 The first definition focuses on the consequences, the second on the possibility or probability. Quantifying and evaluating risks based on merely the probabilities or consequences is less realistic. For example, the risk of losing € 100 with a probability of 50% is different than the risk of losing € 1000 with the same probability. Also, the risk associated with losing a given sum of money will depend on the probability of the event.
 An often-used definition considers risk as expected value:
-<br>
-<div style="text-align: center"><em> Risk is the probability of an undesired event multiplied by the consequences.</em></div>
-<br>
+
+*Risk is the probability of an undesired event multiplied by the consequences.*
 
 The unit of risk now depends on the units of probability and consequences. The probability of an event is generally expressed as the probability per unit time, for example per year. The consequences of an undesired event are often multi-dimensional, i.e. they can consist of different types of consequences, such as material, ecological damages, injuries and fatalities (see section 3.2.2 for further details). In many applications in engineering consequences are expressed by means of a monetary value. The unit of the risk (or expected value $
  E(d)$ ) then becomes € per year. For a case with one event scenario <em>i</em>  with probability <em>$p_{i}$ </em> it yields:
  $$
  E(d) = p_{i}d_{i} 
- $$ (risk_definition)
+ $$ 
  
 A more general definition of risk has been given by Kaplan and Garrick (1981):<br>
-<br>
-<div style="text-align: center"><em> Risk is a set of scenarios ($s_{i}$), each of which has a probability ($p_{i}$) and a consequence ($d_{i}$).</em></div>
-<br>
+
+*Risk is a set of scenarios ($s_{i}$), each of which has a probability ($p_{i}$) and a consequence ($d_{i}$).*
+
 
 This definition of Kaplan and Garrick allows the use of various so-called risk metrics (or risk measures) to quantify or depict the risk. The expected value of the damage for a set of multiple discrete scenarios{1,....,<em>n</em>} , can be expressed as:
 $$
 E(d) = \sum_{S_{i=1}}^{n}p_{i}d_{i}
-$$ (risk_definition_sum)
+$$ 
 
-```{figure} ../figures/1.png
+```{figure} ../figures/FN-simple.png
 ---
 height: 200px
 name: FN-curve
@@ -32,7 +31,7 @@ name: FN-curve
 FN curve, showing the probability of exceedance of a certain number of fatalities N on Log-Log scale.
 ```
 
-The expected value does not give insight in the magnitude of probability and consequences and the contribution of individual scenarios. Therefore, an often-used alternative risk metric is the risk curve. It shows the probability of exceedance of a certain magnitude of consequences. A well-known example of such a risk curve is the FN curve, which displays the probability of exceedance of <em>N</em> fatalities. The values on both axes are generally shown on a logarithmic scale, see Figure 3.1Figure 3.1 for an example. The FN curve was originally introduced for the assessment of the risks in the nuclear industry (Farmer, 1967; Kendall et al., 1977) and is now used to display and limit risks in various countries and sectors. Further information on the use of FN curves and a simple example of how to construct such a curve are included in section 3.5.1. 
+The expected value does not give insight in the magnitude of probability and consequences and the contribution of individual scenarios. Therefore, an often-used alternative risk metric is the risk curve. It shows the probability of exceedance of a certain magnitude of consequences. A well-known example of such a risk curve is the FN curve, which displays the probability of exceedance of <em>N</em> fatalities. The values on both axes are generally shown on a logarithmic scale, see Figure 3.1 for an example. The FN curve was originally introduced for the assessment of the risks in the nuclear industry (Farmer, 1967; Kendall et al., 1977) and is now used to display and limit risks in various countries and sectors. Further information on the use of FN curves and a simple example of how to construct such a curve are included in section 3.5.1. 
 
 # Other risk definitions
 In the remainder of this lecture notes and the course the definitions from the previous paragraph will be applied. Since (civil) engineers will work in a broad domain of applications it is useful to highlight some risk concepts used in other domains.

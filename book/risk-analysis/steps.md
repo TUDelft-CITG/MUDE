@@ -15,8 +15,8 @@ In general, the following elements can be identified within risk analysis, see t
 Each of these steps is described in more detail below, and provides context for the following chapters in this book. In addition to the steps in risk assessment of a given system, *risk management* also includes the element ‘risk reduction and control’. Dependent on the outcome of the former phase measures can be taken to reduce the risk. This will lead to changes in the system configuration and the risk level. If the risk analysis is used in the design of systems, the steps are often repeated several times with adjusted system specifications to obtain an optimal design. It should also be determined how the risks can be controlled, for example by monitoring, inspection or maintenance.
 
 <figure>
-<center><img src="2.png" style="width: 250px; height: 300px;"/></center></figure>
-<figcaption align = "center">Figure 3.2 Schematic view of steps in risk assessment and risk management.</figcaption> <br>
+<center><img src="../figures/risk-steps.png" style="width: 250px; height: 300px;"/></center></figure>
+<figcaption align = "center">Figure 3.2 Schematic view of steps in risk assessment and risk management.</figcaption> 
 
 ## 1. System definition
 
@@ -32,19 +32,19 @@ When a system or part of it no longer fulfils one or more desired functions, thi
 
 - In the case of the exceedance of ultimate limit state (ULS) failure or collapse of a system or structure occurs. This, for instance, occurs if the breakwaters of a harbour entrance are destroyed as a result of extreme conditions. An example from structural engineering is the collapse of a roof of a building
 - In the case of exceedance of the serviceability limit state (SLS) exceedance leads to temporary and/or partial failure. An example of this state is the non-workability in a harbour, due to waves that are temporarily too high. Another example could be too much vibration of a structure, so that the users experience discomfort. 
-	
-	Further information on the use of the SLS and ULS concepts in civil engineering is included in chapter 10.
-	
-	In a risk analysis, it is very important to get an overview of the various undesired events and failures before proceeding with a quantitative analysis. In practice, many accidents are caused by failing to identify failure modes.
-	Finding a list of threats and failing modes that is as complete as possible, is not an easy task. Aids are data banks, literature studies, interviews, experiences with comparable systems, brainstorm sessions et cetera. Techniques for systematically identifying undesired events (e.g. FMEA (Failure Modes and Effects Analysis) are treated in more detail in section 9.4 of the chapter on reliability of systems.
-	
+
+   Further information on the use of the SLS and ULS concepts in civil engineering is included in chapter 10.
+
+   In a risk analysis, it is very important to get an overview of the various undesired events and failures before proceeding with a quantitative analysis. In practice, many accidents are caused by failing to identify failure modes.
+   Finding a list of threats and failing modes that is as complete as possible, is not an easy task. Aids are data banks, literature studies, interviews, experiences with comparable systems, brainstorm sessions et cetera. Techniques for systematically identifying undesired events (e.g. FMEA (Failure Modes and Effects Analysis) are treated in more detail in section 9.4 of the chapter on reliability of systems.
+
 
 ## 3. Quantitative analysis
 
 The probabilities and consequences of the defined undesired events are determined in this step. The risk is quantified in a risk number or graph as a function of probabilities and consequences (see section 3.5.2 for an example).
 The probability of failure can be quantified using the (previously) introduced limit state. A limit state Z can be assessed by considering the resistance R and the loads S, i.e.
 $$
-  Z = R-S										(3.3)
+Z = R-S                                        
 $$  
 Failure occurs when $R<S$, so when $Z<0$ . Techniques for computing the probability of failure, i.e. $ P(Z<0)$, are treated in more detail in later sections of these lecture notes.
 After failure has been defined and analysed, the consequences of the event are quantified. First, the physical effects associated with the undesired event have to be considered, e.g. heat and / or smoke from fire, or inflow of water due to dike breach. Depending on whether people or objects are exposed to the physical effects, damages, life loss or other impacts can occur.
@@ -52,47 +52,45 @@ As an example the failure of a dike for a set of discrete events is considered:
 
 - The probability that a dike fails, $P(E_{1})$
 - The conditional probability that water flows into the polder given a dike breach $P(E_{2}|E_{1})$
-- The probability of damage given dike breach and inflow into the polder $P(D|E_{1}\cap E_{2})$<br>
+- The probability of damage given dike breach and inflow into the polder $P(D|E_{1}\cap E_{2})$
 
 The probability of damage can now be computed by combining these terms 
 
-  >>>>>$P(D)=P(E_{1})P(E_{2}|E_{1})P(D|E_{1}\cap E_{2})$	(3.4)
+$P(D)=P(E_{1})P(E_{2}|E_{1})P(D|E_{1}\cap E_{2})$        (3.4)                            
 
-As introduced in section 3.1, multiple types of consequences can be caused by one disaster. Table 3.2Table 3.2 gives an overview of the different types of consequences of the failure of large engineering systems. The damage is divided into tangible and intangible damage, depending on whether or not the losses can be assessed in monetary values. Another distinction is made between the direct damage, caused by physical effects of the event, and damages occurring outside the directly exposed area. The latter occurs when companies outside a flooded area experience damages, due to loss of demand from customers in the flooded area. In a risk analysis it is desired to take into account a complete set of impacts. Since a lot of the items from the table cannot be quantified easily, the quantitative analysis and risk evaluation are often focused  on economic damages and life loss.
->>>Table 3.2 General classification of damages, based on (Vrouwenvelder and Vrijling, 1996)
+As introduced in section 3.1, multiple types of consequences can be caused by one disaster. Table 3.2 gives an overview of the different types of consequences of the failure of large engineering systems. The damage is divided into tangible and intangible damage, depending on whether or not the losses can be assessed in monetary values. Another distinction is made between the direct damage, caused by physical effects of the event, and damages occurring outside the directly exposed area. The latter occurs when companies outside a flooded area experience damages, due to loss of demand from customers in the flooded area. In a risk analysis it is desired to take into account a complete set of impacts. Since a lot of the items from the table cannot be quantified easily, the quantitative analysis and risk evaluation are often focused  on economic damages and life loss.
+   Table 3.2 General classification of damages, based on (Vrouwenvelder and Vrijling, 1996)
 
-|          	| Tangible                                      	| Intangible                     	|
-|----------	|-----------------------------------------------	|--------------------------------	|
-| Direct   	| Residences                                    	| Fatalities                     	|
-|          	| Structure inventory                           	| Injuries                       	|
-|          	| Vehicles                                      	| Animals                        	|
-|          	| Agriculture                                   	| Utilities and communication    	|
-|          	| Infrastructure and other public facilities    	| Historical and cultural losses 	|
-|          	| Business interruption                         	| Environmental losses           	|
-|          	| Evacuation and rescue operations              	|                                	|
-|          	| Reconstruction of flood defences              	|                                	|
-|          	| Clean up costs                                	|                                	|
-| Indirect 	| Damage for companies outside the exposed area 	| Societal disruption            	|
-|          	| Substitution of production outside the area   	| Damage to government           	|
-|          	| Temporary housing of evacuees                 	|                                	|<br>
+|          | Tangible                                      | Intangible                     |
+|----------|-----------------------------------------------|--------------------------------|
+| Direct   | Residences                                    | Fatalities                     |
+|          | Structure inventory                           | Injuries                       |
+|          | Vehicles                                      | Animals                        |
+|          | Agriculture                                   | Utilities and communication    |
+|          | Infrastructure and other public facilities    | Historical and cultural losses |
+|          | Business interruption                         | Environmental losses           |
+|          | Evacuation and rescue operations              |                                |
+|          | Reconstruction of flood defences              |                                |
+|          | Clean up costs                                |                                |
+| Indirect | Damage for companies outside the exposed area | Societal disruption            |
+|          | Substitution of production outside the area   | Damage to government           |
+|          | Temporary housing of evacuees                 |                                |
 
 ## 4. Risk evaluation
 
 
-<div style="text-align: justify">In the risk evaluation phase the decision is made whether the risk is acceptable or not and whether risk reduction measures need to be implemented. Or in other words, it is attempted to answer the question “how safe is safe enough?” (Starr, 1967). The results of the quantitative analysis provide input for risk evaluation and decision making. 
-Different quantitative approaches can be used to support risk evaluation, which will be outlined more in detail in the coming sections.<br>
+In the risk evaluation phase the decision is made whether the risk is acceptable or not and whether risk reduction measures need to be implemented. Or in other words, it is attempted to answer the question “how safe is safe enough?” (Starr, 1967). The results of the quantitative analysis provide input for risk evaluation and decision making. 
+Different quantitative approaches can be used to support risk evaluation, which will be outlined more in detail in the coming sections.
 
->> 
-  >* **<div style="text-align: justify">Decision making under uncertainties** (Section 3.3): Recording different variants, with associated risks, costs and benefits, in a matrix or decision tree, serves as an aid for making decisions. With this, the optimal selection can be made from a number of alternatives.
+**Decision making under uncertainties** (Section 3.3): Recording different variants, with associated risks, costs and benefits, in a matrix or decision tree, serves as an aid for making decisions. With this, the optimal selection can be made from a number of alternatives.
 
-  >* **<div style="text-align: justify">Cost benefit Analysis** (section 3.4.1): the costs and benefits of risk reduction measures are considered.  When a very large number of design choices are possible, an **economic optimization** (section 3.4.2) can be applied to select an optimal system design, based on costs and benefits of risk reduction.
+**Cost benefit Analysis** (section 3.4.1): the costs and benefits of risk reduction measures are considered.  When a very large number of design choices are possible, an **economic optimization** (section 3.4.2) can be applied to select an optimal system design, based on costs and benefits of risk reduction.
 
-  >* **<div style="text-align: justify">Safety standards** (section 3.5): Comparing the risk with predetermined safety standards which often focus on loss of life.</div>
+**Safety standards** (section 3.5): Comparing the risk with predetermined safety standards which often focus on loss of life.
 
+However, given the nature of the key question (how safe is safe enough?) several political, psychological and social processes play a role in the evaluation of risk. This means that risk evaluation is not a purely technical process, but will involve many subjective elements. One of the difficulties facing regulators is that people’s preferences and risk attitudes may diverge and that costs and benefits may not be distributed evenly. This means that a single, collective decision, in practice, has to be based on strongly divergent individual preferences. In practice, this implies that devising collective decision making procedures is inevitably political. This ambiguity can also be found in the numerous interpretations of “the” precautionary principle, which is interpreted by some as a decision making criterion that requires proof of harmlessness (a scientific impossibility), whereas it is seen by others as a decision making procedure that puts emphasis on dialogue and stakeholder involvement, (e.g. Jongejan, (2008 ).
 
-<div style="text-align: justify">However, given the nature of the key question (how safe is safe enough?) several political, psychological and social processes play a role in the evaluation of risk. This means that risk evaluation is not a purely technical process, but will involve many subjective elements. One of the difficulties facing regulators is that people’s preferences and risk attitudes may diverge and that costs and benefits may not be distributed evenly. This means that a single, collective decision, in practice, has to be based on strongly divergent individual preferences. In practice, this implies that devising collective decision making procedures is inevitably political. This ambiguity can also be found in the numerous interpretations of “the” precautionary principle, which is interpreted by some as a decision making criterion that requires proof of harmlessness (a scientific impossibility), whereas it is seen by others as a decision making procedure that puts emphasis on dialogue and stakeholder involvement, (e.g. Jongejan, (2008 ).</div>
+### **Risk reduction and risk control**
 
-### Risk reduction and risk control
-
-<div style="text-align: justify">If the risks are considered unacceptable several forms of risk reduction can be implemented. These can be changes to the engineered system, or changes to the organization and management.  From analysis of accidents it appears that human and organizational errors are still a major cause of failure in civil engineering. It seems that the only suitable way to reduce human errors is by the incorporation of sufficient control in the different phases of the construction process (Taerwe, 1986) and by a thorough education of all personnel involved. Therefore, an extensive interaction between the safety methodology and the quality management is a necessity in order to guarantee the safety of our structures.</div>
+If the risks are considered unacceptable several forms of risk reduction can be implemented. These can be changes to the engineered system, or changes to the organization and management.  From analysis of accidents it appears that human and organizational errors are still a major cause of failure in civil engineering. It seems that the only suitable way to reduce human errors is by the incorporation of sufficient control in the different phases of the construction process (Taerwe, 1986) and by a thorough education of all personnel involved. Therefore, an extensive interaction between the safety methodology and the quality management is a necessity in order to guarantee the safety of our structures.
 
