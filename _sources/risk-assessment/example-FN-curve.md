@@ -49,4 +49,9 @@ Example FN-curve calculation: cumulative probability function (CDF).
 ````
  
 ```{figure} ../figures/ex_FN_curve_step_03.svg
-_curve_step_03.svg
+---
+width: 400
+name: ex_FN_curve_step_03
+---
+Example FN-curve calculation: exceedance probability (FN curve).
+```

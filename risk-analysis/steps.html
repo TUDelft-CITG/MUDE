@@ -396,7 +396,9 @@ title="Print to PDF"
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#risk-reduction-and-risk-control">
-     Risk reduction and risk control
+     <strong>
+      Risk reduction and risk control
+     </strong>
     </a>
    </li>
   </ul>
@@ -442,7 +444,9 @@ title="Print to PDF"
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#risk-reduction-and-risk-control">
-     Risk reduction and risk control
+     <strong>
+      Risk reduction and risk control
+     </strong>
     </a>
    </li>
   </ul>
@@ -470,8 +474,8 @@ title="Print to PDF"
 </ol>
 <p>Each of these steps is described in more detail below, and provides context for the following chapters in this book. In addition to the steps in risk assessment of a given system, <em>risk management</em> also includes the element ‘risk reduction and control’. Dependent on the outcome of the former phase measures can be taken to reduce the risk. This will lead to changes in the system configuration and the risk level. If the risk analysis is used in the design of systems, the steps are often repeated several times with adjusted system specifications to obtain an optimal design. It should also be determined how the risks can be controlled, for example by monitoring, inspection or maintenance.</p>
 <figure>
-<center><img src="2.png" style="width: 250px; height: 300px;"/></center></figure>
-<figcaption align = "center">Figure 3.2 Schematic view of steps in risk assessment and risk management.</figcaption> <br>
+<center><img src="../figures/risk-steps.png" style="width: 250px; height: 300px;"/></center></figure>
+<figcaption align = "center">Figure 3.2 Schematic view of steps in risk assessment and risk management.</figcaption> 
 <section id="system-definition">
 <h2>1. System definition<a class="headerlink" href="#system-definition" title="Permalink to this headline">#</a></h2>
 <p>This step entails the definition and description of the system as well as the scope and objectives of the analysis.  The process or system under consideration can usually be described as a so-called input-output element. Here the system is assumed to be failing if no output takes place. Usually a system is divided into components and subsystems, which can all be schematised as an input-output elements. By means of the internal relations the components and subsystems together form a configuration that is representative of the total system. Further information on the decomposition and analysis of system is provided in section 3.5 of these lecture notes.</p>
@@ -495,7 +499,7 @@ Finding a list of threats and failing modes that is as complete as possible, is 
 <p>The probabilities and consequences of the defined undesired events are determined in this step. The risk is quantified in a risk number or graph as a function of probabilities and consequences (see section 3.5.2 for an example).
 The probability of failure can be quantified using the (previously) introduced limit state. A limit state Z can be assessed by considering the resistance R and the loads S, i.e.
 $<span class="math notranslate nohighlight">\(
-  Z = R-S										(3.3)
+Z = R-S                                        
 \)</span><span class="math notranslate nohighlight">\(  
 Failure occurs when \)</span>R&lt;S<span class="math notranslate nohighlight">\(, so when \)</span>Z&lt;0<span class="math notranslate nohighlight">\( . Techniques for computing the probability of failure, i.e. \)</span> P(Z&lt;0)$, are treated in more detail in later sections of these lecture notes.
 After failure has been defined and analysed, the consequences of the event are quantified. First, the physical effects associated with the undesired event have to be considered, e.g. heat and / or smoke from fire, or inflow of water due to dike breach. Depending on whether people or objects are exposed to the physical effects, damages, life loss or other impacts can occur.
@@ -503,28 +507,12 @@ As an example the failure of a dike for a set of discrete events is considered:<
 <ul class="simple">
 <li><p>The probability that a dike fails, <span class="math notranslate nohighlight">\(P(E_{1})\)</span></p></li>
 <li><p>The conditional probability that water flows into the polder given a dike breach <span class="math notranslate nohighlight">\(P(E_{2}|E_{1})\)</span></p></li>
-<li><p>The probability of damage given dike breach and inflow into the polder <span class="math notranslate nohighlight">\(P(D|E_{1}\cap E_{2})\)</span><br></p></li>
+<li><p>The probability of damage given dike breach and inflow into the polder <span class="math notranslate nohighlight">\(P(D|E_{1}\cap E_{2})\)</span></p></li>
 </ul>
 <p>The probability of damage can now be computed by combining these terms</p>
-<blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><p><span class="math notranslate nohighlight">\(P(D)=P(E_{1})P(E_{2}|E_{1})P(D|E_{1}\cap E_{2})\)</span>	(3.4)</p>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
-<p>As introduced in section 3.1, multiple types of consequences can be caused by one disaster. Table 3.2Table 3.2 gives an overview of the different types of consequences of the failure of large engineering systems. The damage is divided into tangible and intangible damage, depending on whether or not the losses can be assessed in monetary values. Another distinction is made between the direct damage, caused by physical effects of the event, and damages occurring outside the directly exposed area. The latter occurs when companies outside a flooded area experience damages, due to loss of demand from customers in the flooded area. In a risk analysis it is desired to take into account a complete set of impacts. Since a lot of the items from the table cannot be quantified easily, the quantitative analysis and risk evaluation are often focused  on economic damages and life loss.</p>
-<blockquote>
-<div><blockquote>
-<div><blockquote>
-<div><p>Table 3.2 General classification of damages, based on (Vrouwenvelder and Vrijling, 1996)</p>
-</div></blockquote>
-</div></blockquote>
-</div></blockquote>
+<p><span class="math notranslate nohighlight">\(P(D)=P(E_{1})P(E_{2}|E_{1})P(D|E_{1}\cap E_{2})\)</span>        (3.4)</p>
+<p>As introduced in section 3.1, multiple types of consequences can be caused by one disaster. Table 3.2 gives an overview of the different types of consequences of the failure of large engineering systems. The damage is divided into tangible and intangible damage, depending on whether or not the losses can be assessed in monetary values. Another distinction is made between the direct damage, caused by physical effects of the event, and damages occurring outside the directly exposed area. The latter occurs when companies outside a flooded area experience damages, due to loss of demand from customers in the flooded area. In a risk analysis it is desired to take into account a complete set of impacts. Since a lot of the items from the table cannot be quantified easily, the quantitative analysis and risk evaluation are often focused  on economic damages and life loss.
+Table 3.2 General classification of damages, based on (Vrouwenvelder and Vrijling, 1996)</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
@@ -586,27 +574,15 @@ As an example the failure of a dike for a set of discrete events is considered:<
 </section>
 <section id="risk-evaluation">
 <h2>4. Risk evaluation<a class="headerlink" href="#risk-evaluation" title="Permalink to this headline">#</a></h2>
-<div style="text-align: justify">In the risk evaluation phase the decision is made whether the risk is acceptable or not and whether risk reduction measures need to be implemented. Or in other words, it is attempted to answer the question “how safe is safe enough?” (Starr, 1967). The results of the quantitative analysis provide input for risk evaluation and decision making. 
-Different quantitative approaches can be used to support risk evaluation, which will be outlined more in detail in the coming sections.<br>
-<blockquote>
-<div><ul class="simple">
-<li><p><strong><div style="text-align: justify">Decision making under uncertainties</strong> (Section 3.3): Recording different variants, with associated risks, costs and benefits, in a matrix or decision tree, serves as an aid for making decisions. With this, the optimal selection can be made from a number of alternatives.</p></li>
-</ul>
-</div></blockquote>
-<blockquote>
-<div><ul class="simple">
-<li><p><strong><div style="text-align: justify">Cost benefit Analysis</strong> (section 3.4.1): the costs and benefits of risk reduction measures are considered.  When a very large number of design choices are possible, an <strong>economic optimization</strong> (section 3.4.2) can be applied to select an optimal system design, based on costs and benefits of risk reduction.</p></li>
-</ul>
-</div></blockquote>
-<blockquote>
-<div><ul class="simple">
-<li><p><strong><div style="text-align: justify">Safety standards</strong> (section 3.5): Comparing the risk with predetermined safety standards which often focus on loss of life.</div></p></li>
-</ul>
-</div></blockquote>
-<div style="text-align: justify">However, given the nature of the key question (how safe is safe enough?) several political, psychological and social processes play a role in the evaluation of risk. This means that risk evaluation is not a purely technical process, but will involve many subjective elements. One of the difficulties facing regulators is that people’s preferences and risk attitudes may diverge and that costs and benefits may not be distributed evenly. This means that a single, collective decision, in practice, has to be based on strongly divergent individual preferences. In practice, this implies that devising collective decision making procedures is inevitably political. This ambiguity can also be found in the numerous interpretations of “the” precautionary principle, which is interpreted by some as a decision making criterion that requires proof of harmlessness (a scientific impossibility), whereas it is seen by others as a decision making procedure that puts emphasis on dialogue and stakeholder involvement, (e.g. Jongejan, (2008 ).</div>
+<p>In the risk evaluation phase the decision is made whether the risk is acceptable or not and whether risk reduction measures need to be implemented. Or in other words, it is attempted to answer the question “how safe is safe enough?” (Starr, 1967). The results of the quantitative analysis provide input for risk evaluation and decision making.
+Different quantitative approaches can be used to support risk evaluation, which will be outlined more in detail in the coming sections.</p>
+<p><strong>Decision making under uncertainties</strong> (Section 3.3): Recording different variants, with associated risks, costs and benefits, in a matrix or decision tree, serves as an aid for making decisions. With this, the optimal selection can be made from a number of alternatives.</p>
+<p><strong>Cost benefit Analysis</strong> (section 3.4.1): the costs and benefits of risk reduction measures are considered.  When a very large number of design choices are possible, an <strong>economic optimization</strong> (section 3.4.2) can be applied to select an optimal system design, based on costs and benefits of risk reduction.</p>
+<p><strong>Safety standards</strong> (section 3.5): Comparing the risk with predetermined safety standards which often focus on loss of life.</p>
+<p>However, given the nature of the key question (how safe is safe enough?) several political, psychological and social processes play a role in the evaluation of risk. This means that risk evaluation is not a purely technical process, but will involve many subjective elements. One of the difficulties facing regulators is that people’s preferences and risk attitudes may diverge and that costs and benefits may not be distributed evenly. This means that a single, collective decision, in practice, has to be based on strongly divergent individual preferences. In practice, this implies that devising collective decision making procedures is inevitably political. This ambiguity can also be found in the numerous interpretations of “the” precautionary principle, which is interpreted by some as a decision making criterion that requires proof of harmlessness (a scientific impossibility), whereas it is seen by others as a decision making procedure that puts emphasis on dialogue and stakeholder involvement, (e.g. Jongejan, (2008 ).</p>
 <section id="risk-reduction-and-risk-control">
-<h3>Risk reduction and risk control<a class="headerlink" href="#risk-reduction-and-risk-control" title="Permalink to this headline">#</a></h3>
-<div style="text-align: justify">If the risks are considered unacceptable several forms of risk reduction can be implemented. These can be changes to the engineered system, or changes to the organization and management.  From analysis of accidents it appears that human and organizational errors are still a major cause of failure in civil engineering. It seems that the only suitable way to reduce human errors is by the incorporation of sufficient control in the different phases of the construction process (Taerwe, 1986) and by a thorough education of all personnel involved. Therefore, an extensive interaction between the safety methodology and the quality management is a necessity in order to guarantee the safety of our structures.</div>
+<h3><strong>Risk reduction and risk control</strong><a class="headerlink" href="#risk-reduction-and-risk-control" title="Permalink to this headline">#</a></h3>
+<p>If the risks are considered unacceptable several forms of risk reduction can be implemented. These can be changes to the engineered system, or changes to the organization and management.  From analysis of accidents it appears that human and organizational errors are still a major cause of failure in civil engineering. It seems that the only suitable way to reduce human errors is by the incorporation of sufficient control in the different phases of the construction process (Taerwe, 1986) and by a thorough education of all personnel involved. Therefore, an extensive interaction between the safety methodology and the quality management is a necessity in order to guarantee the safety of our structures.</p>
 </section>
 </section>
 </section>
