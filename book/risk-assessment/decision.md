@@ -1,6 +1,6 @@
-# Decision-making under uncertainty
+# Decision Analysis
 
-Decision-making under uncertain conditions is part of everyday life, e.g. when choosing to buy a lottery ticket or choosing to take an umbrella during cloudy weather. In contrast to the rather intuitive decision making in everyday matters, a structured analysis of different alternatives with associated risks, costs and benefits is very useful for decisions in (civil) engineering. This chapter offers a very basic introduction into the decision theory with applications to decision problems in the civil engineering domain. Further reference is made to the work by other scholars for more rigorous and detailed treatment of this topic, see for example (Raiffa and Schlaifer, (1961); Benjamin and Cornell, (1970 ).
+Decision analysis, or decision-making under uncertain conditions is part of everyday life, e.g. when choosing to buy a lottery ticket or choosing to take an umbrella during cloudy weather. In contrast to the rather intuitive decision making in everyday matters, a structured analysis of different alternatives with associated risks, costs and benefits is very useful for decisions in (civil) engineering. This chapter offers a very basic introduction into the decision theory with applications to decision problems in the civil engineering domain. Further reference is made to the work by other scholars for more rigorous and detailed treatment of this topic, see for example (Raiffa and Schlaifer, (1961); Benjamin and Cornell, (1970 ).
 
 ## Introduction and basics
 
@@ -32,7 +32,7 @@ Decision tree.
 
 Based on the possible results a choice is made for an action. To be able to assess the different results, a numerical value is assigned to each outcome of $\omega$ , which can be used to establish the benefit of each outcome. This number can be a monetary value, a number on an arbitrary scale or utility - as long as the decision maker(s) can establish a consistent ranking of the outcomes with it. In the last two cases the benefit has no absolute value, but only gives the relative value of the different outcomes. Utility <em> (u)</em>  is a concept used to rank the possible outcomes according to the preferences of the decision maker. Utility <em> (u) </em> values are between $0\leq\textit u ({\omega})\leq 1$ . A utility function can be used to characterize the relative utility of various outcomes. The elaborations below are based on the monetary values as a measure for the outcomes and assume a risk neutral decision maker. This is a decision maker who is indifferent between choices with equal expected outcomes, even if one choice is riskier than the other. For example, a risk neutral decision maker would have the same preference for a € 400 pay out, or a 50/50 bet with a coin toss with outcomes of € 0 (head) or € 800 (tail). Utility and risk aversion are further discussed in section 3.3.3.<br>  
 
-**3.3.2 Decision rules**
+## Decision rules
 
 Once a set of actions, circumstances and outcomes is known, various approaches can be used to come to a preferred decision. Various deterministic decisions  rules are available which do not take into account the probabilities of the possible circumstances and outcomes. One example of such a decision rule is the minimax criterion: a decision maker wants to minimize maximum losses. This is in fact a risk-averse criterion. Another example is the maximax criterion: a decision maker chooses the option with the maximum income and is risk seeking. 
 
@@ -46,7 +46,7 @@ In which $u(a, \theta)$  – utility of action a under circumstance $\theta$. $P
 
 A rational decision is choosing the action with the highest expected (utility) value or highest benefit if outcomes are expressed in monetary values. This is illustrated in the example below. Note that other examples in these lecture notes will also be based on monetary values.
 
-**Example 3.1: buying shares or bonds?**
+### Example: buying shares or bonds?
 
 Suppose a person has EUR 1000 at his or her disposal and is given the choice to invest this money in bonds or in shares of a given company.  It is known that, on a yearly basis, 3 % of the current market value is distributed as interest on the bonds. The dividend of the shares depends on the company’s profit. Suppose that the board of directors have made the following agreements: 
 * for a profit smaller than 5 % of the shareholders capital, no dividend is paid;
@@ -92,7 +92,7 @@ In this case the expected outcome is larger for buying shares than for buying bo
 In the previous example, the number of circumstances is limited and the probability distribution of the circumstances is discrete. For many decision problems this is not the case. The state of nature, for instance, can assume many values that cannot be made discrete. This, for example, would have been the case if the dividend in example 0 had been a percentage of the profit. In such cases a probability density function can be used to characterize the spectrum of outcomes. Using a continuous form of formula (3.5), the expected value of various actions, and the optimal action / decision can be identified. 
 In taking decisions with uncertainties, it appears that probabilistic calculation techniques are a valuable aid to reach a rational choice. This is particularly the case if risks are dependent on the possible decisions. In such cases, Bayesian decision theory minimizes the total costs (i.e. investment costs plus risk in terms of potential losses). This can best be illustrated by means of an example from the civil engineering domain.
 
-**Example 3.2: drainage of a construction site – decision tree**
+### Example: drainage of a construction site – decision tree
 
 In a river polder a basement has to be built in an excavated construction site. The construction site is made of sheet piling and the bottom is sealed off with a clay layer with a thickness (d) of, on average, $\mu_{d}$ = 2.5 m. The thickness is not known exactly; it follows from measurements that the thickness has a normal distribution and a standard deviation of $\sigma_{d}$ = 0.2 m.
 The river cuts through the clay layer and the underlying sand layer is fed by the river (see Figure 3.5). The groundwater potential in the upper layer equals the potential in the deep sand layer. The upward water pressure under the sealing layer is assumed to be a direct function of the river levels. The fluctuating river levels result in fluctuations of the upward pressure under the sealing layer.<br>
@@ -158,7 +158,7 @@ name: decision-tree-filled
 Decision tree with probabilities and costs.
 ```
 
-**3.3.3 Utility functions**
+## Utility functions
 
 The elaborations in the previous sections were based on monetary values as a metric for outcomes and a risk neutral decision maker. This section will provide some basic information on utility functions and various risk attitudes.
 
