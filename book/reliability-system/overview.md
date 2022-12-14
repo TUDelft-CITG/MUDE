@@ -10,6 +10,12 @@ Example illustrating difference in failure probability in reality versus model (
 
 Sometimes the distinction is made because components are very different. Sometimes it is a matter of convenience, as two components may share a number of random variables through their respective limit-state functions that influence failure.
 
+Key concept: system reliability analysis can look very similar to component reliability problems. We separate it because in practice the analytic and numerical solutions can be quite different, which also reflects the way these methods are used (and even named) in different fields of engineering and mathematics.
+
+```{admonition} Exam Information
+:class: tip, dropdown
+For the exam, you will be expected to be able to recognize and solve simple series and parallel systems, and describe the influence that dependence between components may have on the calculated probability of interest.
+```
 
 Table of contents:
 
