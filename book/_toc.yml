@@ -13,7 +13,7 @@ parts:
       sections:
       - file: risk-analysis/definition.md
       - file: risk-analysis/steps.md
-      - file: risk-analysis/risk-analysis-old.md
+      - file: risk-analysis/example-FN-curve.md
     - file: reliability-component/overview.md
     - file: reliability-system/overview.md
     - file: risk-assessment/overview.md
@@ -23,7 +23,7 @@ parts:
       - file: risk-assessment/econ-optimization.ipynb
       - file: risk-assessment/example-dike-heightening.md
       - file: risk-assessment/safety-standards.ipynb
-      - file: risk-assessment/example-FN-curve.md
+
       - file: risk-assessment/example-types-of-risk.ipynb
     - file: other-topics/overview.md
     - file: references.md

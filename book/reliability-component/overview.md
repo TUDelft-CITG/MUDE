@@ -22,6 +22,8 @@ In MUDE we focus on situations with two variables (the 'bivariate' case) and use
 
 Our process is: define the region of interest, integrate bivariate PDF to evaluate probability, check requirement, modify component, check requirement, repeat until satisfactory.
 
+To simple slope problem: *this example is borrowed from Moss, which is borrowed from Baecher and Christian. Both are excellent texts on risk and reliability analysis in civil and geotechnical engineering.*
+
 ```{admonition} Exam Information
 :class: tip, dropdown
 For the exam, you will be expected to be able to recognize and solve simple component reliability problems, and describe the influence that dependence between random variables may have on the calculated probability of interest. Given a specific problem of interest, you should be able to describe failure (or non-failure) analytically as a function of random variables and visually in a bivariate plot. Using these simple frameworks, you can modify the component such that the probability of interest meets a specific criteria.
