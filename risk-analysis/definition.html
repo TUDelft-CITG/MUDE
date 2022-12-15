@@ -174,8 +174,8 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="risk-analysis-old.html">
-     OLD: Risk analysis and risk evaluation
+    <a class="reference internal" href="example-FN-curve.html">
+     Example: FN curve Calculation
     </a>
    </li>
   </ul>
@@ -212,12 +212,12 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../risk-assessment/econ-optimization.html">
-     Economic optimization
+     Economic Optimization
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../risk-assessment/example-dike-heightening.html">
-     Application of economic optimization: optimal dike heightening
+     Example: Optimal Dike Height
     </a>
    </li>
    <li class="toctree-l2">
@@ -226,13 +226,8 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/example-FN-curve.html">
-     Calculation of an FN curve
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../risk-assessment/example-types-of-risk.html">
-     Combination of individual, societal and economic risk for a dike ring area
+     Example: 3 Risk Metrics
     </a>
    </li>
   </ul>
@@ -379,15 +374,17 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Definition of risk
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#other-risk-definitions">
-   Other risk definitions
+   Other Risk Definitions
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hazard-vulnerability-and-exposure">
+     Hazard, Vulnerability and Exposure
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -408,15 +405,17 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Definition of risk
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#other-risk-definitions">
-   Other risk definitions
+   Other Risk Definitions
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hazard-vulnerability-and-exposure">
+     Hazard, Vulnerability and Exposure
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -429,19 +428,21 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="definition-of-risk">
-<h1>Definition of risk<a class="headerlink" href="#definition-of-risk" title="Permalink to this headline">#</a></h1>
+<span id="risk-definition"></span><h1>Definition of risk<a class="headerlink" href="#definition-of-risk" title="Permalink to this headline">#</a></h1>
 <p>Almost all activities in life are characterized by some level of risk. Especially in the design and management of engineering systems risk and safety are key concepts and need to be taken into account explicitly. In social discussions no unambiguous meaning is assigned to the concept of risk. Two definitions given in the Oxford dictionary are: 1) a situation involving exposure to danger; 2) the possibility that something unpleasant or unwelcome will happen.</p>
 <p>The first definition focuses on the consequences, the second on the possibility or probability. Quantifying and evaluating risks based on merely the probabilities or consequences is less realistic. For example, the risk of losing € 100 with a probability of 50% is different than the risk of losing € 1000 with the same probability. Also, the risk associated with losing a given sum of money will depend on the probability of the event.
 An often-used definition considers risk as expected value:</p>
 <p><em>Risk is the probability of an undesired event multiplied by the consequences.</em></p>
 <p>The unit of risk now depends on the units of probability and consequences. The probability of an event is generally expressed as the probability per unit time, for example per year. The consequences of an undesired event are often multi-dimensional, i.e. they can consist of different types of consequences, such as material, ecological damages, injuries and fatalities (see section 3.2.2 for further details). In many applications in engineering consequences are expressed by means of a monetary value. The unit of the risk (or expected value <span class="math notranslate nohighlight">\(
- E(d)\)</span> ) then becomes € per year. For a case with one event scenario <em>i</em>  with probability <em><span class="math notranslate nohighlight">\(p_{i}\)</span> </em> it yields:
+ E(d)\)</span>) then becomes € per year. For a case with one event scenario <span class="math notranslate nohighlight">\(i\)</span> with probability <span class="math notranslate nohighlight">\(p_{i}\)</span> it yields:
 $<span class="math notranslate nohighlight">\(
  E(d) = p_{i}d_{i} 
  \)</span>$</p>
-<p>A more general definition of risk has been given by Kaplan and Garrick (1981):<br></p>
-<p><em>Risk is a set of scenarios (<span class="math notranslate nohighlight">\(s_{i}\)</span>), each of which has a probability (<span class="math notranslate nohighlight">\(p_{i}\)</span>) and a consequence (<span class="math notranslate nohighlight">\(d_{i}\)</span>).</em></p>
-<p>This definition of Kaplan and Garrick allows the use of various so-called risk metrics (or risk measures) to quantify or depict the risk. The expected value of the damage for a set of multiple discrete scenarios{1,….,<em>n</em>} , can be expressed as:
+<p>A more general definition of risk has been given by Kaplan and Garrick (1981):</p>
+<blockquote>
+<div><p>Risk is a set of scenarios, <span class="math notranslate nohighlight">\(s_{i}\)</span>, each of which has a probability, <span class="math notranslate nohighlight">\(p_{i}\)</span>, and a consequence, <span class="math notranslate nohighlight">\(d_{i}\)</span>.</p>
+</div></blockquote>
+<p>This definition of Kaplan and Garrick allows the use of various so-called risk metrics (or risk measures) to quantify or depict the risk. The expected value of the damage for a set of multiple discrete scenarios <span class="math notranslate nohighlight">\(i=1,....,n\)</span> , can be expressed as:
 $<span class="math notranslate nohighlight">\(
 E(d) = \sum_{S_{i=1}}^{n}p_{i}d_{i}
 \)</span>$</p>
@@ -452,61 +453,86 @@ E(d) = \sum_{S_{i=1}}^{n}p_{i}d_{i}
 </figcaption>
 </figure>
 <p>The expected value does not give insight in the magnitude of probability and consequences and the contribution of individual scenarios. Therefore, an often-used alternative risk metric is the risk curve. It shows the probability of exceedance of a certain magnitude of consequences. A well-known example of such a risk curve is the FN curve, which displays the probability of exceedance of <em>N</em> fatalities. The values on both axes are generally shown on a logarithmic scale, see Figure 3.1 for an example. The FN curve was originally introduced for the assessment of the risks in the nuclear industry (Farmer, 1967; Kendall et al., 1977) and is now used to display and limit risks in various countries and sectors. Further information on the use of FN curves and a simple example of how to construct such a curve are included in section 3.5.1.</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="other-risk-definitions">
-<h1>Other risk definitions<a class="headerlink" href="#other-risk-definitions" title="Permalink to this headline">#</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Add integral (and also below)</p>
+</div>
+<div class="math notranslate nohighlight" id="equation-risk">
+<span class="eqno">(1)<a class="headerlink" href="#equation-risk" title="Permalink to this equation">#</a></span>\[
+RISK
+\]</div>
+<section id="other-risk-definitions">
+<h2>Other Risk Definitions<a class="headerlink" href="#other-risk-definitions" title="Permalink to this headline">#</a></h2>
 <p>In the remainder of this lecture notes and the course the definitions from the previous paragraph will be applied. Since (civil) engineers will work in a broad domain of applications it is useful to highlight some risk concepts used in other domains.</p>
 <p>Within economics, risk is generally associated with a deviation from the expected return or the probability of loss. In social sciences risk is often considered as a contextual notion or social construct. Vlek (1996) has summarized 11 formal definitions used in social sciences, see Table 3.1. In some of these definitions (e.g. numbers 2 and 4) the perceived seriousness of the undesired consequences plays an important role. Examples of other, more informal risk definitions used in psychology are “the lack of perceived controllability”, “set of possible negative consequences” and “fear of loss” (Vlek, 1996).</p>
 <p>Substantial research has focussed on the factors that determine the perception of risk (e.g. Slovic, 1987, Vlek, 1996). Examples of factors that influence risk perception include: the degree of damage, the controllability of and familiarity with the hazards, the extent of benefits from an activity, and voluntariness of exposure.</p>
-<p>Table 3.1 Formal definitions of risk used in social sciences (Vlek, 1996 )</p>
-<table class="colwidths-auto table">
+<table class="table" id="risk-definitions">
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">Formal definitions of risk used in social sciences (Vlek, 1996 )</span><a class="headerlink" href="#risk-definitions" title="Permalink to this table">#</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
 <thead>
-<tr class="row-odd"><th class="text-align:left head"><p></p></th>
-<th class="text-align:left head"><p></p></th>
+<tr class="row-odd"><th class="head"><p>No.</p></th>
+<th class="head"><p>Definition</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td class="text-align:left"><p>1</p></td>
-<td class="text-align:left"><p>Probability of undesired consequence</p></td>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>Probability of undesired consequence</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p>2</p></td>
-<td class="text-align:left"><p>Seriousness of (maximum) possible undesired consequence</p></td>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>Seriousness of (maximum) possible undesired consequence</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p>3</p></td>
-<td class="text-align:left"><p>Multi-attribute weighted sum of components of possible undesired consequences</p></td>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>Multi-attribute weighted sum of components of possible undesired consequences</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p>4</p></td>
-<td class="text-align:left"><p>Probability x seriousness of undesired consequence (‘expected loss’)</p></td>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>robability x seriousness of undesired consequence (‘expected loss’)</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p>5</p></td>
-<td class="text-align:left"><p>Probability-weighted sum of all possible undesired consequences (‘average expected loss’)</p></td>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>Probability-weighted sum of all possible undesired consequences (‘average expected loss’)</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p>6</p></td>
-<td class="text-align:left"><p>Fitted function through graph of points relating probability to extent of undesired consequences</p></td>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>Fitted function through graph of points relating probability to extent of undesired consequences</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p>7</p></td>
-<td class="text-align:left"><p>Semi variance of possible undesired consequences about their average</p></td>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>Semi variance of possible undesired consequences about their average</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p>8</p></td>
-<td class="text-align:left"><p>Variance of all possible consequences about mean expected consequence</p></td>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>Variance of all possible consequences about mean expected consequence</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p>9</p></td>
-<td class="text-align:left"><p>Weighted sum of expected value and variance of all possible consequences</p></td>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>Weighted sum of expected value and variance of all possible consequences</p></td>
 </tr>
-<tr class="row-odd"><td class="text-align:left"><p>10</p></td>
-<td class="text-align:left"><p>Weighted combination of various parameters of the probability distribution of all possible consequences</p></td>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>Weighted combination of various parameters of the probability distribution of all possible consequences</p></td>
 </tr>
-<tr class="row-even"><td class="text-align:left"><p>11</p></td>
-<td class="text-align:left"><p>Weight of possible undesired consequences (‘loss’) relative to comparable possible desired consequences</p></td>
+<tr class="row-even"><td><p>11</p></td>
+<td><p>Weight of possible undesired consequences (‘loss’) relative to comparable possible desired consequences</p></td>
 </tr>
 </tbody>
 </table>
-<p>The definitions applied in the research on natural hazards, often define risk in terms of more qualitative concepts such as hazard, vulnerability and exposure</p>
+<section id="hazard-vulnerability-and-exposure">
+<h3>Hazard, Vulnerability and Exposure<a class="headerlink" href="#hazard-vulnerability-and-exposure" title="Permalink to this headline">#</a></h3>
+<p>Risk definitions applied in fields that are focused on natural hazards often define risk as the combination of hazard, exposure and vulnerability, as shown in Figure <a class="reference internal" href="#risk-hazard"><span class="std std-numref">Fig. 2</span></a>.</p>
 <ul class="simple">
 <li><p>Hazard: A dangerous phenomenon, substance, human activity or condition that may cause loss of life, injury or other health impacts, property damage, loss of livelihoods and services, social and economic disruption, or environmental damage</p></li>
 <li><p>Vulnerability: The characteristics and circumstances of a community, system or asset that make it susceptible to the damaging effects of a hazard</p></li>
 <li><p>People, property, systems, or other elements present in hazard zones that are thereby subject to potential losses</p></li>
 </ul>
+<figure class="align-default" id="risk-hazard">
+<a class="reference internal image-reference" href="figures/risk-hazard.svg"><img alt="figures/risk-hazard.svg" height="200px" src="figures/risk-hazard.svg" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Alternative definition of risk as intersection of hazard, exposure and vulnerability.</span><a class="headerlink" href="#risk-hazard" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Often these terms are useful for framing qualitative discussions around complex topics where a quantitative analysis may be out of reach, for example, as done in IPCC reports on climate change <span id="id1">[<a class="reference internal" href="../references.html#id3" title="Omar Dario Cardona, Maarten K Van Aalst, Jörn Birkmann, Maureen Fordham, Glenn Mc Gregor, Perez Rosa, Roger S Pulwarty, E Lisa F Schipper, Bach Tan Sinh, Henri Décamps, and others. Determinants of risk: exposure and vulnerability. In Managing the risks of extreme events and disasters to advance climate change adaptation: special report of the intergovernmental panel on climate change, pages 65–108. Cambridge University Press, 2012.">Cardona <em>et al.</em>, 2012</a>]</span>. Note, however, that an analytical expression can easily be formulated by extending Equation <a class="reference internal" href="../risk-assessment/example-dike-heightening.html#equation-risk">(5)</a>:
+$<span class="math notranslate nohighlight">\(
+RISK INTEGRAL WITH CONDITIONAL
+\)</span>$</p>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">

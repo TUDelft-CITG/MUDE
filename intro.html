@@ -173,8 +173,8 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="risk-analysis/risk-analysis-old.html">
-     OLD: Risk analysis and risk evaluation
+    <a class="reference internal" href="risk-analysis/example-FN-curve.html">
+     Example: FN curve Calculation
     </a>
    </li>
   </ul>
@@ -211,12 +211,12 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="risk-assessment/econ-optimization.html">
-     Economic optimization
+     Economic Optimization
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="risk-assessment/example-dike-heightening.html">
-     Application of economic optimization: optimal dike heightening
+     Example: Optimal Dike Height
     </a>
    </li>
    <li class="toctree-l2">
@@ -225,13 +225,8 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="risk-assessment/example-FN-curve.html">
-     Calculation of an FN curve
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="risk-assessment/example-types-of-risk.html">
-     Combination of individual, societal and economic risk for a dike ring area
+     Example: 3 Risk Metrics
     </a>
    </li>
   </ul>
@@ -356,12 +351,41 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-information">
+   Module information
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#acknowledgements-license-citation">
+   Acknowledgements, license, citation
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -373,6 +397,24 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#module-information">
+   Module information
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#acknowledgements-license-citation">
+   Acknowledgements, license, citation
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -392,7 +434,7 @@ title="Print to PDF"
 <p>So in fact, as engineers we are optimistic, otherwise this chapter would be called Risk and <em>Un</em>reliability.</p>
 <div class="dropdown admonition note">
 <p class="admonition-title">Note</p>
-<p>Why are the variables above written using words? Because this document and many others use a variety of different terms to talk about the same concepts, for example, failure probability, <span class="math notranslate nohighlight">\(p_f\)</span>, is often used when reliability analyses are done for structural components; however, this term is misleading in the situation where we want to estimate the probability that the concentration of a solute in groundwater exceeds a certain value, or the discharge of a river falling below a regularotry threshold for ship traffic or fish migration.</p>
+<p>Why are the variables above written using words? Because many different terms and symbols are used in different fields of science and enginering which refer to about the same mathematical concepts. For example, ‘failure probability,’ <span class="math notranslate nohighlight">\(p_f\)</span>, is often used when designing structural components. However, this term may be misleading when applied to the probability that the concentration of a solute in groundwater exceeds a certain value, or the discharge of a river falling below a regulatory threshold for fish migration.</p>
 </div>
 <p>In short, risk and reliability cannot be defined without <em>probability</em>. These concepts are necessary in order to quantify uncertainty and take it into account when making decisions, regardless of whether our specific task is to investigate, assess, design or create policy for a particular engineering problem. Probability theory is a powerful tool because it provides a way to quantify many aspects of uncertainty, for example:</p>
 <ul class="simple">
@@ -404,15 +446,18 @@ title="Print to PDF"
 <li><p>inability to predict the outcome of future events with sufficient accuracy or precision</p></li>
 <li><p>and many more</p></li>
 </ul>
+<section id="module-information">
+<h2>Module information<a class="headerlink" href="#module-information" title="Permalink to this headline">#</a></h2>
+<p>This digital document is a series of lecture notes prepared for CEGM1000: Modeling, Uncertainty and Data for Engineers (MUDE), a first year MSc module in the Civil Engineering and Geosciences faculty at TU Delft. During the 2022-23 academic year it is only used for two weeks (2.7-2.8) for topics of risk and reliability.</p>
 <div class="tip dropdown admonition">
-<p class="admonition-title">Exam Information</p>
+<p class="admonition-title">MUDE exam information</p>
 <p>Key concepts from these lecture notes that will be assessed on the MUDE exam are:</p>
 <ul class="simple">
 <li><p>Definitions of risk and steps of a risk analysis</p></li>
 <li><p>Simple system and component reliability (quantitative risk analysis methods)</p></li>
 <li><p>Use of probability to design and assess engineering systems and components</p></li>
 <li><p>Influence of dependence on simple systems and components</p></li>
-<li><p>Decision analysis, cost-benefit analysis and economic optimization (risk assessment methods)</p></li>
+<li><p>Decision analysis, <a class="reference internal" href="risk-assessment/cost-benefit.html#cost-benefit"><span class="std std-ref">cost-benefit analysis</span></a> and economic optimization (risk assessment methods)</p></li>
 <li><p>Assessment and quantification of risks for a system with three different risk metrics: individual, societal and economic</p></li>
 <li><p>Application and derivation of standards for human safety (individual and societal risk)</p></li>
 <li><p>Application and derivation of standards based on economic risk</p></li>
@@ -420,7 +465,7 @@ title="Print to PDF"
 <p>Although the list is long, the methods are introduced in a simple form and are applied to simplified systems of engineering problems within Civil and Environmental Engineering and Geosciences.</p>
 </div>
 <div class="tip dropdown admonition">
-<p class="admonition-title">Not-exam Information</p>
+<p class="admonition-title">MUDE not-on-the-exam information</p>
 <p>The following concepts or methods are used in this document to illustrate key subjects and examples, but you will <em>not</em> be asked to do them on the exam:</p>
 <ul class="simple">
 <li><p>List from memory the steps of a risk analysis and describe all aspects in detail</p></li>
@@ -430,10 +475,11 @@ title="Print to PDF"
 <li></li>
 </ul>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This digital document is prepared for CEGM1000: Modeling, Uncertainty and Data for Engineers, a first year MSc course in the Civil Engineering and Geosciences faculty at TU Delft.</p>
-</div>
+</section>
+<section id="acknowledgements-license-citation">
+<h2>Acknowledgements, license, citation<a class="headerlink" href="#acknowledgements-license-citation" title="Permalink to this headline">#</a></h2>
+<p>Based on lecture notes of previous course CIE4130 Probabilistic Design.</p>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>

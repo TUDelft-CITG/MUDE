@@ -16,7 +16,7 @@ Point out how a single risk value can used as a design criteria, which links to 
 ```
 
 ```{warning}
-Add FN/FD curve to this section, as well as the integrals and (mathematical) statement of individual risk as combination of conditional probabilities.
+Add integrals and (mathematical) statement of individual risk as combination of conditional probabilities.
 ```
 
 It is noted that a (probabilistic) risk analysis is different  from a (deterministic) scenario analysis. A risk analysis is based on quantitative analysis of all (known) undesired events and their probabilities and consequences. A scenario analysis considers one (or a limited number) of design scenarios, often without considering its failure probability. Both approaches are complementary, as a scenario analysis considers one of the scenarios from the risk analysis. 
