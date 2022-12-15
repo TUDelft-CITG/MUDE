@@ -1,4 +1,5 @@
-# Calculation of an FN curve
+(ex-FN-curve)=
+# Example: FN curve Calculation
 
 The following example shows the composition of an FN curve for a system with two mutually exclusive event scenarios.
 
