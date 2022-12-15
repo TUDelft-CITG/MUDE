@@ -16,6 +16,8 @@ parts:
       - file: risk-analysis/example-FN-curve.md
     - file: reliability-component/overview.md
     - file: reliability-system/overview.md
+      sections:
+      - file: reliability-system/exercise-paint.md
     - file: risk-assessment/overview.md
       sections:
       - file: risk-assessment/decision.md
