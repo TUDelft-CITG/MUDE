@@ -24,7 +24,7 @@ $$
 E(d) = \sum_{S_{i=1}}^{n}p_{i}d_{i}
 $$ 
 
-```{figure} ../figures/FN-simple.png
+```{figure} ../figures/FN-simple.PNG
 ---
 height: 200px
 name: FN-curve
