@@ -40,7 +40,7 @@ $$
 
 *Answer:*
 
-```{figure} ../figures/FN-curve.png
+```{figure} ../figures/exercise-FN-curve.png
 ---
 width: 600px
 name: FN-curve

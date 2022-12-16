@@ -74,7 +74,7 @@ High Quality Paint + High Quality Cleaning
 
 *Answer:*
 
-```{figure} images/decision-tree.png
+```{figure} ../figures/exercise-decision-tree.png
 ---
 width: 600px
 name: decision-tree
@@ -123,7 +123,7 @@ $$
 *Answer:*
 3 per year
 
-```{figure} ../figures/optim-curve.png
+```{figure} ../figures/exercise-optimization.png
 ---
 width: 600px
 name: optimization-curve
