@@ -12,12 +12,6 @@ execute:
   allow_errors: false
 
 ################################################################################
-# Extensions
-parse:
-  myst_enable_extensions:
-    - amsmath
-
-################################################################################
 # Sphinx settings
 sphinx:
   config:
