@@ -19,6 +19,8 @@ parts:
     - file: reliability-system/overview.md
       sections:
       - file: reliability-system/exercise-paint.md
+      - file: reliability-system/exercise-simple-city.md
+      - file: reliability-system/exercise-dam.md
     - file: risk-assessment/overview.md
       sections:
       - file: risk-assessment/decision.md

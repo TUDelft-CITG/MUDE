@@ -1,0 +1,113 @@
+# Exercise: Dam failure analysis
+
+You are tasked to analyse the safety of a dam. The dam itself can fail due to instability. Another failure mechanism is failure of the spillway due to uncontrolled erosion (of the spillway) that could reach the body of the dam. If water levels in the reservoir become high, water flows from the reservoir into the spillway due to overflow. This happens approximately once every 10 years.
+
+When water flows into the spillway, there are two situations that could lead to a weak spillway prone to erosion and failure. The first one is a hidden damage to the spillway structure that cannot be detected in yearly inspections. The second is a crack in the concrete of the spillway, which has been missed during the yearly inspection.
+
+## Dependence between floods in two rivers
+
+Downstream of the dam there is an area protected by dikes. It consists of two main dike sections. A dike section fails if the river discharge exceeds a critical discharge Qc with a probability of exceedance of 1/100 per year. And this leads to flooding of the area. There appears to be a correlation between failures of both sections $\rho_{1,2}=0.9$. The figure below shows the effect of the correlation coefficient on the joint failure of the two sections.
+
+** PUT FIGURE HERE **
+
+1. Estimate the probability of flooding of the area protected by the two dike sections.
+
+*Answer*
+
+Let $P1$, $P2$ denote failure probability of dike section 1 and section 2 respectively. Flooding of the protected area occurs when at least one of the two dike section fails. Thus, probability of flooding of the protected area can be determined by:
+
+$$
+    P(\text{flooding}) &= P(\text{dike sections 1 fails OR dike section 2 fails}) \\
+    P(F1 \cup F2) &= P1 + P2 - P(F1 \cup F2)
+$$
+
+Given that the correlation between failures of both sections $\rho_{1,2} = 0.8$ based on the fiven correlation coefficient graph one can also determine the joined failure probability as $P(F1 \cup F2)$.
+
+$$
+    P(\text{flooding}) = 0.01 + 0.01 - 0.003 = 0.017 \: \text{per year}
+$$
+
+## Dam repair: probabilistic planning
+
+The dam has to be repaired. The responsible minister wants to make sure the whole project is finished within 9 months, and only accepts a probability of 10% that actual construction works exceed this duration. The dam reinforcement consists of two activities. The second activity can only start when the first one has been finished. The durations of both activities are uncertain and normally distributed. The first activity has a mean duration of $\mu_1=4$ months and a standard deviation of $\sigma_1 = 1$ month; for the second activity $\sigma_2 = 2$ months.
+
+2. Compute the mean duration of the activity 2, so that the project duration would fall within the criterion given by the minister.
+
+*Answer*
+Let $T1$ and $T2$ denote the duration of activities 1 and 2; $T$ denotes the total duration; $T1$ and $T2$ are normally distributed:
+
+$$
+    T1 \sim \mathcal{N}(4,1) \\
+    T2 \sim \mathcal{N}(?,2) 
+$$
+
+$T = T1 + T2$ is also normally distributed. 
+
+Limit state equation: total duration of constuction will not exceed 12 months, thus:
+
+$$
+    Z = 12 - (T1 + T2)
+$$
+
+The event $Z<0$ reflects that the actual construction works exceed the duration the minister want (12 months). It is acceptable that the actual construction works exceed this duration with a probability of 10%. Thus: $P(Z<0) = 0.1$. This leads to $\beta_z = 1.28155$
+
+Application of Level II reliability calculation:
+
+$$
+    \mu_z = 12 - (\mu_1 + \mu_2) = 8 - \mu_2 \\
+    \sigma_z = \sqrt{\sigma_1^2 + \sigma_2^2} = \sqrt{5} = 2.326 \\
+    8 - \mu_2 = \beta_z * \sigma_z = 2.86 \\
+    \mu_2 = 5.13 \: \text{months}
+$$
+
+## Acceptable risk
+
+The government wants to study the acceptable risk and the acceptable probability of dam failure. Two criteria are used for acceptable risk:
+
+- Societal risk (SR): an FN limit line: $P_f \leq 10^{-2}/n^2$.
+- Individual risk (IR): $IR \leq 10^{-6}$ per year.
+
+We know that mortality is case of dam failure is $F_{d|f} = 0.01$ and that the population living downstream of the dam is 1000 people. 
+
+3. Plot the FN limit line and indicate the acceptable probability of failure according to both criteria (individual risk, societal risk).
+
+*Answer*
+
+```{figure} ../figures/exercise-dam-fn-limit-line.png
+---
+width: 500px
+---
+```
+
+4. Provide an advice on the acceptable probability of failure for the dam. Give the proposed numerical value and a short motivation.
+
+*Answer*
+
+Based on individual risk criterion, we have:
+
+$$
+    IR = P_f P_{d|f} \leq IR_{acc}
+$$
+
+where $P_{d|f}=0.1$. Hence, the acceptable probability of failure is:
+
+$$
+    P_f \leq \frac{IR_{acc}}{P_{d|f}} = \frac{10^{-5}}{0.1} = 10^{-4} \: \text{per year}
+$$
+
+Based on societal risk criterion (FN-Curve):
+
+Acceptable failure probability can be determined by the FN-Curve:
+
+$$
+    P_f = 1 - F_N(n) \leq \frac{C}{n^\alpha} = \frac{10^{-2}}{n^2}
+$$
+
+Based on given information above, expected number of casualties per dam failure event is $n = F_{d|f}*1000 = 100$.
+
+$$
+    P_f \leq \frac{10^{-2}}{100^2} \\
+    P_f = 10^{-6} \: \text{per year}
+$$
+ 
+The most stringent of the two criteria applies, so the proposed safety standard would be $10^{-6}$ per year for the given inputs.
