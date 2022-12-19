@@ -30,4 +30,6 @@ parts:
       - file: risk-assessment/safety-standards.ipynb
       - file: risk-assessment/example-types-of-risk.ipynb
     - file: other-topics/overview.md
+      sections:
+      - file: other-topics/exercise-sample-exam.md
     - file: references.md
