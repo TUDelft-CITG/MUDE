@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Economic Optimization &#8212; Modelling, Uncertainty and Data for Engineers (MUDE)</title>
+    <title>Exercise: FN-curve &#8212; Modelling, Uncertainty and Data for Engineers (MUDE)</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Example: Optimal Dike Height" href="example-dike-height.html" />
-    <link rel="prev" title="Cost benefit analysis" href="cost-benefit.html" />
+    <link rel="next" title="Component Reliability" href="../reliability-component/overview.html" />
+    <link rel="prev" title="Example: FN curve Calculation" href="example-FN-curve.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -153,33 +153,33 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../risk-analysis/overview.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="overview.html">
    Risk Analysis
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-analysis/definition.html">
+    <a class="reference internal" href="definition.html">
      Definition of risk
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-analysis/steps.html">
+    <a class="reference internal" href="steps.html">
      Steps in a Risk Analysis
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-analysis/example-FN-curve.html">
+    <a class="reference internal" href="example-FN-curve.html">
      Example: FN curve Calculation
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../risk-analysis/exercise-fn-curve.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Exercise: FN-curve
     </a>
    </li>
@@ -217,43 +217,43 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="overview.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../risk-assessment/overview.html">
    Risk Assessment
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="decision.html">
+    <a class="reference internal" href="../risk-assessment/decision.html">
      Decision Analysis
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="cost-benefit.html">
+    <a class="reference internal" href="../risk-assessment/cost-benefit.html">
      Cost benefit analysis
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../risk-assessment/econ-optimization.html">
      Economic Optimization
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="example-dike-height.html">
+    <a class="reference internal" href="../risk-assessment/example-dike-height.html">
      Example: Optimal Dike Height
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="safety-standards.html">
+    <a class="reference internal" href="../risk-assessment/safety-standards.html">
      Safety standards
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="example-types-of-risk.html">
+    <a class="reference internal" href="../risk-assessment/example-types-of-risk.html">
      Example: 3 Risk Metrics
     </a>
    </li>
@@ -332,35 +332,6 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/risk-assessment/econ-optimization.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -383,7 +354,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/risk-assessment/econ-optimization.ipynb"
+        <a href="../_sources/risk-analysis/exercise-fn-curve.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -394,7 +365,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.ipynb</span>
+<span class="headerbtn__text-container">.md</span>
 </a>
 
       </li>
@@ -432,7 +403,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Economic Optimization</h1>
+                <h1>Exercise: FN-curve</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -444,44 +415,51 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="economic-optimization">
-<span id="econ-optimization"></span><h1>Economic Optimization<a class="headerlink" href="#economic-optimization" title="Permalink to this headline">#</a></h1>
-<p>The previous sections have focussed on decisions for which the number of actions was limited, e.g. excavation with or without drainage and the associated costs and benefits. However, there are several situations in which the number of actions is unlimited. This occurs when the failure probability level has to be decided for a system that is yet to be designed, with an infinite number of design options. An example of this type of decision problem is the heightening of dikes, as in theory an unlimited amount of values can be chosen for the elevation, e.g. 2m, 5m, 5.1m, 5.11m, 5.1111m 6m etc.</p>
-<p>For this situation an economic optimization that takes into account the costs of increasing the safety level and reducing the risks can be applied to derive an optimal level of safety (or the optimal “failure probability”). The economic optimization was developed and applied by ⚠️van Dantzig (1956), to derive the optimal dike height for South Holland after the 1953 storm surge disaster, as will be further elaborated in the next section.
-In the economic optimization the total costs (<span class="math notranslate nohighlight">\(C_{tot}\)</span>[€]) are determined, consisting of the investments <span class="math notranslate nohighlight">\(I\)</span>[€] in a safer system and the present value of the risk <span class="math notranslate nohighlight">\(R\)</span>[€].</p>
-<div class="math notranslate nohighlight">
-\[
-    C_{tot} = I + R
-\]</div>
-<p>The annual risk, or expected economic dagmage is found by:</p>
-<div class="math notranslate nohighlight">
-\[
-    E(D) = P_f D
-\]</div>
-<p>where:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(E(D)\)</span> the expected value of the risk [€/year]</p></li>
-<li><p><span class="math notranslate nohighlight">\(P_f\)</span> the failure probablity of the system per year [1/year]</p></li>
-<li><p><span class="math notranslate nohighlight">\(D\)</span> the damage in case of failure [€]</p></li>
-</ul>
-<p>In this approach it is thus assumed that all damages are expressed in monetary terms. Additional criteria for separately considering the loss of human life are included in the next section.</p>
-<p>The present value of the risk for an infinite time horizon can be found as follows:</p>
-<div class="math notranslate nohighlight">
-\[
-    R = \frac{P_f D}{r}
-\]</div>
-<p>The risk can be reduced by constructing a safer system (a lower <span class="math notranslate nohighlight">\(P_f\)</span>), or limiting the damage (smaller <span class="math notranslate nohighlight">\(D\)</span>). In this case we assume prevention measures that focus on reducing the failure probability. The investments will become a function of the failure probability of the system, since increasing the safety will lead to an increase of costs.</p>
-<div class="math notranslate nohighlight">
-\[
-    I = I(P_f)
-\]</div>
-<p>⚠️Figure 3.10 shows the costs and risks as a function of the accepted failure probability of a system. The economic optimum is found when the total costs are minimal. For this situation the following is valid:</p>
-<div class="math notranslate nohighlight">
-\[
-    \frac{d C_{tot}}{d P_f} = 0
-\]</div>
-<p>This approach can be applied to various decisions problems, such as the optimal dike height (see next section) but also the dimensioning of other interventions such as sprinklers or ventilation in tunnels to reduce fire risks. In cases where no continuous functions are available to create a figure like the one below, the analyst can consider a limited number of design options (e.g. no, small, medium or large sprinklers in a tunnel) and determine investments, risks and total costs for these options.</p>
-<p>In addition to the determination of the optimal failure probability, the cost benefit criterion should still be verified. (It is possible that we find an economic optimum with higher total costs than in the current situation without interventions). It is checked whether the benefits of risk reduction are larger than the costs of the dike heightening, i.e. <span class="math notranslate nohighlight">\((P_{f,0} - P_{f,opt}) D &gt; I(P_{f,opt})\)</span>.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="exercise-fn-curve">
+<h1>Exercise: FN-curve<a class="headerlink" href="#exercise-fn-curve" title="Permalink to this headline">#</a></h1>
+<p>A small town is located in a seismic region threatened by two faults. Fault A has a 10% probability of occurring each year, which would cause 10 fatalities, and Fault B has a 1% chance of occurring, which would cause 100 fatalities. Construct an FN curve for the town. Assume that the town is risk averse and that the tolerable risk limit is governed using a constant of C=1.</p>
+<ol class="simple">
+<li><p>Compute the expected annual fatalities for the town.</p></li>
+</ol>
+<p><em>Answer:</em>
+$<span class="math notranslate nohighlight">\(
+E(N) = P_1 * N_1 + P_2 * N_2 = 0.1 * 10 + 0.01 * 100 = 2
+\)</span>$</p>
+<ol class="simple">
+<li><p>If the town improved the safety of its buildings, what would be the maximum allowable number of fatalities that would be considered acceptable due to an earthquake on fault A?</p></li>
+</ol>
+<p><em>Answer:</em></p>
+<p>Using the limit curve
+$<span class="math notranslate nohighlight">\(
+1 - F_n(n) = C / n^\alpha
+\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+0.1 = 1 / n^2
+\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+n = \sqrt{10} \approx 3
+\)</span>$</p>
+<ol class="simple">
+<li><p>What is the maximum value for the probability of an earthquake on Fault B that would be considered acceptable by the town?</p></li>
+</ol>
+<p><em>Answer:</em></p>
+<p>Using the limit curve
+$<span class="math notranslate nohighlight">\(
+1 - F_n(n) = C / n^\alpha
+\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+1 - F_n(100) = C / 100^2 = 0.0001 = 10^{-4}
+\)</span>$</p>
+<ol class="simple">
+<li><p>Upload a photo/scan of your FN curve. Be sure to clearly label the axes and the values of key points on your diagram.</p></li>
+</ol>
+<p><em>Answer:</em></p>
+<figure class="align-default" id="fn-curve">
+<a class="reference internal image-reference" href="../_images/exercise-FN-curve.png"><img alt="../_images/exercise-FN-curve.png" src="../_images/exercise-FN-curve.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">FN-curve for exercise 4</span><a class="headerlink" href="#fn-curve" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 </section>
 
     <script type="text/x-thebe-config">
@@ -497,7 +475,7 @@ In the economic optimization the total costs (<span class="math notranslate nohi
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./risk-assessment"
+            path: "./risk-analysis"
         },
         predefinedOutput: true
     }
@@ -511,17 +489,17 @@ In the economic optimization the total costs (<span class="math notranslate nohi
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="cost-benefit.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="example-FN-curve.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Cost benefit analysis</p>
+            <p class="prev-next-title">Example: FN curve Calculation</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="example-dike-height.html" title="next page">
+    <a class='right-next' id="next-link" href="../reliability-component/overview.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Example: Optimal Dike Height</p>
+        <p class="prev-next-title">Component Reliability</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

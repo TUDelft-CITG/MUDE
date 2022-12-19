@@ -178,6 +178,11 @@ const thebe_selector_output = ".output, .cell_output"
      Example: FN curve Calculation
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exercise-fn-curve.html">
+     Exercise: FN-curve
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -185,17 +190,39 @@ const thebe_selector_output = ".output, .cell_output"
    Component Reliability
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../reliability-system/overview.html">
    System Reliability
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reliability-system/exercise-paint.html">
+     Exercise: Paint System
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reliability-system/exercise-simple-city.html">
+     Exercise: Simple City
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reliability-system/exercise-dam.html">
+     Exercise: Dam failure analysis
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../risk-assessment/overview.html">
    Risk Assessment
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -232,10 +259,22 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../other-topics/overview.html">
    Other topics
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../other-topics/exercise-sample-exam.html">
+     Sample Exam Questions
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../references.html">
@@ -473,9 +512,12 @@ title="Print to PDF"
 <li><p>Risk evaluation (of the acceptability of the risk)</p></li>
 </ol>
 <p>Each of these steps is described in more detail below, and provides context for the following chapters in this book. In addition to the steps in risk assessment of a given system, <em>risk management</em> also includes the element ‘risk reduction and control’. Dependent on the outcome of the former phase measures can be taken to reduce the risk. This will lead to changes in the system configuration and the risk level. If the risk analysis is used in the design of systems, the steps are often repeated several times with adjusted system specifications to obtain an optimal design. It should also be determined how the risks can be controlled, for example by monitoring, inspection or maintenance.</p>
-<figure>
-<center><img src="../figures/risk-steps.png" style="width: 250px; height: 300px;"/></center></figure>
-<figcaption align = "center">Figure 3.2 Schematic view of steps in risk assessment and risk management.</figcaption> 
+<figure class="align-default" id="risk-steps">
+<a class="reference internal image-reference" href="../_images/risk-steps.PNG"><img alt="../_images/risk-steps.PNG" src="../_images/risk-steps.PNG" style="width: 250px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Schematic view of steps in risk assessment and risk management.</span><a class="headerlink" href="#risk-steps" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <section id="system-definition">
 <h2>1. System definition<a class="headerlink" href="#system-definition" title="Permalink to this headline">#</a></h2>
 <p>This step entails the definition and description of the system as well as the scope and objectives of the analysis.  The process or system under consideration can usually be described as a so-called input-output element. Here the system is assumed to be failing if no output takes place. Usually a system is divided into components and subsystems, which can all be schematised as an input-output elements. By means of the internal relations the components and subsystems together form a configuration that is representative of the total system. Further information on the decomposition and analysis of system is provided in section 3.5 of these lecture notes.</p>
@@ -510,7 +552,8 @@ As an example the failure of a dike for a set of discrete events is considered:<
 <li><p>The probability of damage given dike breach and inflow into the polder <span class="math notranslate nohighlight">\(P(D|E_{1}\cap E_{2})\)</span></p></li>
 </ul>
 <p>The probability of damage can now be computed by combining these terms</p>
-<p><span class="math notranslate nohighlight">\(P(D)=P(E_{1})P(E_{2}|E_{1})P(D|E_{1}\cap E_{2})\)</span>        (3.4)</p>
+<div class="math notranslate nohighlight">
+\[P(D)=P(E_{1})P(E_{2}|E_{1})P(D|E_{1}\cap E_{2})\]</div>
 <p>As introduced in section 3.1, multiple types of consequences can be caused by one disaster. Table 3.2 gives an overview of the different types of consequences of the failure of large engineering systems. The damage is divided into tangible and intangible damage, depending on whether or not the losses can be assessed in monetary values. Another distinction is made between the direct damage, caused by physical effects of the event, and damages occurring outside the directly exposed area. The latter occurs when companies outside a flooded area experience damages, due to loss of demand from customers in the flooded area. In a risk analysis it is desired to take into account a complete set of impacts. Since a lot of the items from the table cannot be quantified easily, the quantitative analysis and risk evaluation are often focused  on economic damages and life loss.
 Table 3.2 General classification of damages, based on (Vrouwenvelder and Vrijling, 1996)</p>
 <table class="colwidths-auto table">

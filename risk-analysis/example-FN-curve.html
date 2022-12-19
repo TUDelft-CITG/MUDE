@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Component Reliability" href="../reliability-component/overview.html" />
+    <link rel="next" title="Exercise: FN-curve" href="exercise-fn-curve.html" />
     <link rel="prev" title="Steps in a Risk Analysis" href="steps.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -178,6 +178,11 @@ const thebe_selector_output = ".output, .cell_output"
      Example: FN curve Calculation
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exercise-fn-curve.html">
+     Exercise: FN-curve
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -185,17 +190,39 @@ const thebe_selector_output = ".output, .cell_output"
    Component Reliability
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../reliability-system/overview.html">
    System Reliability
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reliability-system/exercise-paint.html">
+     Exercise: Paint System
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reliability-system/exercise-simple-city.html">
+     Exercise: Simple City
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reliability-system/exercise-dam.html">
+     Exercise: Dam failure analysis
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../risk-assessment/overview.html">
    Risk Assessment
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -232,10 +259,22 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../other-topics/overview.html">
    Other topics
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../other-topics/exercise-sample-exam.html">
+     Sample Exam Questions
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../references.html">
@@ -378,151 +417,52 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="example-fn-curve-calculation">
 <span id="ex-fn-curve"></span><h1>Example: FN curve Calculation<a class="headerlink" href="#example-fn-curve-calculation" title="Permalink to this headline">#</a></h1>
-<p>The following example shows the composition of an FN curve for a system with two mutually exclusive event scenarios.</p>
-<p>Accident 1 with <span class="math notranslate nohighlight">\(N_{1}=10\)</span> fatalities and a probability of <span class="math notranslate nohighlight">\(P_{1} = 10^{-2}\)</span> per year
-Accident 2 with <span class="math notranslate nohighlight">\(N_{2}=100\)</span> fatalities and a probability of <span class="math notranslate nohighlight">\(P_{1} = 10^{-3}\)</span> per year</p>
-<p>Based on this information the probability mass function can  be formed (first graph). Consequently, the cumulative  distribution function can be made (second graph). Finally, the probability of exceedance or the FN curve is made (third graph).</p>
-<p>Finally, we note that the expected value of the number of fatalities equals:</p>
-<p><span class="math notranslate nohighlight">\(E(N) = P_{1}N_{1} + P_{2}N_{2} = 0.2\)</span> fatalities per year</p>
-<div class="toggle docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">mpl_toolkits.axisartist.axislines</span> <span class="kn">import</span> <span class="n">AxesZero</span>
-
-<span class="c1"># Probability density/mass function</span>
-
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">axes_class</span><span class="o">=</span><span class="n">AxesZero</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">direction</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;xzero&quot;</span><span class="p">,</span> <span class="s2">&quot;yzero&quot;</span><span class="p">]:</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="n">direction</span><span class="p">]</span><span class="o">.</span><span class="n">set_axisline_style</span><span class="p">(</span><span class="s2">&quot;-|&gt;&quot;</span><span class="p">)</span> <span class="c1"># add arrows</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="n">direction</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># x and y from origin</span>
-    
-<span class="k">for</span> <span class="n">direction</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="s2">&quot;right&quot;</span><span class="p">,</span> <span class="s2">&quot;bottom&quot;</span><span class="p">,</span> <span class="s2">&quot;top&quot;</span><span class="p">]:</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="n">direction</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span> <span class="c1"># hide borders</span>
-
-<span class="n">N_fatalities</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;100&#39;</span><span class="p">]</span>
-<span class="n">N_fatalities_loc</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.30</span><span class="p">,</span> <span class="mf">0.66</span><span class="p">]</span>
-
-<span class="n">pdf</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;0.989&#39;</span><span class="p">,</span> <span class="s1">&#39;$10^{-2}$&#39;</span><span class="p">,</span> <span class="s1">&#39;$10^{-3}$&#39;</span><span class="p">]</span>
-<span class="n">pdf_loc</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.99</span><span class="p">,</span> <span class="mf">0.66</span><span class="p">,</span> <span class="mf">0.33</span><span class="p">]</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">N_fatalities_loc</span><span class="p">,</span> <span class="n">pdf_loc</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span> <span class="s1">&#39;lightcyan&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">N_fatalities_loc</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">N_fatalities</span><span class="p">)</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">pdf_loc</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">(</span><span class="n">pdf</span><span class="p">)</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Probability density/mass function, $f_</span><span class="si">{N}</span><span class="s1">(n)$&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.0</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Fatalities&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Probability&#39;</span><span class="p">)</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mf">0.66</span><span class="p">,</span> <span class="n">xmin</span><span class="o">=</span> <span class="mf">0.01</span><span class="p">,</span> <span class="n">xmax</span><span class="o">=</span> <span class="mf">0.40</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span> <span class="c1"># add dashed horizontal lines</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mf">0.33</span><span class="p">,</span> <span class="n">xmin</span><span class="o">=</span> <span class="mf">0.01</span><span class="p">,</span> <span class="n">xmax</span><span class="o">=</span> <span class="mf">0.90</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;ex_FN_curve_step_01.svg&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
+<p>The following three figures illustrate the computation of an FN curve for a system with two mutually exclusive event scenarios:</p>
+<ul class="simple">
+<li><p>Accident 1 with <span class="math notranslate nohighlight">\(N_{1}=10\)</span> fatalities and a probability of <span class="math notranslate nohighlight">\(P_{1} = 10^{-2}\)</span> per year</p></li>
+<li><p>Accident 2 with <span class="math notranslate nohighlight">\(N_{2}=100\)</span> fatalities and a probability of <span class="math notranslate nohighlight">\(P_{1} = 10^{-3}\)</span> per year</p></li>
+</ul>
+<p>First, the probability mass function is created <span class="math notranslate nohighlight">\(f_N(n)=P(N=n)\)</span>, taking care that the probability of no fatalities is included:</p>
+<div class="math notranslate nohighlight">
+\[ P(0) = 1 - P_{1} + P_{2} = 1 - 0.01 - 0.001 = 0.989 \]</div>
+<p>The cumulative  distribution function, <span class="math notranslate nohighlight">\(F_N(n)=P(N\leq n)\)</span>, can thus be easily computed, as well as the probability of exceedance, <span class="math notranslate nohighlight">\(1-F_N(n)\)</span>, also known as the <em>FN curve.</em> Note that if a risk metric such as damage in Euros was being used, we would call this the <em>FD curve</em> and use <span class="math notranslate nohighlight">\(D\)</span> to denote the random variable, as in <span class="math notranslate nohighlight">\(f_D(d)\)</span> and <span class="math notranslate nohighlight">\(F_D(d)\)</span></p>
+<p>While the curves below illustrate probability and consequences associated with specific scenarios, the expected value can be used to assess the entire system. For this example, the expected value of fatalities per year for all scenarios can be computed as follows:</p>
+<div class="math notranslate nohighlight">
+\[E(N) = P_{1}N_{1} + P_{2}N_{2} = 0.2\quad \textsf{(fatalities per year)}\]</div>
+<!-- ````{toggle}
+```{eval-rst}
+.. literalinclude:: ../code/ex_FN_curve_step_01.py
+   :language: python
+```
+```` -->
 <figure class="align-default" id="ex-fn-curve-step-01">
-<a class="reference internal image-reference" href="../_images/ex_FN_curve_step_01.svg"><img alt="../_images/ex_FN_curve_step_01.svg" src="../_images/ex_FN_curve_step_01.svg" width="400" /></a>
+<a class="reference internal image-reference" href="../_images/ex_FN_curve_step_01_py.svg"><img alt="../_images/ex_FN_curve_step_01_py.svg" src="../_images/ex_FN_curve_step_01_py.svg" width="400" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Example FN-curve calculation: probability mass function (PMF).</span><a class="headerlink" href="#ex-fn-curve-step-01" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Probability mass function (PMF), <span class="math notranslate nohighlight">\(f_N(N)\)</span>.</span><a class="headerlink" href="#ex-fn-curve-step-01" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<div class="toggle docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">mpl_toolkits.axisartist.axislines</span> <span class="kn">import</span> <span class="n">AxesZero</span>
-
-<span class="c1"># Cumulative Distribution Function </span>
-
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">axes_class</span><span class="o">=</span><span class="n">AxesZero</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">direction</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;xzero&quot;</span><span class="p">,</span> <span class="s2">&quot;yzero&quot;</span><span class="p">]:</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="n">direction</span><span class="p">]</span><span class="o">.</span><span class="n">set_axisline_style</span><span class="p">(</span><span class="s2">&quot;-|&gt;&quot;</span><span class="p">)</span> <span class="c1"># add arrows</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="n">direction</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># x and y from origin</span>
-    
-<span class="k">for</span> <span class="n">direction</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="s2">&quot;right&quot;</span><span class="p">,</span> <span class="s2">&quot;bottom&quot;</span><span class="p">,</span> <span class="s2">&quot;top&quot;</span><span class="p">]:</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="n">direction</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span> <span class="c1"># hide borders</span>
-
-<span class="n">N_fatalities</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;100&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">]</span>
-<span class="n">N_fatalities_loc</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.03</span><span class="p">,</span> <span class="mf">0.33</span><span class="p">,</span> <span class="mf">0.76</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">]</span>
-
-<span class="n">pdf</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="s1">&#39;0.989&#39;</span><span class="p">,</span> <span class="s1">&#39;0.999&#39;</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">]</span>
-<span class="n">pdf_loc</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.03</span><span class="p">,</span> <span class="mf">0.66</span><span class="p">,</span> <span class="mf">0.86</span><span class="p">,</span> <span class="mf">0.99</span><span class="p">]</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">N_fatalities_loc</span><span class="p">,</span> <span class="n">pdf_loc</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span> <span class="s1">&#39;darkblue&#39;</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">N_fatalities_loc</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">N_fatalities</span><span class="p">)</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">pdf_loc</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">(</span><span class="n">pdf</span><span class="p">)</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Cumulative distribution function, $f_</span><span class="si">{N}</span><span class="s1">(x) = P(N \leq n)$&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mf">0.55</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.1</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Fatalities&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Probability&#39;</span><span class="p">)</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;} $10^{-3}$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.725</span><span class="p">,</span> <span class="sa">r</span><span class="s1">&#39;} $10^{-2}$&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;ex_FN_curve_step_02.svg&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
+<!-- ````{toggle}
+```{eval-rst}
+.. literalinclude:: ../code/ex_FN_curve_step_02.py
+   :language: python
+```
+```` -->
 <figure class="align-default" id="ex-fn-curve-step-02">
-<a class="reference internal image-reference" href="../_images/ex_FN_curve_step_02.svg"><img alt="../_images/ex_FN_curve_step_02.svg" src="../_images/ex_FN_curve_step_02.svg" width="400" /></a>
+<a class="reference internal image-reference" href="../_images/ex_FN_curve_step_02_py.svg"><img alt="../_images/ex_FN_curve_step_02_py.svg" src="../_images/ex_FN_curve_step_02_py.svg" width="400" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Example FN-curve calculation: cumulative probability function (CDF).</span><a class="headerlink" href="#ex-fn-curve-step-02" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Cumulative distribution function (CDF), <span class="math notranslate nohighlight">\(F_N(n)\)</span>.</span><a class="headerlink" href="#ex-fn-curve-step-02" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<div class="toggle docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">mpl_toolkits.axisartist.axislines</span> <span class="kn">import</span> <span class="n">AxesZero</span>
-
-<span class="c1"># FN curve</span>
-
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="n">axes_class</span><span class="o">=</span><span class="n">AxesZero</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="n">direction</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;xzero&quot;</span><span class="p">,</span> <span class="s2">&quot;yzero&quot;</span><span class="p">]:</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="n">direction</span><span class="p">]</span><span class="o">.</span><span class="n">set_axisline_style</span><span class="p">(</span><span class="s2">&quot;-|&gt;&quot;</span><span class="p">)</span> <span class="c1"># add arrows</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="n">direction</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># x and y from origin</span>
-    
-<span class="k">for</span> <span class="n">direction</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="s2">&quot;right&quot;</span><span class="p">,</span> <span class="s2">&quot;bottom&quot;</span><span class="p">,</span> <span class="s2">&quot;top&quot;</span><span class="p">]:</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">[</span><span class="n">direction</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span> <span class="c1"># hide borders</span>
-    
-<span class="n">N_fatalities</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;100&#39;</span><span class="p">,</span><span class="s1">&#39;100&#39;</span><span class="p">]</span>
-<span class="n">N_fatalities_loc</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.03</span><span class="p">,</span><span class="mf">0.33</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">]</span>
-
-<span class="n">pdf</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">,</span><span class="s1">&#39;$1.1 * 10^{-2}$&#39;</span><span class="p">,</span> <span class="s1">&#39;$10^{-3}$&#39;</span><span class="p">,</span><span class="s1">&#39;0&#39;</span><span class="p">]</span>
-<span class="n">pdf_loc</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.03</span><span class="p">,</span><span class="mf">0.99</span><span class="p">,</span> <span class="mf">0.66</span><span class="p">,</span> <span class="mf">0.03</span><span class="p">]</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">step</span><span class="p">(</span><span class="n">N_fatalities_loc</span><span class="p">,</span> <span class="n">pdf_loc</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span> <span class="s1">&#39;darkblue&#39;</span><span class="p">,</span><span class="n">linewidth</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">N_fatalities_loc</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">N_fatalities</span><span class="p">)</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">pdf_loc</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">(</span><span class="n">pdf</span><span class="p">)</span>
-
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;FN curve, $f_</span><span class="si">{N}</span><span class="s1">(x) = P(N \leq n)$&#39;</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.1</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Fatalities&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Probability&#39;</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;ex_FN_curve_step_03.svg&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
+<!-- ````{toggle}
+```{eval-rst}
+.. literalinclude:: ../code/ex_FN_curve_step_03.py
+   :language: python
+```
+```` -->
 <figure class="align-default" id="ex-fn-curve-step-03">
-<a class="reference internal image-reference" href="../_images/ex_FN_curve_step_03.svg"><img alt="../_images/ex_FN_curve_step_03.svg" src="../_images/ex_FN_curve_step_03.svg" width="400" /></a>
+<a class="reference internal image-reference" href="../_images/ex_FN_curve_step_03_py.svg"><img alt="../_images/ex_FN_curve_step_03_py.svg" src="../_images/ex_FN_curve_step_03_py.svg" width="400" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Example FN-curve calculation: exceedance probability (FN curve).</span><a class="headerlink" href="#ex-fn-curve-step-03" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">Exceedance probability (FN curve), <span class="math notranslate nohighlight">\(1-F_N(n)\)</span>.</span><a class="headerlink" href="#ex-fn-curve-step-03" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -561,10 +501,10 @@ Accident 2 with <span class="math notranslate nohighlight">\(N_{2}=100\)</span> 
             <p class="prev-next-title">Steps in a Risk Analysis</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../reliability-component/overview.html" title="next page">
+    <a class='right-next' id="next-link" href="exercise-fn-curve.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Component Reliability</p>
+        <p class="prev-next-title">Exercise: FN-curve</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
