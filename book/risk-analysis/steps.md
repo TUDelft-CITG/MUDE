@@ -15,7 +15,7 @@ In general, the following elements can be identified within risk analysis, see t
 Each of these steps is described in more detail below, and provides context for the following chapters in this book. In addition to the steps in risk assessment of a given system, *risk management* also includes the element ‘risk reduction and control’. Dependent on the outcome of the former phase measures can be taken to reduce the risk. This will lead to changes in the system configuration and the risk level. If the risk analysis is used in the design of systems, the steps are often repeated several times with adjusted system specifications to obtain an optimal design. It should also be determined how the risks can be controlled, for example by monitoring, inspection or maintenance.
 
 <figure>
-<center><img src="../figures/risk-steps.png" style="width: 250px; height: 300px;"/></center></figure>
+<center><img src="../figures/risk-steps.PNG" style="width: 250px; height: 300px;"/></center></figure>
 <figcaption align = "center">Figure 3.2 Schematic view of steps in risk assessment and risk management.</figcaption> 
 
 ## 1. System definition
