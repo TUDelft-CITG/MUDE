@@ -35,4 +35,4 @@ ax.set_ylabel('Probability')
 ax.text(0.8, 0.9, r'} $10^{-3}$', fontsize=20)
 ax.text(0.4, 0.725, r'} $10^{-2}$', fontsize=30)
 
-plt.savefig('ex_FN_curve_step_02.svg')
+plt.savefig('ex_FN_curve_step_02_py.svg')

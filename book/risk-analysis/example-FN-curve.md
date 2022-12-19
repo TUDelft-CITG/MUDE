@@ -23,7 +23,7 @@ $$E(N) = P_{1}N_{1} + P_{2}N_{2} = 0.2\quad \textsf{(fatalities per year)}$$
 ```
 ```` -->
  
-```{figure} ../figures/ex_FN_curve_step_01.svg
+```{figure} ../figures/ex_FN_curve_step_01_py.svg
 ---
 width: 400
 name: ex_FN_curve_step_01
@@ -38,7 +38,7 @@ Probability mass function (PMF), $f_N(N)$.
 ```
 ```` -->
 
-```{figure} ../figures/ex_FN_curve_step_02.svg
+```{figure} ../figures/ex_FN_curve_step_02_py.svg
 ---
 width: 400
 name: ex_FN_curve_step_02
@@ -53,7 +53,7 @@ Cumulative distribution function (CDF), $F_N(n)$.
 ```
 ```` -->
  
-```{figure} ../figures/ex_FN_curve_step_03.svg
+```{figure} ../figures/ex_FN_curve_step_03_py.svg
 ---
 width: 400
 name: ex_FN_curve_step_03

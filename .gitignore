@@ -35,4 +35,4 @@ MANIFEST
 open_book.sh
 
 # Images from Python code
-*.svg
+*_py.svg
