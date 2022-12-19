@@ -13,7 +13,7 @@ The damage in case of failure is 1 billion $10^9$ Euros. We compare two differen
 
 For which value of the interest rate $r$ is strategy 2 the most interesting? (You may consider an infinite lifetime of investments).
 
-```{figure} ../figures/flood-protection.png
+```{figure} ../figures/exercise-sample-exam-bay.png
 ---
 width: 400px
 name: flood-protection
