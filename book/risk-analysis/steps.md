@@ -14,9 +14,13 @@ In general, the following elements can be identified within risk analysis, see t
 
 Each of these steps is described in more detail below, and provides context for the following chapters in this book. In addition to the steps in risk assessment of a given system, *risk management* also includes the element ‘risk reduction and control’. Dependent on the outcome of the former phase measures can be taken to reduce the risk. This will lead to changes in the system configuration and the risk level. If the risk analysis is used in the design of systems, the steps are often repeated several times with adjusted system specifications to obtain an optimal design. It should also be determined how the risks can be controlled, for example by monitoring, inspection or maintenance.
 
-<figure>
-<center><img src="../figures/risk-steps.png" style="width: 250px; height: 300px;"/></center></figure>
-<figcaption align = "center">Figure 3.2 Schematic view of steps in risk assessment and risk management.</figcaption> 
+```{figure} ../figures/risk-steps.PNG
+---
+width: 250px
+name: risk-steps
+---
+Schematic view of steps in risk assessment and risk management.
+```
 
 ## 1. System definition
 
@@ -56,7 +60,7 @@ As an example the failure of a dike for a set of discrete events is considered:
 
 The probability of damage can now be computed by combining these terms 
 
-$P(D)=P(E_{1})P(E_{2}|E_{1})P(D|E_{1}\cap E_{2})$        (3.4)                            
+$$P(D)=P(E_{1})P(E_{2}|E_{1})P(D|E_{1}\cap E_{2})$$                        
 
 As introduced in section 3.1, multiple types of consequences can be caused by one disaster. Table 3.2 gives an overview of the different types of consequences of the failure of large engineering systems. The damage is divided into tangible and intangible damage, depending on whether or not the losses can be assessed in monetary values. Another distinction is made between the direct damage, caused by physical effects of the event, and damages occurring outside the directly exposed area. The latter occurs when companies outside a flooded area experience damages, due to loss of demand from customers in the flooded area. In a risk analysis it is desired to take into account a complete set of impacts. Since a lot of the items from the table cannot be quantified easily, the quantitative analysis and risk evaluation are often focused  on economic damages and life loss.
    Table 3.2 General classification of damages, based on (Vrouwenvelder and Vrijling, 1996)

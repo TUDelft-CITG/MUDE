@@ -28,11 +28,11 @@ ax.set_xticklabels(N_fatalities)
 ax.set_yticks(pdf_loc)
 ax.set_yticklabels(pdf)
 
-ax.set_title('Cumulative distribution function, $f_{N}(x) = P(N \leq n)$', x=0.55, y=1.1)
+ax.set_title('Cumulative distribution function, $F_{N}(n) = P(N \leq n)$', x=0.55, y=1.0)
 ax.set_xlabel('Fatalities')
 ax.set_ylabel('Probability')
 
 ax.text(0.8, 0.9, r'} $10^{-3}$', fontsize=20)
 ax.text(0.4, 0.725, r'} $10^{-2}$', fontsize=30)
 
-plt.savefig('ex_FN_curve_step_02.svg')
+plt.savefig('ex_FN_curve_step_02_py.svg')

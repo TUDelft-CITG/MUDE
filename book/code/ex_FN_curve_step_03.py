@@ -28,8 +28,8 @@ ax.set_xticklabels(N_fatalities)
 ax.set_yticks(pdf_loc)
 ax.set_yticklabels(pdf)
 
-ax.set_title('FN curve, $f_{N}(x) = P(N \leq n)$', x=0.75, y=1.1)
+ax.set_title('FN curve, $1-F_{N}(n) = P(N > n)$', x=0.75, y=1.0)
 ax.set_xlabel('Fatalities')
 ax.set_ylabel('Probability')
 
-plt.savefig('ex_FN_curve_step_03.svg')
+plt.savefig('ex_FN_curve_step_03_py.svg')

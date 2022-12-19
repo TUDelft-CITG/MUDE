@@ -14,8 +14,13 @@ parts:
       - file: risk-analysis/definition.md
       - file: risk-analysis/steps.md
       - file: risk-analysis/example-FN-curve.md
+      - file: risk-analysis/exercise-fn-curve.md
     - file: reliability-component/overview.md
     - file: reliability-system/overview.md
+      sections:
+      - file: reliability-system/exercise-paint.md
+      - file: reliability-system/exercise-simple-city.md
+      - file: reliability-system/exercise-dam.md
     - file: risk-assessment/overview.md
       sections:
       - file: risk-assessment/decision.md
@@ -25,4 +30,6 @@ parts:
       - file: risk-assessment/safety-standards.ipynb
       - file: risk-assessment/example-types-of-risk.ipynb
     - file: other-topics/overview.md
+      sections:
+      - file: other-topics/exercise-sample-exam.md
     - file: references.md

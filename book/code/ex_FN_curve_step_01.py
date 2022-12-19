@@ -35,4 +35,4 @@ ax.set_ylabel('Probability')
 ax.axhline(y=0.66, xmin= 0.01, xmax= 0.40, linewidth=1, linestyle='dashed', color='k') # add dashed horizontal lines
 ax.axhline(y=0.33, xmin= 0.01, xmax= 0.90, linewidth=1, linestyle='dashed', color='k')
 
-plt.savefig('ex_FN_curve_step_01.svg')
+plt.savefig('ex_FN_curve_step_01_py.svg')
