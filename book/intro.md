@@ -56,7 +56,7 @@ This book is prepared for CEGM1000: Modeling, Uncertainty and Data for Engineers
 
 ```{admonition} MUDE exam information
 :class: tip, dropdown
-Key concepts from these lecture notes that will be assessed on the MUDE exam are:
+Key concepts from this book that will be assessed on the MUDE exam are:
 - Definitions of risk and steps of a risk analysis
 - Simple system and component reliability (quantitative risk analysis methods)
 - Use of probability to design and assess engineering systems and components
@@ -95,7 +95,7 @@ This book is a Jupyter Book that is written using Markdown, Jupyter notebooks an
 
 ### Acknowledgements
 
-This book is created by Robert Lanzafame, but uses adapted excerpts from the lecture notes of a previous course, CIE4130 Probabilistic Design, which was last taught at Delft University of Technology in 2022. In particular, the introduction, risk analysis and risk assessment chapters reuse modified material from Professor Bas Jonkman. This book, and the included exercises, would not be possible without the efforts of CIE4130 teachers over the last decades (in alphabetical order): Bas Jonkman, Han Vrijling, Oswaldo Morales Napoles, Pieter van Gelder, Raphaël Steenbergen, Robert Lanzafame, Ton Vrouwenvelder.
+This book is primarily written by Robert Lanzafame, but uses adapted excerpts from the lecture notes of a previous course, CIE4130 Probabilistic Design, which was last taught at Delft University of Technology in 2022. In particular, the introduction, risk analysis and risk assessment chapters reuse modified material from Professor Bas Jonkman. This book, and the included exercises, would not be possible without the efforts of CIE4130 teachers over the last decades (in alphabetical order): Bas Jonkman, Han Vrijling, Oswaldo Morales Napoles, Pieter van Gelder, Raphaël Steenbergen, Robert Lanzafame, Ton Vrouwenvelder.
 
 Special thanks goes to Caspar Jungbacker, who set up the JupyterBook and GitHub repository to make this book and website possible, and Benjamin Ramousse, who brought the bivariate "patterns" to life with Python.
 

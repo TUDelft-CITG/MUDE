@@ -29,12 +29,12 @@ These are just a few examples, where items 3 and 4 are the focus of the followin
 
 The remainder of this chapter uses the evaluation and design of a river flood protection system to introduce key aspects of risk and reliability, as well as the design process. A distinction is made between using probability to assess engineering components and systems (reliability analysis) and to derive design criteria (risk assessment), which are introduced formally in later chapters after the general risk analysis framework is discussed.
 
-Key concepts are often illustrated in a simple way by considering two random variables, which can be referred to as a *bivariate* situation. This is more insightful than the univariate case because it allows us to consider the quantitative and qualitative influence of dependence, as well as the functional relationship between two variables and their join probability density (e.g., union, intersection or limit-states).
+Key concepts are often illustrated in a simple way by considering two random variables, which can be referred to as a *bivariate* case. This is more insightful than the univariate case because it allows us to consider the quantitative and qualitative influence of dependence, as well as the functional relationship between two variables and their join probability density (e.g., union, intersection or limit-states).
 
-Table of contents:
+%Table of contents:
 
-```{tableofcontents}
-```
+%```{tableofcontents}
+%```
 
 [^solicitation]: $S$ stands for solicitation. While this letter and word EW much more pedantic-sounding than simply using load, or $L$, it is widely used in the structural engineering field, where component reliability methods were pioneered. Here we take a broader approach on the subject. Classical texts are {cite:t}`adk2022`, {cite:t}`moss2020` and {cite:t}`ditlevsen1996`.
 %[^pattern]: The word *paradigm* is not used because it suggests completeness. The examples here, are meant to be used as illustrations for key concepts, and extended to other situations and higher dimensions, so *pattern* seems more appropriate.
