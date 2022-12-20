@@ -27,7 +27,7 @@ $$
 ```{figure} ../figures/FN-simple.PNG
 ---
 height: 200px
-name: FN-curve
+name: FN-curve-simple
 ---
 FN curve, showing the probability of exceedance of a certain number of fatalities N on Log-Log scale.
 ```
