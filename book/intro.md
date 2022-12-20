@@ -1,4 +1,4 @@
-# Welcome 
+# Introduction 
 
 Welcome to the lecture notes for weeks 2.7 and 2.8 which provides an introduction to risk and reliability.
 
@@ -50,7 +50,7 @@ Risk and reliability concepts have been organized into five primary chapters to 
 - **Risk Assessment** provides simple quantitative tools and a framework for establishing risk-based safety standards and economic risk criteria. This is a key step in the risk analysis process.
 
 Additional chapters are provided to put these concepts into context, explain industry-specific characteristics or indicate possibilities of additional study for the student.
-## Module Information
+### MUDE Module Information
 
 This document is a series of lecture notes prepared for CEGM1000: Modeling, Uncertainty and Data for Engineers (MUDE), a first year MSc module in the Civil Engineering and Geosciences faculty at TU Delft. During the 2022-23 academic year it is only used for two weeks (2.7-2.8) for topics of risk and reliability.
 
@@ -79,8 +79,24 @@ The following concepts or methods are used in this document to illustrate key su
 - 
 ```
 
-## Acknowledgements, license, citation
+### Updates and Citation
 
-This document uses adapted excerpts from the lecture notes of a previous course, CIE4130 Probabilistic Design, which was last taught at Delft University of Technology in 2022. In particular, the introduction, risk analysis and risk assessment chapters reuse modified material from Professor Bas Jonkman. This document, and the included exercises, would not be possible without the efforts of CIE4130 teachers over the last decades (in alphabetical order): Bas Jonkman, Han Vrijling, Oswaldo Morales Napoles, Pieter van Gelder, Robert Lanzafame, Ton Vrouwenvelder.
+The document is a work in progress, and while it will certainly be updated for the second year of MUDE, it will also be used in Q4 as part of the Hydraulic and Offshore Structures track (a unit on probabilistic design) and an elective unit on Flood Risk Analysis in Q1 of the 2023-24 academic year (open to all students at Delft). If you must cite this document, we suggest the following:
+
+`Lanzafame, R. (2023) Risk and reliability analysis for MUDE. Delft University of Technology, the Netherlands. https://tudelft-citg.github.io/MUDE/ `
+
+### License
+
+The contents of this book are licensed for free consumption under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International license ([CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)).
+
+### How the book is made
+
+This document is a Jupyter Book that is written using Markdown, Jupyter notebooks and Python files to generate some figures. The files are stored and compiled from a repository on GitHub within the organization [TUDelft-CITG](https://github.com/TUDelft-CITG/). At the moment the repository is private because we have not decided if and how we should share the source code and solutions to various exercises, quizzes and sample exam questions. We expect to work this out by the beginning of the 2023-24 academic year. If you would like access in the meantime, contact [Robert Lanzafame](https://www.tudelft.nl/staff/r.c.lanzafame/?cHash=e5e7c74400d3d0181a6e635077a912d4).
+
+### Acknowledgements
+
+This document is created by Robert Lanzafame, but uses adapted excerpts from the lecture notes of a previous course, CIE4130 Probabilistic Design, which was last taught at Delft University of Technology in 2022. In particular, the introduction, risk analysis and risk assessment chapters reuse modified material from Professor Bas Jonkman. This document, and the included exercises, would not be possible without the efforts of CIE4130 teachers over the last decades (in alphabetical order): Bas Jonkman, Han Vrijling, Oswaldo Morales Napoles, Pieter van Gelder, Raphaël Steenbergen, Robert Lanzafame, Ton Vrouwenvelder.
+
+Special thanks goes to Caspar Jungbacker, who set up the JupyterBook and GitHub repository to make this document and website possible, and Benjamin Ramousse, who brought the bivariate "patterns" to life with Python.
 
 [^levee]: A levee is a structure, typically made of soil, that protects a specific region from flooding by physically holding back water. Usually associated with rivers, such structures are also widely used on the coast, especially in low elevation areas such as the Netherlands. The Dutch word for levee is *dijk,* although we avoid use of the English word *dike* here. An alternative word is *embankment.*
