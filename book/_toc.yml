@@ -27,7 +27,7 @@ parts:
       - file: risk-assessment/econ-optimization.md
       - file: risk-assessment/example-dike-height.md
       - file: risk-assessment/safety-standards.md
-      - file: risk-assessment/example-types-of-risk.ipynb
+      - file: risk-assessment/example-types-of-risk.md
     - file: other-topics/overview.md
       sections:
       - file: other-topics/exercise-sample-exam.md
