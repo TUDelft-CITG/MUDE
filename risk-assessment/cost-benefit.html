@@ -111,7 +111,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    Welcome
+                    Introduction
                 </a>
             </li>
         </ul>
@@ -132,23 +132,18 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../prob-design/xx-river-system-example.html">
-     Example: River system
+    <a class="reference internal" href="../prob-design/example-river-system.html">
+     Flood Management Case Study
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../prob-design/01-one-random-variable.html">
-     One random variable
+     One Random Variable
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../prob-design/02-two-random-variables.html">
-     Two random variables
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../prob-design/xx-quiz.html">
-     Quiz example
+     Two Random Variables
     </a>
    </li>
   </ul>
@@ -274,6 +269,11 @@ const thebe_selector_output = ".output, .cell_output"
      Sample Exam Questions
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../other-topics/xx-quiz.html">
+     Quiz example
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -332,35 +332,6 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/risk-assessment/cost-benefit.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -383,7 +354,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/risk-assessment/cost-benefit.ipynb"
+        <a href="../_sources/risk-assessment/cost-benefit.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -394,7 +365,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.ipynb</span>
+<span class="headerbtn__text-container">.md</span>
 </a>
 
       </li>
@@ -610,36 +581,31 @@ For investments that focus on prevention (i.e. reducing the failure probability 
 <li><p><span class="math notranslate nohighlight">\(C_t\)</span> the costs in year <span class="math notranslate nohighlight">\(t\)</span> [€]</p></li>
 <li><p><span class="math notranslate nohighlight">\(T\)</span> the reference period [years]</p></li>
 </ul>
-<p>The contribution of costs in a certain year to the net present value depend on the discount rate and the reference year. Costs or benefits closest to the present will have the greatest contribution. <a class="reference internal" href="#cost-contribution"><span class="std std-numref">Fig. 16</span></a> below shows the value of <span class="math notranslate nohighlight">\(1/(1+r)^t\)</span> for a given year <span class="math notranslate nohighlight">\(t\)</span> for different discount rates. The higher the discount rate, the smaller the contribution to the net present value of costs or benefits that are far away from the present. For an infinite time horizon it can be shown that <span class="math notranslate nohighlight">\(\sum 1/(1+r)^t \approx 1/r\)</span>. This approximation can be used in evaluating engineering projects with a long life time.</p>
-<div class="cell tag_remove-input docutils container">
-</div>
-<div class="cell tag_hide-input tag_remove-output docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import numpy as np
-import matplotlib.pyplot as plt
+<p>The contribution of costs in a certain year to the net present value depend on the discount rate and the reference year. Costs or benefits closest to the present will have the greatest contribution. <a class="reference internal" href="#present-value"><span class="std std-numref">Fig. 17</span></a> below shows the value of <span class="math notranslate nohighlight">\(1/(1+r)^t\)</span> for a given year <span class="math notranslate nohighlight">\(t\)</span> for different discount rates. The higher the discount rate, the smaller the contribution to the net present value of costs or benefits that are far away from the present. For an infinite time horizon it can be shown that <span class="math notranslate nohighlight">\(\sum 1/(1+r)^t \approx 1/r\)</span>. This approximation can be used in evaluating engineering projects with a long life time.</p>
+<div class="toggle docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-t = np.linspace(0, 101)
-y_2 = 1 / (1 + 0.02)**t
-y_4 = 1 / (1 + 0.04)**t
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">101</span><span class="p">)</span>
+<span class="n">y_2</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mf">0.02</span><span class="p">)</span><span class="o">**</span><span class="n">t</span>
+<span class="n">y_4</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mf">0.04</span><span class="p">)</span><span class="o">**</span><span class="n">t</span>
 
-fig = plt.figure()
-plt.plot(t, y_2, label=&#39;2%&#39;)
-plt.plot(t, y_4, label=&#39;4%&#39;)
-plt.grid()
-plt.legend()
-plt.xlabel(&#39;Year&#39;)
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y_2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;2%&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">y_4</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;4%&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Normalized Present Value [$-$]&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;present-value.svg&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-</div>
-<div class="cell tag_remove-input tag_remove-output docutils container">
-</div>
-<figure class="align-default" id="cost-contribution">
-<div class="cell_output docutils container">
-<img alt="../_images/cost-benefit_3_0.png" src="../_images/cost-benefit_3_0.png" />
-</div>
+<figure class="align-default" id="present-value">
+<a class="reference internal image-reference" href="../_images/present-value.svg"><img alt="../_images/present-value.svg" src="../_images/present-value.svg" width="400" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Normalized present value of a cost or benefit in year <span class="math notranslate nohighlight">\(t\)</span> for different discount rates.</span><a class="headerlink" href="#cost-contribution" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Normalized present value of a cost or benefit in year <span class="math notranslate nohighlight">\(t\)</span> for different discount rates.</span><a class="headerlink" href="#present-value" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>

@@ -111,7 +111,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    Welcome
+                    Introduction
                 </a>
             </li>
         </ul>
@@ -132,23 +132,18 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../prob-design/xx-river-system-example.html">
-     Example: River system
+    <a class="reference internal" href="../prob-design/example-river-system.html">
+     Flood Management Case Study
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../prob-design/01-one-random-variable.html">
-     One random variable
+     One Random Variable
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../prob-design/02-two-random-variables.html">
-     Two random variables
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../prob-design/xx-quiz.html">
-     Quiz example
+     Two Random Variables
     </a>
    </li>
   </ul>
@@ -274,6 +269,11 @@ const thebe_selector_output = ".output, .cell_output"
      Sample Exam Questions
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../other-topics/xx-quiz.html">
+     Quiz example
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -332,35 +332,6 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/risk-assessment/example-types-of-risk.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -383,7 +354,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/risk-assessment/example-types-of-risk.ipynb"
+        <a href="../_sources/risk-assessment/example-types-of-risk.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -394,7 +365,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.ipynb</span>
+<span class="headerbtn__text-container">.md</span>
 </a>
 
       </li>
@@ -462,15 +433,71 @@ title="Print to PDF"
 <p>For a given number of inhabitants and potential fatalities  for a dike ring, the acceptable failure probability can be determined. For dike rings with between 1 and 10 fatalities –generally small areas- the individual  risk  criterion  is  the  most  stringent. For dike rings with large numbers of fatalities, the risk averse societal risk criterion becomes dominant.</p>
 <p>Several extensions of this model are possible. One can consider to add the economic value of life loss or consider a different distribution of the nationally acceptable societal risk over dike rings with different sizes.
 The limit line for societal risk becomes <span class="math notranslate nohighlight">\(1-F_{N}(n) \leq 0.11 / n^{2}\)</span> . Both the individual and societal risk criteria are plotted in the figure below. As a third criterion the  economic optimization can be added. The optimal or acceptable  probability of failure depends on the damage and investment costs. A relationship with the graph below can be established by assuming that the number of fatalities is related to the economic damages. A dike ring with many inhabitants and potential fatalities will generally also represent a large economic value. For the sake of the example we assume that every fatality corresponds to an economic damage of <span class="math notranslate nohighlight">\(5 \cdot 10^{7}\)</span> (note: this is simply used as a way to approximate the value of infrastructure in more densely populated regions, and is <em>not</em> equal to the value of a human life). To calculate the economic optimum for the example we assume arbitrary values of <span class="math notranslate nohighlight">\(r = 0.025\)</span>, <span class="math notranslate nohighlight">\(I = 5 \cdot 10^{6}\)</span>; <span class="math notranslate nohighlight">\(B = 0.33\)</span>. The figure below shows the combination for the three criteria.</p>
-<div class="cell tag_remove-input docutils container">
+<div class="toggle docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Given Parameters</span>
+
+<span class="n">N_fatalities</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1000</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>  <span class="c1"># fatalities</span>
+
+<span class="n">P_df</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">;</span> <span class="n">beta</span> <span class="o">=</span> <span class="mf">0.1</span>
+
+<span class="n">alpha</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">k</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">N_A</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="n">r</span><span class="o">=</span> <span class="mf">0.025</span>
+<span class="n">I</span> <span class="o">=</span> <span class="mi">5</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">6</span>
+<span class="n">B</span> <span class="o">=</span> <span class="mf">0.33</span>
+
+<span class="c1"># Individual Risk</span>
+
+<span class="n">Pf_ind_risk</span> <span class="o">=</span> <span class="p">(</span><span class="n">beta</span><span class="o">*</span><span class="p">(</span><span class="mi">10</span><span class="o">**-</span><span class="mi">4</span><span class="p">))</span><span class="o">/</span><span class="n">P_df</span>  <span class="c1"># per year</span>
+
+<span class="c1"># print(&#39;Acceptable Failure Probability: &#39;, Pf_ind_risk)</span>
+
+<span class="c1"># Societal Risk</span>
+
+<span class="n">C</span> <span class="o">=</span> <span class="p">((</span><span class="n">beta</span><span class="o">*</span><span class="mi">100</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">k</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">N_A</span><span class="p">)))</span><span class="o">**</span><span class="mi">2</span>  <span class="c1"># binomial distribution</span>
+
+<span class="n">Pf_SR</span> <span class="o">=</span> <span class="p">(</span><span class="n">C</span><span class="o">/</span><span class="p">(</span><span class="n">N_fatalities</span><span class="o">**</span><span class="n">alpha</span><span class="p">))</span>
+
+<span class="c1"># Economic Risk</span>
+
+<span class="n">D_damage</span> <span class="o">=</span> <span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="mi">7</span><span class="p">)</span><span class="o">*</span><span class="n">N_fatalities</span>
+
+<span class="n">Pf_ER</span> <span class="o">=</span> <span class="p">(</span><span class="n">I</span><span class="o">*</span><span class="n">B</span><span class="o">*</span><span class="n">r</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">D_damage</span><span class="p">)</span>
+
+<span class="c1"># Visualize</span>
+
+<span class="n">my_linewidth</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">yscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xscale</span><span class="p">(</span><span class="s1">&#39;log&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">N_fatalities</span><span class="p">,</span> <span class="n">Pf_SR</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="n">my_linewidth</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Societal Risk&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">N_fatalities</span><span class="p">,</span><span class="n">Pf_ER</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="n">my_linewidth</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Economic Risk&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">Pf_ind_risk</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="n">my_linewidth</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Individual Risk&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Probability of Exceedance, $1-F_N(n)$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Fatalities, N&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">7</span><span class="p">),</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper right&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;risk-types.svg&#39;</span><span class="p">)</span>
+</pre></div>
 </div>
-<div class="cell tag_remove-input docutils container">
 </div>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<img alt="../_images/example-types-of-risk_4_0.png" src="../_images/example-types-of-risk_4_0.png" />
-</div>
-</div>
+<figure class="align-default" id="risk-types">
+<a class="reference internal image-reference" href="../_images/risk-types.svg"><img alt="../_images/risk-types.svg" src="../_images/risk-types.svg" width="400" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Combination of individual, societal and economic risk criteria for a
+hypothetical example.</span><a class="headerlink" href="#risk-types" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p>For a given number of fatalities in a dike ring the acceptable failure probability according to the three criteria can be  derived. The individual risk criterion is independent on the  number of fatalities. The economic criterion shows a linear relation between the failure probability and damage or number of fatalities. The societal criterion is risk averse so shows a decreasing quadratic relationship between acceptable failure probability and consequences.</p>
 <p>For a given number of inhabitants and potential fatalities for a dike ring, the acceptable failure probability can be determined. For dike rings with between 1 and 10 fatalities-–generally small areas–the individual risk  criterion is the most stringent. For dike rings with large numbers of fatalities, the risk averse societal risk criterion becomes dominant.</p>
 <p>Several extensions of this model are possible. One can consider to add the economic value of life loss or consider a different distribution of the nationally acceptable societal risk over dike rings with different sizes.</p>

@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Definition of risk" href="definition.html" />
-    <link rel="prev" title="Quiz example" href="../prob-design/xx-quiz.html" />
+    <link rel="prev" title="Two Random Variables" href="../prob-design/02-two-random-variables.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -109,7 +109,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    Welcome
+                    Introduction
                 </a>
             </li>
         </ul>
@@ -130,23 +130,18 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../prob-design/xx-river-system-example.html">
-     Example: River system
+    <a class="reference internal" href="../prob-design/example-river-system.html">
+     Flood Management Case Study
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../prob-design/01-one-random-variable.html">
-     One random variable
+     One Random Variable
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../prob-design/02-two-random-variables.html">
-     Two random variables
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../prob-design/xx-quiz.html">
-     Quiz example
+     Two Random Variables
     </a>
    </li>
   </ul>
@@ -270,6 +265,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../other-topics/exercise-sample-exam.html">
      Sample Exam Questions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../other-topics/xx-quiz.html">
+     Quiz example
     </a>
    </li>
   </ul>
@@ -415,39 +415,15 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="risk-analysis">
 <h1>Risk Analysis<a class="headerlink" href="#risk-analysis" title="Permalink to this headline">#</a></h1>
-<p>This chapter introduces the concept of risk and steps of a risk analysis. The following two chapters introduce quantitative analysis (step 3) and the final chapter covers risk assessment.</p>
-<p>Pages will be:</p>
-<ul class="simple">
-<li><p>Risk:</p>
-<ul>
-<li><p>definition quantification (integral)</p></li>
-<li><p>steps in a risk analysis (maybe also in probabilistic design part?)</p></li>
-<li><p>units, illustrated with…</p></li>
-<li><p>examples of risk (metrics)</p></li>
-</ul>
-</li>
-<li><p>Types of risk used in MUDE / flood risk example</p></li>
-</ul>
+<p>This book splits risk into two parts: risk <em>analysis</em> and risk <em>assessment.</em> This chapter considers the analysis of risks from a broad perspective, beginning with definitions and key steps of a risk analysis. The next two chapters explore quantitative analyses (component and system reliability) before returning to risk concepts of decision theory, cost benefit analysis and safety standards.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Point out how a single risk value can used as a design criteria, which links to probability. Can also consider illustrating risk types.</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Add integrals and (mathematical) statement of individual risk as combination of conditional probabilities.</p>
-</div>
-<p>It is noted that a (probabilistic) risk analysis is different  from a (deterministic) scenario analysis. A risk analysis is based on quantitative analysis of all (known) undesired events and their probabilities and consequences. A scenario analysis considers one (or a limited number) of design scenarios, often without considering its failure probability. Both approaches are complementary, as a scenario analysis considers one of the scenarios from the risk analysis.</p>
-<p>In the Netherlands, scenario analysis is often used for evaluating disaster preparedness and designing the capabilities of emergency management services. For example, in the design of the Green Heart Tunnel which is a part of the high speed rail line in the Netherlands, a single accident scenario was chosen to design the emergency exits out of the tunnel. Analysing a high impact, low probability scenario in detail may provide helpful clues about the effectiveness of particular safety measures or crisis management actions. While such analyses may be helpful, it would be wrong to assume that such high-impact, low probability scenarios should always be properly manageable by emergency responders. This is because the probability of harm should be an integral part of any cost-benefit or cost-effectiveness analysis (Jongejan et al., 2011).</p>
-<p>This book splits risk into two parts: risk <em>analysis</em> and risk <em>assessment.</em> This chapter considers the analysis of risks from a broad perspective, beginning with definitions and key steps of a risk analysis. The next two chapters explore the quantitative analyses (component and system reliability) before returning to risk concepts of decision theory, cost benefit analysis and safety standards.</p>
+<p>On Definitions page, still need to add integrals and (mathematical) statement of individual risk as combination of conditional probabilities.</p>
+<p>Consider adding a page to explain units and perhaps an overview of risk metrics, especially those used in flood risk exmaple (can add some examples to illustrate the steps?).</p>
 <p>The relationship between safety standards and engineering design is indicated in section 3.6.</p>
-<p>Table of contents:</p>
+</div>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="definition.html">Definition of risk</a></li>
-<li class="toctree-l1"><a class="reference internal" href="steps.html">Steps in a Risk Analysis</a></li>
-<li class="toctree-l1"><a class="reference internal" href="example-FN-curve.html">Example: FN curve Calculation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="exercise-fn-curve.html">Exercise: FN-curve</a></li>
-</ul>
 </div>
 </section>
 
@@ -478,11 +454,11 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../prob-design/xx-quiz.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../prob-design/02-two-random-variables.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Quiz example</p>
+            <p class="prev-next-title">Two Random Variables</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="definition.html" title="next page">

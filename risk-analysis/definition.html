@@ -111,7 +111,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    Welcome
+                    Introduction
                 </a>
             </li>
         </ul>
@@ -132,23 +132,18 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../prob-design/xx-river-system-example.html">
-     Example: River system
+    <a class="reference internal" href="../prob-design/example-river-system.html">
+     Flood Management Case Study
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../prob-design/01-one-random-variable.html">
-     One random variable
+     One Random Variable
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../prob-design/02-two-random-variables.html">
-     Two random variables
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../prob-design/xx-quiz.html">
-     Quiz example
+     Two Random Variables
     </a>
    </li>
   </ul>
@@ -272,6 +267,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../other-topics/exercise-sample-exam.html">
      Sample Exam Questions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../other-topics/xx-quiz.html">
+     Quiz example
     </a>
    </li>
   </ul>
@@ -485,10 +485,10 @@ $<span class="math notranslate nohighlight">\(
 $<span class="math notranslate nohighlight">\(
 E(d) = \sum_{S_{i=1}}^{n}p_{i}d_{i}
 \)</span>$</p>
-<figure class="align-default" id="fn-curve">
+<figure class="align-default" id="fn-curve-simple">
 <a class="reference internal image-reference" href="../_images/FN-simple.PNG"><img alt="../_images/FN-simple.PNG" src="../_images/FN-simple.PNG" style="height: 200px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">FN curve, showing the probability of exceedance of a certain number of fatalities N on Log-Log scale.</span><a class="headerlink" href="#fn-curve" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">FN curve, showing the probability of exceedance of a certain number of fatalities N on Log-Log scale.</span><a class="headerlink" href="#fn-curve-simple" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The expected value does not give insight in the magnitude of probability and consequences and the contribution of individual scenarios. Therefore, an often-used alternative risk metric is the risk curve. It shows the probability of exceedance of a certain magnitude of consequences. A well-known example of such a risk curve is the FN curve, which displays the probability of exceedance of <em>N</em> fatalities. The values on both axes are generally shown on a logarithmic scale, see Figure 3.1 for an example. The FN curve was originally introduced for the assessment of the risks in the nuclear industry (Farmer, 1967; Kendall et al., 1977) and is now used to display and limit risks in various countries and sectors. Further information on the use of FN curves and a simple example of how to construct such a curve are included in section 3.5.1.</p>
@@ -554,7 +554,7 @@ RISK
 </table>
 <section id="hazard-vulnerability-and-exposure">
 <h3>Hazard, Vulnerability and Exposure<a class="headerlink" href="#hazard-vulnerability-and-exposure" title="Permalink to this headline">#</a></h3>
-<p>Risk definitions applied in fields that are focused on natural hazards often define risk as the combination of hazard, exposure and vulnerability, as shown in Figure <a class="reference internal" href="#risk-hazard"><span class="std std-numref">Fig. 2</span></a>.</p>
+<p>Risk definitions applied in fields that are focused on natural hazards often define risk as the combination of hazard, exposure and vulnerability, as shown in Figure <a class="reference internal" href="#risk-hazard"><span class="std std-numref">Fig. 3</span></a>.</p>
 <ul class="simple">
 <li><p>Hazard: A dangerous phenomenon, substance, human activity or condition that may cause loss of life, injury or other health impacts, property damage, loss of livelihoods and services, social and economic disruption, or environmental damage</p></li>
 <li><p>Vulnerability: The characteristics and circumstances of a community, system or asset that make it susceptible to the damaging effects of a hazard</p></li>
@@ -563,10 +563,10 @@ RISK
 <figure class="align-default" id="risk-hazard">
 <a class="reference internal image-reference" href="../_images/risk-hazard.svg"><img alt="../_images/risk-hazard.svg" height="200px" src="../_images/risk-hazard.svg" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 2 </span><span class="caption-text">Alternative definition of risk as intersection of hazard, exposure and vulnerability.</span><a class="headerlink" href="#risk-hazard" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Alternative definition of risk as intersection of hazard, exposure and vulnerability.</span><a class="headerlink" href="#risk-hazard" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Often these terms are useful for framing qualitative discussions around complex topics where a quantitative analysis may be out of reach, for example, as done in IPCC reports on climate change <span id="id1">[<a class="reference internal" href="../references.html#id3" title="Omar Dario Cardona, Maarten K Van Aalst, Jörn Birkmann, Maureen Fordham, Glenn Mc Gregor, Perez Rosa, Roger S Pulwarty, E Lisa F Schipper, Bach Tan Sinh, Henri Décamps, and others. Determinants of risk: exposure and vulnerability. In Managing the risks of extreme events and disasters to advance climate change adaptation: special report of the intergovernmental panel on climate change, pages 65–108. Cambridge University Press, 2012.">Cardona <em>et al.</em>, 2012</a>]</span>. Note, however, that an analytical expression can easily be formulated by extending Equation <a class="reference internal" href="../risk-assessment/example-dike-height.html#equation-risk">(5)</a>:
+<p>Often these terms are useful for framing qualitative discussions around complex topics where a quantitative analysis may be out of reach, for example, as done in IPCC reports on climate change <span id="id1">[<a class="reference internal" href="../references.html#id3" title="Omar Dario Cardona, Maarten K Van Aalst, Jörn Birkmann, Maureen Fordham, Glenn Mc Gregor, Perez Rosa, Roger S Pulwarty, E Lisa F Schipper, Bach Tan Sinh, Henri Décamps, and others. Determinants of risk: exposure and vulnerability. In Managing the risks of extreme events and disasters to advance climate change adaptation: special report of the intergovernmental panel on climate change, pages 65–108. Cambridge University Press, 2012.">Cardona <em>et al.</em>, 2012</a>]</span>. Note, however, that an analytical expression can easily be formulated by extending Equation <a class="reference internal" href="#equation-risk">(1)</a>:
 $<span class="math notranslate nohighlight">\(
 RISK INTEGRAL WITH CONDITIONAL
 \)</span>$</p>

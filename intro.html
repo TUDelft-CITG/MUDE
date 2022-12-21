@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Welcome &#8212; Modelling, Uncertainty and Data for Engineers (MUDE)</title>
+    <title>Introduction &#8212; Modelling, Uncertainty and Data for Engineers (MUDE)</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -110,7 +110,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1 current active">
                 <a class="reference internal" href="#">
-                    Welcome
+                    Introduction
                 </a>
             </li>
         </ul>
@@ -131,23 +131,18 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="prob-design/xx-river-system-example.html">
-     Example: River system
+    <a class="reference internal" href="prob-design/example-river-system.html">
+     Flood Management Case Study
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="prob-design/01-one-random-variable.html">
-     One random variable
+     One Random Variable
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="prob-design/02-two-random-variables.html">
-     Two random variables
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="prob-design/xx-quiz.html">
-     Quiz example
+     Two Random Variables
     </a>
    </li>
   </ul>
@@ -271,6 +266,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="other-topics/exercise-sample-exam.html">
      Sample Exam Questions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="other-topics/xx-quiz.html">
+     Quiz example
     </a>
    </li>
   </ul>
@@ -413,14 +413,36 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#module-information">
-   Module information
+  <a class="reference internal nav-link" href="#chapter-overview">
+   Chapter Overview
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#acknowledgements-license-citation">
-   Acknowledgements, license, citation
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mude-module-information">
+     MUDE Module Information
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#updates-and-citation">
+     Updates and Citation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#license">
+     License
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-the-book-is-made">
+     How the book is made
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#acknowledgements">
+     Acknowledgements
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -431,7 +453,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Welcome</h1>
+                <h1>Introduction</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -442,14 +464,36 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#module-information">
-   Module information
+  <a class="reference internal nav-link" href="#chapter-overview">
+   Chapter Overview
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#acknowledgements-license-citation">
-   Acknowledgements, license, citation
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mude-module-information">
+     MUDE Module Information
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#updates-and-citation">
+     Updates and Citation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#license">
+     License
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-the-book-is-made">
+     How the book is made
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#acknowledgements">
+     Acknowledgements
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -461,21 +505,29 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="welcome">
-<h1>Welcome<a class="headerlink" href="#welcome" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h1>
 <p>Welcome to the lecture notes for weeks 2.7 and 2.8 which provides an introduction to risk and reliability.</p>
+<p>Almost all activities in life are characterized by some level of risk, such as riding a bike or driving a car, boarding an airplane, or living below sea level behind flood protection system. Particularly within the field of civil engineering, risk and safety are key concepts that should be taken into account explicitly in design and management. Failures of systems providing flood protection, water distribution, transportation networks, air quality control, buildings and other infrastructure are expected to occur rarely, but can lead to large consequences. On the other hand, these systems also provide many benefits to humankind on a daily basis.</p>
 <p><em>Risk</em> is often defined simply as the combination of probability and consequences; it is a measure of how bad something can be (the consequence) combined with the chance that it can happen. In mathematical form:</p>
 <div class="math notranslate nohighlight">
 \[\text{Risk}_\text{bad thing}=\text{Consequence}_\text{bad thing}\cdot\text{Probability}_\text{bad thing}\]</div>
-<p>As engineers we are typically concerned with making sure bad things don’t happen, or, stated more precisely for our purposes: <em>reducing the <strong>probability</strong> of a bad thing happening to an <strong>acceptable</strong> level.</em> Although much of this document focuses on calculating <span class="math notranslate nohighlight">\(\text{Probability}_\text{bad thing}\)</span>, we call this a reliability analysis, where <em>reliability</em> is simply</p>
-<div class="math notranslate nohighlight">
-\[\text{Reliability}=1-\text{Probability}_\text{bad thing}\]</div>
-<p>So in fact, as engineers we are optimistic, otherwise this chapter would be called Risk and <em>Un</em>reliability.</p>
 <div class="dropdown admonition note">
 <p class="admonition-title">Note</p>
 <p>Why are the variables above written using words? Because many different terms and symbols are used in different fields of science and enginering which refer to about the same mathematical concepts. For example, ‘failure probability,’ <span class="math notranslate nohighlight">\(p_f\)</span>, is often used when designing structural components. However, this term may be misleading when applied to the probability that the concentration of a solute in groundwater exceeds a certain value, or the discharge of a river falling below a regulatory threshold for fish migration.</p>
 </div>
-<p>In short, risk and reliability cannot be defined without <em>probability</em>. These concepts are necessary in order to quantify uncertainty and take it into account when making decisions, regardless of whether our specific task is to investigate, assess, design or create policy for a particular engineering problem. Probability theory is a powerful tool because it provides a way to quantify many aspects of uncertainty, for example:</p>
+<p>As engineers we are typically concerned with making sure bad things don’t happen, or, stated more precisely for our purposes: <em>reducing the <strong>probability</strong> of a bad thing happening to an <strong>acceptable</strong> level.</em> To determine if this probability results in a situation that is <em>safe enough,</em> an acceptable level of risk needs to be defined. The eventual decision about acceptable risk is predominantly a political one, but engineers can have an important role in the discussion and decision-making. They can provide information on failure probabilities and consequences (economic consequences, life loss, etc.) of a given system and highlight trade-offs between investments in safer systems and risk reduction. Risk plays an important role in many current societal discussions. Examples include recent discussions related to Covid-19 vaccination programs and mitigation measures like facemasks, where there was a lot of uncertainty in the effect of on virus spread. Another example is the discussion over nuclear power versus fossil fuels: both activities bring various benefits (energy generation) but also introduce additional risks to the population and environment. A systematic analysis of risks of (proposed) projects can help to inform the broader societal discussions.</p>
+<p>Inevitably, the consideration of risk should result in a specific value of probability that can be used in the design or evaluation of something; in other words, a specific criteria for <span class="math notranslate nohighlight">\(\text{Probability}_\text{bad thing}\)</span>. For standard applications and systems that are frequently constructed, the risk analysis has been done and building codes are available that define acceptable safety levels in such a way that the failure probability of a structure is sufficiently small. For example, Eurocode provides guidance for the design of structures using so-called target values for the failure probability different safety classes. Thus, critical buildings like hospitals are designed to be stronger than a hardware store. However, for other applications, e.g. special structures or new applications like the reliability of renewable energy-generating components, no standard codes or guidelines are available for design and a more explicit analysis of the reliability and risk of the system is required. An example from the past is the design of the Eastern Scheldt barrier. The acceptable probabilities of failure of the structure and non-closure of the gates were determined based on the acceptable risk of flooding of Zeeland. These probability values formed the basis for the so-called probabilistic design of the barrier in the 1970’s.</p>
+<div class="dropdown admonition note">
+<p class="admonition-title">Note</p>
+<p>Although much of this book focuses on calculating failure probability, or <span class="math notranslate nohighlight">\(\text{Probability}_\text{bad thing}\)</span>, we call this a reliability analysis, where <em>reliability</em> is simply</p>
+<div class="math notranslate nohighlight">
+\[\text{Reliability}=1-\text{Probability}_\text{bad thing}\]</div>
+<p>So in fact, as engineers we are optimistic, otherwise this chapter would be called Risk and <em>Un</em>reliability.</p>
+</div>
+<p>Throughout this book we will repeatedly draw on the field of flood management to illustrate risk and reliability concepts as this field requires expertise from all perspectives in civil and environmental engineering and geosciences, from climate and hydrologic processes to evacuation and recovery. In addition, this field has driven the development and use of risk and reliability techniques in the Netherlands since the flooding disaster of 1953, not to mention the experience gained during the previous millenium, albeit in a less rigorous mathematical fashion. And finally, new safety standards for primary flood defences in the Netherlands have been in place since 2017 that are formulated as a tolerable failure probability of levee<a class="footnote-reference brackets" href="#levee" id="id1">1</a> segments. As such, levee reinforcements are legally required to be designed according to these new standards, which requires one to show that the failure probability is less than an allowable maximum value.</p>
+<p>Despite the focus on flood management, many applications exist in other fields, for example the discussion about the gas extraction in the North of the Netherlands which leads to increased earthquakes, building damage and potential injury to humans. A thorough analysis of the probability of earthquake occurrence, structural safety of various infrastructure (houses, levees, hospitals, pipelines), benefits associated with extracting gas and the resulting level of risk is required to make decisions about how to manage this industry. As with the flood management application, advanced knowledge of probabilistic techniques is needed.</p>
+<p>In short, risk and reliability concepts cannot be defined or applied without <em>probability.</em> It is necessary in order to quantify uncertainty and take it into account when making decisions, regardless of whether our specific task is to investigate, assess, design or create policy for a particular engineering problem. Probability theory is a powerful tool because it provides a way to quantify many aspects of uncertainty, for example:</p>
 <ul class="simple">
 <li><p>precision of measurements</p></li>
 <li><p>variability in data</p></li>
@@ -485,12 +537,23 @@ title="Print to PDF"
 <li><p>inability to predict the outcome of future events with sufficient accuracy or precision</p></li>
 <li><p>and many more</p></li>
 </ul>
-<section id="module-information">
-<h2>Module information<a class="headerlink" href="#module-information" title="Permalink to this headline">#</a></h2>
-<p>This digital document is a series of lecture notes prepared for CEGM1000: Modeling, Uncertainty and Data for Engineers (MUDE), a first year MSc module in the Civil Engineering and Geosciences faculty at TU Delft. During the 2022-23 academic year it is only used for two weeks (2.7-2.8) for topics of risk and reliability.</p>
+<p>It is crucial that civil and environmental engineers and geoscientists are able to understand and apply the concepts of risk and reliability, as well as probability theory. As such, these lecture provide an introduction to the fundamental techniques and concepts necessary to do so.</p>
+<section id="chapter-overview">
+<h2>Chapter Overview<a class="headerlink" href="#chapter-overview" title="Permalink to this headline">#</a></h2>
+<p>Risk and reliability concepts have been organized into five primary chapters to introduce fundamental concepts and progressively illustrate how they are applied in practice.</p>
+<ul class="simple">
+<li><p><strong>Probabilistic Design</strong> describes how probability is used in the design process and illustrates key concepts through simple examples and ‘patterns’ (analytic expressions and visual representations).</p></li>
+<li><p><strong>Risk Analysis</strong> as a process is formally defined and quantitative risk measures are introduced.</p></li>
+<li><p><strong>Component Reliability</strong> and <strong>System Reliability</strong> briefly introduce approaches for evaluating reliability, or <span class="math notranslate nohighlight">\(\text{P}_\text{bad thing}\)</span>, in order to carry out probabilistic assessment and design quantitatively. This is the <em>quantitative analysis</em> step of a risk analysis.</p></li>
+<li><p><strong>Risk Assessment</strong> provides simple quantitative tools and a framework for establishing risk-based safety standards and economic risk criteria. This is a key step in the risk analysis process.</p></li>
+</ul>
+<p>Additional chapters are provided to put these concepts into context, explain industry-specific characteristics or indicate possibilities of additional study for the student.</p>
+<section id="mude-module-information">
+<h3>MUDE Module Information<a class="headerlink" href="#mude-module-information" title="Permalink to this headline">#</a></h3>
+<p>This book is prepared for CEGM1000: Modeling, Uncertainty and Data for Engineers (MUDE), a first year MSc module in the Civil Engineering and Geosciences faculty at TU Delft. During the 2022-23 academic year it is only used for two weeks (2.7-2.8) for topics of risk and reliability.</p>
 <div class="tip dropdown admonition">
 <p class="admonition-title">MUDE exam information</p>
-<p>Key concepts from these lecture notes that will be assessed on the MUDE exam are:</p>
+<p>Key concepts from this book that will be assessed on the MUDE exam are:</p>
 <ul class="simple">
 <li><p>Definitions of risk and steps of a risk analysis</p></li>
 <li><p>Simple system and component reliability (quantitative risk analysis methods)</p></li>
@@ -505,7 +568,7 @@ title="Print to PDF"
 </div>
 <div class="tip dropdown admonition">
 <p class="admonition-title">MUDE not-on-the-exam information</p>
-<p>The following concepts or methods are used in this document to illustrate key subjects and examples, but you will <em>not</em> be asked to do them on the exam:</p>
+<p>The following concepts or methods are used in this book to illustrate key subjects and examples, but you will <em>not</em> be asked to do them on the exam:</p>
 <ul class="simple">
 <li><p>List from memory the steps of a risk analysis and describe all aspects in detail</p></li>
 <li><p>Set up a decision tree yourself (note that you may be given a tree with values filled in and asked to interpret it)</p></li>
@@ -515,9 +578,30 @@ title="Print to PDF"
 </ul>
 </div>
 </section>
-<section id="acknowledgements-license-citation">
-<h2>Acknowledgements, license, citation<a class="headerlink" href="#acknowledgements-license-citation" title="Permalink to this headline">#</a></h2>
-<p>Based on lecture notes of previous course CIE4130 Probabilistic Design.</p>
+<section id="updates-and-citation">
+<h3>Updates and Citation<a class="headerlink" href="#updates-and-citation" title="Permalink to this headline">#</a></h3>
+<p>The book is a work in progress, and while it will certainly be updated for the second year of MUDE, it will also be used in Q4 as part of the Hydraulic and Offshore Structures track (a unit on probabilistic design) and an elective unit on Flood Risk Analysis in Q1 of the 2023-24 academic year (open to all students at Delft). If you must cite this book, we suggest the following:</p>
+<p><code class="docutils literal notranslate"><span class="pre">Lanzafame,</span> <span class="pre">R.</span> <span class="pre">(2023)</span> <span class="pre">Risk</span> <span class="pre">and</span> <span class="pre">reliability</span> <span class="pre">analysis</span> <span class="pre">for</span> <span class="pre">MUDE.</span> <span class="pre">Delft</span> <span class="pre">University</span> <span class="pre">of</span> <span class="pre">Technology,</span> <span class="pre">the</span> <span class="pre">Netherlands.</span> <span class="pre">https://tudelft-citg.github.io/MUDE/</span> </code></p>
+</section>
+<section id="license">
+<h3>License<a class="headerlink" href="#license" title="Permalink to this headline">#</a></h3>
+<p>The contents of this book are licensed for free consumption under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International license (<a class="reference external" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>).</p>
+</section>
+<section id="how-the-book-is-made">
+<h3>How the book is made<a class="headerlink" href="#how-the-book-is-made" title="Permalink to this headline">#</a></h3>
+<p>This book is a Jupyter Book that is written using Markdown, Jupyter notebooks and Python files to generate some figures. The files are stored and compiled from a repository on GitHub within the organization <a class="reference external" href="https://github.com/TUDelft-CITG/">TUDelft-CITG</a>. At the moment the repository is private because we have not decided if and how we should share the source code and solutions to various exercises, quizzes and sample exam questions. We expect to work this out by the beginning of the 2023-24 academic year. If you would like access in the meantime, contact <a class="reference external" href="https://www.tudelft.nl/staff/r.c.lanzafame/?cHash=e5e7c74400d3d0181a6e635077a912d4">Robert Lanzafame</a>.</p>
+</section>
+<section id="acknowledgements">
+<h3>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">#</a></h3>
+<p>This book is primarily written by Robert Lanzafame, but uses adapted excerpts from the lecture notes of a previous course, CIE4130 Probabilistic Design, which was last taught at Delft University of Technology in 2022. In particular, the introduction, risk analysis and risk assessment chapters reuse modified material from Professor Bas Jonkman. This book, and the included exercises, would not be possible without the efforts of CIE4130 teachers over the last decades (in alphabetical order): Bas Jonkman, Han Vrijling, Oswaldo Morales Napoles, Pieter van Gelder, Raphaël Steenbergen, Robert Lanzafame, Ton Vrouwenvelder.</p>
+<p>Special thanks goes to Caspar Jungbacker, who set up the JupyterBook and GitHub repository to make this book and website possible, and Benjamin Ramousse, who brought the bivariate “patterns” to life with Python.</p>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="levee"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>A levee is a structure, typically made of soil, that protects a specific region from flooding by physically holding back water. Usually associated with rivers, such structures are also widely used on the coast, especially in low elevation areas such as the Netherlands. The Dutch word for levee is <em>dijk,</em> although we avoid use of the English word <em>dike</em> here. An alternative word is <em>embankment.</em></p>
+</dd>
+</dl>
+</section>
 </section>
 <div class="toctree-wrapper compound">
 </div>

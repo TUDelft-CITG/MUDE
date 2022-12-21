@@ -12,7 +12,7 @@ Sometimes the distinction is made because components are very different. Sometim
 
 Key concept: system reliability analysis can look very similar to component reliability problems. We separate it because in practice the analytic and numerical solutions can be quite different, which also reflects the way these methods are used (and even named) in different fields of engineering and mathematics.
 
-```{admonition} Exam Information
+```{admonition} MUDE Exam Information
 :class: tip, dropdown
 For the exam, you should be able to recognize and solve simple series and parallel systems, as well as describe the influence dependence between components may have on the calculated probability of interest.
 ```

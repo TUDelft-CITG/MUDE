@@ -111,7 +111,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="../intro.html">
-                    Welcome
+                    Introduction
                 </a>
             </li>
         </ul>
@@ -132,23 +132,18 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../prob-design/xx-river-system-example.html">
-     Example: River system
+    <a class="reference internal" href="../prob-design/example-river-system.html">
+     Flood Management Case Study
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../prob-design/01-one-random-variable.html">
-     One random variable
+     One Random Variable
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../prob-design/02-two-random-variables.html">
-     Two random variables
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../prob-design/xx-quiz.html">
-     Quiz example
+     Two Random Variables
     </a>
    </li>
   </ul>
@@ -272,6 +267,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../other-topics/exercise-sample-exam.html">
      Sample Exam Questions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../other-topics/xx-quiz.html">
+     Quiz example
     </a>
    </li>
   </ul>
@@ -520,7 +520,7 @@ Within a decision problem the following characteristics can be distinguished:</p
 <figure class="align-default" id="decision-tree-blank">
 <a class="reference internal image-reference" href="../_images/decision-tree-blank.png"><img alt="../_images/decision-tree-blank.png" src="../_images/decision-tree-blank.png" style="height: 300px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 10 </span><span class="caption-text">Decision tree.</span><a class="headerlink" href="#decision-tree-blank" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Decision tree.</span><a class="headerlink" href="#decision-tree-blank" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Based on the possible results a choice is made for an action. To be able to assess the different results, a numerical value is assigned to each outcome of <span class="math notranslate nohighlight">\(\omega\)</span> , which can be used to establish the benefit of each outcome. This number can be a monetary value, a number on an arbitrary scale or utility - as long as the decision maker(s) can establish a consistent ranking of the outcomes with it. In the last two cases the benefit has no absolute value, but only gives the relative value of the different outcomes. Utility <em> (u)</em>  is a concept used to rank the possible outcomes according to the preferences of the decision maker. Utility <em> (u) </em> values are between <span class="math notranslate nohighlight">\(0\leq\textit u ({\omega})\leq 1\)</span> . A utility function can be used to characterize the relative utility of various outcomes. The elaborations below are based on the monetary values as a measure for the outcomes and assume a risk neutral decision maker. This is a decision maker who is indifferent between choices with equal expected outcomes, even if one choice is riskier than the other. For example, a risk neutral decision maker would have the same preference for a € 400 pay out, or a 50/50 bet with a coin toss with outcomes of € 0 (head) or € 800 (tail). Utility and risk aversion are further discussed in section 3.3.3.<br></p>
@@ -583,7 +583,7 @@ Table 3.3 Outcomes given the decisions (a1,a2) and market conditions (<span clas
 <figure class="align-default" id="decision-tree-example">
 <a class="reference internal image-reference" href="../_images/decision-tree-example.png"><img alt="../_images/decision-tree-example.png" src="../_images/decision-tree-example.png" style="height: 300px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 11 </span><span class="caption-text">Decision tree for the example of buying shares (<span class="math notranslate nohighlight">\(a_{1}\)</span>) or bonds (<span class="math notranslate nohighlight">\(a_{2}\)</span>).</span><a class="headerlink" href="#decision-tree-example" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Decision tree for the example of buying shares (<span class="math notranslate nohighlight">\(a_{1}\)</span>) or bonds (<span class="math notranslate nohighlight">\(a_{2}\)</span>).</span><a class="headerlink" href="#decision-tree-example" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The deterministic decision rules can be applied to this example. Minimax would result in investing in bonds (<span class="math notranslate nohighlight">\(a_{2}\)</span>), maximax would result in buying shares.
@@ -618,14 +618,14 @@ The probability of failure \)</span>\textit P(Z&lt;0)<span class="math notransla
 <figure class="align-default" id="example-river-excavation">
 <a class="reference internal image-reference" href="../_images/example-river-excavation.png"><img alt="../_images/example-river-excavation.png" src="../_images/example-river-excavation.png" style="height: 300px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 12 </span><span class="caption-text">Cross-section of excavation near a river.</span><a class="headerlink" href="#example-river-excavation" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Cross-section of excavation near a river.</span><a class="headerlink" href="#example-river-excavation" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The effect of a drainage system in the construction site (see Figure 3.6) on the groundwater levels has been reviewed using groundwater flow calculations. It appears that it reduces the mean value of the maximum water levels to <span class="math notranslate nohighlight">\(\mu _{h}\)</span> = 3.52m and the standard deviation remains the same. In this case the failure probability is reduced to 0.04. Such a drainage system costs EUR 150,000.</p>
 <figure class="align-default" id="example-river-excavation-2">
 <a class="reference internal image-reference" href="../_images/example-river-excavation-2.png"><img alt="../_images/example-river-excavation-2.png" src="../_images/example-river-excavation-2.png" style="height: 300px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Cross-section of excavation and river.</span><a class="headerlink" href="#example-river-excavation-2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Cross-section of excavation and river.</span><a class="headerlink" href="#example-river-excavation-2" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The flooding of the construction site will result in the buoyancy of the basement resulting in damages are estimated at EUR 5,000,000. The designer of the construction site is faced with the choice whether or not to include drainage facilities in the design of the construction site.
@@ -647,7 +647,7 @@ Without drainage, the risk, defined as the expected value of the loss, is: 0.12 
 <figure class="align-default" id="decision-tree-filled">
 <a class="reference internal image-reference" href="../_images/decision-tree-filled.png"><img alt="../_images/decision-tree-filled.png" src="../_images/decision-tree-filled.png" style="height: 300px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Decision tree with probabilities and costs.</span><a class="headerlink" href="#decision-tree-filled" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Decision tree with probabilities and costs.</span><a class="headerlink" href="#decision-tree-filled" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -659,7 +659,7 @@ Without drainage, the risk, defined as the expected value of the loss, is: 0.12 
 <figure class="align-default" id="utility-example">
 <a class="reference internal image-reference" href="../_images/utility-example.png"><img alt="../_images/utility-example.png" src="../_images/utility-example.png" style="height: 300px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Example of a utility function for monetary benefits.</span><a class="headerlink" href="#utility-example" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Example of a utility function for monetary benefits.</span><a class="headerlink" href="#utility-example" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p><strong>Example 3.3: a bet</strong></p>
