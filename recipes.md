@@ -82,6 +82,10 @@ The book uses a Matplotlib [style sheet](https://matplotlib.org/stable/tutorials
            :language: python
         ```
         ````
+> **Note**
+> 
+> the outer most directive needs an extra tick mark for nested cases.
+
 4. Include the figure like described above. Remember that figures are saved in the `book/figures` directory.
 
 
