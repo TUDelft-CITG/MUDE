@@ -5,7 +5,7 @@ A pre-fabricated bridge design is being considered for river crossings in a remo
 ```{figure} ../figures/simple-city.png
 ---
 width: 600px
-name: simple-city
+name: exercise-simple-city
 ---
 ```
 
