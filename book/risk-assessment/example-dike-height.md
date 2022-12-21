@@ -23,7 +23,7 @@ It is assumed that there is total damage   to all objects and infrastructures in
 
 $$
     R = \frac{P_fD}{r^\prime} = \frac{e^{-\frac{h_d-A}{B}}D}{r^\prime}
-$$ (risk)
+$$ (dike_height_risk)
 
 Note that the risk is thus dependent on the dike height. To limit the failure probability and thus risks, the dikes can be heightened further. The investments in dike heightening are determined by initial costs for mobilization and variable costs that are dependent on the level of dike heightening (see also {numref}`dike_heightening_schematic`):
 

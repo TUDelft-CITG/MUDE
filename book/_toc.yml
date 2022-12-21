@@ -5,10 +5,9 @@ parts:
     chapters:
     - file: prob-design/overview.md
       sections:
-      - file: prob-design/xx-river-system-example.md
+      - file: prob-design/example-river-system.md
       - file: prob-design/01-one-random-variable.md
-      - file: prob-design/02-two-random-variables.ipynb
-      - file: prob-design/xx-quiz.ipynb
+      - file: prob-design/02-two-random-variables.md
     - file: risk-analysis/overview.md
       sections:
       - file: risk-analysis/definition.md
@@ -24,12 +23,13 @@ parts:
     - file: risk-assessment/overview.md
       sections:
       - file: risk-assessment/decision.md
-      - file: risk-assessment/cost-benefit.ipynb
-      - file: risk-assessment/econ-optimization.ipynb
+      - file: risk-assessment/cost-benefit.md
+      - file: risk-assessment/econ-optimization.md
       - file: risk-assessment/example-dike-height.md
-      - file: risk-assessment/safety-standards.ipynb
-      - file: risk-assessment/example-types-of-risk.ipynb
+      - file: risk-assessment/safety-standards.md
+      - file: risk-assessment/example-types-of-risk.md
     - file: other-topics/overview.md
       sections:
       - file: other-topics/exercise-sample-exam.md
+      - file: other-topics/xx-quiz.ipynb
     - file: references.md
