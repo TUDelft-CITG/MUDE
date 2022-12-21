@@ -24,9 +24,9 @@ parts:
       sections:
       - file: risk-assessment/decision.md
       - file: risk-assessment/cost-benefit.md
-      - file: risk-assessment/econ-optimization.ipynb
+      - file: risk-assessment/econ-optimization.md
       - file: risk-assessment/example-dike-height.md
-      - file: risk-assessment/safety-standards.ipynb
+      - file: risk-assessment/safety-standards.md
       - file: risk-assessment/example-types-of-risk.ipynb
     - file: other-topics/overview.md
       sections:
