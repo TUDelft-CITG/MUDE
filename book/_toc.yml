@@ -23,7 +23,7 @@ parts:
     - file: risk-assessment/overview.md
       sections:
       - file: risk-assessment/decision.md
-      - file: risk-assessment/cost-benefit.ipynb
+      - file: risk-assessment/cost-benefit.md
       - file: risk-assessment/econ-optimization.ipynb
       - file: risk-assessment/example-dike-height.md
       - file: risk-assessment/safety-standards.ipynb
