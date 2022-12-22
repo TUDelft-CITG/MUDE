@@ -17,7 +17,16 @@ Key concept: system reliability analysis can look very similar to component reli
 For the exam, you should be able to recognize and solve simple series and parallel systems, as well as describe the influence dependence between components may have on the calculated probability of interest.
 ```
 
-Table of contents:
+**Sample exam question:** Indicate which of the following statements is true (multiple answers possible):
+   1. A parallel system gets stronger if there is a strong positive correlation between failure of the elements.
+   2. Dependence between elements is only determined by dependence in loads.
+   3. In case of a full dependence between two elements $A$ and $B$, it holds that $P(B|A)=1$.
+   4. A flood defence system that is a single line of defence composed of multiple dike sections would best be characterized as a series sytem, not as a parallel system.
+   5. A prison with multiple walls and fences would best be characterized as a series system, not as a parallel system.
+
+*Answers 3 and 4 are true.*
+
+%Table of contents:
 
 % ```{tableofcontents}
 % ```
