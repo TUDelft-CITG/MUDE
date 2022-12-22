@@ -31,5 +31,6 @@ parts:
     - file: other-topics/overview.md
       sections:
       - file: other-topics/exercise-sample-exam.md
+      - file: other-topics/exercise-sample-exam-solution.md
       - file: other-topics/xx-quiz.ipynb
     - file: references.md
