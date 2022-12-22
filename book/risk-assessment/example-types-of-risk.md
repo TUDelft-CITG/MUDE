@@ -33,7 +33,7 @@ The limit line for societal risk becomes $1-F_{N}(n) \leq 0.11 / n^{2}$ . Both t
 
 ````{toggle}
 ```{eval-rst}
-.. literalinclude:: ../code/risk_types_py.py
+.. literalinclude:: ../code/risk_types.py
    :language: python
 ```
 ````
