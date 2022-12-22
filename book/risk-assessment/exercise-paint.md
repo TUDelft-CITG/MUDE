@@ -95,6 +95,7 @@ $$
 **Question 8:**	What is the annual expected total cost for the paint system if no sonic inspections are done?
 
 *Answer:*
+
 Using the decision tree from above: €77.50/m2
 
 **Question 9:**	What is the change in risk for 3 sonic inspections?
@@ -116,6 +117,7 @@ $$
 **Question 11:**	What is the maximum number of inspections per year that can be performed that are cost-effective? Note: Round your answer towards the smallest integer.
 
 *Answer:*
+
 17 per year
 
 $$
@@ -125,6 +127,7 @@ $$
 **Question 12:**	What is the optimum number of sonic inspections to perform each year? Plot a graph, with the Risk, Investment and Total cost curves and clearly indicate the optimum.
 
 *Answer:*
+
 3 per year
 
 ```{figure} ../figures/exercise-optimization.png
