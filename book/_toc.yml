@@ -18,7 +18,6 @@ parts:
     - file: reliability-system/overview.md
       sections:
       - file: reliability-system/exercise-simple-city.md
-      - file: reliability-system/exercise-dam.md
     - file: risk-assessment/overview.md
       sections:
       - file: risk-assessment/decision.md
@@ -28,6 +27,7 @@ parts:
       - file: risk-assessment/safety-standards.md
       - file: risk-assessment/example-types-of-risk.md
       - file: risk-assessment/exercise-paint.md
+      - file: risk-assessment/exercise-dam.md
     - file: other-topics/overview.md
       sections:
       - file: other-topics/exercise-sample-exam.md
