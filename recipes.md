@@ -40,12 +40,20 @@ $$
     F = m \cdot a
 $$
 
+> **Warning**
+> 
+> Make sure there is a blank line *before* the display mode equations, otherwise it will render as inline and display the outer set of $$$ symbols. Also, the Euro symbol is not included in MathJax (see note below) and must be specified using `\unicode{0x20AC}` (note that it displays incorrectly in some Markdown renderers like VS Code).
+
 To number the equations and refer in text, you need to provide a label to the equation. Just put the label between brackets and place it after the last \$\$, like this:
 
     $$
         F = m \cdot a
     $$ (newtons_second_law)
 
+> **Note**
+> 
+> The Jupyter Book uses MathJax to display equations, which provides some LaTeX-like functionality, but not all! For example, the Euro symbol is missing, and packages like `siunitx` are not available (hint, use `\textrm{}` and `\textrm{}`). When something is not working, it's useful to search for MathJax-specific solutions (hint, include "mathjax" in your Google search).
+> 
 ## Code blocks that produce figures
 
 This can be done with notebooks, but it's not easy to make references to figures in notebooks. You can also place the code that produces and saves the figure in a separate `.py` file, and include that in a markdown file. Let's say we want to make a simple sine wave:
