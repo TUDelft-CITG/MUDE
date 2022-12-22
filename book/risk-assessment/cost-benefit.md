@@ -100,7 +100,7 @@ The contribution of costs in a certain year to the net present value depend on t
 ```
 ````
  
-```{figure} ../figures/present-value.svg
+```{figure} ../figures/present_value_py.svg
 ---
 width: 400
 name: present-value

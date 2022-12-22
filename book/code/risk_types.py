@@ -51,4 +51,4 @@ plt.ylim(10**(-7),1)
 
 plt.legend(loc='upper right')
 
-plt.savefig('risk-types.svg')
+plt.savefig('risk_types_py.svg')
