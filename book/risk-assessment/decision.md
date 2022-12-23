@@ -13,8 +13,7 @@ Making a decision is in fact choosing from alternatives. The decision theory is 
  - knows which advantages and disadvantages each alternative provides, be it in the form of random variables;
  - strives to maximise that advantage (formally called utility).
 
-
-The decision-making concept discussed in these lecture notes assumes this model, although decision-making in practice is often different since the above conditions will not be fulfilled. There can be multiple decision makers and multiple objectives. Also, the decision maker does not know all the alternatives or their outcomes. For many practical cases this has led to an extension of the decision model, but not to a fundamental adjustment of the classical model.
+The decision-making concept discussed in these lecture notes assumes this model, although decision-making in practice is often different since the above conditions are often not fulfilled. For example, there can be multiple decision makers and multiple objectives, and in reality the decision maker does not know all the alternatives or their outcomes. For many practical cases this has led to an extension of the decision model, but not to a fundamental adjustment of the classical model described here.
 
 Within a decision problem the following characteristics can be distinguished: 
 
@@ -32,7 +31,9 @@ name: decision-tree-blank
 Decision tree.
 ```
 
-Based on the possible results a choice is made for an action. To be able to assess the different results, a numerical value is assigned to each outcome, $\omega$, which can be used to establish the benefit of each outcome. This number can be a monetary value, a number on an arbitrary scale or utility--as long as the decision maker(s) can establish a consistent ranking of the outcomes with it. In the last two cases the benefit has no absolute value, but only gives the relative value of the different outcomes. Utility, $u$,  is a concept used to rank the possible outcomes according to the preferences of the decision maker, with possible values $0\leq u \leq 1$ . A utility function can be used to characterize the relative utility of various outcomes. The elaborations below are based on the monetary values as a measure for the outcomes and assume a risk neutral decision maker. This is a decision maker who is indifferent between choices with equal expected outcomes, even if one choice is riskier than the other. For example, a risk neutral decision maker would have the same preference for a € 400 pay out, or a 50/50 bet with a coin toss with outcomes of € 0 (head) or € 800 (tail). Utility and risk aversion are further discussed in a later section.
+Based on the possible results a choice is made for an action. To be able to assess the different results, a numerical value is assigned to each outcome, $\omega$, which can be used to establish the benefit of each outcome. This number can be a monetary value, a number on an arbitrary scale or utility--as long as the decision maker(s) can establish a consistent ranking of the outcomes with it. In the last two cases the benefit has no absolute value, but only gives the relative value of the different outcomes.
+
+Utility, $u$, is a concept used to rank the possible outcomes according to the preferences of the decision maker, with possible values $0\leq u \leq 1$ . A utility function can be used to characterize the relative utility of various outcomes. The elaborations below are based on the monetary values as a measure for the outcomes and assume a risk neutral decision maker. This is a decision maker who is indifferent between choices with equal expected outcomes, even if one choice is riskier than the other. For example, a risk neutral decision maker would have the same preference for a € 400 pay out, or a 50/50 bet with a coin toss with outcomes of € 0 (head) or € 800 (tail). Utility and risk aversion are further discussed in ater sections.
 
 ## Decision rules
 
@@ -184,36 +185,3 @@ name: example-river-excavation-3
 Decision tree with probabilities and costs.
 ```
 ````
-
-## Utility functions
-
-The elaborations in the previous sections were based on monetary values as a metric for outcomes and a risk neutral decision maker. This section will provide some basic information on utility functions and various risk attitudes.
-
-Utility is a concept used to rank the possible outcomes according to the preferences of the decision maker. Utility $(\textit u)$ values are between $0\leq \textit{u}(\omega)\leq 1$. A utility function can be used to characterize the relative utility of various outcomes. The utility function depends on the preferences and attitude of the decision maker. An example of three different utility functions is given in Figure 3.8 for an example of an activity with potential monetary benefits between € 0 and € 1000. In the case of a risk neutral decision maker the utility increases linearly with the benefits. In the case of the risk aversion relatively small benefits are already given a high utility. A risk seeking decision maker gives a relatively low value to smaller benefits, but high utility values to larger incomes. 
-
-```{figure} ../figures/utility-example.png
----
-height: 300px
-name: utility-example
----
-Example of a utility function for monetary benefits.
-```
-
- ```{admonition} Example: a bet
-
-The utility functions can be applied to a simple example. Assume that a student has the chance to receive a guranteed payout of €400. Alternatively, a bet can be organized with a $\textit p$ =  0.5 chance of a payout of € 800, and a (1-$\textit p$) = 0.5 chance of no payout. A risk neutral decision maker would be indifferent between both choices, as they have the same expected outcome – i.e. €400 gain – and a utility value of $\textit u$(€400) = $\textit{pu}$(€800)+(1-$\textit p$)$\textit u$(€0)= 0.4.  
-
-We now apply the two other utility functions. For the risk averse function  we find the following:
-
-The expected utility of the direct payout equals $u_{R A}( € 400 )=0.75$
-
-The expected utility of the bet becomes: $0.5 u_{R A}(€ 800)+0.5 u_{R A}(€ 0)=0.5 \cdot 0.97+0.5 \cdot 0=0.485$  
-
-In this case the expected utility of the direct payout is higher and this is the preferred decision of the risk averse decision maker. For the risk seeking function  we find the following:
-
-The expected utility of the direct payout equals $u_{R A}( € 400 )$  = 0.1 .  
-The expected utility of the bet becomes: $0.5 u_{R S}(€ 800)+0.5 u_{R S}(€ 0)=0.5 \cdot 0.57+0.5 \cdot 0=0.285$   
-In this case the expected utility of the bet is higher. The preferred decision of the risk seeking decision maker is the bet.
-
-So for the example of the bet, the risk neutral decision maker is indifferent between the bet and the direct payout. The risk averse decision maker would accept a lower payout, rather than taking the bet. The risk seeking decision maker accepts the bet, even if the guaranteed payout is higher than the expected outcomes of the bet. The same concept can also be applied to losses, a decision-maker can be risk averse against events with large consequences. For example, a civil engineering company could be risk averse in making decisions about bidding for projects with financial risks that could threaten the financial stability of the company. On the other hand, a government with a large portfolio of projects may actask  more risk neutral. The various risk attitudes can also play a role in making investment decisions (see also 3.4.2). A risk averse investor would prefer investments (such as bonds or guaranteed loans with relatively low expected returns) over investments in stocks that have higher expected returns, but also a higher chance of losing money. The principle of risk aversion is also related to decisions about insurances. For example, most people are risk averse against losing their belongings in a large house fire. They are willing to pay an annual premium that is higher than the expected losses due to the fire. Finally, a further discussion of a related risk aversion concept regarding  s accidents with large numbers of fatalities is included in section 3.5.
-```
