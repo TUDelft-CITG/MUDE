@@ -80,7 +80,7 @@ where:
 
 The foregoing assumes that both the costs and benefits are expressed in the same unit, generally in the form of a present value [€]. The net present value represents the sum of the present values of the benefit and cost cash flows over a period of time. In engineering we often deal with situations with larger initial investments, whereas the risk reduction benefits are spread out over a longer time period. For example, when a government invests this year in flood protection, the costs are made in year 0, but the benefits will be spread over the coming decades. 
 
-For such situations the failure probability is generally expressed per unit of time, mostly per year. That means that the risk (reduction) is expressed in terms of € per year, whereas the initial investments  have the unit of €. The net present value of cost or benefit values over a future range of years can be calculated with {eq}`npv`. To calculate the net present value NPV [€] a discount rate  should be used. The discount rate represents a required return on an investment.
+For such situations the failure probability is generally expressed per unit of time, mostly per year. That means that the risk (reduction) is expressed in terms of € per year, whereas the initial investments have the unit of €. The net present value of cost or benefit values over a future range of years can be calculated with {eq}`npv`. To calculate the net present value NPV [€] a discount rate  should be used. The discount rate represents a required return on an investment.
 
 $$
   NPV = \sum_{t=1}^{T} \frac{C_t}{(1+r)^t}
