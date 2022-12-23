@@ -67,27 +67,6 @@ The **economic optimization** has already been discussed in detail in ⚠️sect
 To illustrate the difference between the individual and societal perspective, consider a fairly safe car that has a probability of 10$^{-5}$ per year of causing a fatality due to technical failure. This may well be acceptable to an individual. Such a probability is in the same range as the average death rate in traffic (650 fatalities / 17 million people which is about 4.10$^{-5}$ per year). If only 1000 cars are sold in the Netherlands, the number of fatal accidents with this car is rare, i.e. 0.01 fatalities per year. However, when the car becomes popular and 10 million cars are sold, the average number of fatalities due to technical failure becomes 100 per year. This may well lead to public concerns and indignation. From a societal point of view this may no longer be acceptable, whereas the individual risk has not changed.
 ```
 
-```{warning}
-The following example is also implemented in a notebook on one of the following pages (`example-FN-curve.ipynb`), which needs to be combined.
-```
-
-```{admonition} Example: calculation of an FN curve.
-The following example shows the composition of an FN curve for a system with two mutually exclusive event scenarios.
-
-Accident 1 with $N_1 = 10$ fatalities and a probability of $P_1 = 10^{-2}$ per year
-
-Accident 2 with $N_2 = 100$ fatalities and a probability of $P_2 = 10^{-3}$ per year
-
-Based on this information the probability mass function can be formed (first graph). Consequently, the cumulative distribution function can be made (second graph). Finally, the probability of exceedance or the FN curve is made (third graph).
-Finally, we note that the expected value of the number of fatalities equals:
- 
-$$
-  E(N) = P_1 N_1 + P_2 N_2 =  0.2\text{ fatalities per year}
-$$
-
-This value will also be found when the surface of the area under the FN curve is computed ⚠️(Vrijling and van Gelder, 1997).
-```
-
 ## Limits for individual and societal risk
 
 Safety standards can be used to set limits to the individual and societal risk. A **limit** value can be set for **individual risks**. Such a limit value is to avoid disproportionate exposures by laying down a minimum safety level for all individuals. In various fields of applications limit values in the range of 10$^{-4}$ to 10$^{-6}$ per year are used (see below for more information). To put the stringency of the individual risk criteria into perspective, one could consider the effect of the probability of an accident on life expectancy. When an average person would be constantly exposed to a maximum allowable level of risk of 10-6 per year, the decrease of his or her life expectancy would be only 1 day as shown in {numref}`individual-risk-life-expectancy`.
