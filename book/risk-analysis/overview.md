@@ -1,6 +1,6 @@
 # Risk Analysis
 
-This book splits risk into two parts: risk *analysis* and risk *assessment.* This chapter considers the analysis of risks from a broad perspective, beginning with definitions and key steps of a risk analysis. The next two chapters explore quantitative analyses (component and system reliability) before returning to risk concepts of decision theory, cost benefit analysis and safety standards.
+This book splits risk into two parts: risk *analysis* and risk *assessment.* This chapter considers the analysis of risks from a broad perspective, beginning with definitions and key steps of a risk analysis, illustrated quantitatively through an FN curve. The next two chapters explore quantitative analyses (component and system reliability) before returning to risk assessment concepts of decision theory, cost benefit analysis and safety standards, where the principal focus is on making decisions and answering the question 'how safe is safe enough?'
 
 ```{warning}
 Point out how a single risk value can used as a design criteria, which links to probability. Can also consider illustrating risk types.

@@ -2,7 +2,7 @@
 
 This is a key part of step 3 in a risk analysis: quantitative analysis.
 
-Just a few simple examples to illustrate: series and parallel systems, influence of dependence 
+Just a few simple examples to illustrate: series and parallel systems, influence of dependence.
 
 Example illustrating difference in failure probability in reality versus model (flooding?).
 

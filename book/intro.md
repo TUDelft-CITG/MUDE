@@ -61,7 +61,7 @@ Key concepts from this book that will be assessed on the MUDE exam are:
 - Simple system and component reliability (quantitative risk analysis methods)
 - Use of probability to design and assess engineering systems and components
 - Influence of dependence on simple systems and components
-- Decision analysis, [cost-benefit analysis](cost-benefit) and economic optimization (risk assessment methods)
+- Decision analysis, [cost-benefit analysis](cost_benefit) and economic optimization (risk assessment methods)
 - Assessment and quantification of risks for a system with three different risk metrics: individual, societal and economic
 - Application and derivation of standards for human safety (individual and societal risk)
 - Application and derivation of standards based on economic risk
