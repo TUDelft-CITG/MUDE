@@ -26,9 +26,13 @@ $$\text{Reliability}=1-\text{Probability}_\text{bad thing}$$
 So in fact, as engineers we are optimistic, otherwise this chapter would be called Risk and *Un*reliability.
 ```
 
+## Risk and Reliability in Practice
+
 Throughout this book we will repeatedly draw on the field of flood management to illustrate risk and reliability concepts as this field requires expertise from all perspectives in civil and environmental engineering and geosciences, from climate and hydrologic processes to evacuation and recovery. In addition, this field has driven the development and use of risk and reliability techniques in the Netherlands since the flooding disaster of 1953, not to mention the experience gained during the previous millenium, albeit in a less rigorous mathematical fashion. And finally, new safety standards for primary flood defences in the Netherlands have been in place since 2017 that are formulated as a tolerable failure probability of dike[^dike] segments. As such, dike reinforcements are legally required to be designed according to these new standards, which requires one to show that the failure probability is less than an allowable maximum value.
 
 Despite the focus on flood management, many applications exist in other fields, for example the discussion about the gas extraction in the North of the Netherlands which leads to increased earthquakes, building damage and potential injury to humans. A thorough analysis of the probability of earthquake occurrence, structural safety of various infrastructure (houses, levee, hospitals, pipelines), benefits associated with extracting gas and the resulting level of risk is required to make decisions about how to manage this industry. As with the flood management application, advanced knowledge of probabilistic techniques is needed. 
+
+## It All Comes Back to Probability
 
 In short, risk and reliability concepts cannot be defined or applied without *probability.* It is necessary in order to quantify uncertainty and take it into account when making decisions, regardless of whether our specific task is to investigate, assess, design or create policy for a particular engineering problem. Probability theory is a powerful tool because it provides a way to quantify many aspects of uncertainty, for example:
 - precision of measurements
@@ -41,7 +45,7 @@ In short, risk and reliability concepts cannot be defined or applied without *pr
 
 It is crucial that civil and environmental engineers and geoscientists are able to understand and apply the concepts of risk and reliability, as well as probability theory. As such, these lecture provide an introduction to the fundamental techniques and concepts necessary to do so. 
 
-## Chapter Overview
+## Book Overview
 
 Risk and reliability concepts have been organized into five primary chapters to introduce fundamental concepts and progressively illustrate how they are applied in practice.
 - **Probabilistic Design** describes how probability is used in the design process and illustrates key concepts through simple examples and 'patterns' (analytic expressions and visual representations).

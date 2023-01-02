@@ -17,5 +17,5 @@ Then introduce (illustration only):
 
 ```{admonition} MUDE exam information
 :class: tip, dropdown
-Given a specific scenario, you should understand the difficulty associated with choosing specific design values, and be able to represent the failure probability analytically and graphically. For simple measures of dependence (correlation coefficient, $\rho$) you can describe the quantitative influence on failure probability. This topic is covered more thoroughly in the **Component Reliability** chapter.
+Given a specific scenario, you should understand the difficulty associated with choosing specific design values when more than one random variable is considered, and be able to represent the failure probability analytically and graphically. For simple measures of dependence (correlation coefficient, $\rho$) you can describe the quantitative influence on failure probability. You should also recognize how a function of random variables can be used the univariate case is simple, it can also be extended to a function of random variables, which implicitly assumes a more complex multivariate probability distribution though the marginal distributions of the (random) input variables. This topic is covered more thoroughly in the **Component Reliability** chapter.
 ```

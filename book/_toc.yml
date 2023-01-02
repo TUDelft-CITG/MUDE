@@ -5,9 +5,9 @@ parts:
     chapters:
     - file: prob-design/overview.md
       sections:
-      - file: prob-design/example-river-system.md
       - file: prob-design/01-one-random-variable.md
       - file: prob-design/02-two-random-variables.md
+      - file: prob-design/example-river-system.md
     - file: risk-analysis/overview.md
       sections:
       - file: risk-analysis/definition.md
