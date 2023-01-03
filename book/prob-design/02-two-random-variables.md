@@ -1,5 +1,15 @@
 # Two Random Variables
 
+Two rivers upstream.
+
+sum of the two
+
+how to find the probability?
+
+%design point consideration NOT included here!!!
+
+## old stuff
+
 This becomes much more interesting, but already a lot more complex.
 
 Start with two loads. Illustrated using
