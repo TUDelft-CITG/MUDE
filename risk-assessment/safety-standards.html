@@ -132,11 +132,6 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../prob-design/example-river-system.html">
-     Flood Management Case Study
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../prob-design/01-one-random-variable.html">
      One Random Variable
     </a>
@@ -144,6 +139,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../prob-design/02-two-random-variables.html">
      Two Random Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../prob-design/example-river-system.html">
+     Flood Management Case Study
     </a>
    </li>
   </ul>
@@ -160,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../risk-analysis/definition.html">
-     Definition of risk
+     Definition of Risk
     </a>
    </li>
    <li class="toctree-l2">
@@ -169,13 +169,8 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-analysis/example-FN-curve.html">
-     Example: FN curve Calculation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../risk-analysis/exercise-fn-curve.html">
-     Exercise: FN-curve
+    <a class="reference internal" href="../risk-analysis/risk-curves.html">
+     Risk Curve
     </a>
    </li>
   </ul>
@@ -196,18 +191,8 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../reliability-system/exercise-paint.html">
-     Exercise: Paint System
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../reliability-system/exercise-simple-city.html">
      Exercise: Simple City
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../reliability-system/exercise-dam.html">
-     Exercise: Dam failure analysis
     </a>
    </li>
   </ul>
@@ -252,6 +237,21 @@ const thebe_selector_output = ".output, .cell_output"
      Example: 3 Risk Metrics
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exercise-fn-curve.html">
+     Exercise: FN-curve
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exercise-paint.html">
+     Exercise: Paint System
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exercise-dam.html">
+     Exercise: Dam and River
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -266,6 +266,11 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../other-topics/exercise-sample-exam.html">
+     Sample Exam Questions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../other-topics/exercise-sample-exam-solution.html">
      Sample Exam Questions
     </a>
    </li>
@@ -414,27 +419,34 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#limits-for-individual-and-societal-risk">
-   Limits for individual and societal risk
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-dutch-safety-standards-for-industrial-major-hazards">
-   The Dutch safety standards for industrial major hazards
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-taw-model-a-general-model-for-deriving-safety-standards">
-   The TAW model: a general model for deriving safety standards
+  <a class="reference internal nav-link" href="#three-types-of-risk">
+   Three Types of Risk
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#individual-risk">
+     Individual Risk
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#limits-for-individual-and-societal-risk">
+   Limits for Individual and Societal Risk
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#case-study-dutch-industrial-hazards">
+   Case Study: Dutch industrial hazards
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#case-study-dutch-flood-protection">
+   Case Study: Dutch flood protection
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
      Individual risk
     </a>
    </li>
@@ -470,27 +482,34 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction">
-   Introduction
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#limits-for-individual-and-societal-risk">
-   Limits for individual and societal risk
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-dutch-safety-standards-for-industrial-major-hazards">
-   The Dutch safety standards for industrial major hazards
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-taw-model-a-general-model-for-deriving-safety-standards">
-   The TAW model: a general model for deriving safety standards
+  <a class="reference internal nav-link" href="#three-types-of-risk">
+   Three Types of Risk
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#individual-risk">
+     Individual Risk
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#limits-for-individual-and-societal-risk">
+   Limits for Individual and Societal Risk
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#case-study-dutch-industrial-hazards">
+   Case Study: Dutch industrial hazards
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#case-study-dutch-flood-protection">
+   Case Study: Dutch flood protection
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
      Individual risk
     </a>
    </li>
@@ -517,10 +536,8 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="safety-standards">
-<h1>Safety standards<a class="headerlink" href="#safety-standards" title="Permalink to this headline">#</a></h1>
+<span id="id1"></span><h1>Safety standards<a class="headerlink" href="#safety-standards" title="Permalink to this headline">#</a></h1>
 <p>When answering the question “how safe is safe enough” a merely economic treatment with cost benefit analysis or economic optimization is often not sufficient for activities with risks to people. Therefore, criteria have been developed that focus on risks to human life. This section focuses on safety standards and criteria for evaluating the risk to life.</p>
-<section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
 <p>Two aspects are typically considered when evaluating and regulating risks to the public: the total or population-wide effects, and the distribution of effects within the affected population. <a class="reference internal" href="#risk-evaluation"><span class="std std-numref">Table 3</span></a> summarizes these perspectives. The societal perspective is concerned with ‘total effect’ and the effects of large-scale accidents on the society, in terms of economic damages and life loss. The individual perspective is concerned with distributive justice (‘equity’), i.e. the distribution of harm over the population.</p>
 <p>As risk is often the by-product of an otherwise legitimate and advantageous activity, such as production or transportation, regulating risks is essentially a balancing act between economic and social activities on the hand and a sufficiently safe society on the other hand ⚠️(e.g. Jongejan, 2008): just as too lenient regulations are suboptimal, too stringent ones are too.</p>
 <table class="table" id="risk-evaluation">
@@ -547,13 +564,18 @@ title="Print to PDF"
 </tr>
 </tbody>
 </table>
-<p>Based on this general concept, it has been proposed to evaluate risks based on three criteria ⚠️(TAW, 1985; Vrijling et al, 1995; 1998):</p>
+<section id="three-types-of-risk">
+<h2>Three Types of Risk<a class="headerlink" href="#three-types-of-risk" title="Permalink to this headline">#</a></h2>
+<p>Based on the general concepts described above, it has been proposed to evaluate risks based on three criteria ⚠️(TAW, 1985; Vrijling et al, 1995; 1998):</p>
 <ul class="simple">
-<li><p>To limit the <strong>invidual risk</strong> to prevent that certain people are exposed to disproportionally large risks;</p></li>
-<li><p>To limit the <strong>societal risk</strong> to limit the risks of large scale accidents with many fatalities;</p></li>
+<li><p>limit the <strong>invidual risk</strong> to prevent that certain people are exposed to disproportionally large risks;</p></li>
+<li><p>limit the <strong>societal risk</strong> to limit the risks of large scale accidents with many fatalities;</p></li>
 <li><p><strong>Economic optimization</strong> to balance investments in risk reduction from an economic point of view.</p></li>
 </ul>
-<p>The <strong>individual risk</strong> concerns the probability of death of a person due to an accident. Various related definitions exist. The “average individual risk” for a certain activity can be calculated, e.g. the individual risk due to smoking or the risk of an airplane crash for a frequent flyer. <a class="reference internal" href="#death-probability"><span class="std std-numref">Table 4</span></a> compares the probability of lethal accidents for various types of accidents.</p>
+<p>Two of these criteria have already been discussed elsewhere in this book. <strong>Societal risk</strong> refers to the probability of an accident with multiple fatalities and is often graphically represented by an FN-curve (<a class="reference internal" href="../risk-analysis/risk-curves.html#risk-curve"><span class="std std-ref">Risk Curve</span></a> Section). <strong>Economic optimization</strong> has already been discussed in the <a class="reference internal" href="econ-optimization.html#econ-optimization"><span class="std std-ref">Economic Optimization</span></a> Section.</p>
+<section id="individual-risk">
+<h3>Individual Risk<a class="headerlink" href="#individual-risk" title="Permalink to this headline">#</a></h3>
+<p><strong>Individual risk</strong> concerns the probability of death of a person due to an accident. Various related definitions exist. The “average individual risk” for a certain activity can be calculated, e.g. the individual risk due to smoking or the risk of an airplane crash for a frequent flyer. <a class="reference internal" href="#death-probability"><span class="std std-numref">Table 4</span></a> compares the probability of various types of fatal accidents.</p>
 <table class="table" id="death-probability">
 <caption><span class="caption-number">Table 4 </span><span class="caption-text">Average probability of death due to several activities. (statistics based on various sources for the Netherlands and Europe)</span><a class="headerlink" href="#death-probability" title="Permalink to this table">#</a></caption>
 <colgroup>
@@ -592,32 +614,14 @@ title="Print to PDF"
 <li><p><span class="math notranslate nohighlight">\(P_{d|f}\)</span> the conditional probability of death given an accident</p></li>
 </ul>
 <p>Both the individual risk and <span class="math notranslate nohighlight">\(P_{d|f}\)</span> can be formulated as a function of a location near a risk source. If it is assumed that a person is permanently present at that location, the individual risk becomes a property of that location and it can be used for zoning and land use planning. This is applied in the industrial safety policy in the Netherlands (see next section).</p>
-<p><strong>Societal risk</strong> refers to the probability of an accident with multiple fatalities. It is often graphically represented by an FN-curve that shows the exceedance probabilities of the potential numbers of fatalities (<span class="math notranslate nohighlight">\(P(N&gt;n)\)</span>) on double log scale. A simplified example of the calculation of an FN curve is given below.</p>
-<p>The <strong>economic optimization</strong> has already been discussed in detail in ⚠️section 3.4.2. Possible criteria for acceptable individual and societal risk are discussed in the coming paragraphs.</p>
 <div class="admonition-example-difference-between-individual-and-societal-risk admonition">
 <p class="admonition-title">Example: Difference between individual and societal risk.</p>
 <p>To illustrate the difference between the individual and societal perspective, consider a fairly safe car that has a probability of 10<span class="math notranslate nohighlight">\(^{-5}\)</span> per year of causing a fatality due to technical failure. This may well be acceptable to an individual. Such a probability is in the same range as the average death rate in traffic (650 fatalities / 17 million people which is about 4.10<span class="math notranslate nohighlight">\(^{-5}\)</span> per year). If only 1000 cars are sold in the Netherlands, the number of fatal accidents with this car is rare, i.e. 0.01 fatalities per year. However, when the car becomes popular and 10 million cars are sold, the average number of fatalities due to technical failure becomes 100 per year. This may well lead to public concerns and indignation. From a societal point of view this may no longer be acceptable, whereas the individual risk has not changed.</p>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>The following example is also implemented in a notebook on one of the following pages (<code class="docutils literal notranslate"><span class="pre">example-FN-curve.ipynb</span></code>), which needs to be combined.</p>
-</div>
-<div class="admonition-example-calculation-of-an-fn-curve admonition">
-<p class="admonition-title">Example: calculation of an FN curve.</p>
-<p>The following example shows the composition of an FN curve for a system with two mutually exclusive event scenarios.</p>
-<p>Accident 1 with <span class="math notranslate nohighlight">\(N_1 = 10\)</span> fatalities and a probability of <span class="math notranslate nohighlight">\(P_1 = 10^{-2}\)</span> per year</p>
-<p>Accident 2 with <span class="math notranslate nohighlight">\(N_2 = 100\)</span> fatalities and a probability of <span class="math notranslate nohighlight">\(P_2 = 10^{-3}\)</span> per year</p>
-<p>Based on this information the probability mass function can be formed (first graph). Consequently, the cumulative distribution function can be made (second graph). Finally, the probability of exceedance or the FN curve is made (third graph).
-Finally, we note that the expected value of the number of fatalities equals:</p>
-<div class="math notranslate nohighlight">
-\[
-  E(N) = P_1 N_1 + P_2 N_2 =  0.2\text{ fatalities per year}
-\]</div>
-<p>This value will also be found when the surface of the area under the FN curve is computed ⚠️(Vrijling and van Gelder, 1997).</p>
-</div>
+</section>
 </section>
 <section id="limits-for-individual-and-societal-risk">
-<h2>Limits for individual and societal risk<a class="headerlink" href="#limits-for-individual-and-societal-risk" title="Permalink to this headline">#</a></h2>
+<h2>Limits for Individual and Societal Risk<a class="headerlink" href="#limits-for-individual-and-societal-risk" title="Permalink to this headline">#</a></h2>
 <p>Safety standards can be used to set limits to the individual and societal risk. A <strong>limit</strong> value can be set for <strong>individual risks</strong>. Such a limit value is to avoid disproportionate exposures by laying down a minimum safety level for all individuals. In various fields of applications limit values in the range of 10<span class="math notranslate nohighlight">\(^{-4}\)</span> to 10<span class="math notranslate nohighlight">\(^{-6}\)</span> per year are used (see below for more information). To put the stringency of the individual risk criteria into perspective, one could consider the effect of the probability of an accident on life expectancy. When an average person would be constantly exposed to a maximum allowable level of risk of 10-6 per year, the decrease of his or her life expectancy would be only 1 day as shown in <a class="reference internal" href="#individual-risk-life-expectancy"><span class="std std-numref">Table 5</span></a>.</p>
 <table class="table" id="individual-risk-life-expectancy">
 <caption><span class="caption-number">Table 5 </span><span class="caption-text">Relationship between the additional risk and life expectancy</span><a class="headerlink" href="#individual-risk-life-expectancy" title="Permalink to this table">#</a></caption>
@@ -673,28 +677,30 @@ Finally, we note that the expected value of the number of fatalities equals:</p>
 <li><p><span class="math notranslate nohighlight">\(C\)</span> a constant that determines the vertical position of the limit line</p></li>
 <li><p><span class="math notranslate nohighlight">\(\alpha\)</span> a coefficient that determines the steepness of the limit line</p></li>
 </ul>
-<p>The limit line is called risk neutral<a class="footnote-reference brackets" href="#neutral" id="id1">1</a> if <span class="math notranslate nohighlight">\(\alpha=1\)</span>, since it places equal weight on exceedance probabilities and numbers of fatalities. If <span class="math notranslate nohighlight">\(\alpha = 2\)</span>, the limit is risk averse. This means that that the exceedance probability of 10 times as many fatalities should be 100 times lower. This has been motivated by public aversion to large numbers of fatalities. For example, the loss of 1000 people in one accident (e.g. a major explosion) could be valued differently than  1000 losses of 1 person in separate accidents (e.g. in traffic).</p>
+<p>The limit line is called risk neutral<a class="footnote-reference brackets" href="#neutral" id="id2">1</a> if <span class="math notranslate nohighlight">\(\alpha=1\)</span>, since it places equal weight on exceedance probabilities and numbers of fatalities. If <span class="math notranslate nohighlight">\(\alpha = 2\)</span>, the limit is risk averse. This means that that the exceedance probability of 10 times as many fatalities should be 100 times lower. This has been motivated by public aversion to large numbers of fatalities. For example, the loss of 1000 people in one accident (e.g. a major explosion) could be valued differently than  1000 losses of 1 person in separate accidents (e.g. in traffic).</p>
 <p>For different applications limit lines have been developed with varying constants and steepness. Examples of application areas include industrial risks in the Netherlands (next section), dams in the United States and Canada, and chemical risks in Hongkong and the UK ⚠️(Jonkman et al., 2003).</p>
 <div class="admonition-exaple-risk-matrix admonition">
-<p class="admonition-title">Exaple: Risk matrix</p>
-<p>Risk matrices are often used in various industries for risk evaluation and decision support, for example for the evaluation of health and safety risks within a facility. For a given undesired event the extent of probability and consequences are estimated on a qualitative or semi-quantitative scale, see <a class="reference internal" href="#risk-matrix"><span class="std std-numref">Fig. 21</span></a> for an example. Ranges of failure probabilities or consequences can be assigned to the qualitative terms on the axes in the example. The combination of probability and consequence estimates determines whether the risk is acceptable or whether it requires more attention and risk reduction efforts. However, unlike the FN curve, the cumulative effects of multiple possible events are generally not considered in a risk matrix.</p>
+<p class="admonition-title">Exaple: Risk Matrix</p>
+<p>Risk matrices are often used in various industries for risk evaluation and decision support, for example, to quickly prioritize actions, especially in time-sensitive situations. For a given undesired event the extent of probability and consequences are estimated on a qualitative or semi-quantitative scale, see <a class="reference internal" href="#risk-matrix"><span class="std std-numref">Fig. 22</span></a> for an example. Ranges of failure probabilities or consequences can be assigned to the qualitative terms on the axes in the example. The combination of probability and consequence determines the level of risk, and depending on the application, whether it is acceptable or whether it requires more attention and risk reduction efforts. However, unlike the FN curve, the cumulative effects of multiple possible events are generally not considered in a risk matrix.</p>
 <figure class="align-default" id="risk-matrix">
-<a class="reference internal image-reference" href="../_images/risk_matrix.png"><img alt="../_images/risk_matrix.png" src="../_images/risk_matrix.png" style="width: 500px;" /></a>
+<a class="reference internal image-reference" href="figures/risk_matrix.PNG"><img alt="figures/risk_matrix.PNG" src="figures/risk_matrix.PNG" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 21 </span><span class="caption-text">Example of a risk matrix (<a class="reference external" href="http://www.eimicrosites.org/heartsandminds/ram.php">Source</a>).</span><a class="headerlink" href="#risk-matrix" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 22 </span><span class="caption-text">Example of a risk matrix used by various engineering and military branches of the United States Army Corps of Engineers (Source: Corps <a class="reference external" href="https://www.rmc.usace.army.mil/">Risk Management Center</a> or <a class="reference external" href="https://www.iwr.usace.army.mil/Missions/Risk-Analysis-Gateway/Risk-Assessment/">Risk Analysis Gateway</a>).</span><a class="headerlink" href="#risk-matrix" title="Permalink to this image">#</a></p>
+<div class="legend">
+</div>
 </figcaption>
 </figure>
 </div>
 </section>
-<section id="the-dutch-safety-standards-for-industrial-major-hazards">
-<h2>The Dutch safety standards for industrial major hazards<a class="headerlink" href="#the-dutch-safety-standards-for-industrial-major-hazards" title="Permalink to this headline">#</a></h2>
+<section id="case-study-dutch-industrial-hazards">
+<h2>Case Study: Dutch industrial hazards<a class="headerlink" href="#case-study-dutch-industrial-hazards" title="Permalink to this headline">#</a></h2>
 <p>The Dutch major hazards policy deals with the risks to those living in the vicinity of major industrial hazards such as chemical plants and LPG-fuelling stations. The development of the Dutch major hazards policy was strongly incident driven, as were European efforts aimed at the prevention of major industrial accidents. After a number of severe industrial accidents, including the Bhopal accident in 1984 which killed an estimated 3000 people and severely injured over 200.000, a European directive was drafted concerning the prevention of major accidents: the 1982 Seveso Directive. This was later replaced by the Seveso II Directive.
 The cornerstones of the Dutch major hazards policy are a) the use of quantitative risk analysis (QRA); b) comparison of QRA outcomes with limits to individual and societal risks ⚠️(Bottelberghs, 2000).</p>
-<p>Within the Dutch major hazards policy, individual risk is defined as the probability of death of an average, unprotected person that is constantly present at a certain location. It is thereby a property of location and iso-risk contours can be plotted on a map (see <a class="reference internal" href="#risk-contour"><span class="std std-numref">Fig. 22</span></a>). Individual risk is therefore also named local risk (“plaatsgebonden risico”) in the Netherlands. The shape of the risk contours for other applications will look different. For airports the contours will follow the shape of the runway and flight paths, for polders and flooding the risk contours will be highest in the deepest part of the polder.</p>
+<p>Within the Dutch major hazards policy, individual risk is defined as the probability of death of an average, unprotected person that is constantly present at a certain location. It is thereby a property of location and iso-risk contours can be plotted on a map (see <a class="reference internal" href="#risk-contour"><span class="std std-numref">Fig. 23</span></a>). Individual risk is therefore also named local risk (“plaatsgebonden risico”) in the Netherlands. The shape of the risk contours for other applications will look different. For airports the contours will follow the shape of the runway and flight paths, for polders and flooding the risk contours will be highest in the deepest part of the polder.</p>
 <figure class="align-default" id="risk-contour">
 <a class="reference internal image-reference" href="../_images/risk_contour.png"><img alt="../_images/risk_contour.png" src="../_images/risk_contour.png" style="height: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 22 </span><span class="caption-text">Example of a schematic individual risk contour (circles) for a chemical installation.</span><a class="headerlink" href="#risk-contour" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 23 </span><span class="caption-text">Example of a schematic individual risk contour (circles) for a chemical installation.</span><a class="headerlink" href="#risk-contour" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <table class="table" id="individual-risk-criteria">
@@ -724,26 +730,26 @@ The cornerstones of the Dutch major hazards policy are a) the use of quantitativ
 <td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span> per year</p></td>
 </tr>
 <tr class="row-odd"><td></td>
-<td><p>Vulnerable</p></td>
+<td><p>Limitedly Vulnerable</p></td>
 <td><p><span class="math notranslate nohighlight">\(10^{-6}\)</span> per year</p></td>
 </tr>
 </tbody>
 </table>
 <p>A distinction is made between vulnerable objects such as schools and houses and limitedly vulnerable objects such as small offices. The following criteria apply. For new situations a limit of <span class="math notranslate nohighlight">\(10^{-6}\)</span> per year applies. A comparison with <a class="reference internal" href="#individual-risk-criteria"><span class="std std-numref">Table 6</span></a> shows that this individual risk value has a negligible effect on life expectancy.</p>
-<p>The criterion for societal risk that is used in the Netherlands for evaluating the third party risks posed by major industrial hazards is shown in <a class="reference internal" href="#fn-limit"><span class="std std-numref">Fig. 23</span></a> below. It serves as a reference in the broader assessment of third party risks by competent authorities. Exceedances of the criterion line also have to be motivated by competent authorities. When the criterion line is not exceeded, the acceptability of the third party risk still has to be motivated. The limit line is characterized by <span class="math notranslate nohighlight">\(C=10^{-3}\)</span> and a steepness of <span class="math notranslate nohighlight">\(\alpha = 2\)</span>, making it a risk averse criterion. The criterion is used to assess the acceptability of the risks of individual facilities.</p>
+<p>The criterion for societal risk that is used in the Netherlands for evaluating the third party risks posed by major industrial hazards is shown in <a class="reference internal" href="#fn-limit"><span class="std std-numref">Fig. 24</span></a> below. It serves as a reference in the broader assessment of third party risks by competent authorities. Exceedances of the criterion line also have to be motivated by competent authorities. When the criterion line is not exceeded, the acceptability of the third party risk still has to be motivated. The limit line is characterized by <span class="math notranslate nohighlight">\(C=10^{-3}\)</span> and a steepness of <span class="math notranslate nohighlight">\(\alpha = 2\)</span>, making it a risk averse criterion. The criterion is used to assess the acceptability of the risks of individual facilities.</p>
 <figure class="align-default" id="fn-limit">
 <a class="reference internal image-reference" href="../_images/fn_limit.png"><img alt="../_images/fn_limit.png" src="../_images/fn_limit.png" style="width: 300px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 23 </span><span class="caption-text">FN limit line used for installations in the Netherlands</span><a class="headerlink" href="#fn-limit" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 24 </span><span class="caption-text">FN limit line used for installations in the Netherlands</span><a class="headerlink" href="#fn-limit" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
-<section id="the-taw-model-a-general-model-for-deriving-safety-standards">
-<h2>The TAW model: a general model for deriving safety standards<a class="headerlink" href="#the-taw-model-a-general-model-for-deriving-safety-standards" title="Permalink to this headline">#</a></h2>
-<p>Engineers are sometimes faced with the question ‘how safe is safe enough’. For systems for which no regulations are available, this can be a difficult question to resolve. A model has therefore been developed by the Technical Advice Committee for Water (TAW)<a class="footnote-reference brackets" href="#taw" id="id2">2</a>  defences for deriving safety standards on the basis of accident statistics ⚠️(TAW, 1985; Vrijling et al 1995; 1998). The assumption underlying the model is that accident statistics are the result of a process of societal optimisation and that they thereby reflect what is apparently considered acceptable by society at large. Such an approach is commonly referred to as a ‘revealed preference’ approach.</p>
-<section id="individual-risk">
-<h3>Individual risk<a class="headerlink" href="#individual-risk" title="Permalink to this headline">#</a></h3>
-<p>Accident statistics reveal that the extent to which participation in the activity is voluntary strongly influences the level of risk that is accepted by individuals. Relatively high individual risks are accepted for activities that are voluntary and have a (personal) benefit, such as mountain climbing. Much smaller individual risk values are accepted for involuntary activities for which the risks are imposed by others, e.g. for chemical and nuclear industry. A policy factor (<span class="math notranslate nohighlight">\(\beta\)</span>) is therefore introduced to account for voluntariness of exposure. This factor is set at <span class="math notranslate nohighlight">\(\beta=1\)</span> for an individual risk value of <span class="math notranslate nohighlight">\(10^{-4}\)</span> per year. This represents the “baseline” individual risk for the group of young men who are most at risk from traffic.</p>
+<section id="case-study-dutch-flood-protection">
+<h2>Case Study: Dutch flood protection<a class="headerlink" href="#case-study-dutch-flood-protection" title="Permalink to this headline">#</a></h2>
+<p>For systems for which no regulations are available the question ‘how safe is safe enough?’ can be difficult to resolve. A general model has been developed by the Technical Advice Committee for Water defences (TAW)<a class="footnote-reference brackets" href="#taw" id="id3">2</a> in the process of deriving safety standards for flood protection in the Netherlands, which, in a formal sense, has been an ongoing process since the 1950’s. This approach is derived on the basis of accident statistics ⚠️(TAW, 1985; Vrijling et al 1995; 1998), where underlying assumption of the model is that accident statistics are the result of a process of societal optimisation and that they thereby reflect what is apparently considered acceptable by society at large. Such an approach is commonly referred to as a ‘revealed preference’ approach, and was already introduced in a a general sense in the Chapter on Risk Analysis, Section <a class="reference internal" href="../risk-analysis/risk-curves.html#risk-curve-famous"><span class="std std-ref">A Famous Risk Curve</span></a> (<a class="reference internal" href="../risk-analysis/definition.html#risk-curve-baecher"><span class="std std-numref">Fig. 6</span></a>).</p>
+<section id="id4">
+<h3>Individual risk<a class="headerlink" href="#id4" title="Permalink to this headline">#</a></h3>
+<p>Accident statistics reveal that the extent to which participation in the activity is voluntary strongly influences the level of risk that is accepted by individuals. Relatively high individual risks are accepted for activities that are voluntary and have a (personal) benefit, such as mountain climbing. Much smaller individual risk values are accepted for involuntary activities for which the risks are imposed by others, e.g. for chemical and nuclear industry. A policy factor (<span class="math notranslate nohighlight">\(\beta\)</span>) is therefore introduced to account for voluntariness of exposure. This factor is set at <span class="math notranslate nohighlight">\(\beta=1\)</span> for an individual risk value of <span class="math notranslate nohighlight">\(10^{-4}\)</span> per year. This represents the “baseline” individual risk for the group young men<a class="footnote-reference brackets" href="#men" id="id5">3</a> who are most at risk of dying in a traffic accident.</p>
 <table class="table" id="accident-statistics">
 <caption><span class="caption-number">Table 7 </span><span class="caption-text">Accident statistics and proposed policy factor and characteristics of the activity ⚠️(Sources: CUR, 2015; Vrijling, 2001; Vrijling et al., 1998).</span><a class="headerlink" href="#accident-statistics" title="Permalink to this table">#</a></caption>
 <colgroup>
@@ -900,24 +906,27 @@ The cornerstones of the Dutch major hazards policy are a) the use of quantitativ
 \[
     C = \left( \frac{\beta \cdot 100}{k \sqrt{N_a}} \right)^2 = \left( \frac{0.1 \cdot 1000}{3 \sqrt{100}} \right)^2 = 0.11
 \]</div>
-<p>The limit line for societal risk becomes <span class="math notranslate nohighlight">\(1 - F_N(n) \leq 0.11/n^2\)</span>. Both the individual and societal risk criteria are plotted in  below. As a third criterion the economic optimization can be added. The optimal or acceptable probability of failure depends on the damage and investment costs. A relationship with the graph below can be established by assuming that the number of fatalities is related to the economic damages. A dike ring with many inhabitants and potential fatalities will generally also represent a large economic value. For the sake of the example we assume that every fatality corresponds to an economic damage of €<span class="math notranslate nohighlight">\(5 \cdot 10^7\)</span> (note: this is not equal to the value of a human life). To calculate the economic optimum for the example we assume arbitrary values of <span class="math notranslate nohighlight">\(r=0.025\)</span> and  €<span class="math notranslate nohighlight">\(5 \cdot 10^6\)</span> <span class="math notranslate nohighlight">\(B=0.33\)</span>. <a class="reference internal" href="#combined-risk-criteria"><span class="std std-numref">Fig. 24</span></a> below shows the combination for the three criteria.</p>
+<p>The limit line for societal risk becomes <span class="math notranslate nohighlight">\(1 - F_N(n) \leq 0.11/n^2\)</span>. Both the individual and societal risk criteria are plotted in  below. As a third criterion the economic optimization can be added. The optimal or acceptable probability of failure depends on the damage and investment costs. A relationship with the graph below can be established by assuming that the number of fatalities is related to the economic damages. A dike ring with many inhabitants and potential fatalities will generally also represent a large economic value. For the sake of the example we assume that every fatality corresponds to an economic damage of €<span class="math notranslate nohighlight">\(5 \cdot 10^7\)</span> (note: this is not equal to the value of a human life). To calculate the economic optimum for the example we assume arbitrary values of <span class="math notranslate nohighlight">\(r=0.025\)</span> and  €<span class="math notranslate nohighlight">\(5 \cdot 10^6\)</span> <span class="math notranslate nohighlight">\(B=0.33\)</span>. <a class="reference internal" href="#combined-risk-criteria"><span class="std std-numref">Fig. 25</span></a> below shows the combination for the three criteria.</p>
 <p>For a given number of inhabitants and potential fatalities for a dike ring, the acceptable failure probability can be determined. For dike rings with between 1 and 10 fatalities – generally small areas-the individual risk criterion is the most stringent. For dike rings with large numbers of fatalities, the risk averse societal risk criterion becomes dominant.</p>
 <p>Several extensions of this model are possible. One can consider to add the economic value of life loss or consider a different distribution of the nationally acceptable societal risk over dike rings with different sizes.</p>
 <figure class="align-default" id="combined-risk-criteria">
 <a class="reference internal image-reference" href="../_images/combined_risk_criteria.png"><img alt="../_images/combined_risk_criteria.png" src="../_images/combined_risk_criteria.png" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 24 </span><span class="caption-text">Combination of the individual, societal and economic risk criteria for a hypothetical example.</span><a class="headerlink" href="#combined-risk-criteria" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Combination of the individual, societal and economic risk criteria for a hypothetical example.</span><a class="headerlink" href="#combined-risk-criteria" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </div>
-<p>One field of application where these concepts have been applied concerns the flood protection standards in the Netherlands. In the year 2014 new safety standards have been proposed for primary flood defences in the Netherlands. These have been derived based on a risk assessment, and standards have been formulated as a (tolerable) probability of failure of the flood defences. More information on this field of application will be given during the lectures.</p>
+<p>One field of application where these concepts have been applied concerns the flood protection standards in the Netherlands. Since 2017 new safety standards have been in place for primary flood defences in the Netherlands that have been derived based on a risk assessment, with standards been formulated as a (tolerable) probability of failure of the flood defences.</p>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
-<dt class="label" id="neutral"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>It should be noted that the usage of the term “risk neutral” to describe the FN-curve limit line for <span class="math notranslate nohighlight">\(\alpha = 1\)</span> is widespread but, strictly speaking, incorrect in the context of decision theory (see ⚠️section 3.3). This is because the cost of risk bearing to a risk neutral decision maker equals expected loss (i.e. the product of probabilities and damages). The FN-curve shows cumulative probabilities, however. Also, an individual crossing of the limit line would not necessarily disturb a risk neutral decision maker, provided the other accident scenarios have relatively small probabilities.</p>
+<dt class="label" id="neutral"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
+<dd><p>It should be noted that the usage of the term “risk neutral” to describe the FN-curve limit line for <span class="math notranslate nohighlight">\(\alpha = 1\)</span> is widespread but, strictly speaking, incorrect in the context of decision theory (see <a class="reference internal" href="decision.html#decision"><span class="std std-ref">Decision Analysis</span></a> Section). This is because the cost of risk bearing to a risk neutral decision maker equals expected loss (i.e. the product of probabilities and damages). The FN-curve shows cumulative probabilities, however. Also, an individual crossing of the limit line would not necessarily disturb a risk neutral decision maker, provided the other accident scenarios have relatively small probabilities.</p>
 </dd>
-<dt class="label" id="taw"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dt class="label" id="taw"><span class="brackets"><a class="fn-backref" href="#id3">2</a></span></dt>
 <dd><p>TAW is nowadays called ENW: Extertise Network on Flood Protection.</p>
+</dd>
+<dt class="label" id="men"><span class="brackets"><a class="fn-backref" href="#id5">3</a></span></dt>
+<dd><p>The group ‘young men’ is used as a baseline because this was the only information available at the time the study was completed.</p>
 </dd>
 </dl>
 </section>

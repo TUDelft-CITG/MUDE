@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Flood Management Case Study" href="example-river-system.html" />
+    <link rel="next" title="One Random Variable" href="01-one-random-variable.html" />
     <link rel="prev" title="Introduction" href="../intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -132,11 +132,6 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="example-river-system.html">
-     Flood Management Case Study
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="01-one-random-variable.html">
      One Random Variable
     </a>
@@ -144,6 +139,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="02-two-random-variables.html">
      Two Random Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="example-river-system.html">
+     Flood Management Case Study
     </a>
    </li>
   </ul>
@@ -160,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../risk-analysis/definition.html">
-     Definition of risk
+     Definition of Risk
     </a>
    </li>
    <li class="toctree-l2">
@@ -169,13 +169,8 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-analysis/example-FN-curve.html">
-     Example: FN curve Calculation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../risk-analysis/exercise-fn-curve.html">
-     Exercise: FN-curve
+    <a class="reference internal" href="../risk-analysis/risk-curves.html">
+     Risk Curve
     </a>
    </li>
   </ul>
@@ -196,18 +191,8 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../reliability-system/exercise-paint.html">
-     Exercise: Paint System
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../reliability-system/exercise-simple-city.html">
      Exercise: Simple City
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../reliability-system/exercise-dam.html">
-     Exercise: Dam failure analysis
     </a>
    </li>
   </ul>
@@ -252,6 +237,21 @@ const thebe_selector_output = ".output, .cell_output"
      Example: 3 Risk Metrics
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../risk-assessment/exercise-fn-curve.html">
+     Exercise: FN-curve
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../risk-assessment/exercise-paint.html">
+     Exercise: Paint System
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../risk-assessment/exercise-dam.html">
+     Exercise: Dam and River
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -266,6 +266,11 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../other-topics/exercise-sample-exam.html">
+     Sample Exam Questions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../other-topics/exercise-sample-exam-solution.html">
      Sample Exam Questions
     </a>
    </li>
@@ -414,8 +419,8 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#an-overview-of-this-chapter">
-   An overview of this chapter
+  <a class="reference internal nav-link" href="#chapter-overview">
+   Chapter Overview
   </a>
  </li>
 </ul>
@@ -438,8 +443,8 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#an-overview-of-this-chapter">
-   An overview of this chapter
+  <a class="reference internal nav-link" href="#chapter-overview">
+   Chapter Overview
   </a>
  </li>
 </ul>
@@ -453,18 +458,18 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="probabilistic-design">
-<h1>Probabilistic Design<a class="headerlink" href="#probabilistic-design" title="Permalink to this headline">#</a></h1>
-<p>Stated as simply as possible, the term <em>probabilistic design</em> implies the use of probability to design something. Although this may sound complex, there is actually not much different than a deterministic approach, where values used to design something are not assumed to be random. For example, the load on a beam, or the maximum discharge expected in a river. In a typical design process, the problem and functional requirements are first defined, the system or component is evaluated and then refined <span id="id1">[<a class="reference internal" href="../references.html#id11" title="Mark Voorendt. Design principles of multifunctional flood defences. PhD thesis, Delft University of Technology, the Netherlands, 2017.">Voorendt, 2017</a>]</span>. It is ideally an iterative process, where tradeoffs between competing requirements must be considered in order to arrive at an optimal configuration. During much of your university education you have probably learned a variety of techniques to evaluate interesting problems in your field of study; however, only towards the end of a bachelor or master program do you begin to <em>design</em> things and take into count information beyond what is written in a simple exam problem to make decisions. The design process is often challenging because there is no single right answer, and it turns out that incorporating probability in the design process can help.</p>
-<p>Consider some arbitrary object–let’s call it a thingamajig–which we must design and eventually build. We would like to apply the safety factor approach, which compares load<a class="footnote-reference brackets" href="#solicitation" id="id2">1</a>, <span class="math notranslate nohighlight">\(S\)</span>, to resistance, <span class="math notranslate nohighlight">\(R\)</span>, such that <span class="math notranslate nohighlight">\(FS=S/R\)</span>. As long as we make sure that <span class="math notranslate nohighlight">\(R\)</span> is less than <span class="math notranslate nohighlight">\(S\)</span>, or <span class="math notranslate nohighlight">\(FS&gt;1\)</span>, our thingamajig will never fail. This makes the design process quite simple and is a great engineering approach for many situations, for example, if:</p>
+<span id="prob-design"></span><h1>Probabilistic Design<a class="headerlink" href="#probabilistic-design" title="Permalink to this headline">#</a></h1>
+<p>Stated as simply as possible, the term <em>probabilistic design</em> implies the use of probability to design something. Although this may sound complex, there is actually not much different than a deterministic approach, where values used to design something are not assumed to be random. For example, the load on a beam, or the maximum discharge expected in a river. In a typical design process, the problem and functional requirements are first defined, the system or component is evaluated and then refined <span id="id1">[<a class="reference internal" href="../references.html#id14" title="Mark Voorendt. Design principles of multifunctional flood defences. PhD thesis, Delft University of Technology, the Netherlands, 2017.">Voorendt, 2017</a>]</span>. It is ideally an iterative process, where tradeoffs between competing requirements must be considered in order to arrive at an optimal configuration. During much of your university education you have probably learned a variety of techniques to evaluate interesting problems in your field of study; however, only towards the end of a bachelor or master program do you begin to <em>design</em> things and take into count information beyond what is written in a simple exam problem to make decisions. The design process is often challenging because there is no single right answer, and it turns out that incorporating probability in the design process can help.</p>
+<p>Consider some arbitrary object–let’s call it a thingamajig–which we must design and eventually build. We would like to apply the <em>factor of safety</em> approach, which compares load<a class="footnote-reference brackets" href="#solicitation" id="id2">1</a>, <span class="math notranslate nohighlight">\(S\)</span>, to resistance, <span class="math notranslate nohighlight">\(R\)</span>, such that <span class="math notranslate nohighlight">\(FS=S/R\)</span>. As long as we make sure that <span class="math notranslate nohighlight">\(R\)</span> is less than <span class="math notranslate nohighlight">\(S\)</span>, or <span class="math notranslate nohighlight">\(FS&gt;1\)</span>, our thingamajig will never fail. We could also use the <em>safety margin</em> approach, where <span class="math notranslate nohighlight">\(M=R-S\)</span>, which also quantifies the point between safe and unsafe, although here we make sure <span class="math notranslate nohighlight">\(M&gt;0\)</span>. These so-called <em>limit states</em> make the design process quite simple and is a great engineering approach for many situations, for example, if:</p>
 <ol class="simple">
 <li><p>the values of <span class="math notranslate nohighlight">\(R\)</span> and <span class="math notranslate nohighlight">\(S\)</span> are precisely known, or the range of values is negligibly small</p></li>
 <li><p><span class="math notranslate nohighlight">\(R\)</span> and <span class="math notranslate nohighlight">\(S\)</span> never change (at least not over short time or length scales)</p></li>
 <li><p><span class="math notranslate nohighlight">\(R\)</span> and <span class="math notranslate nohighlight">\(S\)</span> are easy to measure in all locations of interest</p></li>
 <li><p>the model used to design the thingamajig is nearly perfect</p></li>
 <li><p>the consequence of a failure is negligible
-In situations like this you can make your design decision and rest assured that there won’t be any lawyers knocking on your door in the near future.</p></li>
+In situations like this you can make your design decision and rest assured that there won’t be any lawyers knocking on your door in the near future because the thingamajig broke.</p></li>
 </ol>
-<p>For many situations, however, a deterministic analysis is not wise because we cannot guarantee that our thingamajig will always survive. When <span class="math notranslate nohighlight">\(R\)</span> and/or <span class="math notranslate nohighlight">\(S\)</span> can take on a range of possible values, all of a sudden there is a chance that our thingamajig is not reliable: there is a distinct probability it may <em>fail.</em> A significant part of this book is concerned with the quantification of what is often called the <em>failure probability,</em> <span class="math notranslate nohighlight">\(p_f\)</span>. Specifically, probability theory is useful to incorporate in the process of engineering because it allows us to quantitatively account for:</p>
+<p>For many situations, however, a deterministic analysis is not wise because we cannot guarantee that our thingamajig will always survive. When <span class="math notranslate nohighlight">\(R\)</span> and/or <span class="math notranslate nohighlight">\(S\)</span> can take on a range of possible values, all of a sudden there is a chance that our thingamajig is <em>not</em> reliable: there is a distinct probability it may <em>fail.</em> Part of this book is concerned with the quantification of what is often called the <em>failure probability,</em> <span class="math notranslate nohighlight">\(p_f\)</span>, for which there are many different techniques. These techniques all rely on  probability theory because it is because it allows us to quantitatively account for the following in our engineering process:</p>
 <ol class="simple">
 <li><p>imprecise measurements</p></li>
 <li><p>model error</p></li>
@@ -472,14 +477,14 @@ In situations like this you can make your design decision and rest assured that 
 <li><p>risk-based design criteria and safety standards</p></li>
 </ol>
 <p>These are just a few examples, where items 3 and 4 are the focus of the following chapters, and items 1 and 2 have already been considered elsewhere in MUDE.</p>
-<section id="an-overview-of-this-chapter">
-<h2>An overview of this chapter<a class="headerlink" href="#an-overview-of-this-chapter" title="Permalink to this headline">#</a></h2>
-<p>The remainder of this chapter uses the evaluation and design of a river flood protection system to introduce key aspects of risk and reliability, as well as the design process. A distinction is made between using probability to assess engineering components and systems (reliability analysis) and to derive design criteria (risk assessment), which are introduced formally in later chapters after the general risk analysis framework is discussed.</p>
-<p>Key concepts are often illustrated in a simple way by considering two random variables, which can be referred to as a <em>bivariate</em> case. This is more insightful than the univariate case because it allows us to consider the quantitative and qualitative influence of dependence, as well as the functional relationship between two variables and their join probability density (e.g., union, intersection or limit-states).</p>
+<section id="chapter-overview">
+<h2>Chapter Overview<a class="headerlink" href="#chapter-overview" title="Permalink to this headline">#</a></h2>
+<p>A probabilistic design is illustrated in the following sections, first with the simple cases of one random variable. Then an example with two random variables is used, which can be referred to as a <em>bivariate</em> case. This is more insightful than the univariate case because it allows us to consider the quantitative and qualitative influence of dependence, as well as the functional relationship between two variables and their joint probability density (e.g., union, intersection or limit-states).</p>
+<p>The evaluation and design of a river flood protection system is used to introduce key aspects of risk and reliability, as well as the design process. A distinction is made between using probability to assess engineering components and systems (reliability analysis) and to derive design criteria (risk assessment), which are introduced formally in later chapters after the general risk analysis framework is discussed.</p>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="solicitation"><span class="brackets"><a class="fn-backref" href="#id2">1</a></span></dt>
-<dd><p><span class="math notranslate nohighlight">\(S\)</span> stands for solicitation. While this letter and word EW much more pedantic-sounding than simply using load, or <span class="math notranslate nohighlight">\(L\)</span>, it is widely used in the structural engineering field, where component reliability methods were pioneered. Here we take a broader approach on the subject. Classical texts are <span id="id3">Der Kiureghian [<a class="reference internal" href="../references.html#id2" title="Armen Der Kiureghian. Structural and System Reliability. Cambridge University Press, 2022.">2022</a>]</span>, <span id="id4">Moss [<a class="reference internal" href="../references.html#id6" title="Robb Eric S Moss. Applied civil engineering risk analysis. Springer, 2020.">2020</a>]</span> and <span id="id5">Ditlevsen and Madsen [<a class="reference internal" href="../references.html#id4" title="Ove Ditlevsen and Henrik O Madsen. Structural reliability methods. Volume 178. Wiley New York, 1996.">1996</a>]</span>.</p>
+<dd><p><span class="math notranslate nohighlight">\(S\)</span> stands for solicitation. While this letter and word EW much more pedantic-sounding than simply using load, or <span class="math notranslate nohighlight">\(L\)</span>, it is widely used in the structural engineering field, where component reliability methods were pioneered. Here we take a broader approach on the subject. Classical texts are <span id="id3">Der Kiureghian [<a class="reference internal" href="../references.html#id2" title="Armen Der Kiureghian. Structural and System Reliability. Cambridge University Press, 2022.">2022</a>]</span>, <span id="id4">Moss [<a class="reference internal" href="../references.html#id9" title="Robb Eric S Moss. Applied civil engineering risk analysis. Springer, 2020.">2020</a>]</span> and <span id="id5">Ditlevsen and Madsen [<a class="reference internal" href="../references.html#id7" title="Ove Ditlevsen and Henrik O Madsen. Structural reliability methods. Volume 178. Wiley New York, 1996.">1996</a>]</span>.</p>
 </dd>
 </dl>
 </section>
@@ -521,10 +526,10 @@ In situations like this you can make your design decision and rest assured that 
             <p class="prev-next-title">Introduction</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="example-river-system.html" title="next page">
+    <a class='right-next' id="next-link" href="01-one-random-variable.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Flood Management Case Study</p>
+        <p class="prev-next-title">One Random Variable</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

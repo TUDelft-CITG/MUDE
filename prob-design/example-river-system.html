@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="One Random Variable" href="01-one-random-variable.html" />
-    <link rel="prev" title="Probabilistic Design" href="overview.html" />
+    <link rel="next" title="Risk Analysis" href="../risk-analysis/overview.html" />
+    <link rel="prev" title="Two Random Variables" href="02-two-random-variables.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -129,11 +129,6 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Flood Management Case Study
-    </a>
-   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="01-one-random-variable.html">
      One Random Variable
@@ -142,6 +137,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="02-two-random-variables.html">
      Two Random Variables
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Flood Management Case Study
     </a>
    </li>
   </ul>
@@ -158,7 +158,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../risk-analysis/definition.html">
-     Definition of risk
+     Definition of Risk
     </a>
    </li>
    <li class="toctree-l2">
@@ -167,13 +167,8 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-analysis/example-FN-curve.html">
-     Example: FN curve Calculation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../risk-analysis/exercise-fn-curve.html">
-     Exercise: FN-curve
+    <a class="reference internal" href="../risk-analysis/risk-curves.html">
+     Risk Curve
     </a>
    </li>
   </ul>
@@ -194,18 +189,8 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../reliability-system/exercise-paint.html">
-     Exercise: Paint System
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../reliability-system/exercise-simple-city.html">
      Exercise: Simple City
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../reliability-system/exercise-dam.html">
-     Exercise: Dam failure analysis
     </a>
    </li>
   </ul>
@@ -250,6 +235,21 @@ const thebe_selector_output = ".output, .cell_output"
      Example: 3 Risk Metrics
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../risk-assessment/exercise-fn-curve.html">
+     Exercise: FN-curve
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../risk-assessment/exercise-paint.html">
+     Exercise: Paint System
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../risk-assessment/exercise-dam.html">
+     Exercise: Dam and River
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -264,6 +264,11 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../other-topics/exercise-sample-exam.html">
+     Sample Exam Questions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../other-topics/exercise-sample-exam-solution.html">
      Sample Exam Questions
     </a>
    </li>
@@ -415,30 +420,35 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="flood-management-case-study">
 <h1>Flood Management Case Study<a class="headerlink" href="#flood-management-case-study" title="Permalink to this headline">#</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The flood management example is covered in the plenary lecture on Jan 9, 2023 (see Brightspace), and has not yet been added to this book.</p>
+</div>
 <p>As mentioned on Introduction page:</p>
 <blockquote>
 <div><p>Throughout this book we will repeatedly draw on the field of flood management to illustrate risk and reliability concepts as this field requires expertise from all perspectives in civil and environmental engineering and geosciences, from climate and hydrologic processes to evacuation and recovery.</p>
 </div></blockquote>
-<p>After introducing key elements of the system, topics may include:</p>
-<ul class="simple">
-<li><p>hazard</p></li>
-<li><p>levee failure, conditional on the hazard</p></li>
-<li><p>consequences</p></li>
-<li><p>integration (sum) to get risk</p></li>
-<li><p>assume we can establish a max value, then we can derive the required safety level for our levee</p></li>
-<li><p>fragility curve</p></li>
-</ul>
+<!-- After introducing key elements of the system, topics may include:
+- hazard
+- levee failure, conditional on the hazard
+- consequences
+- integration (sum) to get risk
+- assume we can establish a max value, then we can derive the required safety level for our levee
+- fragility curve -->
 <figure class="align-default" id="simple-city">
 <a class="reference internal image-reference" href="../_images/simple-city.png"><img alt="../_images/simple-city.png" src="../_images/simple-city.png" style="width: 600px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">A simple city that we would like to protect against flooding by the river.</span><a class="headerlink" href="#simple-city" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">A simple city that we would like to protect against flooding by the river.</span><a class="headerlink" href="#simple-city" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <div class="tip dropdown admonition">
 <p class="admonition-title">MUDE exam information</p>
-<p>You are not required to memorize all aspects of this example, but should be capable of describing how simple risk and reliability concepts can be used for a specific analysis, as well as carrying it out. For example, recognizing that the probability of exceeding a certain water level per year can be modeled with a probability distribution, which is then used to select a design crest level for a levee along the river for a given probability of exceedance.</p>
+<p>You are not required to memorize all aspects of the flooding example, but should be capable of recognizing how key concepts from other parts of this book can be applied in this context. Note that non-flooding examples from other fields may be used to text concepts on the exam in a similar way.</p>
 </div>
-</section>
+<!-- ```{admonition} MUDE exam information
+:class: tip, dropdown
+You are not required to memorize all aspects of this example, but should be capable of describing how simple risk and reliability concepts can be used for a specific analysis, as well as carrying it out. For example, recognizing that the probability of exceeding a certain water level per year can be modeled with a probability distribution, which is then used to select a design crest level for a levee along the river for a given probability of exceedance.
+``` --></section>
 
     <script type="text/x-thebe-config">
     {
@@ -467,17 +477,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="overview.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="02-two-random-variables.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Probabilistic Design</p>
+            <p class="prev-next-title">Two Random Variables</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="01-one-random-variable.html" title="next page">
+    <a class='right-next' id="next-link" href="../risk-analysis/overview.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">One Random Variable</p>
+        <p class="prev-next-title">Risk Analysis</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

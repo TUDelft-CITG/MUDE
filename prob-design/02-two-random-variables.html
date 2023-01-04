@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Risk Analysis" href="../risk-analysis/overview.html" />
+    <link rel="next" title="Flood Management Case Study" href="example-river-system.html" />
     <link rel="prev" title="One Random Variable" href="01-one-random-variable.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -132,11 +132,6 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul class="current">
    <li class="toctree-l2">
-    <a class="reference internal" href="example-river-system.html">
-     Flood Management Case Study
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="01-one-random-variable.html">
      One Random Variable
     </a>
@@ -144,6 +139,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Two Random Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="example-river-system.html">
+     Flood Management Case Study
     </a>
    </li>
   </ul>
@@ -160,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../risk-analysis/definition.html">
-     Definition of risk
+     Definition of Risk
     </a>
    </li>
    <li class="toctree-l2">
@@ -169,13 +169,8 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-analysis/example-FN-curve.html">
-     Example: FN curve Calculation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../risk-analysis/exercise-fn-curve.html">
-     Exercise: FN-curve
+    <a class="reference internal" href="../risk-analysis/risk-curves.html">
+     Risk Curve
     </a>
    </li>
   </ul>
@@ -196,18 +191,8 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../reliability-system/exercise-paint.html">
-     Exercise: Paint System
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../reliability-system/exercise-simple-city.html">
      Exercise: Simple City
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../reliability-system/exercise-dam.html">
-     Exercise: Dam failure analysis
     </a>
    </li>
   </ul>
@@ -252,6 +237,21 @@ const thebe_selector_output = ".output, .cell_output"
      Example: 3 Risk Metrics
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../risk-assessment/exercise-fn-curve.html">
+     Exercise: FN-curve
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../risk-assessment/exercise-paint.html">
+     Exercise: Paint System
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../risk-assessment/exercise-dam.html">
+     Exercise: Dam and River
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -266,6 +266,11 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../other-topics/exercise-sample-exam.html">
+     Sample Exam Questions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../other-topics/exercise-sample-exam-solution.html">
      Sample Exam Questions
     </a>
    </li>
@@ -391,12 +396,63 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#discharge-from-two-rivers">
+   Discharge from Two Rivers
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#incorrect-approach-1">
+     Incorrect Approach 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#incorrect-approach-2">
+     Incorrect Approach 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#incorrect-approach-3">
+     Incorrect Approach 3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#correct-approach">
+     Correct Approach
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reflections-on-the-simple-example">
+   Reflections on the Simple Example
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -408,6 +464,46 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#discharge-from-two-rivers">
+   Discharge from Two Rivers
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#incorrect-approach-1">
+     Incorrect Approach 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#incorrect-approach-2">
+     Incorrect Approach 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#incorrect-approach-3">
+     Incorrect Approach 3
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#correct-approach">
+     Correct Approach
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reflections-on-the-simple-example">
+   Reflections on the Simple Example
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -416,25 +512,126 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="two-random-variables">
-<h1>Two Random Variables<a class="headerlink" href="#two-random-variables" title="Permalink to this headline">#</a></h1>
-<p>This becomes much more interesting, but already a lot more complex.</p>
-<p>Start with two loads. Illustrated using</p>
-<ul class="simple">
-<li><p>intuition</p></li>
-<li><p>Venn diagrams</p></li>
-<li><p>bivariate plot</p></li>
-</ul>
-<p>Key concept: component reliability is nothing more than an integration over a specific region of a multivariate probability density function. Often this region describes failure of a component, which we will try to keep below an acceptable level.</p>
-<p>Then introduce (illustration only):</p>
-<ul class="simple">
-<li><p>joint / and (discrete)</p></li>
-<li><p>union / or (discrete)</p></li>
-<li><p>Brief illustration: <span class="math notranslate nohighlight">\(Z = R - S\)</span></p></li>
-</ul>
+<span id="prob-design-2-rv"></span><h1>Two Random Variables<a class="headerlink" href="#two-random-variables" title="Permalink to this headline">#</a></h1>
+<p>The previous section illustrated the how a decision for dike height, <span class="math notranslate nohighlight">\(h_{dike}\)</span>, can take into account uncertainty in river discharge. We used a maximum allowable probability of flooding to derive the specific value of discharge, <span class="math notranslate nohighlight">\(q_{design}\)</span>, that should be used to choose <span class="math notranslate nohighlight">\(h_{dike}\)</span>. This was necessary because there was otherwise no way of establishing what the maximum discharge should be. The only variable considered to be random was the maximum river discharge that occurs each year. This Section considers how the design process becomes more complicated when <em>two</em> random variables are considered (two load variables).</p>
+<section id="discharge-from-two-rivers">
+<h2>Discharge from Two Rivers<a class="headerlink" href="#discharge-from-two-rivers" title="Permalink to this headline">#</a></h2>
+<p>In this scenario our objective for choosing <span class="math notranslate nohighlight">\(h_{dike}\)</span> is still the same, except now we recognize that our location on the river is downstream of a confluence of two smaller rivers. The discharge at the location of our dike is thus the sum of the dicharge from Rivers 1 and 2:</p>
+<div class="math notranslate nohighlight">
+\[
+Q_{dike}=Q_1+Q_2
+\]</div>
+<p>where the same rating curve applies, giving <span class="math notranslate nohighlight">\(h_w\)</span> as a function of <span class="math notranslate nohighlight">\(Q_{dike}\)</span>. As before, acknowledging that the maximum discharge per year in each river is a random variable, we can approach the design problem in the same way: choose <span class="math notranslate nohighlight">\(h_{dike}\)</span> such that it retains water when <span class="math notranslate nohighlight">\(Q_{dike}\)</span> takes a value with probability of exceedance 0.001. For now, we can assume the distribution for River 1 and River 2 are the same as in the previous Section, and that they are independent.</p>
+<p>But now we have two distributions, how do we do it?</p>
+<section id="incorrect-approach-1">
+<h3>Incorrect Approach 1<a class="headerlink" href="#incorrect-approach-1" title="Permalink to this headline">#</a></h3>
+<p>Find the discharge <span class="math notranslate nohighlight">\(Q\)</span> in each River 1 and River 2 such that the probability of exceeding the discharge is 0.001.</p>
+<div class="math notranslate nohighlight">
+\[
+1-F_{Q}(Q_{\mathrm{design}})=0.001
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+q_{\mathrm{design}}=F_{Q}^{-1}(1-0.001)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+q_1=q_2=q_{\mathrm{design}}
+\]</div>
+<p><em>Why is this approach incorrect?</em></p>
+<p>The probability of these two conditions occurring is not 0.001, it’s actualy 0.001<span class="math notranslate nohighlight">\(^2\)</span>=0.000001.</p>
+<figure class="align-default" id="two-rv-and-discharge">
+<a class="reference internal image-reference" href="../_images/temp.svg"><img alt="../_images/temp.svg" height="400px" src="../_images/temp.svg" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">And probability for 2 random variables.</span><a class="headerlink" href="#two-rv-and-discharge" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="incorrect-approach-2">
+<h3>Incorrect Approach 2<a class="headerlink" href="#incorrect-approach-2" title="Permalink to this headline">#</a></h3>
+<p>Find the discharge <span class="math notranslate nohighlight">\(Q\)</span> in each River 1 and River 2 such that the joint probability of exceeding these values is 0.001. Since the two rivers are independent, we can solve for our design probability, <span class="math notranslate nohighlight">\(p_{design}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\left(p_{design}\right)^2=0.001\: \rightarrow \: p_{design}=\sqrt{0.001}=0.0316
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+1-F_{Q}(Q_{\mathrm{design}})=0.0316
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+q_{\mathrm{design}}=F_{Q}^{-1}(1-0.0316)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+q_1=q_2=q_{\mathrm{design}}
+\]</div>
+<p><em>Why is this approach incorrect?</em></p>
+<p>It only considers one scenario!</p>
+<p>There are infinite alternative scenarios that also result in a joint probability of exceedance of 0.001, for example 0.1 and 0.01:</p>
+<div class="math notranslate nohighlight">
+\[
+P(Q_1) \cdot P(Q_2) = 0.1 \cdot 0.01 = 0.001
+\]</div>
+<p>which results in a totally different dike height.</p>
+<figure class="align-default" id="two-rv-and-discharge-2">
+<a class="reference internal image-reference" href="../_images/temp.svg"><img alt="../_images/temp.svg" height="400px" src="../_images/temp.svg" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">And probability for 2 random variables.</span><a class="headerlink" href="#two-rv-and-discharge-2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="incorrect-approach-3">
+<h3>Incorrect Approach 3<a class="headerlink" href="#incorrect-approach-3" title="Permalink to this headline">#</a></h3>
+<p>We can use the ‘OR’ probability, or union! In other words, Find the discharge <span class="math notranslate nohighlight">\(Q\)</span> for each River 1 and River 2 such that the probability of either of them being exceeded is 0.001.</p>
+<p>The union probability is:</p>
+<div class="math notranslate nohighlight">
+\[
+P(Q_1 \cup Q_1)=P(Q_1)+P(Q_1)-P(Q_1,Q_2)=0.001
+\]</div>
+<p>given the assumtion of independence, the exceedance probability for each river is simply 0.001/2-0.0005:</p>
+<div class="math notranslate nohighlight">
+\[
+1-F_{Q}(Q_{\mathrm{design}})=0.0005
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+q_{\mathrm{design}}=F_{Q}^{-1}(1-0.0005)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+q_1=q_2=q_{\mathrm{design}}
+\]</div>
+<p><em>Why is this approach incorrect?</em></p>
+<p>As with the first two incorrect approaches, it also only considers one specific scenario!</p>
+<p>There are infinite combinations of <span class="math notranslate nohighlight">\(Q_1\)</span> and <span class="math notranslate nohighlight">\(Q_2\)</span> such that the union is 0.001.</p>
+<figure class="align-default" id="two-rv-or-discharge">
+<a class="reference internal image-reference" href="../_images/temp.svg"><img alt="../_images/temp.svg" height="400px" src="../_images/temp.svg" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Or probability for 2 random variables.</span><a class="headerlink" href="#two-rv-or-discharge" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="correct-approach">
+<h3>Correct Approach<a class="headerlink" href="#correct-approach" title="Permalink to this headline">#</a></h3>
+<p>Function of random variables. Get distribution of <span class="math notranslate nohighlight">\(Q_{dike}\)</span> directly.</p>
+</section>
+</section>
+<section id="reflections-on-the-simple-example">
+<h2>Reflections on the Simple Example<a class="headerlink" href="#reflections-on-the-simple-example" title="Permalink to this headline">#</a></h2>
+<p>We need to be explicit in what we are trying to evaluate. In this case, it is the distribution of a function of random variables, <span class="math notranslate nohighlight">\(Q_{dike}\)</span>.</p>
+<p>Sometimes we can’t get the distribution of the function of random variables analyticaly. THere are two main reasons: 1) non-Gaussian distributions, and 2) non-linear function of random variables. Fortunately it is easy to find it numerically through sampling techniques. This will be discussed elsewhere.</p>
+<p>The ‘and’ and ‘or’ approaches (intersection and union) are simple, but really only limited to discrete cases. As illustrated above, they cannot be used in the case of continuous random variables, or with functions of random variables because one must integrate across all possible scenarios leading to failure. Nonetheless, these approaches are extremely useful for many situations, and are the basis of <em>system reliability</em> problems.</p>
+<p>The situation illustrated here is often referred to as a <em>component reliability</em> problem, where the ‘component’ is defined by a function of random variables.
+Although nothing more than a function of random variables,is nothing more than an integration over a specific region of a multivariate probability density function. Often this region describes failure of a component, which we will try to keep below an acceptable level.</p>
 <div class="tip dropdown admonition">
 <p class="admonition-title">MUDE exam information</p>
-<p>Given a specific scenario, you should understand the difficulty associated with choosing specific design values, and be able to represent the failure probability analytically and graphically. For simple measures of dependence (correlation coefficient, <span class="math notranslate nohighlight">\(\rho\)</span>) you can describe the quantitative influence on failure probability. This topic is covered more thoroughly in the <strong>Component Reliability</strong> chapter.</p>
+<p>Given a specific scenario, you should be able to identify the design condition and an appropriate method for calculating a probability of interest (as illustrated here). Functions of random variables are illustrated more thoroughly in the <strong>Component Reliability</strong> chapter.</p>
 </div>
+<!-- ```{admonition} MUDE exam information
+:class: tip, dropdown
+Given a specific scenario, you should understand the difficulty associated with choosing specific design values when more than one random variable is considered, and be able to represent the failure probability analytically and graphically. For simple measures of dependence (correlation coefficient, $\rho$) you can describe the quantitative influence on failure probability. You should also recognize how a function of random variables can be used the univariate case is simple, it can also be extended to a function of random variables, which implicitly assumes a more complex multivariate probability distribution though the marginal distributions of the (random) input variables. This topic is covered more thoroughly in the **Component Reliability** chapter.
+``` --></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -471,10 +668,10 @@ title="Print to PDF"
             <p class="prev-next-title">One Random Variable</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../risk-analysis/overview.html" title="next page">
+    <a class='right-next' id="next-link" href="example-river-system.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Risk Analysis</p>
+        <p class="prev-next-title">Flood Management Case Study</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

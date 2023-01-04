@@ -132,11 +132,6 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../prob-design/example-river-system.html">
-     Flood Management Case Study
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../prob-design/01-one-random-variable.html">
      One Random Variable
     </a>
@@ -144,6 +139,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../prob-design/02-two-random-variables.html">
      Two Random Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../prob-design/example-river-system.html">
+     Flood Management Case Study
     </a>
    </li>
   </ul>
@@ -160,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../risk-analysis/definition.html">
-     Definition of risk
+     Definition of Risk
     </a>
    </li>
    <li class="toctree-l2">
@@ -169,13 +169,8 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-analysis/example-FN-curve.html">
-     Example: FN curve Calculation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../risk-analysis/exercise-fn-curve.html">
-     Exercise: FN-curve
+    <a class="reference internal" href="../risk-analysis/risk-curves.html">
+     Risk Curve
     </a>
    </li>
   </ul>
@@ -196,18 +191,8 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../reliability-system/exercise-paint.html">
-     Exercise: Paint System
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../reliability-system/exercise-simple-city.html">
      Exercise: Simple City
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../reliability-system/exercise-dam.html">
-     Exercise: Dam failure analysis
     </a>
    </li>
   </ul>
@@ -252,6 +237,21 @@ const thebe_selector_output = ".output, .cell_output"
      Example: 3 Risk Metrics
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exercise-fn-curve.html">
+     Exercise: FN-curve
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exercise-paint.html">
+     Exercise: Paint System
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exercise-dam.html">
+     Exercise: Dam and River
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -266,6 +266,11 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../other-topics/exercise-sample-exam.html">
+     Sample Exam Questions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../other-topics/exercise-sample-exam-solution.html">
      Sample Exam Questions
     </a>
    </li>
@@ -571,7 +576,7 @@ For investments that focus on prevention (i.e. reducing the failure probability 
 <section id="net-present-value">
 <h2>Net Present Value<a class="headerlink" href="#net-present-value" title="Permalink to this headline">#</a></h2>
 <p>The foregoing assumes that both the costs and benefits are expressed in the same unit, generally in the form of a present value [€]. The net present value represents the sum of the present values of the benefit and cost cash flows over a period of time. In engineering we often deal with situations with larger initial investments, whereas the risk reduction benefits are spread out over a longer time period. For example, when a government invests this year in flood protection, the costs are made in year 0, but the benefits will be spread over the coming decades.</p>
-<p>For such situations the failure probability is generally expressed per unit of time, mostly per year. That means that the risk (reduction) is expressed in terms of € per year, whereas the initial investments  have the unit of €. The net present value of cost or benefit values over a future range of years can be calculated with <a class="reference internal" href="#equation-npv">(2)</a>. To calculate the net present value NPV [€] a discount rate  should be used. The discount rate represents a required return on an investment.</p>
+<p>For such situations the failure probability is generally expressed per unit of time, mostly per year. That means that the risk (reduction) is expressed in terms of € per year, whereas the initial investments have the unit of €. The net present value of cost or benefit values over a future range of years can be calculated with <a class="reference internal" href="#equation-npv">(2)</a>. To calculate the net present value NPV [€] a discount rate  should be used. The discount rate represents a required return on an investment.</p>
 <div class="math notranslate nohighlight" id="equation-npv">
 <span class="eqno">(2)<a class="headerlink" href="#equation-npv" title="Permalink to this equation">#</a></span>\[
   NPV = \sum_{t=1}^{T} \frac{C_t}{(1+r)^t}
@@ -581,7 +586,7 @@ For investments that focus on prevention (i.e. reducing the failure probability 
 <li><p><span class="math notranslate nohighlight">\(C_t\)</span> the costs in year <span class="math notranslate nohighlight">\(t\)</span> [€]</p></li>
 <li><p><span class="math notranslate nohighlight">\(T\)</span> the reference period [years]</p></li>
 </ul>
-<p>The contribution of costs in a certain year to the net present value depend on the discount rate and the reference year. Costs or benefits closest to the present will have the greatest contribution. <a class="reference internal" href="#present-value"><span class="std std-numref">Fig. 17</span></a> below shows the value of <span class="math notranslate nohighlight">\(1/(1+r)^t\)</span> for a given year <span class="math notranslate nohighlight">\(t\)</span> for different discount rates. The higher the discount rate, the smaller the contribution to the net present value of costs or benefits that are far away from the present. For an infinite time horizon it can be shown that <span class="math notranslate nohighlight">\(\sum 1/(1+r)^t \approx 1/r\)</span>. This approximation can be used in evaluating engineering projects with a long life time.</p>
+<p>The contribution of costs in a certain year to the net present value depend on the discount rate and the reference year. Costs or benefits closest to the present will have the greatest contribution. <a class="reference internal" href="#present-value"><span class="std std-numref">Fig. 18</span></a> below shows the value of <span class="math notranslate nohighlight">\(1/(1+r)^t\)</span> for a given year <span class="math notranslate nohighlight">\(t\)</span> for different discount rates. The higher the discount rate, the smaller the contribution to the net present value of costs or benefits that are far away from the present. For an infinite time horizon it can be shown that <span class="math notranslate nohighlight">\(\sum 1/(1+r)^t \approx 1/r\)</span>. This approximation can be used in evaluating engineering projects with a long life time.</p>
 <div class="toggle docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -598,19 +603,19 @@ For investments that focus on prevention (i.e. reducing the failure probability 
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Normalized Present Value [$-$]&#39;</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;present-value.svg&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">&#39;present_value_py.svg&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <figure class="align-default" id="present-value">
-<a class="reference internal image-reference" href="../_images/present-value.svg"><img alt="../_images/present-value.svg" src="../_images/present-value.svg" width="400" /></a>
+<a class="reference internal image-reference" href="../_images/present_value_py.svg"><img alt="../_images/present_value_py.svg" src="../_images/present_value_py.svg" width="400" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Normalized present value of a cost or benefit in year <span class="math notranslate nohighlight">\(t\)</span> for different discount rates.</span><a class="headerlink" href="#present-value" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Normalized present value of a cost or benefit in year <span class="math notranslate nohighlight">\(t\)</span> for different discount rates.</span><a class="headerlink" href="#present-value" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="economic-valuation-of-human-life">
-<h2>Economic Valuation of human life<a class="headerlink" href="#economic-valuation-of-human-life" title="Permalink to this headline">#</a></h2>
+<span id="value-human-life"></span><h2>Economic Valuation of human life<a class="headerlink" href="#economic-valuation-of-human-life" title="Permalink to this headline">#</a></h2>
 <p>The previous paragraphs have focussed on the evaluation of economic costs and benefits of risk reduction interventions. Many of these interventions also directly focus on reducing injuries and fatalities. Examples are regulations and investments in traffic safety which have introduced measures such as airbags and seat belts.</p>
 <p>In literature on risk management the economic valuation of human life is often depicted as a difficult problem as it raises numerous moral questions. Some claim it is unethical to put a price on human life because life is priceless. The actual expenditures on risk reducing prospects show however that the investment in the reduction of risks to humans is always finite. Different approaches are available for evaluating the costs of interventions in relation to the reduction of risk to human life, see ⚠️(Vrijling and van Gelder, (2000); Jongejan et al., (2005 ) for a further discussion of the various approaches.
 One of the options is to add the economic value  of  human fatalities to the economic damages, i.e. <span class="math notranslate nohighlight">\(D+N \cdot d\)</span>. The value of the number of lives lost can be determined with different approaches.</p>

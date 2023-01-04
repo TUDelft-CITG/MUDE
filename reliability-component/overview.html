@@ -50,10 +50,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="System Reliability" href="../reliability-system/overview.html" />
-    <link rel="prev" title="Exercise: FN-curve" href="../risk-analysis/exercise-fn-curve.html" />
+    <link rel="prev" title="Risk Curve" href="../risk-analysis/risk-curves.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -130,11 +132,6 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../prob-design/example-river-system.html">
-     Flood Management Case Study
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../prob-design/01-one-random-variable.html">
      One Random Variable
     </a>
@@ -142,6 +139,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../prob-design/02-two-random-variables.html">
      Two Random Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../prob-design/example-river-system.html">
+     Flood Management Case Study
     </a>
    </li>
   </ul>
@@ -158,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../risk-analysis/definition.html">
-     Definition of risk
+     Definition of Risk
     </a>
    </li>
    <li class="toctree-l2">
@@ -167,13 +169,8 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-analysis/example-FN-curve.html">
-     Example: FN curve Calculation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../risk-analysis/exercise-fn-curve.html">
-     Exercise: FN-curve
+    <a class="reference internal" href="../risk-analysis/risk-curves.html">
+     Risk Curve
     </a>
    </li>
   </ul>
@@ -194,18 +191,8 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../reliability-system/exercise-paint.html">
-     Exercise: Paint System
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../reliability-system/exercise-simple-city.html">
      Exercise: Simple City
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../reliability-system/exercise-dam.html">
-     Exercise: Dam failure analysis
     </a>
    </li>
   </ul>
@@ -250,6 +237,21 @@ const thebe_selector_output = ".output, .cell_output"
      Example: 3 Risk Metrics
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../risk-assessment/exercise-fn-curve.html">
+     Exercise: FN-curve
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../risk-assessment/exercise-paint.html">
+     Exercise: Paint System
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../risk-assessment/exercise-dam.html">
+     Exercise: Dam and River
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -264,6 +266,11 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../other-topics/exercise-sample-exam.html">
+     Sample Exam Questions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../other-topics/exercise-sample-exam-solution.html">
      Sample Exam Questions
     </a>
    </li>
@@ -389,12 +396,46 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition">
+   Definition
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-simple-case">
+   A Simple Case
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#not-simple-cases">
+   Not Simple Cases
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -406,6 +447,29 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition">
+   Definition
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-simple-case">
+   A Simple Case
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#not-simple-cases">
+   Not Simple Cases
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -414,32 +478,93 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="component-reliability">
-<h1>Component Reliability<a class="headerlink" href="#component-reliability" title="Permalink to this headline">#</a></h1>
-<p>This is a key part of step 3 in a risk analysis: quantitative analysis.</p>
-<p>Component reliability Analysis:</p>
-<ul class="simple">
-<li><p>limit states (servicability, ultimate) and limit-state functions; failure definition</p></li>
-<li><p>Design frameworks</p></li>
-<li><p>A simple case</p></li>
-<li><p>Special page to illustrate partial safety factor approach. Start with univariate, then show bivariate (pointing out ‘choice’ that must be made for design point, reference it, then move along).</p></li>
-<li><p>other</p>
-<ul>
-<li><p>R-S</p></li>
-<li><p>Z = R + S</p></li>
-<li><p>non-linear</p></li>
-<li><p>most of these should probably go in the component reliability chapter</p></li>
-</ul>
-</li>
-</ul>
-<p>Overview of non-linear problems (distribution and LSF); explanation of LSF; formulations of structural reliability. the area under the curve. Solution techniquest. Partial safety factor approach / LRFD / beta and reliability index.</p>
-<p>In MUDE we focus on situations with two variables (the ‘bivariate’ case) and use simulation (i.e., Monte Carlo simulation) to calculate failure probability. As problems become more complex, so do the methods to formulate limit-state functions and evaluate failure probability.</p>
-<p>Our process is: define the region of interest, integrate bivariate PDF to evaluate probability, check requirement, modify component, check requirement, repeat until satisfactory.</p>
-<p>To simple slope problem: <em>this example is borrowed from Moss, which is borrowed from Baecher and Christian. Both are excellent texts on risk and reliability analysis in civil and geotechnical engineering.</em></p>
+<span id="rel-comp"></span><h1>Component Reliability<a class="headerlink" href="#component-reliability" title="Permalink to this headline">#</a></h1>
+<p>This Section gives a brief introduction to some of the mathematical foundations of component reliability theory, which is focused on determining the probability of a ‘bad thing’ happening (see <a class="reference internal" href="../intro.html#intro"><span class="std std-ref">Introduction</span></a>). The topic has also been covered in the <a class="reference internal" href="../prob-design/overview.html#prob-design"><span class="std std-ref">Probabilistic Design</span></a> Section (especially the <a class="reference internal" href="../prob-design/02-two-random-variables.html#prob-design-2-rv"><span class="std std-ref">Two Random Variables</span></a> example), and is a key part of Step 3 (quantitative analysis) in the <a class="reference internal" href="../risk-analysis/steps.html#risk-steps"><span class="std std-ref">Steps in a Risk Analysis</span></a>.</p>
+<section id="definition">
+<h2>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">#</a></h2>
+<p>In short, a component reliability analysis evaluates the reliability of a particular engineered object, where reliability is the complement of failure probability, <span class="math notranslate nohighlight">\(p_f\)</span>. The analysis is performed by defining a function of random variables, <span class="math notranslate nohighlight">\(g_X(X)\)</span>, and mathematically specifying a region of interest, <span class="math notranslate nohighlight">\(\Omega\)</span>,often called the failure region. The function of random variables implies a multivariate probability density function, <span class="math notranslate nohighlight">\(f_X(X)\)</span>, where integrating over the failure region <span class="math notranslate nohighlight">\(\Omega\)</span> gives <span class="math notranslate nohighlight">\(p_f\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+p_f=\int_\Omega f_X(X)\:\mathrm{d}X
+\]</div>
+</section>
+<section id="a-simple-case">
+<h2>A Simple Case<a class="headerlink" href="#a-simple-case" title="Permalink to this headline">#</a></h2>
+<p>The most simple reliability analysis is a univariate case with one random variable. Consider a water distribution <em>system</em> that relies on groundwater (i.e., one <em>component</em> within the system). Suppose we can model the groundwater elevation as a random variable with the normal distribution:</p>
+<div class="math notranslate nohighlight">
+\[
+h_w \: [\mathrm{m}] \sim \mathrm{N}(\mu=5,\sigma=1)
+\]</div>
+<p>If <span class="math notranslate nohighlight">\(h_w\)</span> drops below 2 m, the pumps run dry, and our component fails. In this case our function of random variables is simply:</p>
+<div class="math notranslate nohighlight">
+\[
+g(X) \rightarrow g(h_w)=h_w
+\]</div>
+<p>and failure is defined as:</p>
+<div class="math notranslate nohighlight">
+\[
+\Omega: h_w &lt; 2 \mathrm{m}
+\]</div>
+<p>The component reliability analysis is thus:</p>
+<div class="math notranslate nohighlight">
+\[
+p_f=\int_{-\infty}^{2} f_{h_w}(h_w)\:\mathrm{d}h_w
+\]</div>
+<p>Which is easily evaluated with the CDF of <span class="math notranslate nohighlight">\(h_w\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+p_f=F_{h_w}(2)=\Phi\left[ \frac{2-\mu}{\sigma}\right] =\Phi[-3]=0.13
+\]</div>
+<p>This is nearly equivalent to the <a class="reference internal" href="../prob-design/01-one-random-variable.html#prob-design-1-rv"><span class="std std-ref">One Random Variable</span></a> example using river discharge from the <a class="reference internal" href="../prob-design/overview.html#prob-design"><span class="std std-ref">Probabilistic Design</span></a> Chapter, the only difference is there a load variable was considered and therefore evaluated with the complementary CDF.</p>
+</section>
+<section id="not-simple-cases">
+<h2>Not Simple Cases<a class="headerlink" href="#not-simple-cases" title="Permalink to this headline">#</a></h2>
+<p>The example above is ‘simple’ for three reasons, specifically. It has:</p>
+<ol class="simple">
+<li><p>only one random variable, so the distribution of <span class="math notranslate nohighlight">\(g(X)\)</span> is also univariate</p></li>
+<li><p>the function of random variables, <span class="math notranslate nohighlight">\(g(X)\)</span> is linear</p></li>
+<li><p>the distribution of the random variables (variable, in this case) is Gaussian</p></li>
+</ol>
+<p>These three characteristics make component reliability problems very easy to solve. In fact, you’ve already done this earlier in MUDE with (co)variance propagation methods. Unfortunately, as problems become more complex, so do the methods required for solving such problems.</p>
+<p>In MUDE we focus on simple situations with up to two variables (the ‘bivariate’ case) that can be solved analytically (linear functions and Gaussian random variables). Random variables are limited to continuous parametric distributions and linear measures of dependence (correlation coefficient, multivariate Gaussian). If these requirements are relaxed, we will use simulation to calculate the failure probability numerically (i.e., Monte Carlo simulation).</p>
+<p>With this in mind, a generic procedure for using component reliability analysis in a probabilistic design context is:</p>
+<ol class="simple">
+<li><p>establish probability distributions for each random variable (<em>marginal</em> distributions)</p></li>
+<li><p>establish dependence, if any</p></li>
+<li><p>define the function of random variables and region of interest</p></li>
+<li><p>integrate multivariate PDF to evaluate probability of interest</p></li>
+<li><p>check probability requirement, and if needed:</p></li>
+<li><p>modify component (i.e., modify 1, 2 or 3)</p></li>
+<li><p>repeat 4, 5 and 6 until the requirement is met</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The term ‘failure’ here, widely used in civil engineering, is used here as a matter of convenience. Component reliability methods can also be used to find the probability of something that has nothing to do with failure, as long as it can be desribed with a function of random variables.</p>
+</div>
+<!-- Component reliability Analysis:  
+- limit states (servicability, ultimate) and limit-state functions; failure definition
+- Design frameworks 
+- A simple case 
+- Special page to illustrate partial safety factor approach. Start with univariate, then show bivariate (pointing out ‘choice’ that must be made for design point, reference it, then move along). 
+
+
+- other
+  - R-S
+  - Z = R + S
+  - non-linear
+  - most of these should probably go in the component reliability chapter
+
+Overview of non-linear problems (distribution and LSF); explanation of LSF; formulations of structural reliability. the area under the curve. Solution techniquest. Partial safety factor approach / LRFD / beta and reliability index. -->
 <div class="tip dropdown admonition">
 <p class="admonition-title">Exam Information</p>
-<p>For the exam, you will be expected to be able to recognize and solve simple component reliability problems, and describe the influence that dependence between random variables may have on the calculated probability of interest. Given a specific problem of interest, you should be able to describe failure (or non-failure) analytically as a function of random variables and visually in a bivariate plot. Using these simple frameworks, you can modify the component such that the probability of interest meets a specific criteria.</p>
+<p>You are expected to recognize the role of random variables (e.g., loads and resistances) within the function of random variables for a component and visualize it on a bivariate plot. You may be asked to solve simple component reliability problems, limited to linear functions of normally distributed random variables, and evaluate the role of dependence between variables. You can use the method within a probabilistic design context by modifying the component such that the probability of interest meets a specific criteria.</p>
 </div>
+<!-- ```{admonition} Exam Information
+:class: tip, dropdown
+For the exam, you will be expected to be able to recognize and solve simple component reliability problems, and describe the influence that dependence between random variables may have on the calculated probability of interest. Given a specific problem of interest, you should be able to describe failure (or non-failure) analytically as a function of random variables and visually in a bivariate plot. Using these simple frameworks, you can modify the component such that the probability of interest meets a specific criteria.
+``` -->
 <p>Table of contents:</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -469,11 +594,11 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../risk-analysis/exercise-fn-curve.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../risk-analysis/risk-curves.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Exercise: FN-curve</p>
+            <p class="prev-next-title">Risk Curve</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../reliability-system/overview.html" title="next page">

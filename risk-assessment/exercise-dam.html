@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Exercise: Dam failure analysis &#8212; Modelling, Uncertainty and Data for Engineers (MUDE)</title>
+    <title>Exercise: Dam and River &#8212; Modelling, Uncertainty and Data for Engineers (MUDE)</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Risk Assessment" href="../risk-assessment/overview.html" />
-    <link rel="prev" title="Exercise: Simple City" href="exercise-simple-city.html" />
+    <link rel="next" title="Other topics" href="../other-topics/overview.html" />
+    <link rel="prev" title="Exercise: Paint System" href="exercise-paint.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -132,11 +132,6 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../prob-design/example-river-system.html">
-     Flood Management Case Study
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../prob-design/01-one-random-variable.html">
      One Random Variable
     </a>
@@ -144,6 +139,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../prob-design/02-two-random-variables.html">
      Two Random Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../prob-design/example-river-system.html">
+     Flood Management Case Study
     </a>
    </li>
   </ul>
@@ -160,7 +160,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../risk-analysis/definition.html">
-     Definition of risk
+     Definition of Risk
     </a>
    </li>
    <li class="toctree-l2">
@@ -169,13 +169,8 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-analysis/example-FN-curve.html">
-     Example: FN curve Calculation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../risk-analysis/exercise-fn-curve.html">
-     Exercise: FN-curve
+    <a class="reference internal" href="../risk-analysis/risk-curves.html">
+     Risk Curve
     </a>
    </li>
   </ul>
@@ -185,71 +180,76 @@ const thebe_selector_output = ".output, .cell_output"
    Component Reliability
   </a>
  </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="overview.html">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../reliability-system/overview.html">
    System Reliability
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="exercise-paint.html">
-     Exercise: Paint System
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="exercise-simple-city.html">
-     Exercise: Simple City
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Exercise: Dam failure analysis
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../risk-assessment/overview.html">
-   Risk Assessment
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/decision.html">
+    <a class="reference internal" href="../reliability-system/exercise-simple-city.html">
+     Exercise: Simple City
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="overview.html">
+   Risk Assessment
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="decision.html">
      Decision Analysis
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/cost-benefit.html">
+    <a class="reference internal" href="cost-benefit.html">
      Cost benefit analysis
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/econ-optimization.html">
+    <a class="reference internal" href="econ-optimization.html">
      Economic Optimization
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/example-dike-height.html">
+    <a class="reference internal" href="example-dike-height.html">
      Example: Optimal Dike Height
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/safety-standards.html">
+    <a class="reference internal" href="safety-standards.html">
      Safety standards
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/example-types-of-risk.html">
+    <a class="reference internal" href="example-types-of-risk.html">
      Example: 3 Risk Metrics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exercise-fn-curve.html">
+     Exercise: FN-curve
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exercise-paint.html">
+     Exercise: Paint System
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Exercise: Dam and River
     </a>
    </li>
   </ul>
@@ -266,6 +266,11 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../other-topics/exercise-sample-exam.html">
+     Sample Exam Questions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../other-topics/exercise-sample-exam-solution.html">
      Sample Exam Questions
     </a>
    </li>
@@ -354,7 +359,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/reliability-system/exercise-dam.md"
+        <a href="../_sources/risk-assessment/exercise-dam.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -414,11 +419,6 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dependence-between-floods-in-two-rivers">
-   Dependence between floods in two rivers
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dam-repair-probabilistic-planning">
    Dam repair: probabilistic planning
   </a>
@@ -437,7 +437,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Exercise: Dam failure analysis</h1>
+                <h1>Exercise: Dam and River</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -447,11 +447,6 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#dependence-between-floods-in-two-rivers">
-   Dependence between floods in two rivers
-  </a>
- </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dam-repair-probabilistic-planning">
    Dam repair: probabilistic planning
@@ -472,38 +467,42 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="exercise-dam-failure-analysis">
-<h1>Exercise: Dam failure analysis<a class="headerlink" href="#exercise-dam-failure-analysis" title="Permalink to this headline">#</a></h1>
-<p>You are tasked to analyse the safety of a dam. The dam itself can fail due to instability. Another failure mechanism is failure of the spillway due to uncontrolled erosion (of the spillway) that could reach the body of the dam. If water levels in the reservoir become high, water flows from the reservoir into the spillway due to overflow. This happens approximately once every 10 years.</p>
-<p>When water flows into the spillway, there are two situations that could lead to a weak spillway prone to erosion and failure. The first one is a hidden damage to the spillway structure that cannot be detected in yearly inspections. The second is a crack in the concrete of the spillway, which has been missed during the yearly inspection.</p>
-<section id="dependence-between-floods-in-two-rivers">
-<h2>Dependence between floods in two rivers<a class="headerlink" href="#dependence-between-floods-in-two-rivers" title="Permalink to this headline">#</a></h2>
-<p>Downstream of the dam there is an area protected by dikes. It consists of two main dike sections. A dike section fails if the river discharge exceeds a critical discharge Qc with a probability of exceedance of 1/100 per year. And this leads to flooding of the area. There appears to be a correlation between failures of both sections <span class="math notranslate nohighlight">\(\rho_{1,2}=0.9\)</span>. The figure below shows the effect of the correlation coefficient on the joint failure of the two sections.</p>
-<p>** PUT FIGURE HERE **</p>
-<ol class="simple">
-<li><p>Estimate the probability of flooding of the area protected by the two dike sections.</p></li>
-</ol>
-<p><em>Answer</em></p>
-<p>Let <span class="math notranslate nohighlight">\(P1\)</span>, <span class="math notranslate nohighlight">\(P2\)</span> denote failure probability of dike section 1 and section 2 respectively. Flooding of the protected area occurs when at least one of the two dike section fails. Thus, probability of flooding of the protected area can be determined by:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="exercise-dam-and-river">
+<h1>Exercise: Dam and River<a class="headerlink" href="#exercise-dam-and-river" title="Permalink to this headline">#</a></h1>
+<div class="tip dropdown admonition">
+<p class="admonition-title">MUDE Exam Information</p>
+<p>Questions 1, 3 and 4 are representative for the Q2 MUDE exam. Question 2 is related.</p>
+</div>
+<p>You are tasked to analyse the safety of a dam and the downstream river system. Downstream of the dam there is an area protected by two main dike sections which must be able to contain water released from the reservoir. Let <span class="math notranslate nohighlight">\(P(F_1)\)</span>, <span class="math notranslate nohighlight">\(P(F_2)\)</span> denote failure probability of dike section 1 and section 2 respectively. There appears to be a correlation between failures of both sections, <span class="math notranslate nohighlight">\(\rho_{1,2}=0.9\)</span>, and the figure below shows the effect of the correlation coefficient on the joint failure of the two sections.</p>
+<figure class="align-default" id="corr-coeff-or">
+<a class="reference internal image-reference" href="../_images/system-corr-coeff.PNG"><img alt="../_images/system-corr-coeff.PNG" src="../_images/system-corr-coeff.PNG" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 30 </span><span class="caption-text">Effect of correlation coefficient joint failure, <span class="math notranslate nohighlight">\(\mathrm{P}(A \cap B)\)</span> (assume that <span class="math notranslate nohighlight">\(\mathrm{P}(A \cap B)=0.003\)</span> at <span class="math notranslate nohighlight">\(\rho=+0.9\)</span>, where the arrow is located).</span><a class="headerlink" href="#corr-coeff-or" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p><strong>Question 1:</strong> Estimate the probability of flooding of the area protected by the two dike sections.</p>
+<p><em>Answer:</em></p>
+<p>Flooding of the protected area occurs when at least one of the two dike section fails. This is a series system. Thus, probability of flooding of the protected area can be determined by:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-    P(\text{flooding}) &amp;= P(\text{dike sections 1 fails OR dike section 2 fails}) \\
-    P(F1 \cup F2) &amp;= P1 + P2 - P(F1 \cup F2)
+    P(\textrm{flooding}) &amp;= P(\textrm{dike sections 1 fails \cup dike section 2 fails}) \\
+    P(F_1 \cup F_2) &amp;= P(F_1) + P(F_2) - P(F_1 \cap F_2)
 \end{split}\]</div>
-<p>Given that the correlation between failures of both sections <span class="math notranslate nohighlight">\(\rho_{1,2} = 0.8\)</span> based on the fiven correlation coefficient graph one can also determine the joined failure probability as <span class="math notranslate nohighlight">\(P(F1 \cup F2)\)</span>.</p>
+<p>Based on the figure and the correlation <span class="math notranslate nohighlight">\(\rho_{1,2} = 0.9\)</span>, the joint probability of failure <span class="math notranslate nohighlight">\(P(F_1 \cap F_2)=0.003\)</span> and the series failure probability is</p>
 <div class="math notranslate nohighlight">
 \[
-    P(\text{flooding}) = 0.01 + 0.01 - 0.003 = 0.017 \: \text{per year}
+    P(\textrm{flooding}) = 0.01 + 0.01 - 0.003 = 0.017 \: \mathrm{/year}
 \]</div>
-</section>
+<div class="tip dropdown admonition">
+<p class="admonition-title">MUDE Exam Information</p>
+<p>This question illustrates how we will give you everything you need if you are asked about system reliability and dependence, but you need to recognize if something is a series or parallel system, and recognize the quantitative influence of dependence.</p>
+</div>
 <section id="dam-repair-probabilistic-planning">
 <h2>Dam repair: probabilistic planning<a class="headerlink" href="#dam-repair-probabilistic-planning" title="Permalink to this headline">#</a></h2>
 <p>The dam has to be repaired. The responsible minister wants to make sure the whole project is finished within 9 months, and only accepts a probability of 10% that actual construction works exceed this duration. The dam reinforcement consists of two activities. The second activity can only start when the first one has been finished. The durations of both activities are uncertain and normally distributed. The first activity has a mean duration of <span class="math notranslate nohighlight">\(\mu_1=4\)</span> months and a standard deviation of <span class="math notranslate nohighlight">\(\sigma_1 = 1\)</span> month; for the second activity <span class="math notranslate nohighlight">\(\sigma_2 = 2\)</span> months.</p>
-<ol class="simple">
-<li><p>Compute the mean duration of the activity 2, so that the project duration would fall within the criterion given by the minister.</p></li>
-</ol>
-<p><em>Answer</em>
-Let <span class="math notranslate nohighlight">\(T1\)</span> and <span class="math notranslate nohighlight">\(T2\)</span> denote the duration of activities 1 and 2; <span class="math notranslate nohighlight">\(T\)</span> denotes the total duration; <span class="math notranslate nohighlight">\(T1\)</span> and <span class="math notranslate nohighlight">\(T2\)</span> are normally distributed:</p>
+<p><strong>Question 2:</strong> Compute the mean duration of the activity 2, so that the project duration would fall within the criterion given by the minister.</p>
+<p><em>Answer:</em></p>
+<p>Let <span class="math notranslate nohighlight">\(T1\)</span> and <span class="math notranslate nohighlight">\(T2\)</span> denote the duration of activities 1 and 2; <span class="math notranslate nohighlight">\(T\)</span> denotes the total duration; <span class="math notranslate nohighlight">\(T1\)</span> and <span class="math notranslate nohighlight">\(T2\)</span> are normally distributed:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
     T1 \sim \mathcal{N}(4,1) \\
@@ -513,7 +512,7 @@ Let <span class="math notranslate nohighlight">\(T1\)</span> and <span class="ma
 <p>Limit state equation: total duration of constuction will not exceed 12 months, thus:</p>
 <div class="math notranslate nohighlight">
 \[
-    Z = 12 - (T1 + T2)
+    Z = 12 - (T_1 + T_2)
 \]</div>
 <p>The event <span class="math notranslate nohighlight">\(Z&lt;0\)</span> reflects that the actual construction works exceed the duration the minister want (12 months). It is acceptable that the actual construction works exceed this duration with a probability of 10%. Thus: <span class="math notranslate nohighlight">\(P(Z&lt;0) = 0.1\)</span>. This leads to <span class="math notranslate nohighlight">\(\beta_z = 1.28155\)</span></p>
 <p>Application of Level II reliability calculation:</p>
@@ -521,8 +520,8 @@ Let <span class="math notranslate nohighlight">\(T1\)</span> and <span class="ma
 \[\begin{split}
     \mu_z = 12 - (\mu_1 + \mu_2) = 8 - \mu_2 \\
     \sigma_z = \sqrt{\sigma_1^2 + \sigma_2^2} = \sqrt{5} = 2.326 \\
-    8 - \mu_2 = \beta_z * \sigma_z = 2.86 \\
-    \mu_2 = 5.13 \: \text{months}
+    8 - \mu_2 = \beta_z \cdot \sigma_z = 2.86 \\
+    \mu_2 = 5.13 \: \mathrm{months}
 \end{split}\]</div>
 </section>
 <section id="acceptable-risk">
@@ -532,18 +531,14 @@ Let <span class="math notranslate nohighlight">\(T1\)</span> and <span class="ma
 <li><p>Societal risk (SR): an FN limit line: <span class="math notranslate nohighlight">\(P_f \leq 10^{-2}/n^2\)</span>.</p></li>
 <li><p>Individual risk (IR): <span class="math notranslate nohighlight">\(IR \leq 10^{-6}\)</span> per year.</p></li>
 </ul>
-<p>We know that mortality is case of dam failure is <span class="math notranslate nohighlight">\(F_{d|f} = 0.01\)</span> and that the population living downstream of the dam is 1000 people.</p>
-<ol class="simple">
-<li><p>Plot the FN limit line and indicate the acceptable probability of failure according to both criteria (individual risk, societal risk).</p></li>
-</ol>
-<p><em>Answer</em></p>
+<p>We know that mortality in case of dam failure is <span class="math notranslate nohighlight">\(F_{d|f} = 0.1\)</span> and that the population living downstream of the dam is 1000 people.</p>
+<p><strong>Question 3:</strong> Plot the FN limit line and indicate the acceptable probability of failure according to both criteria (individual risk, societal risk).</p>
+<p><em>Answer:</em></p>
 <figure class="align-default">
 <a class="reference internal image-reference" href="../_images/exercise-dam-fn-limit-line.png"><img alt="../_images/exercise-dam-fn-limit-line.png" src="../_images/exercise-dam-fn-limit-line.png" style="width: 500px;" /></a>
 </figure>
-<ol class="simple">
-<li><p>Provide an advice on the acceptable probability of failure for the dam. Give the proposed numerical value and a short motivation.</p></li>
-</ol>
-<p><em>Answer</em></p>
+<p><strong>Question 4:</strong> Provide an advice on the acceptable probability of failure for the dam. Give the proposed numerical value and a short motivation.</p>
+<p><em>Answer:</em></p>
 <p>Based on individual risk criterion, we have:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -552,7 +547,7 @@ Let <span class="math notranslate nohighlight">\(T1\)</span> and <span class="ma
 <p>where <span class="math notranslate nohighlight">\(P_{d|f}=0.1\)</span>. Hence, the acceptable probability of failure is:</p>
 <div class="math notranslate nohighlight">
 \[
-    P_f \leq \frac{IR_{acc}}{P_{d|f}} = \frac{10^{-5}}{0.1} = 10^{-4} \: \text{per year}
+    P_f \leq \frac{IR_{acc}}{P_{d|f}} = \frac{10^{-5}}{0.1} = 10^{-4} \: \mathrm{/year}
 \]</div>
 <p>Based on societal risk criterion (FN-Curve):</p>
 <p>Acceptable failure probability can be determined by the FN-Curve:</p>
@@ -560,11 +555,11 @@ Let <span class="math notranslate nohighlight">\(T1\)</span> and <span class="ma
 \[
     P_f = 1 - F_N(n) \leq \frac{C}{n^\alpha} = \frac{10^{-2}}{n^2}
 \]</div>
-<p>Based on given information above, expected number of casualties per dam failure event is <span class="math notranslate nohighlight">\(n = F_{d|f}*1000 = 100\)</span>.</p>
+<p>Based on given information above, expected number of casualties per dam failure event is <span class="math notranslate nohighlight">\(n = F_{d|f}\cdot 1000 = 100\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
     P_f \leq \frac{10^{-2}}{100^2} \\
-    P_f = 10^{-6} \: \text{per year}
+    P_f = 10^{-6} \: \mathrm{/year}
 \end{split}\]</div>
 <p>The most stringent of the two criteria applies, so the proposed safety standard would be <span class="math notranslate nohighlight">\(10^{-6}\)</span> per year for the given inputs.</p>
 </section>
@@ -583,7 +578,7 @@ Let <span class="math notranslate nohighlight">\(T1\)</span> and <span class="ma
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./reliability-system"
+            path: "./risk-assessment"
         },
         predefinedOutput: true
     }
@@ -597,17 +592,17 @@ Let <span class="math notranslate nohighlight">\(T1\)</span> and <span class="ma
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="exercise-simple-city.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="exercise-paint.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Exercise: Simple City</p>
+            <p class="prev-next-title">Exercise: Paint System</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../risk-assessment/overview.html" title="next page">
+    <a class='right-next' id="next-link" href="../other-topics/overview.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Risk Assessment</p>
+        <p class="prev-next-title">Other topics</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

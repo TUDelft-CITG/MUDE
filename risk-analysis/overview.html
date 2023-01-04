@@ -52,8 +52,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Definition of risk" href="definition.html" />
-    <link rel="prev" title="Two Random Variables" href="../prob-design/02-two-random-variables.html" />
+    <link rel="next" title="Definition of Risk" href="definition.html" />
+    <link rel="prev" title="Flood Management Case Study" href="../prob-design/example-river-system.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -130,11 +130,6 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../prob-design/example-river-system.html">
-     Flood Management Case Study
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../prob-design/01-one-random-variable.html">
      One Random Variable
     </a>
@@ -142,6 +137,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="../prob-design/02-two-random-variables.html">
      Two Random Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../prob-design/example-river-system.html">
+     Flood Management Case Study
     </a>
    </li>
   </ul>
@@ -158,7 +158,7 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="definition.html">
-     Definition of risk
+     Definition of Risk
     </a>
    </li>
    <li class="toctree-l2">
@@ -167,13 +167,8 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="example-FN-curve.html">
-     Example: FN curve Calculation
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="exercise-fn-curve.html">
-     Exercise: FN-curve
+    <a class="reference internal" href="risk-curves.html">
+     Risk Curve
     </a>
    </li>
   </ul>
@@ -194,18 +189,8 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../reliability-system/exercise-paint.html">
-     Exercise: Paint System
-    </a>
-   </li>
-   <li class="toctree-l2">
     <a class="reference internal" href="../reliability-system/exercise-simple-city.html">
      Exercise: Simple City
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../reliability-system/exercise-dam.html">
-     Exercise: Dam failure analysis
     </a>
    </li>
   </ul>
@@ -250,6 +235,21 @@ const thebe_selector_output = ".output, .cell_output"
      Example: 3 Risk Metrics
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../risk-assessment/exercise-fn-curve.html">
+     Exercise: FN-curve
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../risk-assessment/exercise-paint.html">
+     Exercise: Paint System
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../risk-assessment/exercise-dam.html">
+     Exercise: Dam and River
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
@@ -264,6 +264,11 @@ const thebe_selector_output = ".output, .cell_output"
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../other-topics/exercise-sample-exam.html">
+     Sample Exam Questions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../other-topics/exercise-sample-exam-solution.html">
      Sample Exam Questions
     </a>
    </li>
@@ -415,13 +420,10 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="risk-analysis">
 <h1>Risk Analysis<a class="headerlink" href="#risk-analysis" title="Permalink to this headline">#</a></h1>
-<p>This book splits risk into two parts: risk <em>analysis</em> and risk <em>assessment.</em> This chapter considers the analysis of risks from a broad perspective, beginning with definitions and key steps of a risk analysis. The next two chapters explore quantitative analyses (component and system reliability) before returning to risk concepts of decision theory, cost benefit analysis and safety standards.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Point out how a single risk value can used as a design criteria, which links to probability. Can also consider illustrating risk types.</p>
-<p>On Definitions page, still need to add integrals and (mathematical) statement of individual risk as combination of conditional probabilities.</p>
-<p>Consider adding a page to explain units and perhaps an overview of risk metrics, especially those used in flood risk exmaple (can add some examples to illustrate the steps?).</p>
-<p>The relationship between safety standards and engineering design is indicated in section 3.6.</p>
+<p>This book splits risk into two parts: risk <em>analysis</em> and risk <em>assessment.</em> This chapter considers the analysis of risks from a broad perspective, beginning with definitions and key steps of a risk analysis, illustrated quantitatively through an FN curve. The next two chapters explore quantitative analyses (component and system reliability) before returning to risk assessment concepts of decision theory, cost benefit analysis and safety standards, where the principal focus is on making decisions and answering the question ‘how safe is safe enough?’</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">MUDE exam information</p>
+<p>You should understand the definition of risk and recognize the steps in a risk analysis (no need to memorize the details of every step). It is very important that you are able to construct a risk curve, given a set of scenarios (typically not more than 3 on the exam).</p>
 </div>
 <div class="toctree-wrapper compound">
 </div>
@@ -454,17 +456,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../prob-design/02-two-random-variables.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../prob-design/example-river-system.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Two Random Variables</p>
+            <p class="prev-next-title">Flood Management Case Study</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="definition.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Definition of risk</p>
+        <p class="prev-next-title">Definition of Risk</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

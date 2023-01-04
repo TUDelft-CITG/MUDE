@@ -1,4 +1,4 @@
-(cost-benefit)=
+(cost_benefit)=
 # Cost benefit analysis
 
 This section deals with simplified cost benefit analysis for risk reduction interventions in the engineering domain. An important question in evaluating (engineering) projects is whether the benefits outweigh the costs. Cost benefit analysis (CBA) is generally used for appraisal of a wide range of effects of projects or interventions in order to support decision making. The cost benefit analysis starts with defining the system and existing situation. Then, a broad range of effects of the proposed project and intervention can be identified. {numref}`costs_and_benefits` below shows an overview of effects of the Delta works that were built after the 1953 flood disaster in the Netherlands. The main aim of the delta works was to provide flood protection to the Southwest of the Netherlands. However, other effects included the agricultural benefits to the region (benefits) and the effects on environmental quality in the estuaries in which dams were built (costs or negative effects).
@@ -80,7 +80,7 @@ where:
 
 The foregoing assumes that both the costs and benefits are expressed in the same unit, generally in the form of a present value [€]. The net present value represents the sum of the present values of the benefit and cost cash flows over a period of time. In engineering we often deal with situations with larger initial investments, whereas the risk reduction benefits are spread out over a longer time period. For example, when a government invests this year in flood protection, the costs are made in year 0, but the benefits will be spread over the coming decades. 
 
-For such situations the failure probability is generally expressed per unit of time, mostly per year. That means that the risk (reduction) is expressed in terms of € per year, whereas the initial investments  have the unit of €. The net present value of cost or benefit values over a future range of years can be calculated with {eq}`npv`. To calculate the net present value NPV [€] a discount rate  should be used. The discount rate represents a required return on an investment.
+For such situations the failure probability is generally expressed per unit of time, mostly per year. That means that the risk (reduction) is expressed in terms of € per year, whereas the initial investments have the unit of €. The net present value of cost or benefit values over a future range of years can be calculated with {eq}`npv`. To calculate the net present value NPV [€] a discount rate  should be used. The discount rate represents a required return on an investment.
 
 $$
   NPV = \sum_{t=1}^{T} \frac{C_t}{(1+r)^t}
@@ -100,14 +100,14 @@ The contribution of costs in a certain year to the net present value depend on t
 ```
 ````
  
-```{figure} ../figures/present-value.svg
+```{figure} ../figures/present_value_py.svg
 ---
 width: 400
 name: present-value
 ---
 Normalized present value of a cost or benefit in year $t$ for different discount rates.
 ```
-
+(value_human_life)=
 ## Economic Valuation of human life
 
 The previous paragraphs have focussed on the evaluation of economic costs and benefits of risk reduction interventions. Many of these interventions also directly focus on reducing injuries and fatalities. Examples are regulations and investments in traffic safety which have introduced measures such as airbags and seat belts. 
