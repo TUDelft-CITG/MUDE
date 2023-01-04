@@ -1,8 +1,7 @@
+(safety_standards)=
 # Safety standards
 
 When answering the question “how safe is safe enough” a merely economic treatment with cost benefit analysis or economic optimization is often not sufficient for activities with risks to people. Therefore, criteria have been developed that focus on risks to human life. This section focuses on safety standards and criteria for evaluating the risk to life. 
-
-## Introduction
 
 Two aspects are typically considered when evaluating and regulating risks to the public: the total or population-wide effects, and the distribution of effects within the affected population. {numref}`risk_evaluation` summarizes these perspectives. The societal perspective is concerned with ‘total effect’ and the effects of large-scale accidents on the society, in terms of economic damages and life loss. The individual perspective is concerned with distributive justice (‘equity’), i.e. the distribution of harm over the population.
 
@@ -23,12 +22,18 @@ As risk is often the by-product of an otherwise legitimate and advantageous acti
   - Regulation is to limit large-scale accidents and optimize the costs and benefits of risk reduction
 ```
 
-Based on this general concept, it has been proposed to evaluate risks based on three criteria ⚠️(TAW, 1985; Vrijling et al, 1995; 1998):
-- To limit the **invidual risk** to prevent that certain people are exposed to disproportionally large risks;
-- To limit the **societal risk** to limit the risks of large scale accidents with many fatalities;
+## Three Types of Risk
+
+Based on the general concepts described above, it has been proposed to evaluate risks based on three criteria ⚠️(TAW, 1985; Vrijling et al, 1995; 1998):
+- limit the **invidual risk** to prevent that certain people are exposed to disproportionally large risks;
+- limit the **societal risk** to limit the risks of large scale accidents with many fatalities;
 - **Economic optimization** to balance investments in risk reduction from an economic point of view.
 
-The **individual risk** concerns the probability of death of a person due to an accident. Various related definitions exist. The “average individual risk” for a certain activity can be calculated, e.g. the individual risk due to smoking or the risk of an airplane crash for a frequent flyer. {numref}`death_probability` compares the probability of lethal accidents for various types of accidents.
+Two of these criteria have already been discussed elsewhere in this book. **Societal risk** refers to the probability of an accident with multiple fatalities and is often graphically represented by an FN-curve ({ref}`risk_curve` Section). **Economic optimization** has already been discussed in the {ref}`econ_optimization` Section.
+
+### Individual Risk
+
+**Individual risk** concerns the probability of death of a person due to an accident. Various related definitions exist. The “average individual risk” for a certain activity can be calculated, e.g. the individual risk due to smoking or the risk of an airplane crash for a frequent flyer. {numref}`death_probability` compares the probability of various types of fatal accidents.
 
 ```{list-table} Average probability of death due to several activities. (statistics based on various sources for the Netherlands and Europe)
 :header-rows: 1
@@ -59,36 +64,11 @@ where:
 
 Both the individual risk and $P_{d|f}$ can be formulated as a function of a location near a risk source. If it is assumed that a person is permanently present at that location, the individual risk becomes a property of that location and it can be used for zoning and land use planning. This is applied in the industrial safety policy in the Netherlands (see next section).
 
-**Societal risk** refers to the probability of an accident with multiple fatalities. It is often graphically represented by an FN-curve that shows the exceedance probabilities of the potential numbers of fatalities ($P(N>n)$) on double log scale. A simplified example of the calculation of an FN curve is given below. 
-
-The **economic optimization** has already been discussed in detail in ⚠️section 3.4.2. Possible criteria for acceptable individual and societal risk are discussed in the coming paragraphs. 
-
 ```{admonition} Example: Difference between individual and societal risk.
 To illustrate the difference between the individual and societal perspective, consider a fairly safe car that has a probability of 10$^{-5}$ per year of causing a fatality due to technical failure. This may well be acceptable to an individual. Such a probability is in the same range as the average death rate in traffic (650 fatalities / 17 million people which is about 4.10$^{-5}$ per year). If only 1000 cars are sold in the Netherlands, the number of fatal accidents with this car is rare, i.e. 0.01 fatalities per year. However, when the car becomes popular and 10 million cars are sold, the average number of fatalities due to technical failure becomes 100 per year. This may well lead to public concerns and indignation. From a societal point of view this may no longer be acceptable, whereas the individual risk has not changed.
 ```
 
-```{warning}
-The following example is also implemented in a notebook on one of the following pages (`example-FN-curve.ipynb`), which needs to be combined.
-```
-
-```{admonition} Example: calculation of an FN curve.
-The following example shows the composition of an FN curve for a system with two mutually exclusive event scenarios.
-
-Accident 1 with $N_1 = 10$ fatalities and a probability of $P_1 = 10^{-2}$ per year
-
-Accident 2 with $N_2 = 100$ fatalities and a probability of $P_2 = 10^{-3}$ per year
-
-Based on this information the probability mass function can be formed (first graph). Consequently, the cumulative distribution function can be made (second graph). Finally, the probability of exceedance or the FN curve is made (third graph).
-Finally, we note that the expected value of the number of fatalities equals:
- 
-$$
-  E(N) = P_1 N_1 + P_2 N_2 =  0.2\text{ fatalities per year}
-$$
-
-This value will also be found when the surface of the area under the FN curve is computed ⚠️(Vrijling and van Gelder, 1997).
-```
-
-## Limits for individual and societal risk
+## Limits for Individual and Societal Risk
 
 Safety standards can be used to set limits to the individual and societal risk. A **limit** value can be set for **individual risks**. Such a limit value is to avoid disproportionate exposures by laying down a minimum safety level for all individuals. In various fields of applications limit values in the range of 10$^{-4}$ to 10$^{-6}$ per year are used (see below for more information). To put the stringency of the individual risk criteria into perspective, one could consider the effect of the probability of an accident on life expectancy. When an average person would be constantly exposed to a maximum allowable level of risk of 10-6 per year, the decrease of his or her life expectancy would be only 1 day as shown in {numref}`individual-risk-life-expectancy`.
 
@@ -139,17 +119,18 @@ The limit line is called risk neutral[^neutral] if $\alpha=1$, since it places e
 For different applications limit lines have been developed with varying constants and steepness. Examples of application areas include industrial risks in the Netherlands (next section), dams in the United States and Canada, and chemical risks in Hongkong and the UK ⚠️(Jonkman et al., 2003).
 
 
-````{admonition} Exaple: Risk matrix
-Risk matrices are often used in various industries for risk evaluation and decision support, for example for the evaluation of health and safety risks within a facility. For a given undesired event the extent of probability and consequences are estimated on a qualitative or semi-quantitative scale, see {numref}`risk_matrix` for an example. Ranges of failure probabilities or consequences can be assigned to the qualitative terms on the axes in the example. The combination of probability and consequence estimates determines whether the risk is acceptable or whether it requires more attention and risk reduction efforts. However, unlike the FN curve, the cumulative effects of multiple possible events are generally not considered in a risk matrix.
-```{figure} ../figures/risk_matrix.png
+````{admonition} Exaple: Risk Matrix
+Risk matrices are often used in various industries for risk evaluation and decision support, for example, to quickly prioritize actions, especially in time-sensitive situations. For a given undesired event the extent of probability and consequences are estimated on a qualitative or semi-quantitative scale, see {numref}`risk_matrix` for an example. Ranges of failure probabilities or consequences can be assigned to the qualitative terms on the axes in the example. The combination of probability and consequence determines the level of risk, and depending on the application, whether it is acceptable or whether it requires more attention and risk reduction efforts. However, unlike the FN curve, the cumulative effects of multiple possible events are generally not considered in a risk matrix.
+```{figure} ../figures/risk_matrix.PNG
 ---
 width: 500px
 name: risk_matrix
 ---
-Example of a risk matrix ([Source](http://www.eimicrosites.org/heartsandminds/ram.php)).
+Example of a risk matrix used by various engineering and military branches of the United States Army Corps of Engineers (Source: Corps [Risk Management Center](https://www.rmc.usace.army.mil/) or [Risk Analysis Gateway](https://www.iwr.usace.army.mil/Missions/Risk-Analysis-Gateway/Risk-Assessment/)).
+% Note: real source is a PDF [here](https://home.army.mil/lee/application/files/7815/3809/1878/Tables.pdf)
 ```
 ````
-## The Dutch safety standards for industrial major hazards
+## Case Study: Dutch industrial hazards
 
 The Dutch major hazards policy deals with the risks to those living in the vicinity of major industrial hazards such as chemical plants and LPG-fuelling stations. The development of the Dutch major hazards policy was strongly incident driven, as were European efforts aimed at the prevention of major industrial accidents. After a number of severe industrial accidents, including the Bhopal accident in 1984 which killed an estimated 3000 people and severely injured over 200.000, a European directive was drafted concerning the prevention of major accidents: the 1982 Seveso Directive. This was later replaced by the Seveso II Directive.
 The cornerstones of the Dutch major hazards policy are a) the use of quantitative risk analysis (QRA); b) comparison of QRA outcomes with limits to individual and societal risks ⚠️(Bottelberghs, 2000). 
@@ -181,7 +162,7 @@ Example of a schematic individual risk contour (circles) for a chemical installa
   - Vulnerable
   - $10^{-6}$ per year
 * - 
-  - Vulnerable
+  - Limitedly Vulnerable
   - $10^{-6}$ per year
 ```
 
@@ -197,13 +178,13 @@ name: fn_limit
 FN limit line used for installations in the Netherlands
 ```
 
-## The TAW model: a general model for deriving safety standards
+## Case Study: Dutch flood protection
 
-Engineers are sometimes faced with the question 'how safe is safe enough'. For systems for which no regulations are available, this can be a difficult question to resolve. A model has therefore been developed by the Technical Advice Committee for Water (TAW)[^taw]  defences for deriving safety standards on the basis of accident statistics ⚠️(TAW, 1985; Vrijling et al 1995; 1998). The assumption underlying the model is that accident statistics are the result of a process of societal optimisation and that they thereby reflect what is apparently considered acceptable by society at large. Such an approach is commonly referred to as a 'revealed preference' approach. 
+For systems for which no regulations are available the question 'how safe is safe enough?' can be difficult to resolve. A general model has been developed by the Technical Advice Committee for Water defences (TAW)[^taw] in the process of deriving safety standards for flood protection in the Netherlands, which, in a formal sense, has been an ongoing process since the 1950's. This approach is derived on the basis of accident statistics ⚠️(TAW, 1985; Vrijling et al 1995; 1998), where underlying assumption of the model is that accident statistics are the result of a process of societal optimisation and that they thereby reflect what is apparently considered acceptable by society at large. Such an approach is commonly referred to as a 'revealed preference' approach, and was already introduced in a a general sense in the Chapter on Risk Analysis, Section {ref}`risk_curve_famous` ({numref}`risk-curve-baecher`).
 
 ### Individual risk
 
-Accident statistics reveal that the extent to which participation in the activity is voluntary strongly influences the level of risk that is accepted by individuals. Relatively high individual risks are accepted for activities that are voluntary and have a (personal) benefit, such as mountain climbing. Much smaller individual risk values are accepted for involuntary activities for which the risks are imposed by others, e.g. for chemical and nuclear industry. A policy factor ($\beta$) is therefore introduced to account for voluntariness of exposure. This factor is set at $\beta=1$ for an individual risk value of $10^{-4}$ per year. This represents the “baseline” individual risk for the group of young men who are most at risk from traffic.
+Accident statistics reveal that the extent to which participation in the activity is voluntary strongly influences the level of risk that is accepted by individuals. Relatively high individual risks are accepted for activities that are voluntary and have a (personal) benefit, such as mountain climbing. Much smaller individual risk values are accepted for involuntary activities for which the risks are imposed by others, e.g. for chemical and nuclear industry. A policy factor ($\beta$) is therefore introduced to account for voluntariness of exposure. This factor is set at $\beta=1$ for an individual risk value of $10^{-4}$ per year. This represents the “baseline” individual risk for the group young men[^men] who are most at risk of dying in a traffic accident.
 
 
 ```{list-table} Accident statistics and proposed policy factor and characteristics of the activity ⚠️(Sources: CUR, 2015; Vrijling, 2001; Vrijling et al., 1998).
@@ -365,7 +346,8 @@ Combination of the individual, societal and economic risk criteria for a hypothe
 ```
 ````
 
-One field of application where these concepts have been applied concerns the flood protection standards in the Netherlands. In the year 2014 new safety standards have been proposed for primary flood defences in the Netherlands. These have been derived based on a risk assessment, and standards have been formulated as a (tolerable) probability of failure of the flood defences. More information on this field of application will be given during the lectures. 
+One field of application where these concepts have been applied concerns the flood protection standards in the Netherlands. Since 2017 new safety standards have been in place for primary flood defences in the Netherlands that have been derived based on a risk assessment, with standards been formulated as a (tolerable) probability of failure of the flood defences.
 
-[^neutral]: It should be noted that the usage of the term “risk neutral” to describe the FN-curve limit line for $\alpha = 1$ is widespread but, strictly speaking, incorrect in the context of decision theory (see ⚠️section 3.3). This is because the cost of risk bearing to a risk neutral decision maker equals expected loss (i.e. the product of probabilities and damages). The FN-curve shows cumulative probabilities, however. Also, an individual crossing of the limit line would not necessarily disturb a risk neutral decision maker, provided the other accident scenarios have relatively small probabilities.  
+[^neutral]: It should be noted that the usage of the term “risk neutral” to describe the FN-curve limit line for $\alpha = 1$ is widespread but, strictly speaking, incorrect in the context of decision theory (see {ref}`decision` Section). This is because the cost of risk bearing to a risk neutral decision maker equals expected loss (i.e. the product of probabilities and damages). The FN-curve shows cumulative probabilities, however. Also, an individual crossing of the limit line would not necessarily disturb a risk neutral decision maker, provided the other accident scenarios have relatively small probabilities.  
 [^taw]: TAW is nowadays called ENW: Extertise Network on Flood Protection.
+[^men]: The group 'young men' is used as a baseline because this was the only information available at the time the study was completed.

@@ -13,4 +13,4 @@ plt.legend()
 plt.xlabel('Year')
 plt.ylabel('Normalized Present Value [$-$]')
 
-plt.savefig('present-value.svg')
+plt.savefig('present_value_py.svg')

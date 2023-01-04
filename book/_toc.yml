@@ -5,21 +5,18 @@ parts:
     chapters:
     - file: prob-design/overview.md
       sections:
-      - file: prob-design/example-river-system.md
       - file: prob-design/01-one-random-variable.md
       - file: prob-design/02-two-random-variables.md
+      - file: prob-design/example-river-system.md
     - file: risk-analysis/overview.md
       sections:
       - file: risk-analysis/definition.md
       - file: risk-analysis/steps.md
-      - file: risk-analysis/example-FN-curve.md
-      - file: risk-analysis/exercise-fn-curve.md
+      - file: risk-analysis/risk-curves.md
     - file: reliability-component/overview.md
     - file: reliability-system/overview.md
       sections:
-      - file: reliability-system/exercise-paint.md
       - file: reliability-system/exercise-simple-city.md
-      - file: reliability-system/exercise-dam.md
     - file: risk-assessment/overview.md
       sections:
       - file: risk-assessment/decision.md
@@ -28,8 +25,12 @@ parts:
       - file: risk-assessment/example-dike-height.md
       - file: risk-assessment/safety-standards.md
       - file: risk-assessment/example-types-of-risk.md
+      - file: risk-assessment/exercise-fn-curve.md
+      - file: risk-assessment/exercise-paint.md
+      - file: risk-assessment/exercise-dam.md
     - file: other-topics/overview.md
       sections:
       - file: other-topics/exercise-sample-exam.md
+      - file: other-topics/exercise-sample-exam-solution.md
       - file: other-topics/xx-quiz.ipynb
     - file: references.md
