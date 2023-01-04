@@ -1,3 +1,4 @@
+(intro)=
 # Introduction 
 
 Welcome to the lecture notes for weeks 2.7 and 2.8 which provides an introduction to risk and reliability.
