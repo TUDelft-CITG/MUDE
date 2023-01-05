@@ -1,5 +1,15 @@
 # Sample Exam Questions
 
+**Sample exam question:** Indicate which of the following statements is true (multiple answers possible):
+   1. A parallel system gets stronger if there is a strong positive correlation between failure of the elements.
+   2. Dependence between elements is only determined by dependence in loads.
+   3. In case of a full dependence between two elements $A$ and $B$, it holds that $P(B|A)=1$.
+   4. A flood defence system that is a single line of defence composed of multiple dike sections would best be characterized as a series sytem, not as a parallel system.
+   5. A prison with multiple walls and fences would best be characterized as a series system, not as a parallel system.
+
+*Answers 3 and 4 are true.*
+
+
 A flood protection for an area at a bay consists of a first line of defence (a dam on the coast) and a second line (a dike around the bay) to protect the city against a storm surge that can cause a high water level in the bay. The design team considers two strategies: 1) a single dike around the bay, or 2) a dike around the bay plus a dam (see figure). 
 
 ```{figure} ../figures/exercise-sample-exam-bay.png
