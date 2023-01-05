@@ -14,8 +14,13 @@ parts:
       - file: risk-analysis/steps.md
       - file: risk-analysis/risk-curves.md
     - file: reliability-component/overview.md
+      sections:
+      - file: reliability-component/case-two-loads.md
+      - file: reliability-component/case-r-s.md
     - file: reliability-system/overview.md
       sections:
+      - file: reliability-system/system-series.md
+      - file: reliability-system/system-parallel.md
       - file: reliability-system/exercise-simple-city.md
     - file: risk-assessment/overview.md
       sections:
