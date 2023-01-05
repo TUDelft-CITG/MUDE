@@ -55,7 +55,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Risk Assessment" href="../risk-assessment/overview.html" />
-    <link rel="prev" title="System Reliability" href="overview.html" />
+    <link rel="prev" title="Parallel Systems" href="system-parallel.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -175,21 +175,48 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../reliability-component/overview.html">
    Component Reliability
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reliability-component/case-two-loads.html">
+     Case 1: Two Loads
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reliability-component/case-r-s.html">
+     Case 2: Load and Resistance
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="overview.html">
    System Reliability
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="system-series.html">
+     Series Systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="system-parallel.html">
+     Parallel Systems
+    </a>
+   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Exercise: Simple City
@@ -201,8 +228,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../risk-assessment/overview.html">
    Risk Assessment
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -258,8 +285,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../other-topics/overview.html">
    Other topics
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -515,7 +542,7 @@ title="Print to PDF"
 </ol>
 <p><em>Answer</em></p>
 <p>Increase.</p>
-<p>The probability of failure would increase because the system mainly works like a parallel system. In this case, when there is full dependence between the elements, the probability of failure equals the probability of failure of the strongest element. For instance, <span class="math notranslate nohighlight">\(P_{f_{\text{bridges 2&amp;3}}}=0.01\)</span> for independent case and 0.1 for full dependence case.</p>
+<p>The probability of failure would increase because the system mainly works like a parallel system. In this case, when there is full dependence between the elements, the probability of failure equals the probability of failure of the strongest element. For instance, <span class="math notranslate nohighlight">\(P_{f_{\text{bridges 2, 3}}}=0.01\)</span> for independent case and 0.1 for full dependence case.</p>
 <p>Assume each prefabricated bridge is made up of a single road deck and 5 separate frames that are joined together. Each bridge will fail if either the road deck fails, or 1 of the frames fails.</p>
 <ol class="simple">
 <li><p>If the probability of a frame failure is 0.01, what is the required failure probability of the road deck to make sure the bridge failure probability is no more than 0.1?</p></li>
@@ -565,11 +592,11 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="overview.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="system-parallel.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">System Reliability</p>
+            <p class="prev-next-title">Parallel Systems</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../risk-assessment/overview.html" title="next page">

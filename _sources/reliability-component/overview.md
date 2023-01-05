@@ -58,10 +58,10 @@ In MUDE we focus on simple situations with up to two variables (the 'bivariate' 
 
 With this in mind, a generic procedure for using component reliability analysis in a probabilistic design context is:
 
-1. establish probability distributions for each random variable (*marginal* distributions)
-2. establish dependence, if any
-3. define the function of random variables and region of interest
-4. integrate multivariate PDF to evaluate probability of interest
+1. determine probability distributions for each random variable (*marginal* distributions)
+2. specify dependence between random variables (or independence)
+3. define the function of random variables, $g_X(X)$, and region of interest, $\Omega$
+4. integrate multivariate PDF, $f_X(X)$, over $\Omega$ to evaluate probability of interest
 5. check probability requirement, and if needed:
 6. modify component (i.e., modify 1, 2 or 3)
 7. repeat 4, 5 and 6 until the requirement is met
@@ -91,7 +91,7 @@ Overview of non-linear problems (distribution and LSF); explanation of LSF; form
 
 ```{admonition} Exam Information
 :class: tip, dropdown
-You are expected to recognize the role of random variables (e.g., loads and resistances) within the function of random variables for a component and visualize it on a bivariate plot. You may be asked to solve simple component reliability problems, limited to linear functions of normally distributed random variables, and evaluate the role of dependence between variables. You can use the method within a probabilistic design context by modifying the component such that the probability of interest meets a specific criteria.
+You are expected to recognize the role of random variables (e.g., loads and resistances) within the function of random variables for a component and visualize it on a bivariate plot. You may be asked to solve simple component reliability problems, limited to linear functions of normally distributed random variables, and evaluate the role of dependence between variables. You can produce a probabilistic design by modifying the component such that the probability of interest meets a specific criteria.
 ```
 
 <!-- ```{admonition} Exam Information

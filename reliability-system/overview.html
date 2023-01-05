@@ -50,12 +50,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Exercise: Simple City" href="exercise-simple-city.html" />
-    <link rel="prev" title="Component Reliability" href="../reliability-component/overview.html" />
+    <link rel="next" title="Series Systems" href="system-series.html" />
+    <link rel="prev" title="Case 2: Load and Resistance" href="../reliability-component/case-r-s.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -175,21 +173,48 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../reliability-component/overview.html">
    Component Reliability
   </a>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="current reference internal" href="#">
-   System Reliability
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reliability-component/case-two-loads.html">
+     Case 1: Two Loads
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reliability-component/case-r-s.html">
+     Case 2: Load and Resistance
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   System Reliability
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="system-series.html">
+     Series Systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="system-parallel.html">
+     Parallel Systems
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="exercise-simple-city.html">
      Exercise: Simple City
@@ -201,8 +226,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../risk-assessment/overview.html">
    Risk Assessment
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -258,8 +283,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../other-topics/overview.html">
    Other topics
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -396,12 +421,55 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#series-and-parallel-systems">
+   Series and Parallel Systems
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-of-failure">
+     Definition of Failure
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chapter-overview">
+   Chapter Overview
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#additional-information">
+     Additional Information
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -413,6 +481,38 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#series-and-parallel-systems">
+   Series and Parallel Systems
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-of-failure">
+     Definition of Failure
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#chapter-overview">
+   Chapter Overview
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#additional-information">
+     Additional Information
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -422,25 +522,50 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="system-reliability">
 <span id="rel-sys"></span><h1>System Reliability<a class="headerlink" href="#system-reliability" title="Permalink to this headline">#</a></h1>
-<p>This is a key part of step 3 in a risk analysis: quantitative analysis.</p>
-<p>Just a few simple examples to illustrate: series and parallel systems, influence of dependence.</p>
-<p>Example illustrating difference in failure probability in reality versus model (flooding?).</p>
-<p><em>Note that ‘system’ in the title of this chapter refers to a particular set of reliability analyses made up of more than one distinct components. It may or may not be the same as the system for which the risk analysis is being done. For example (the flood risk case), we look at a levee ring, which is a system of levee segments (trajectory, or traject in Dutch), and each segment can be modeled as a series system.</em></p>
-<p>Sometimes the distinction is made because components are very different. Sometimes it is a matter of convenience, as two components may share a number of random variables through their respective limit-state functions that influence failure.</p>
-<p>Key concept: system reliability analysis can look very similar to component reliability problems. We separate it because in practice the analytic and numerical solutions can be quite different, which also reflects the way these methods are used (and even named) in different fields of engineering and mathematics.</p>
+<p>A structure or system in civil engineering generally consists of a set of <em>components</em> (also called <em>elements</em>). Whereas the previous chapter focused on the reliability of a single  component, this chapter addresses reliability analysis for systems that consist of multiple components. The consequences of the failure of a component will depend on the type of system that is considered. In some cases, the failure of a component leads to failure of the whole system (progressive collapse). In other cases (and system configurations) there could be no failure if a single component fails and other components take over the function of the failed one.</p>
+<p>The techniques introduced in this chapter essential for carrying out step 3 in a risk analysis: quantitative analysis.</p>
+<section id="series-and-parallel-systems">
+<h2>Series and Parallel Systems<a class="headerlink" href="#series-and-parallel-systems" title="Permalink to this headline">#</a></h2>
+<p>In reliability analysis two types of basic systems can be distinguished: series and parallel (see <a class="reference internal" href="#sys-series-parallel"><span class="std std-numref">Fig. 13</span></a>).</p>
+<figure class="align-default" id="sys-series-parallel">
+<a class="reference internal image-reference" href="../_images/system_series_parallel.png"><img alt="../_images/system_series_parallel.png" src="../_images/system_series_parallel.png" style="height: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 13 </span><span class="caption-text">Series (top row) and parallel (bottom row) systems: the building blocks of system reliability analysis.</span><a class="headerlink" href="#sys-series-parallel" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Within a series system, failure of a single component will always lead to the failure of the entire system. An example is a chain, which breaks if any individual link fails. In our flood management example, a dike ring protecting a single area that is made up of multiple segments is also a series system. Within a parallel system, failure of one component can be compensated by the performance of another  component; it represents the concept of redundancy. Drawing on the chain example, it would imply using more than one chain capable of holding the maximum load. An example from flood management would be to build a second dike ring inside the first dike ring. In practice, a complex system can generally be represented by means of a combination of parallel and series subsystems, just as the parallel system of multiple chains (or dikes) is a parallel system of series systems of links (or dike segments).</p>
+<figure class="align-default" id="sys-series-parallel-ex">
+<a class="reference internal image-reference" href="../_images/system_series_parallel_ex.png"><img alt="../_images/system_series_parallel_ex.png" src="../_images/system_series_parallel_ex.png" style="height: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Example of series (top row) and parallel (bottom row) systems, illustrated with a chain and dike ring.</span><a class="headerlink" href="#sys-series-parallel-ex" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Systems are often schematized using a system diagram, as in <a class="reference internal" href="#sys-series-parallel"><span class="std std-numref">Fig. 13</span></a>. This also illustrates the function of a system as an input-output diagram, where one can considers the ability to travel from left to right on the figure. It is analagous to many scenarios involving flow: electricity (<a class="reference internal" href="#sys-lightbulbs"><span class="std std-numref">Fig. 15</span></a>), water in pipes or transportation routes.</p>
+<figure class="align-default" id="sys-lightbulbs">
+<a class="reference internal image-reference" href="figures/system_lightbulbs.PNG"><img alt="figures/system_lightbulbs.PNG" src="figures/system_lightbulbs.PNG" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Series (left) and parallel (right) systems illustrated as a string of lightbulbs.</span><a class="headerlink" href="#sys-lightbulbs" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="definition-of-failure">
+<h3>Definition of Failure<a class="headerlink" href="#definition-of-failure" title="Permalink to this headline">#</a></h3>
+<p>Whereas in component reliabiity problems we defined failure using a function of random variables, in system reliabiltiy problems, we define failure based on the continuity of the system diagram. Failure occurs when we are not able to travel from left to right on the diagram due to one or more broken links.</p>
+</section>
+</section>
+<section id="chapter-overview">
+<h2>Chapter Overview<a class="headerlink" href="#chapter-overview" title="Permalink to this headline">#</a></h2>
+<p>This chapter contains a brief introduction to the computation of failure probability for series and parallel systems, and illustrates the role of dependence. The final section illustrates these concepts with a simple exercise.</p>
 <div class="tip dropdown admonition">
 <p class="admonition-title">MUDE Exam Information</p>
-<p>For the exam, you should be able to recognize and solve simple series and parallel systems, as well as describe the influence dependence between components may have on the calculated probability of interest.</p>
+<p>For the exam, you should be able to recognize and solve simple series and parallel systems, as well as describe the influence dependence between components may have on the calculated probability of interest. You will not need to draw a system diagram for anything more complex than those illustrated on this page.</p>
 </div>
-<p><strong>Sample exam question:</strong> Indicate which of the following statements is true (multiple answers possible):</p>
-<ol class="simple">
-<li><p>A parallel system gets stronger if there is a strong positive correlation between failure of the elements.</p></li>
-<li><p>Dependence between elements is only determined by dependence in loads.</p></li>
-<li><p>In case of a full dependence between two elements <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>, it holds that <span class="math notranslate nohighlight">\(P(B|A)=1\)</span>.</p></li>
-<li><p>A flood defence system that is a single line of defence composed of multiple dike sections would best be characterized as a series sytem, not as a parallel system.</p></li>
-<li><p>A prison with multiple walls and fences would best be characterized as a series system, not as a parallel system.</p></li>
-</ol>
-<p><em>Answers 3 and 4 are true.</em></p>
+<section id="additional-information">
+<h3>Additional Information<a class="headerlink" href="#additional-information" title="Permalink to this headline">#</a></h3>
+<p>The word ‘system’ in the title of this chapter refers to a reliability analyses made up of more than one distinct components. It may or may not be the same as the system for which the risk analysis is being done. For example, in the flood risk case we look at a dike ring, which is a series system of dike segments. Each dike segment can fail in a variety of ways (e.g., sliding or eroding), where if <em>any</em> of these types of failure occurs, the dike fails; a series system. Thus, the dike ring is a series system, where each component also a series system.</p>
+<p>Sometimes the distinction is made because components are very different. Sometimes it is a matter of convenience, as two components may share a number of random variables through their respective limit-state functions that influence failure.</p>
+<p>System reliability analysis can look very similar to component reliability problems, especially when various combinations of discrete and continuous random variables are incorporated. In reality, all of these problems are generalized by the concept of a multivariate probability distribution. The concepts are separated following conventions in engineering practice, as well as for the convenience of illustrating analytic and numerical solutions.</p>
+</section>
+</section>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -472,17 +597,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../reliability-component/overview.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../reliability-component/case-r-s.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Component Reliability</p>
+            <p class="prev-next-title">Case 2: Load and Resistance</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="exercise-simple-city.html" title="next page">
+    <a class='right-next' id="next-link" href="system-series.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Exercise: Simple City</p>
+        <p class="prev-next-title">Series Systems</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

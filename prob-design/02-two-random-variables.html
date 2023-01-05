@@ -175,14 +175,9 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../reliability-component/overview.html">
    Component Reliability
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../reliability-system/overview.html">
-   System Reliability
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -190,6 +185,38 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reliability-component/case-two-loads.html">
+     Case 1: Two Loads
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reliability-component/case-r-s.html">
+     Case 2: Load and Resistance
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../reliability-system/overview.html">
+   System Reliability
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reliability-system/system-series.html">
+     Series Systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reliability-system/system-parallel.html">
+     Parallel Systems
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../reliability-system/exercise-simple-city.html">
      Exercise: Simple City
@@ -201,8 +228,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../risk-assessment/overview.html">
    Risk Assessment
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -258,8 +285,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../other-topics/overview.html">
    Other topics
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -620,7 +647,7 @@ q_1=q_2=q_{\mathrm{design}}
 <section id="reflections-on-the-simple-example">
 <h2>Reflections on the Simple Example<a class="headerlink" href="#reflections-on-the-simple-example" title="Permalink to this headline">#</a></h2>
 <p>We need to be explicit in what we are trying to evaluate. In this case, it is the distribution of a function of random variables, <span class="math notranslate nohighlight">\(Q_{dike}\)</span>.</p>
-<p>Sometimes we can’t get the distribution of the function of random variables analyticaly. THere are two main reasons: 1) non-Gaussian distributions, and 2) non-linear function of random variables. Fortunately it is easy to find it numerically through sampling techniques. This will be discussed elsewhere.</p>
+<p>Sometimes we can’t get the distribution of the function of random variables analyticaly. There are two main reasons: 1) non-Gaussian distributions, and 2) non-linear function of random variables. Fortunately it is easy to find it numerically through sampling techniques. This will be discussed elsewhere.</p>
 <p>The ‘and’ and ‘or’ approaches (intersection and union) are simple, but really only limited to discrete cases. As illustrated above, they cannot be used in the case of continuous random variables, or with functions of random variables because one must integrate across all possible scenarios leading to failure. Nonetheless, these approaches are extremely useful for many situations, and are the basis of <em>system reliability</em> problems.</p>
 <p>The situation illustrated here is often referred to as a <em>component reliability</em> problem, where the ‘component’ is defined by a function of random variables.
 Although nothing more than a function of random variables,is nothing more than an integration over a specific region of a multivariate probability density function. Often this region describes failure of a component, which we will try to keep below an acceptable level.</p>

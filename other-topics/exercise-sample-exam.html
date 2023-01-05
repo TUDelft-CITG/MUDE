@@ -175,14 +175,9 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../reliability-component/overview.html">
    Component Reliability
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../reliability-system/overview.html">
-   System Reliability
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -190,6 +185,38 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reliability-component/case-two-loads.html">
+     Case 1: Two Loads
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reliability-component/case-r-s.html">
+     Case 2: Load and Resistance
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../reliability-system/overview.html">
+   System Reliability
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reliability-system/system-series.html">
+     Series Systems
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reliability-system/system-parallel.html">
+     Parallel Systems
+    </a>
+   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../reliability-system/exercise-simple-city.html">
      Exercise: Simple City
@@ -201,8 +228,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../risk-assessment/overview.html">
    Risk Assessment
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -258,8 +285,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="overview.html">
    Other topics
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -422,6 +449,15 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="sample-exam-questions">
 <h1>Sample Exam Questions<a class="headerlink" href="#sample-exam-questions" title="Permalink to this headline">#</a></h1>
+<p><strong>Sample exam question:</strong> Indicate which of the following statements is true (multiple answers possible):</p>
+<ol class="simple">
+<li><p>A parallel system gets stronger if there is a strong positive correlation between failure of the elements.</p></li>
+<li><p>Dependence between elements is only determined by dependence in loads.</p></li>
+<li><p>In case of a full dependence between two elements <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>, it holds that <span class="math notranslate nohighlight">\(P(B|A)=1\)</span>.</p></li>
+<li><p>A flood defence system that is a single line of defence composed of multiple dike sections would best be characterized as a series sytem, not as a parallel system.</p></li>
+<li><p>A prison with multiple walls and fences would best be characterized as a series system, not as a parallel system.</p></li>
+</ol>
+<p><em>Answers 3 and 4 are true.</em></p>
 <p>A flood protection for an area at a bay consists of a first line of defence (a dam on the coast) and a second line (a dike around the bay) to protect the city against a storm surge that can cause a high water level in the bay. The design team considers two strategies: 1) a single dike around the bay, or 2) a dike around the bay plus a dam (see figure).</p>
 <figure class="align-default" id="flood-protection">
 <a class="reference internal image-reference" href="../_images/exercise-sample-exam-bay.png"><img alt="../_images/exercise-sample-exam-bay.png" src="../_images/exercise-sample-exam-bay.png" style="width: 400px;" /></a>

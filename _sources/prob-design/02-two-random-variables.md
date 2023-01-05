@@ -132,7 +132,7 @@ Function of random variables. Get distribution of $Q_{dike}$ directly.
 
 We need to be explicit in what we are trying to evaluate. In this case, it is the distribution of a function of random variables, $Q_{dike}$.
 
-Sometimes we can't get the distribution of the function of random variables analyticaly. THere are two main reasons: 1) non-Gaussian distributions, and 2) non-linear function of random variables. Fortunately it is easy to find it numerically through sampling techniques. This will be discussed elsewhere.
+Sometimes we can't get the distribution of the function of random variables analyticaly. There are two main reasons: 1) non-Gaussian distributions, and 2) non-linear function of random variables. Fortunately it is easy to find it numerically through sampling techniques. This will be discussed elsewhere.
 
 The 'and' and 'or' approaches (intersection and union) are simple, but really only limited to discrete cases. As illustrated above, they cannot be used in the case of continuous random variables, or with functions of random variables because one must integrate across all possible scenarios leading to failure. Nonetheless, these approaches are extremely useful for many situations, and are the basis of *system reliability* problems.
 
