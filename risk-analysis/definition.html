@@ -219,14 +219,14 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../reliability-system/exercise-simple-city.html">
-     Exercise: Simple City
+     Example System
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../risk-assessment/overview.html">
-   Risk Assessment
+  <a class="reference internal" href="../risk-evaluation/overview.html">
+   Risk Evaluation
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
@@ -235,55 +235,35 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/decision.html">
+    <a class="reference internal" href="../risk-evaluation/decision.html">
      Decision Analysis
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/cost-benefit.html">
-     Cost benefit analysis
+    <a class="reference internal" href="../risk-evaluation/cost-benefit.html">
+     Cost Benefit Analysis
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/econ-optimization.html">
+    <a class="reference internal" href="../risk-evaluation/econ-optimization.html">
      Economic Optimization
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/example-dike-height.html">
-     Example: Optimal Dike Height
+    <a class="reference internal" href="../risk-evaluation/example-dike-height.html">
+     Optimization Example
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/safety-standards.html">
-     Safety standards
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/example-types-of-risk.html">
-     Example: 3 Risk Metrics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/exercise-fn-curve.html">
-     Exercise: FN-curve
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/exercise-paint.html">
-     Exercise: Paint System
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/exercise-dam.html">
-     Exercise: Dam and River
+    <a class="reference internal" href="../risk-evaluation/safety-standards.html">
+     Safety Standards
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../other-topics/overview.html">
-   Other topics
+  <a class="reference internal" href="../exercises/overview.html">
+   Exercises
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
@@ -292,18 +272,23 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../other-topics/exercise-sample-exam.html">
-     Sample Exam Questions
+    <a class="reference internal" href="../exercises/exercise-fn-curve.html">
+     FN Curve
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../other-topics/exercise-sample-exam-solution.html">
-     Sample Exam Questions
+    <a class="reference internal" href="../exercises/exercise-paint.html">
+     Paint System
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../other-topics/xx-quiz.html">
-     Quiz example
+    <a class="reference internal" href="../exercises/exercise-dam.html">
+     Dam and River
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../exercises/exercise-sample-exam.html">
+     Sample Exam Questions
     </a>
    </li>
   </ul>
@@ -503,26 +488,26 @@ An often-used definition considers risk as an expected value:</p>
 <p>The unit of risk now depends on the units of probability and consequences, where probability of an event is generally expressed as the probability per unit time, for example per year. The consequences of an undesired event often measure a diverse array of damages, such as material, ecological, injuries and fatalities. In many applications engineering consequences are expressed by means of a monetary value, in which case the unit of the risk (or expected value, <span class="math notranslate nohighlight">\(E(d)\)</span>) then becomes € per year. For a case with one event scenario <span class="math notranslate nohighlight">\(i\)</span> with probability <span class="math notranslate nohighlight">\(p_{i}\)</span> it yields:</p>
 <div class="math notranslate nohighlight">
 \[
- E(d_i) = p_{i}d_{i} 
+ E(d_i) = p_{i} \cdot d_{i} 
  \]</div>
 <p>A more general definition of risk has been given by Kaplan and Garrick (1981):</p>
 <blockquote>
 <div><p>Risk is a set of scenarios, <span class="math notranslate nohighlight">\(s_{i}\)</span>, each of which has a probability, <span class="math notranslate nohighlight">\(p_{i}\)</span>, and a consequence, <span class="math notranslate nohighlight">\(d_{i}\)</span>.</p>
 </div></blockquote>
-<p>This definition of Kaplan and Garrick allows the use of various so-called risk metrics (or risk measures) to quantify or depict the risk. The expected value of the damage for a set of multiple discrete scenarios <span class="math notranslate nohighlight">\(i=1,....,n\)</span> , can be expressed as:</p>
+<p>This definition allows the use of various so-called risk metrics (or risk measures) to quantify or depict risk. The expected value of the damage for a set of multiple discrete scenarios <span class="math notranslate nohighlight">\(i=1,....,n\)</span> , can be expressed as:</p>
 <!-- $$
 E(d) = \sum_{S_{i=1}}^{n}p_{i}d_{i}
 $$ (eq_risk_definition) -->
 <div class="math notranslate nohighlight" id="equation-eq-risk-definition">
-<span class="eqno">(1)<a class="headerlink" href="#equation-eq-risk-definition" title="Permalink to this equation">#</a></span>\[E(d) = \sum_{S_{i=1}}^{n}p_{i}d_{i}\]</div>
-<p>For the set of scenarios considered, the expected value quantifies risk precisely, however, it does not give insight in the magnitude of probability and consequences and the contribution of individual scenarios. For example, a single value does not indicate whether the risk is governed by a large number of scenarios with small consequences, or a few scenarios with large consequences and low probabilities. Therefore, an often-used companion risk-based tool is the risk curve, which shows the probability of exceedance and consequence for all scenarios. A well-known example of such a risk curve is the <em>FN curve</em>, which displays the probability of exceedance associated with <span class="math notranslate nohighlight">\(N\)</span> (human) fatalities, schematized in <a class="reference internal" href="#fn-curve-simple"><span class="std std-numref">Fig. 5</span></a>. It is easy to compare the probability of exceeding a relatively low or high</p>
+<span class="eqno">(1)<a class="headerlink" href="#equation-eq-risk-definition" title="Permalink to this equation">#</a></span>\[E(d) = \sum_{S_{i=1}}^{n}p_{i} \cdot d_{i}\]</div>
+<p>For the set of scenarios considered, the expected value quantifies risk precisely; however, it does not give insight in the magnitude of probability and consequences and the contribution of individual scenarios. For example, a single value does not indicate whether the risk is governed by a large number of scenarios with small consequences, or a few scenarios with large consequences and low probabilities. Therefore, an often-used companion risk-based tool is the risk curve, which shows the probability of exceedance and consequence for all scenarios. A well-known example of such a risk curve is the <em>FN curve</em>, which displays the probability of exceedance associated with <span class="math notranslate nohighlight">\(N\)</span> (human) fatalities, schematized in <a class="reference internal" href="#fn-curve-simple"><span class="std std-numref">Fig. 5</span></a>. It is easy to compare the probability of exceeding a relatively low or high nuumber of fatalities.</p>
 <figure class="align-default" id="fn-curve-simple">
 <a class="reference internal image-reference" href="../_images/FN-simple.PNG"><img alt="../_images/FN-simple.PNG" src="../_images/FN-simple.PNG" style="height: 200px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 5 </span><span class="caption-text">FN curve, showing the probability of exceedance of a certain number of fatalities N on Log-Log scale.</span><a class="headerlink" href="#fn-curve-simple" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>The FN curve was originally introduced in the 1960’s for the assessment of the risks in the nuclear industry (Farmer, 1967; Kendall et al., 1977) and is now used to display and limit risks in a wide variety of industries around the world. It is an extremely useful way to quantitatively compare risk associated with a broad range of scenarios, and to make decisions. A famous example of this is shown in <a class="reference internal" href="#risk-curve-baecher"><span class="std std-numref">Fig. 6</span></a>, which compares the risk estimated for a wide variety of engineering infrastructure. This figure is described further in the <a class="reference internal" href="risk-curves.html#risk-curve-examples"><span class="std std-ref">Risk Curve Examples</span></a> Section, and also illustrates the concept of acceptable risk, which is discussed in the Section on <a class="reference internal" href="../risk-assessment/safety-standards.html#safety-standards"><span class="std std-ref">Safety standards</span></a>. In short, it allows one to begin answering the question ‘how safe is safe enough?’</p>
+<p>The FN curve was originally introduced in the 1960’s for the assessment of risks in the nuclear industry (Farmer, 1967; Kendall et al., 1977) and is now used to display and limit risks in a wide variety of industries around the world. It is an extremely useful way to quantitatively compare risk associated with a broad range of scenarios, and to make decisions. A famous example of this is shown in <a class="reference internal" href="#risk-curve-baecher"><span class="std std-numref">Fig. 6</span></a>, which compares the risk estimated for a wide variety of engineering infrastructure. This figure is described further in the <a class="reference internal" href="risk-curves.html#risk-curve"><span class="std std-ref">Risk Curve</span></a> Section, and also illustrates the concept of acceptable risk, which is discussed in the Section on <a class="reference internal" href="../risk-evaluation/safety-standards.html#safety-standards"><span class="std std-ref">Safety Standards</span></a>. In short, it allows one to begin answering the question ‘how safe is safe enough?’</p>
 <figure class="align-default" id="risk-curve-baecher">
 <a class="reference internal image-reference" href="../_images/risk-curve-baecher.PNG"><img alt="../_images/risk-curve-baecher.PNG" src="../_images/risk-curve-baecher.PNG" style="height: 400px;" /></a>
 <figcaption>
@@ -535,7 +520,7 @@ $$ (eq_risk_definition) -->
 <ul class="simple">
 <li><p>Hazard: A dangerous phenomenon, substance, human activity or condition that may cause loss of life, injury or other health impacts, property damage, loss of livelihoods and services, social and economic disruption, or environmental damage</p></li>
 <li><p>Vulnerability: The characteristics and circumstances of a community, system or asset that make it susceptible to the damaging effects of a hazard</p></li>
-<li><p>People, property, systems, or other elements present in hazard zones that are thereby subject to potential losses</p></li>
+<li><p>Exposure: People, property, systems, or other elements present in hazard zones that are thereby subject to potential losses</p></li>
 </ul>
 <figure class="align-default" id="risk-hazard">
 <a class="reference internal image-reference" href="../_images/risk-hazard.svg"><img alt="../_images/risk-hazard.svg" height="200px" src="../_images/risk-hazard.svg" /></a>
@@ -543,21 +528,21 @@ $$ (eq_risk_definition) -->
 <p><span class="caption-number">Fig. 7 </span><span class="caption-text">Alternative definition of risk as intersection of hazard, exposure and vulnerability.</span><a class="headerlink" href="#risk-hazard" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
-<p>Often these terms are useful for framing qualitative discussions around complex topics where a quantitative analysis may be out of reach, for example, as done in IPCC reports on climate change <span id="id4">[<a class="reference internal" href="../references.html#id6" title="Omar Dario Cardona, Maarten K Van Aalst, Jörn Birkmann, Maureen Fordham, Glenn Mc Gregor, Perez Rosa, Roger S Pulwarty, E Lisa F Schipper, Bach Tan Sinh, Henri Décamps, and others. Determinants of risk: exposure and vulnerability. In Managing the risks of extreme events and disasters to advance climate change adaptation: special report of the intergovernmental panel on climate change, pages 65–108. Cambridge University Press, 2012.">Cardona <em>et al.</em>, 2012</a>]</span>. However, they can also be used to simplify the risk analysis by subdividing it into parts that are (computationally) independent. An analytical expression can easily be formulated by extending Equation <a class="reference internal" href="#equation-eq-risk-definition">(1)</a>:</p>
-<div class="math notranslate nohighlight">
-\[
-RISK INTEGRAL WITH CONDITIONAL
-\]</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Point out that this formulation simplifies the calculation, promots the use of tools like fragility curves, and give earthquake hazard assessment as an example (DRMS?).</p>
-</div>
+<p>Often these terms are useful for framing qualitative discussions around complex topics where a quantitative analysis may be out of reach, for example, as done in IPCC reports on climate change <span id="id4">[<a class="reference internal" href="../references.html#id6" title="Omar Dario Cardona, Maarten K Van Aalst, Jörn Birkmann, Maureen Fordham, Glenn Mc Gregor, Perez Rosa, Roger S Pulwarty, E Lisa F Schipper, Bach Tan Sinh, Henri Décamps, and others. Determinants of risk: exposure and vulnerability. In Managing the risks of extreme events and disasters to advance climate change adaptation: special report of the intergovernmental panel on climate change, pages 65–108. Cambridge University Press, 2012.">Cardona <em>et al.</em>, 2012</a>]</span>. However, they can also be used to simplify the risk analysis by subdividing it into parts that are (computationally) independent. An analytic expression can easily be formulated by expanding the probability term of Equation <a class="reference internal" href="#equation-eq-risk-definition">(1)</a>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-risk-definition-hev">
+<span class="eqno">(2)<a class="headerlink" href="#equation-eq-risk-definition-hev" title="Permalink to this equation">#</a></span>\[p_{i} = P(N_i,E_j,H_k) = P(N_i|E_j,H_k) \cdot P(E_j|H_k) \cdot P(H_k)\]</div>
+<p>where <span class="math notranslate nohighlight">\(N_i\)</span>, <span class="math notranslate nohighlight">\(E_j\)</span> and <span class="math notranslate nohighlight">\(H_k\)</span> are the vulnerability (fatalities), exposure and hazard of scenario <span class="math notranslate nohighlight">\(i\)</span>, respectively. Combining with Equation <a class="reference internal" href="#equation-eq-risk-definition">(1)</a> and taking the sum over all combinations of variables (<span class="math notranslate nohighlight">\(i\)</span>, <span class="math notranslate nohighlight">\(j\)</span>, <span class="math notranslate nohighlight">\(k\)</span>) would give the total risk. In the case of our flood management case, an example of each term could be:</p>
+<ul class="simple">
+<li><p>Hazard, <span class="math notranslate nohighlight">\(H_k\)</span>: a high water level.</p></li>
+<li><p>Exposure, <span class="math notranslate nohighlight">\(E_j|H_k\)</span>: breach (failure) of a dike due to the high water level, <span class="math notranslate nohighlight">\(H_i\)</span>.</p></li>
+<li><p>Vulnerability, <span class="math notranslate nohighlight">\(N_i|E_j,H_k\)</span>: fatalities given the broken dike and high water level. <span class="math notranslate nohighlight">\(N\)</span> is usually modeled as a random variable as it is dependent on factors such as evacuation effectiveness and flood warning systems.</p></li>
+</ul>
 </section>
 <section id="other-risk-definitions">
 <h2>Other Risk Definitions<a class="headerlink" href="#other-risk-definitions" title="Permalink to this headline">#</a></h2>
 <p>This book uses Equation <a class="reference internal" href="#equation-eq-risk-definition">(1)</a> as the primary definition of risk. However, it is useful to highlight some risk concepts used in other domains.</p>
 <p>Within economics, risk is generally associated with a deviation from the expected return or the probability of loss. In social sciences risk is often considered as a contextual notion or social construct. Vlek (1996) has summarized 11 formal definitions used in social sciences, see Table <a class="reference internal" href="#risk-definitions"><span class="std std-numref">Table 1</span></a>. In some of these definitions (e.g. numbers 2 and 4) the perceived seriousness of the undesired consequences plays an important role. Examples of other, more informal risk definitions used in psychology are “the lack of perceived controllability”, “set of possible negative consequences” and “fear of loss” (Vlek, 1996).</p>
-<p>Substantial research has focused on factors that determine the perception of risk (e.g. Slovic, 1987, Vlek, 1996). Examples of factors that influence risk perception include: the degree of damage, the controllability of and familiarity with the hazards, the extent of benefits from an activity, and voluntariness of exposure.</p>
+<p>Substantial research has also focused on factors that determine the perception of risk (e.g. Slovic, 1987, Vlek, 1996) including: degree of damage, controllability of and familiarity with hazards, extent of benefits from an activity, and voluntariness of exposure.</p>
 <table class="table" id="risk-definitions">
 <caption><span class="caption-number">Table 1 </span><span class="caption-text">Formal definitions of risk used in social sciences (Vlek, 1996)</span><a class="headerlink" href="#risk-definitions" title="Permalink to this table">#</a></caption>
 <colgroup>

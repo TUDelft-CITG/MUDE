@@ -219,14 +219,14 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../reliability-system/exercise-simple-city.html">
-     Exercise: Simple City
+     Example System
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../risk-assessment/overview.html">
-   Risk Assessment
+  <a class="reference internal" href="../risk-evaluation/overview.html">
+   Risk Evaluation
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
@@ -235,55 +235,35 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/decision.html">
+    <a class="reference internal" href="../risk-evaluation/decision.html">
      Decision Analysis
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/cost-benefit.html">
-     Cost benefit analysis
+    <a class="reference internal" href="../risk-evaluation/cost-benefit.html">
+     Cost Benefit Analysis
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/econ-optimization.html">
+    <a class="reference internal" href="../risk-evaluation/econ-optimization.html">
      Economic Optimization
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/example-dike-height.html">
-     Example: Optimal Dike Height
+    <a class="reference internal" href="../risk-evaluation/example-dike-height.html">
+     Optimization Example
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/safety-standards.html">
-     Safety standards
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/example-types-of-risk.html">
-     Example: 3 Risk Metrics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/exercise-fn-curve.html">
-     Exercise: FN-curve
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/exercise-paint.html">
-     Exercise: Paint System
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/exercise-dam.html">
-     Exercise: Dam and River
+    <a class="reference internal" href="../risk-evaluation/safety-standards.html">
+     Safety Standards
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../other-topics/overview.html">
-   Other topics
+  <a class="reference internal" href="../exercises/overview.html">
+   Exercises
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
@@ -292,18 +272,23 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../other-topics/exercise-sample-exam.html">
-     Sample Exam Questions
+    <a class="reference internal" href="../exercises/exercise-fn-curve.html">
+     FN Curve
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../other-topics/exercise-sample-exam-solution.html">
-     Sample Exam Questions
+    <a class="reference internal" href="../exercises/exercise-paint.html">
+     Paint System
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../other-topics/xx-quiz.html">
-     Quiz example
+    <a class="reference internal" href="../exercises/exercise-dam.html">
+     Dam and River
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../exercises/exercise-sample-exam.html">
+     Sample Exam Questions
     </a>
    </li>
   </ul>
@@ -509,10 +494,10 @@ title="Print to PDF"
 <p>This Section gives a brief introduction to some of the mathematical foundations of component reliability theory, which is focused on determining the probability of a ‘bad thing’ happening (see <a class="reference internal" href="../intro.html#intro"><span class="std std-ref">Introduction</span></a>). The topic has also been covered in the <a class="reference internal" href="../prob-design/overview.html#prob-design"><span class="std std-ref">Probabilistic Design</span></a> Section (especially the <a class="reference internal" href="../prob-design/02-two-random-variables.html#prob-design-2-rv"><span class="std std-ref">Two Random Variables</span></a> example), and is a key part of Step 3 (quantitative analysis) in the <a class="reference internal" href="../risk-analysis/steps.html#risk-steps"><span class="std std-ref">Steps in a Risk Analysis</span></a>.</p>
 <section id="definition">
 <h2>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">#</a></h2>
-<p>In short, a component reliability analysis evaluates the reliability of a particular engineered object, where reliability is the complement of failure probability, <span class="math notranslate nohighlight">\(p_f\)</span>. The analysis is performed by defining a function of random variables, <span class="math notranslate nohighlight">\(g_X(X)\)</span>, and mathematically specifying a region of interest, <span class="math notranslate nohighlight">\(\Omega\)</span>,often called the failure region. The function of random variables implies a multivariate probability density function, <span class="math notranslate nohighlight">\(f_X(X)\)</span>, where integrating over the failure region <span class="math notranslate nohighlight">\(\Omega\)</span> gives <span class="math notranslate nohighlight">\(p_f\)</span>.</p>
+<p>In short, a component reliability analysis evaluates the reliability of a particular engineered object, where reliability is the complement of failure probability, <span class="math notranslate nohighlight">\(p_f\)</span>. The analysis is performed by defining a function of random variables, <span class="math notranslate nohighlight">\(g_X(x)\)</span>, and mathematically specifying a region of interest, <span class="math notranslate nohighlight">\(\Omega\)</span>, often called the failure region. The function of random variables implies a multivariate probability density function, <span class="math notranslate nohighlight">\(f_X(x)\)</span>, where integrating over the failure region <span class="math notranslate nohighlight">\(\Omega\)</span> gives <span class="math notranslate nohighlight">\(p_f\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[
-p_f=\int_\Omega f_X(X)\:\mathrm{d}X
+p_f=\int_\Omega f_X(x)\:\mathrm{d}x
 \]</div>
 </section>
 <section id="a-simple-case">

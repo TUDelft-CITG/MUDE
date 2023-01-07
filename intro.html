@@ -218,14 +218,14 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="reliability-system/exercise-simple-city.html">
-     Exercise: Simple City
+     Example System
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="risk-assessment/overview.html">
-   Risk Assessment
+  <a class="reference internal" href="risk-evaluation/overview.html">
+   Risk Evaluation
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
@@ -234,55 +234,35 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="risk-assessment/decision.html">
+    <a class="reference internal" href="risk-evaluation/decision.html">
      Decision Analysis
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="risk-assessment/cost-benefit.html">
-     Cost benefit analysis
+    <a class="reference internal" href="risk-evaluation/cost-benefit.html">
+     Cost Benefit Analysis
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="risk-assessment/econ-optimization.html">
+    <a class="reference internal" href="risk-evaluation/econ-optimization.html">
      Economic Optimization
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="risk-assessment/example-dike-height.html">
-     Example: Optimal Dike Height
+    <a class="reference internal" href="risk-evaluation/example-dike-height.html">
+     Optimization Example
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="risk-assessment/safety-standards.html">
-     Safety standards
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="risk-assessment/example-types-of-risk.html">
-     Example: 3 Risk Metrics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="risk-assessment/exercise-fn-curve.html">
-     Exercise: FN-curve
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="risk-assessment/exercise-paint.html">
-     Exercise: Paint System
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="risk-assessment/exercise-dam.html">
-     Exercise: Dam and River
+    <a class="reference internal" href="risk-evaluation/safety-standards.html">
+     Safety Standards
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="other-topics/overview.html">
-   Other topics
+  <a class="reference internal" href="exercises/overview.html">
+   Exercises
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
@@ -291,18 +271,23 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="other-topics/exercise-sample-exam.html">
-     Sample Exam Questions
+    <a class="reference internal" href="exercises/exercise-fn-curve.html">
+     FN Curve
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="other-topics/exercise-sample-exam-solution.html">
-     Sample Exam Questions
+    <a class="reference internal" href="exercises/exercise-paint.html">
+     Paint System
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="other-topics/xx-quiz.html">
-     Quiz example
+    <a class="reference internal" href="exercises/exercise-dam.html">
+     Dam and River
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="exercises/exercise-sample-exam.html">
+     Sample Exam Questions
     </a>
    </li>
   </ul>
@@ -603,7 +588,7 @@ title="Print to PDF"
 <li><p><strong>Probabilistic Design</strong> describes how probability is used in the design process and illustrates key concepts through simple examples and ‘patterns’ (analytic expressions and visual representations).</p></li>
 <li><p><strong>Risk Analysis</strong> as a process is formally defined and quantitative risk measures are introduced.</p></li>
 <li><p><strong>Component Reliability</strong> and <strong>System Reliability</strong> briefly introduce approaches for evaluating reliability, or <span class="math notranslate nohighlight">\(\text{P}_\text{bad thing}\)</span>, in order to carry out probabilistic assessment and design quantitatively. This is the <em>quantitative analysis</em> step of a risk analysis.</p></li>
-<li><p><strong>Risk Assessment</strong> provides simple quantitative tools and a framework for establishing risk-based safety standards and economic risk criteria. This is a key step in the risk analysis process.</p></li>
+<li><p><strong>Risk evaluation</strong> provides simple quantitative tools and a framework for establishing risk-based safety standards and economic risk criteria. This is a key step in the risk analysis process.</p></li>
 </ul>
 <p>Additional chapters are provided to put these concepts into context, explain industry-specific characteristics or indicate possibilities of additional study for the student.</p>
 <section id="mude-module-information">
@@ -611,18 +596,18 @@ title="Print to PDF"
 <p>This book is prepared for CEGM1000: Modeling, Uncertainty and Data for Engineers (MUDE), a first year MSc module in the Civil Engineering and Geosciences faculty at TU Delft. During the 2022-23 academic year it is only used for two weeks (2.7-2.8) for topics of risk and reliability.</p>
 <div class="tip dropdown admonition">
 <p class="admonition-title">MUDE exam information</p>
-<p>Key concepts from this book that will be assessed on the MUDE exam are:</p>
+<p>Exam tips like this one are included throughout this book, mostly on the front page of each chapter (but there are exceptions). They describe the key concepts from this book that will be assessed on the Q2 MUDE exam, specifically:</p>
 <ul class="simple">
 <li><p>Definitions of risk and steps of a risk analysis</p></li>
 <li><p>Simple system and component reliability (quantitative risk analysis methods)</p></li>
 <li><p>Use of probability to design and assess engineering systems and components</p></li>
 <li><p>Influence of dependence on simple systems and components</p></li>
-<li><p>Decision analysis, <a class="reference internal" href="risk-assessment/cost-benefit.html#cost-benefit"><span class="std std-ref">cost-benefit analysis</span></a> and economic optimization (risk assessment methods)</p></li>
-<li><p>Assessment and quantification of risks for a system with three different risk metrics: individual, societal and economic</p></li>
+<li><p>Decision analysis, cost-benefit analysis and economic optimization (risk evaluation methods)</p></li>
+<li><p>Evaluation and quantification of risks for a system with three different risk metrics: individual, societal and economic</p></li>
 <li><p>Application and derivation of standards for human safety (individual and societal risk)</p></li>
 <li><p>Application and derivation of standards based on economic risk</p></li>
 </ul>
-<p>Although the list is long, the methods are introduced in a simple form and are applied to simplified systems of engineering problems within Civil and Environmental Engineering and Geosciences.</p>
+<p>Although the list is long, the methods are introduced in a simple form and are always applied to simplified systems of engineering problems within Civil and Environmental Engineering and Geosciences.</p>
 </div>
 <div class="tip dropdown admonition">
 <p class="admonition-title">MUDE not-on-the-exam information</p>
@@ -632,8 +617,11 @@ title="Print to PDF"
 <li><p>Set up a decision tree yourself (note that you may be given a tree with values filled in and asked to interpret it)</p></li>
 <li><p>Schematize system reliability problems (we will give you one)</p></li>
 <li><p>Define a limit-state function yourself and calculate failure probability</p></li>
-<li></li>
+<li><p>Evaluate risk curves with more than three scenarios</p></li>
+<li><p>Perform complicated cost benefit analyses</p></li>
+<li><p>By now this list should give you a good enough idea of what to (not) expect…</p></li>
 </ul>
+<p>Exam questions are also designed such that specialized knowledge is not needed to solve them; however, you should be able to recognize loads and resistances and series and parallel systems for any simple civil engineering and geoscience application provided on the exam.</p>
 </div>
 </section>
 <section id="updates-and-citation">
@@ -651,7 +639,7 @@ title="Print to PDF"
 </section>
 <section id="acknowledgements">
 <h3>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">#</a></h3>
-<p>This book is primarily written by Robert Lanzafame, but uses adapted excerpts from the lecture notes of a previous course, CIE4130 Probabilistic Design, which was last taught at Delft University of Technology in 2022. In particular, the introduction, risk analysis and risk assessment chapters reuse modified material from Professor Bas Jonkman. This book, and the included exercises, would not be possible without the efforts of CIE4130 teachers over the last decades (in alphabetical order): Bas Jonkman, Han Vrijling, Oswaldo Morales Napoles, Pieter van Gelder, Raphaël Steenbergen, Robert Lanzafame, Ton Vrouwenvelder.</p>
+<p>This book is primarily written by Robert Lanzafame, but uses adapted excerpts from the lecture notes of a previous course, CIE4130 Probabilistic Design, which was last taught at Delft University of Technology in 2022. In particular, the introduction, risk analysis and risk evaluation chapters reuse modified material from Professor Bas Jonkman. This book, and the included exercises, would not be possible without the efforts of CIE4130 teachers over the last decades (in alphabetical order): Bas Jonkman, Han Vrijling, Oswaldo Morales Napoles, Pieter van Gelder, Raphaël Steenbergen, Robert Lanzafame, Ton Vrouwenvelder.</p>
 <p>Special thanks goes to Caspar Jungbacker, who set up the JupyterBook and GitHub repository to make this book and website possible, and Benjamin Ramousse, who brought the bivariate “patterns” to life with Python.</p>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">

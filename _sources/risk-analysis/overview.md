@@ -1,19 +1,13 @@
 # Risk Analysis
 
-This book splits risk into two parts: risk *analysis* and risk *assessment.* This chapter considers the analysis of risks from a broad perspective, beginning with definitions and key steps of a risk analysis, illustrated quantitatively through an FN curve. The next two chapters explore quantitative analyses (component and system reliability) before returning to risk assessment concepts of decision theory, cost benefit analysis and safety standards, where the principal focus is on making decisions and answering the question 'how safe is safe enough?'
+This book splits risk into two parts: risk *analysis* and risk *evaluation.* This chapter considers the analysis of risks from a broad perspective, beginning with definitions and key steps of a risk analysis, illustrated quantitatively through an FN curve. The next two chapters explore quantitative analyses (component and system reliability) before returning to risk evaluation concepts of decision theory, cost benefit analysis and safety standards, where the principal focus is on making decisions and answering the question 'how safe is safe enough?'
 
 ```{admonition} MUDE exam information
 :class: tip, dropdown
 You should understand the definition of risk and recognize the steps in a risk analysis (no need to memorize the details of every step). It is very important that you are able to construct a risk curve, given a set of scenarios (typically not more than 3 on the exam).
 ```
 
-% Point out how a single risk value can used as a design criteria, which links to probability. Can also consider illustrating risk types.
-
-% On Definitions page, still need to add integrals and (mathematical) statement of individual risk as combination of conditional probabilities.
-
-% Consider adding a page to explain units and perhaps an overview of risk metrics, especially those used in flood risk exmaple (can add some examples to illustrate the steps?).
-
-% The relationship between safety standards and engineering design is indicated in section 3.6.
+% The relationship between safety standards and engineering design is indicated in section 3.6...may be useful to add
 
 % It is noted that a (probabilistic) risk analysis is different  from a (deterministic) scenario analysis. A risk analysis is based on quantitative analysis of all (known) undesired events and their probabilities and consequences. A scenario analysis considers one (or a limited number) of design scenarios, often without considering its failure probability. Both approaches are complementary, as a scenario analysis considers one of the scenarios from the risk analysis. 
 

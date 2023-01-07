@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Exercise: Simple City &#8212; Modelling, Uncertainty and Data for Engineers (MUDE)</title>
+    <title>Example System &#8212; Modelling, Uncertainty and Data for Engineers (MUDE)</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Risk Assessment" href="../risk-assessment/overview.html" />
+    <link rel="next" title="Risk Evaluation" href="../risk-evaluation/overview.html" />
     <link rel="prev" title="Parallel Systems" href="system-parallel.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -219,14 +219,14 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Exercise: Simple City
+     Example System
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../risk-assessment/overview.html">
-   Risk Assessment
+  <a class="reference internal" href="../risk-evaluation/overview.html">
+   Risk Evaluation
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
@@ -235,55 +235,35 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/decision.html">
+    <a class="reference internal" href="../risk-evaluation/decision.html">
      Decision Analysis
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/cost-benefit.html">
-     Cost benefit analysis
+    <a class="reference internal" href="../risk-evaluation/cost-benefit.html">
+     Cost Benefit Analysis
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/econ-optimization.html">
+    <a class="reference internal" href="../risk-evaluation/econ-optimization.html">
      Economic Optimization
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/example-dike-height.html">
-     Example: Optimal Dike Height
+    <a class="reference internal" href="../risk-evaluation/example-dike-height.html">
+     Optimization Example
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/safety-standards.html">
-     Safety standards
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/example-types-of-risk.html">
-     Example: 3 Risk Metrics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/exercise-fn-curve.html">
-     Exercise: FN-curve
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/exercise-paint.html">
-     Exercise: Paint System
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/exercise-dam.html">
-     Exercise: Dam and River
+    <a class="reference internal" href="../risk-evaluation/safety-standards.html">
+     Safety Standards
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../other-topics/overview.html">
-   Other topics
+  <a class="reference internal" href="../exercises/overview.html">
+   Exercises
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
@@ -292,18 +272,23 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../other-topics/exercise-sample-exam.html">
-     Sample Exam Questions
+    <a class="reference internal" href="../exercises/exercise-fn-curve.html">
+     FN Curve
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../other-topics/exercise-sample-exam-solution.html">
-     Sample Exam Questions
+    <a class="reference internal" href="../exercises/exercise-paint.html">
+     Paint System
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../other-topics/xx-quiz.html">
-     Quiz example
+    <a class="reference internal" href="../exercises/exercise-dam.html">
+     Dam and River
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../exercises/exercise-sample-exam.html">
+     Sample Exam Questions
     </a>
    </li>
   </ul>
@@ -435,7 +420,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Exercise: Simple City</h1>
+                <h1>Example System</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -447,16 +432,15 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="exercise-simple-city">
-<h1>Exercise: Simple City<a class="headerlink" href="#exercise-simple-city" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="example-system">
+<h1>Example System<a class="headerlink" href="#example-system" title="Permalink to this headline">#</a></h1>
 <p>A pre-fabricated bridge design is being considered for river crossings in a remote region of the world, as shown in Figure 1. Cities 1, 2 and 3 are labelled C1, C2 and C3, with bridges labelled B1-B4.</p>
-<figure class="align-default" id="id1">
+<figure class="align-default" id="exercise-simple-city">
 <a class="reference internal image-reference" href="../_images/simple-city.png"><img alt="../_images/simple-city.png" src="../_images/simple-city.png" style="width: 600px;" /></a>
 </figure>
-<ol class="simple">
-<li><p>If the probability of failure for an individual bridge is 0.1 per year, compute the probability that you cannot drive from City 1 to City 2</p></li>
-</ol>
-<p><em>Answer</em></p>
+<p><strong>Question 1:</strong> If the probability of failure for an individual bridge is 0.1 per year, compute the probability that you cannot drive from City 1 to City 2</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Answer</p>
 <div class="math notranslate nohighlight">
 \[
     P_{f_{C1-C2}} = P_{f_{B1}} * P_{f_{B4-B3-B2}} = P_{f_{B1}} * (1 - (1 - P_{f_{B4}})(1 - P_{f_{B3}}*P_{f_{B2}}))
@@ -465,10 +449,10 @@ title="Print to PDF"
 \[
     P_{f_{C1 - C2}} = 0.1 * (1 - (1 - 0.1)(1 - 0.1 * 0.1)) = 0.0109
 \]</div>
-<ol class="simple">
-<li><p>If the probability of failure for an individual bridge is 0.1 per year, compute the probability that you cannot drive from City 2 to City 3.</p></li>
-</ol>
-<p><em>Answer</em></p>
+</div>
+<p><strong>Question 2:</strong> If the probability of failure for an individual bridge is 0.1 per year, compute the probability that you cannot drive from City 2 to City 3.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Answer</p>
 <div class="math notranslate nohighlight">
 \[
     P_{f_{C2 - C3}} = P_{f_{B3}} * P_{f_{B2}} * P_{f_{B1 - B4}} = P_{f_{B3}} * P_{f_{B2}} * (1 - (1 - P_{f_{B3}})(1 - P_{f_{B4}}))
@@ -476,10 +460,10 @@ title="Print to PDF"
 <div class="math notranslate nohighlight">
 \[
     P_{f_{C2 - C3}} = 0.1 * 0.1 * (1 - (1 - 0.1)(1 - 0.1)) = 0.0019 \]</div>
-<ol class="simple">
-<li><p>If the probability of failure for an individual bridge is 0.1 per year, compute the probability that you cannot drive from City 1 to City 3</p></li>
-</ol>
-<p><em>Answer</em></p>
+</div>
+<p><strong>Question 3:</strong> If the probability of failure for an individual bridge is 0.1 per year, compute the probability that you cannot drive from City 1 to City 3</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Answer</p>
 <div class="math notranslate nohighlight">
 \[
     P_{f_{C1 - C3}} = P_{f_{B4}} * P_{f_{B1-B3-B2}} = P_{f_{B4}} * (1 - (1 - P_{f_{B1}})(1 - P_{f_{B3}}*P_{f_{B2}}))
@@ -488,10 +472,10 @@ title="Print to PDF"
 \[
     P_{f_{C1 - C3}} = 0.1 * (1 - (1 - 0.1)(1 - 0.1 * 0*1)) = 0.0109
 \]</div>
-<ol class="simple">
-<li><p>Suppose there is a critical facility (e.g., a hospital) in City 3. How many bridges would you need to install between City 2 and 3 to ensure that the probability of someone not reaching City 3 from City 2 is less than <span class="math notranslate nohighlight">\(10^{-4}\)</span>?</p></li>
-</ol>
-<p><em>Answer</em></p>
+</div>
+<p><strong>Question 4:</strong> Suppose there is a critical facility (e.g., a hospital) in City 3. How many bridges would you need to install between City 2 and 3 to ensure that the probability of someone not reaching City 3 from City 2 is less than <span class="math notranslate nohighlight">\(10^{-4}\)</span>?</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Answer</p>
 <div class="math notranslate nohighlight">
 \[
     P_{f_{C2 - C3}} = P_{f_B}^n * (1 - (1 - P_{f_{B1}})(1 - P4))
@@ -505,25 +489,25 @@ title="Print to PDF"
     n = 3.3
 \]</div>
 <p>It is necessary to install 2 more bridges between City 2 and 3.</p>
-<ol class="simple">
-<li><p>If you had 1 extra bridge to place, which bridge (i.e., B1, 2, 3 or 4) would you place it next to in order to have the biggest decrease of the probability of not reaching City 3 from City 1?</p></li>
-</ol>
-<p><em>Answer</em></p>
+</div>
+<p><strong>Question 5:</strong> If you had 1 extra bridge to place, which bridge (i.e., B1, 2, 3 or 4) would you place it next to in order to have the biggest decrease of the probability of not reaching City 3 from City 1?</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Answer</p>
 <p>I would locate the extra bridge next to Bridge 4. In this case, adding an extra element in the parallel system, making it more redundant.</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(P_f\)</span> next to B1 = 0.00199</p></li>
 <li><p><span class="math notranslate nohighlight">\(P_f\)</span> next to B2 or B3 = 0.0101</p></li>
 <li><p><span class="math notranslate nohighlight">\(P_f\)</span> next to B4 = 0.00109</p></li>
 </ul>
-<ol class="simple">
-<li><p>If you only had 3 available bridges, which of the 4 bridges in the figure would you remove first, to cause the smallest reduction in failure probability?</p></li>
-</ol>
-<p><em>Answer</em></p>
+</div>
+<p><strong>Question 6:</strong> If you only had 3 available bridges, which of the 4 bridges in the figure would you remove first, to cause the smallest reduction in failure probability?</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Answer</p>
 <p>I would remove Bridge 2 or 3. If bridge 1 or 4 is removed, a whole path is removed from the system, while by removing only Bridge 2 or 3, there is still an available bridge to cross that river.</p>
-<ol class="simple">
-<li><p>What should the probability of each bridge be in order to make the probability of crossing from C1 to C3 less than 0.01?</p></li>
-</ol>
-<p><em>Answer</em></p>
+</div>
+<p><strong>Question 7:</strong> What should the probability of each bridge be in order to make the probability of crossing from C1 to C3 less than 0.01?</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Answer</p>
 <div class="math notranslate nohighlight">
 \[
     P_{f_{C1-C3}} = P_{f_{B4}} * P_{f_{B1-B3-B2}} = P_{f_{B4}} * (1 - (1 - P_{f_{B1}})(1 - P_{f_{B3}} * P_{f_B2}))
@@ -537,16 +521,17 @@ title="Print to PDF"
     X = 0.0960
 \]</div>
 <p>Since the bridges have identical designs and have all been manufactured by the same contractor, positive dependence is expected between performance of bridges B1-B4.</p>
-<ol class="simple">
-<li><p>State whether or not dependence would increase or decrease the probability calculated in question 3, and explain why with 1 or 2 sentences.</p></li>
-</ol>
-<p><em>Answer</em></p>
+</div>
+<p><strong>Question 8:</strong> State whether or not dependence would increase or decrease the probability calculated in question 3, and explain why with 1 or 2 sentences.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Answer</p>
 <p>Increase.</p>
 <p>The probability of failure would increase because the system mainly works like a parallel system. In this case, when there is full dependence between the elements, the probability of failure equals the probability of failure of the strongest element. For instance, <span class="math notranslate nohighlight">\(P_{f_{\text{bridges 2, 3}}}=0.01\)</span> for independent case and 0.1 for full dependence case.</p>
 <p>Assume each prefabricated bridge is made up of a single road deck and 5 separate frames that are joined together. Each bridge will fail if either the road deck fails, or 1 of the frames fails.</p>
-<ol class="simple">
-<li><p>If the probability of a frame failure is 0.01, what is the required failure probability of the road deck to make sure the bridge failure probability is no more than 0.1?</p></li>
-</ol>
+</div>
+<p><strong>Question 9:</strong> If the probability of a frame failure is 0.01, what is the required failure probability of the road deck to make sure the bridge failure probability is no more than 0.1?</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Answer</p>
 <div class="math notranslate nohighlight">
 \[
     P_f = 1 - (1 - P_{f_{text{deck}}})(1 - P_{f_{\text{one of the frames}}})
@@ -563,6 +548,7 @@ title="Print to PDF"
 \[
     P_{f_{\text{deck}}} = 0.0536
 \]</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -599,10 +585,10 @@ title="Print to PDF"
             <p class="prev-next-title">Parallel Systems</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../risk-assessment/overview.html" title="next page">
+    <a class='right-next' id="next-link" href="../risk-evaluation/overview.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Risk Assessment</p>
+        <p class="prev-next-title">Risk Evaluation</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

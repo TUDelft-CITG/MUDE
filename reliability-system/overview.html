@@ -217,14 +217,14 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="exercise-simple-city.html">
-     Exercise: Simple City
+     Example System
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../risk-assessment/overview.html">
-   Risk Assessment
+  <a class="reference internal" href="../risk-evaluation/overview.html">
+   Risk Evaluation
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
@@ -233,55 +233,35 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/decision.html">
+    <a class="reference internal" href="../risk-evaluation/decision.html">
      Decision Analysis
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/cost-benefit.html">
-     Cost benefit analysis
+    <a class="reference internal" href="../risk-evaluation/cost-benefit.html">
+     Cost Benefit Analysis
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/econ-optimization.html">
+    <a class="reference internal" href="../risk-evaluation/econ-optimization.html">
      Economic Optimization
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/example-dike-height.html">
-     Example: Optimal Dike Height
+    <a class="reference internal" href="../risk-evaluation/example-dike-height.html">
+     Optimization Example
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/safety-standards.html">
-     Safety standards
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/example-types-of-risk.html">
-     Example: 3 Risk Metrics
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/exercise-fn-curve.html">
-     Exercise: FN-curve
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/exercise-paint.html">
-     Exercise: Paint System
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../risk-assessment/exercise-dam.html">
-     Exercise: Dam and River
+    <a class="reference internal" href="../risk-evaluation/safety-standards.html">
+     Safety Standards
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../other-topics/overview.html">
-   Other topics
+  <a class="reference internal" href="../exercises/overview.html">
+   Exercises
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
@@ -290,18 +270,23 @@ const thebe_selector_output = ".output, .cell_output"
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="../other-topics/exercise-sample-exam.html">
-     Sample Exam Questions
+    <a class="reference internal" href="../exercises/exercise-fn-curve.html">
+     FN Curve
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../other-topics/exercise-sample-exam-solution.html">
-     Sample Exam Questions
+    <a class="reference internal" href="../exercises/exercise-paint.html">
+     Paint System
     </a>
    </li>
    <li class="toctree-l2">
-    <a class="reference internal" href="../other-topics/xx-quiz.html">
-     Quiz example
+    <a class="reference internal" href="../exercises/exercise-dam.html">
+     Dam and River
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../exercises/exercise-sample-exam.html">
+     Sample Exam Questions
     </a>
    </li>
   </ul>
@@ -537,7 +522,7 @@ title="Print to PDF"
 <figure class="align-default" id="sys-series-parallel-ex">
 <a class="reference internal image-reference" href="../_images/system_series_parallel_ex.png"><img alt="../_images/system_series_parallel_ex.png" src="../_images/system_series_parallel_ex.png" style="height: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Example of series (top row) and parallel (bottom row) systems, illustrated with a chain and dike ring.</span><a class="headerlink" href="#sys-series-parallel-ex" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 14 </span><span class="caption-text">Example of series (top row) and parallel (bottom row) systems, illustrated with a chain and dike ring. Each component in the parallel case is itself a series system: links in the chain and dike segments in the dike ring.</span><a class="headerlink" href="#sys-series-parallel-ex" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Systems are often schematized using a system diagram, as in <a class="reference internal" href="#sys-series-parallel"><span class="std std-numref">Fig. 13</span></a>. This also illustrates the function of a system as an input-output diagram, where one can considers the ability to travel from left to right on the figure. It is analagous to many scenarios involving flow: electricity (<a class="reference internal" href="#sys-lightbulbs"><span class="std std-numref">Fig. 15</span></a>), water in pipes or transportation routes.</p>
@@ -557,12 +542,11 @@ title="Print to PDF"
 <p>This chapter contains a brief introduction to the computation of failure probability for series and parallel systems, and illustrates the role of dependence. The final section illustrates these concepts with a simple exercise.</p>
 <div class="tip dropdown admonition">
 <p class="admonition-title">MUDE Exam Information</p>
-<p>For the exam, you should be able to recognize and solve simple series and parallel systems, as well as describe the influence dependence between components may have on the calculated probability of interest. You will not need to draw a system diagram for anything more complex than those illustrated on this page.</p>
+<p>For the exam, you should be able to recognize and solve simple series and parallel systems, as well as describe the influence that dependence between components may have on the calculated probability of interest. You will not need to draw or evaluate a system more complex than those illustrated on this page.</p>
 </div>
 <section id="additional-information">
 <h3>Additional Information<a class="headerlink" href="#additional-information" title="Permalink to this headline">#</a></h3>
 <p>The word ‘system’ in the title of this chapter refers to a reliability analyses made up of more than one distinct components. It may or may not be the same as the system for which the risk analysis is being done. For example, in the flood risk case we look at a dike ring, which is a series system of dike segments. Each dike segment can fail in a variety of ways (e.g., sliding or eroding), where if <em>any</em> of these types of failure occurs, the dike fails; a series system. Thus, the dike ring is a series system, where each component also a series system.</p>
-<p>Sometimes the distinction is made because components are very different. Sometimes it is a matter of convenience, as two components may share a number of random variables through their respective limit-state functions that influence failure.</p>
 <p>System reliability analysis can look very similar to component reliability problems, especially when various combinations of discrete and continuous random variables are incorporated. In reality, all of these problems are generalized by the concept of a multivariate probability distribution. The concepts are separated following conventions in engineering practice, as well as for the convenience of illustrating analytic and numerical solutions.</p>
 </section>
 </section>
