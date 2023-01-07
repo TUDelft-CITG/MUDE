@@ -139,11 +139,13 @@ $$
 ```{admonition} Answer
 :class: tip, dropdown
 
-17 per year
+For the investments to be cost effective:
 
 $$
 \frac{\Delta E(D)}{I}>1
 $$
+
+Which results in a maximum of 17 inspections per year.
 ```
 
 **Question 11:**	What is the optimum number of sonic inspections to perform each year? Plot a graph, with the Risk, Investment and Total cost curves and clearly indicate the optimum.
@@ -151,7 +153,7 @@ $$
 ````{admonition} Answer
 :class: tip, dropdown
 
-3 per year
+As shown in the figure, the optimum is 3 per year.
 
 ```{figure} ../figures/exercise-optimization.png
 ---

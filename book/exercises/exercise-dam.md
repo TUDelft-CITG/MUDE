@@ -26,12 +26,13 @@ Effect of correlation coefficient joint failure, $\mathrm{P}(A \cap B)$ (assume 
 
 **Question 1:** Estimate the probability of flooding of the area protected by the two dike sections.
 
-*Answer:*
+```{admonition} Answer
+:class: tip, dropdown
 
 Flooding of the protected area occurs when at least one of the two dike section fails. This is a series system. Thus, probability of flooding of the protected area can be determined by:
 
 $$
-    P(\textrm{flooding}) &= P(\textrm{dike sections 1 fails \cup dike section 2 fails}) \\
+    P(\textrm{flooding}) &= P(\textrm{dike sections 1 fails}\:\cup \textrm{dike section 2 fails})\\
     P(F_1 \cup F_2) &= P(F_1) + P(F_2) - P(F_1 \cap F_2)
 $$
 
@@ -40,6 +41,7 @@ Based on the figure and the correlation $\rho_{1,2} = 0.9$, the joint probabilit
 $$
     P(\textrm{flooding}) = 0.01 + 0.01 - 0.003 = 0.017 \: \mathrm{/year}
 $$
+```
 
 ```{admonition} MUDE Exam Information
 :class: tip, dropdown
@@ -48,22 +50,47 @@ This question illustrates how we will give you everything you need if you are as
 
 ## Dam repair: probabilistic planning
 
-The dam has to be repaired. The responsible minister wants to make sure the whole project is finished within 9 months, and only accepts a probability of 10% that actual construction works exceed this duration. The dam reinforcement consists of two activities. The second activity can only start when the first one has been finished. The durations of both activities are uncertain and normally distributed. The first activity has a mean duration of $\mu_1=4$ months and a standard deviation of $\sigma_1 = 1$ month; for the second activity $\sigma_2 = 2$ months.
+The dam has to be repaired. The responsible minister wants to make sure the whole project is finished within 12 months, and only accepts a probability of 10% that actual construction works exceed this duration. The dam reinforcement consists of two activities. The second activity can only start when the first one has been finished. The durations of both activities are uncertain and normally distributed. The first activity has a mean duration of $\mu_1=4$ months and a standard deviation of $\sigma_1 = 1$ month; for the second activity $\sigma_2 = 2$ months.
 
 **Question 2:** Compute the mean duration of the activity 2, so that the project duration would fall within the criterion given by the minister.
 
-*Answer:*
+```{admonition} Answer
+:class: tip, dropdown
 
-Let $T1$ and $T2$ denote the duration of activities 1 and 2; $T$ denotes the total duration; $T1$ and $T2$ are normally distributed:
+Let $T_1$ and $T_2$ denote the duration of activities 1 and 2; $T$ denotes the total duration; $T_1$ and $T_2$ are normally distributed:
 
 $$
-    T1 \sim \mathcal{N}(4,1) \\
-    T2 \sim \mathcal{N}(?,2) 
+    T_1 \sim \mathcal{N}(
+        \mu_1=4,\sigma_1=1) \\
+    T_2 \sim \mathcal{N}(\mu_2=?,\sigma_2=2) 
 $$
 
-$T = T1 + T2$ is also normally distributed. 
+$T = T1 + T2$ is also normally distributed, where
 
-Limit state equation: total duration of constuction will not exceed 12 months, thus:
+$$
+\mu_T &= \mu_1 + \mu_2 \\
+\sigma_T &= \sqrt{\sigma_1^2 + \sigma_2^2} = \sqrt{5} = 2.326
+$$
+
+The probability of project duration greater than 12 months can be found with the complementary standard normal CDF, and should be a maximum of 0.1:
+
+$$
+1-\Phi\left[\frac{12\:\mathrm{months}-\mu_T}{\sigma_T}\right]=0.1
+$$
+
+Applying the inverse CDF allows us to solve for $\mu_1$:
+
+$$
+\frac{12-\mu_T}{\sigma_T} &=\Phi^{-1}[0.9] \\
+\frac{12-(\mu_1 + \mu_2)}{\sigma_T} &=0.3159
+$$
+
+$$
+\mu_1 &= 12 - 1.2816 \cdot \sigma_T - \mu_2 \\
+\mu_1 &= 12 - 1.282(2.326) - 4 = 5.018\:\mathrm{months}
+$$
+
+<!-- Limit state equation: total duration of constuction will not exceed 12 months, thus:
 
 $$
     Z = 12 - (T_1 + T_2)
@@ -78,7 +105,8 @@ $$
     \sigma_z = \sqrt{\sigma_1^2 + \sigma_2^2} = \sqrt{5} = 2.326 \\
     8 - \mu_2 = \beta_z \cdot \sigma_z = 2.86 \\
     \mu_2 = 5.13 \: \mathrm{months}
-$$
+$$ -->
+```
 
 ## Acceptable risk
 
@@ -91,17 +119,20 @@ We know that mortality in case of dam failure is $F_{d|f} = 0.1$ and that the po
 
 **Question 3:** Plot the FN limit line and indicate the acceptable probability of failure according to both criteria (individual risk, societal risk).
 
-*Answer:*
+````{admonition} Answer
+:class: tip, dropdown
 
 ```{figure} ../figures/exercise-dam-fn-limit-line.png
 ---
 width: 500px
 ---
 ```
+````
 
 **Question 4:** Provide an advice on the acceptable probability of failure for the dam. Give the proposed numerical value and a short motivation.
 
-*Answer:*
+```{admonition} Answer
+:class: tip, dropdown
 
 Based on individual risk criterion, we have:
 
@@ -126,8 +157,9 @@ $$
 Based on given information above, expected number of casualties per dam failure event is $n = F_{d|f}\cdot 1000 = 100$.
 
 $$
-    P_f \leq \frac{10^{-2}}{100^2} \\
-    P_f = 10^{-6} \: \mathrm{/year}
+    P_f &\leq \frac{10^{-2}}{100^2} \\
+    P_f &= 10^{-6} \: \mathrm{/year}
 $$
  
 The most stringent of the two criteria applies, so the proposed safety standard would be $10^{-6}$ per year for the given inputs.
+```

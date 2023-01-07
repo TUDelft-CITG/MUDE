@@ -29,6 +29,8 @@ Based on the general concepts described above, it has been proposed to evaluate 
 - limit the **societal risk** to limit the risks of large scale accidents with many fatalities;
 - **Economic optimization** to balance investments in risk reduction from an economic point of view.
 
+### Societal and Economic Risk
+
 Two of these criteria have already been discussed elsewhere in this book. **Societal risk** refers to the probability of an accident with multiple fatalities and is often graphically represented by an FN-curve ({ref}`risk_curve` Section). **Economic optimization** has already been discussed in the {ref}`econ_optimization` Section.
 
 ### Individual Risk

@@ -56,7 +56,7 @@ where:
 - $P_{f,new}$ the failure probability after risk reduction investment
 
 ```{admonition} Example: Drainage of a construction site - costs and benefits
-The example from the previous section could also be formulated as a simplified cost-benefit analysis. The same values for the variables are used. The costs of the drainage are € 150,000. The benefits are equal to the risk reduction, i.e. 
+The example from the previous section could also be formulated as a simplified cost-benefit analysis. The same values for the variables are used. The costs of the drainage are €150,000. The benefits are equal to the risk reduction, i.e. 
 
 $$
   \Delta E(D) = (P_{f,0} - P_{f,d}) = (0.12 - 0.04)\text{€} 5,000,000 = \text{€} 400,000

@@ -35,5 +35,4 @@ parts:
       - file: exercises/exercise-paint.md
       - file: exercises/exercise-dam.md
       - file: exercises/exercise-sample-exam.md
-      - file: exercises/exercise-sample-exam-solution.md
     - file: references.md

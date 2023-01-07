@@ -61,17 +61,18 @@ This book is prepared for CEGM1000: Modeling, Uncertainty and Data for Engineers
 
 ```{admonition} MUDE exam information
 :class: tip, dropdown
-Key concepts from this book that will be assessed on the MUDE exam are:
+
+Exam tips like this one are included throughout this book, mostly on the front page of each chapter (but there are exceptions). They describe the key concepts from this book that will be assessed on the Q2 MUDE exam, specifically:
 - Definitions of risk and steps of a risk analysis
 - Simple system and component reliability (quantitative risk analysis methods)
 - Use of probability to design and assess engineering systems and components
 - Influence of dependence on simple systems and components
-- Decision analysis, [cost-benefit analysis](cost_benefit) and economic optimization (risk evaluation methods)
-- evaluation and quantification of risks for a system with three different risk metrics: individual, societal and economic
+- Decision analysis, cost-benefit analysis and economic optimization (risk evaluation methods)
+- Evaluation and quantification of risks for a system with three different risk metrics: individual, societal and economic
 - Application and derivation of standards for human safety (individual and societal risk)
 - Application and derivation of standards based on economic risk
 
-Although the list is long, the methods are introduced in a simple form and are applied to simplified systems of engineering problems within Civil and Environmental Engineering and Geosciences.
+Although the list is long, the methods are introduced in a simple form and are always applied to simplified systems of engineering problems within Civil and Environmental Engineering and Geosciences.
 ```
 
 ```{admonition} MUDE not-on-the-exam information
@@ -81,7 +82,11 @@ The following concepts or methods are used in this book to illustrate key subjec
 - Set up a decision tree yourself (note that you may be given a tree with values filled in and asked to interpret it)
 - Schematize system reliability problems (we will give you one)
 - Define a limit-state function yourself and calculate failure probability
-- 
+- Evaluate risk curves with more than three scenarios
+- Perform complicated cost benefit analyses
+- By now this list should give you a good enough idea of what to (not) expect...
+
+Exam questions are also designed such that specialized knowledge is not needed to solve them; however, you should be able to recognize loads and resistances and series and parallel systems for any simple civil engineering and geoscience application provided on the exam.
 ```
 
 ### Updates and Citation

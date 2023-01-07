@@ -32,6 +32,11 @@ A probabilistic design is illustrated in the following sections, first with the 
 
 The evaluation and design of a river flood protection system is used to introduce key aspects of risk and reliability, as well as the design process. A distinction is made between using probability to assess engineering components and systems (reliability analysis) and to derive design criteria (risk evaluation), which are introduced formally in later chapters after the general risk analysis framework is discussed.
 
+```{admonition} MUDE exam information
+:class: tip
+In this chapter exam tips are given on the page of each section.
+```
+
 %Table of contents:
 
 %```{tableofcontents}
