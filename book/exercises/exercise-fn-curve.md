@@ -5,15 +5,18 @@ A small town is located in a seismic region threatened by two faults. Fault A ha
 
 **Question 1:**	Compute the expected annual fatalities for the town.
 
-*Answer:*
+```{admonition} Answer
+:class: tip, dropdown
 
 $$
 E(N) = P_1 \cdot N_1 + P_2 \cdot N_2 = 0.1 \cdot 10 + 0.01 \cdot 100 = 2
 $$
+```
 
 **Question 2:**	If the town improved the safety of its buildings, what would be the maximum allowable number of fatalities that would be considered acceptable due to an earthquake on fault A?
 
-*Answer:*
+```{admonition} Answer
+:class: tip, dropdown
 
 Using the limit curve
 
@@ -28,10 +31,12 @@ $$
 $$
 n = \sqrt{10} \approx 3
 $$
+```
 
 **Question 3:**	What is the maximum value for the probability of an earthquake on Fault B that would be considered acceptable by the town?
 
-*Answer:*
+```{admonition} Answer
+:class: tip, dropdown
 
 Using the limit curve
 
@@ -42,10 +47,12 @@ $$
 $$
 1 - F_n(100) = C / 100^2 = 0.0001 = 10^{-4}
 $$
+```
 
-**Question 1:**	Create an FN curve for this situation. Be sure to clearly label the axes and the values of key points on your diagram.
+**Question 4:**	Create an FN curve for this situation, including the limit line. Be sure to clearly label the axes and the values of key points on your diagram.
 
-*Answer:*
+````{admonition} Answer
+:class: tip, dropdown
 
 ```{figure} ../figures/exercise-FN-curve.png
 ---
@@ -54,3 +61,4 @@ name: FN-curve
 ---
 FN-curve for exercise 4
 ```
+````

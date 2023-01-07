@@ -102,7 +102,15 @@ Safety standards can be used to set limits to the individual and societal risk. 
   - 0
 ```
 
-Societal risk can be evaluated by means of an FN limit line. The calculated FN curve of the system should, in principle, not exceed the limit line. An FN-criterion is defined by three variables: (1) its base point (the exceedance probability of 1 fatality, i.e. C), (2) its slope ($\alpha$), and (3) its probability and/or consequence cut-off ($A$ and $B$). ⚠️Figure 3.15 shows the different constraints that could make up an FN limit line. 
+Societal risk can be evaluated by means of an FN limit line. The calculated FN curve of the system should, in principle, not exceed the limit line. An FN-criterion is defined by three variables: (1) its base point (the exceedance probability of 1 fatality, i.e. C), (2) its slope ($\alpha$), and (3) its probability and/or consequence cut-off ($A$ and $B$). {numref}`limit_line` shows the different constraints that could make up an FN limit line. 
+
+```{figure} ../figures/fn_limit_eq.png
+---
+height: 400px
+name: limit_line
+---
+Schematic FN curve illustrating limit line formulation.
+```
 
 The general formulation for such a limit line without horizontal of vertical cut-off equals:
 
@@ -172,7 +180,7 @@ The criterion for societal risk that is used in the Netherlands for evaluating t
 
 ```{figure} ../figures/fn_limit.png
 ---
-width: 300px
+width: 400px
 name: fn_limit
 ---
 FN limit line used for installations in the Netherlands
@@ -268,7 +276,7 @@ $$
   \sigma^2(N) = P_f(1-P_f)N^2
 $$ (bernoulli)
 
-The resulting expected value and standard deviation are shown in Table 3.10 below. Although both systems have the same expected value, the standard deviation for the “small probability – large consequence” event for system 2 is higher. Taking into account the standard deviation in the TAW criterion thus accounts for risk aversion against accidents with large numbers of fatalities.
+The resulting expected value and standard deviation are shown in {numref}`exp_val_std_dev_two_activities` below. Although both systems have the same expected value, the standard deviation for the “small probability – large consequence” event for system 2 is higher. Taking into account the standard deviation in the TAW criterion thus accounts for risk aversion against accidents with large numbers of fatalities.
 
 ```{list-table} Calculation of expected value and standard deviation for two activities.
 :header-rows: 1

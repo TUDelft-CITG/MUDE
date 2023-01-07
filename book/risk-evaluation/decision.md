@@ -68,14 +68,29 @@ Assume the inflation amounts to 2 %. The set of outcomes ω contains three possi
   $\omega_{2}$= return (3 % -2 %) =  1 % per annum
   $\omega_{3}$= return (6 % -2 %) =  4 % per annum
 
-Note that for the bonds the net outcome always yields $\omega_{2}$  =1% (i.e. 3% interest – 2% inflation). The outcomes can be shown in a decision tree (see Figure 3.4) or in a table (see Table 3.3).
-Table 3.3 Outcomes given the decisions (a1,a2) and market conditions ($\theta_{1}$,$\theta_{2}$,$\theta_{3}$). 
+Note that for the bonds the net outcome always yields $\omega_{2}$  =1% (i.e. 3% interest – 2% inflation). The outcomes can be illustrated using a decision tree (see {numref}`decision-tree-example`) or a table (see {numref}`ex_market_outcomes`).
 
-|  ||Market circumstances||
-|---|-------------------|---|---|
-|Actions|$\theta_{1}$|$\theta_{2}$|$\theta_{3}$
-|$a_{1}$: buy shares|-2 %|1 %|4 %|
-|$a_{2}$: buy bonds |1 %|1 %|1 %|
+```{list-table} Outcomes given the decisions ($a_1$, $a_2$) and market conditions ($\theta_{1}$, $\theta_{2}$, $\theta_{3}$). 
+:header-rows: 1
+:name: ex_market_outcomes
+
+* - 
+  - Market circumstances
+  - 
+  - 
+* - Actions
+  - $\theta_{1}$
+  - $\theta_{2}$
+  - $\theta_{3}$
+* - $a_{1}$: buy shares
+  - $-$2 %
+  - 1 %
+  - 4 %
+* - $a_{2}$: buy bonds
+  - 1 %
+  - 1 %
+  - 1 %
+```
 
 ```{figure} ../figures/decision-tree-example.png
 ---
@@ -142,7 +157,7 @@ name: example-river-excavation-2
 Cross-section of excavation near a river. Hashed area indicates the clay layer, which is underlain by sand. The water pressure is given by $h$ and is directly related to the river level (Figure {numref}`example-river-excavation`). 
 ```
 
-The effect of a drainage system in the construction site (see Figure 3.6) on the groundwater levels has been reviewed using groundwater flow calculations. It appears that it reduces the mean value of the maximum water levels to $\mu _{h}$ = 3.52m and the standard deviation remains the same. In this case the failure probability is reduced to 0.04. Such a drainage system costs €150,000.
+The effect of a drainage system in the construction site (see {numref}`example-river-excavation`) on the groundwater levels has been reviewed using groundwater flow calculations. It appears that it reduces the mean value of the maximum water levels to $\mu _{h}$ = 3.52m and the standard deviation remains the same. In this case the failure probability is reduced to 0.04. Such a drainage system costs €150,000.
  
 The flooding of the construction site will result in estimated damages of €5,000,000, and the designer of the construction site is faced with the choice whether drainage facility is a worthwhile investment. To provide insight, the decision problem is illustrated with a decision tree, but first the set of actions, circumstances and outcomes are defined:   
 
