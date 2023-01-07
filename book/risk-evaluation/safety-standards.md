@@ -1,5 +1,5 @@
 (safety_standards)=
-# Safety standards
+# Safety Standards
 
 When answering the question “how safe is safe enough” a merely economic treatment with cost benefit analysis or economic optimization is often not sufficient for activities with risks to people. Therefore, criteria have been developed that focus on risks to human life. This section focuses on safety standards and criteria for evaluating the risk to life. 
 
@@ -28,6 +28,8 @@ Based on the general concepts described above, it has been proposed to evaluate 
 - limit the **invidual risk** to prevent that certain people are exposed to disproportionally large risks;
 - limit the **societal risk** to limit the risks of large scale accidents with many fatalities;
 - **Economic optimization** to balance investments in risk reduction from an economic point of view.
+
+### Societal and Economic Risk
 
 Two of these criteria have already been discussed elsewhere in this book. **Societal risk** refers to the probability of an accident with multiple fatalities and is often graphically represented by an FN-curve ({ref}`risk_curve` Section). **Economic optimization** has already been discussed in the {ref}`econ_optimization` Section.
 
@@ -102,7 +104,15 @@ Safety standards can be used to set limits to the individual and societal risk. 
   - 0
 ```
 
-Societal risk can be evaluated by means of an FN limit line. The calculated FN curve of the system should, in principle, not exceed the limit line. An FN-criterion is defined by three variables: (1) its base point (the exceedance probability of 1 fatality, i.e. C), (2) its slope ($\alpha$), and (3) its probability and/or consequence cut-off ($A$ and $B$). ⚠️Figure 3.15 shows the different constraints that could make up an FN limit line. 
+Societal risk can be evaluated by means of an FN limit line. The calculated FN curve of the system should, in principle, not exceed the limit line. An FN-criterion is defined by three variables: (1) its base point (the exceedance probability of 1 fatality, i.e. C), (2) its slope ($\alpha$), and (3) its probability and/or consequence cut-off ($A$ and $B$). {numref}`limit_line` shows the different constraints that could make up an FN limit line. 
+
+```{figure} ../figures/fn_limit_eq.png
+---
+height: 400px
+name: limit_line
+---
+Schematic FN curve illustrating limit line formulation.
+```
 
 The general formulation for such a limit line without horizontal of vertical cut-off equals:
 
@@ -130,7 +140,7 @@ Example of a risk matrix used by various engineering and military branches of th
 % Note: real source is a PDF [here](https://home.army.mil/lee/application/files/7815/3809/1878/Tables.pdf)
 ```
 ````
-## Case Study: Dutch industrial hazards
+## Case Study: Industrial Hazards
 
 The Dutch major hazards policy deals with the risks to those living in the vicinity of major industrial hazards such as chemical plants and LPG-fuelling stations. The development of the Dutch major hazards policy was strongly incident driven, as were European efforts aimed at the prevention of major industrial accidents. After a number of severe industrial accidents, including the Bhopal accident in 1984 which killed an estimated 3000 people and severely injured over 200.000, a European directive was drafted concerning the prevention of major accidents: the 1982 Seveso Directive. This was later replaced by the Seveso II Directive.
 The cornerstones of the Dutch major hazards policy are a) the use of quantitative risk analysis (QRA); b) comparison of QRA outcomes with limits to individual and societal risks ⚠️(Bottelberghs, 2000). 
@@ -172,13 +182,13 @@ The criterion for societal risk that is used in the Netherlands for evaluating t
 
 ```{figure} ../figures/fn_limit.png
 ---
-width: 300px
+width: 400px
 name: fn_limit
 ---
 FN limit line used for installations in the Netherlands
 ```
 
-## Case Study: Dutch flood protection
+## Case Study: Flood Protection
 
 For systems for which no regulations are available the question 'how safe is safe enough?' can be difficult to resolve. A general model has been developed by the Technical Advice Committee for Water defences (TAW)[^taw] in the process of deriving safety standards for flood protection in the Netherlands, which, in a formal sense, has been an ongoing process since the 1950's. This approach is derived on the basis of accident statistics ⚠️(TAW, 1985; Vrijling et al 1995; 1998), where underlying assumption of the model is that accident statistics are the result of a process of societal optimisation and that they thereby reflect what is apparently considered acceptable by society at large. Such an approach is commonly referred to as a 'revealed preference' approach, and was already introduced in a a general sense in the Chapter on Risk Analysis, Section {ref}`risk_curve_famous` ({numref}`risk-curve-baecher`).
 
@@ -268,7 +278,7 @@ $$
   \sigma^2(N) = P_f(1-P_f)N^2
 $$ (bernoulli)
 
-The resulting expected value and standard deviation are shown in Table 3.10 below. Although both systems have the same expected value, the standard deviation for the “small probability – large consequence” event for system 2 is higher. Taking into account the standard deviation in the TAW criterion thus accounts for risk aversion against accidents with large numbers of fatalities.
+The resulting expected value and standard deviation are shown in {numref}`exp_val_std_dev_two_activities` below. Although both systems have the same expected value, the standard deviation for the “small probability – large consequence” event for system 2 is higher. Taking into account the standard deviation in the TAW criterion thus accounts for risk aversion against accidents with large numbers of fatalities.
 
 ```{list-table} Calculation of expected value and standard deviation for two activities.
 :header-rows: 1
@@ -306,13 +316,9 @@ $$
 in which $N_a$ is the number of independent locations where the activity takes place. This requirement corresponds to the requirement set for the chemical installations if $\beta=0.03$, $N_a=1000$ and $k=3$.
 ````
 
-### Combination of individual and societal risk
+### Combination of Risk Types
 
 According to the approach by TAW the three approaches (individual, societal and economic risk) lead to three acceptable failure probabilities. The most stringent of the three criteria can be chosen to determine the acceptable probability of failure of the system and to make sure that all three conditions are fulfilled. This can best be illustrated with an example (see below). The principles of this approach have been applied to derive the proposed new safety standards for flood defences in the Netherland by the ⚠️Delta Program (2014).
-
-```{warning}
-The following example is also implemented in a notebook on one of the following pages (`example-types-of-risk.ipynb`), which needs to be combined.
-```
 
 ````{admonition} Example: Combination of individual, societal and economic risk for a dike ring area
 
@@ -332,17 +338,27 @@ $$
 
 The limit line for societal risk becomes $1 - F_N(n) \leq 0.11/n^2$. Both the individual and societal risk criteria are plotted in  below. As a third criterion the economic optimization can be added. The optimal or acceptable probability of failure depends on the damage and investment costs. A relationship with the graph below can be established by assuming that the number of fatalities is related to the economic damages. A dike ring with many inhabitants and potential fatalities will generally also represent a large economic value. For the sake of the example we assume that every fatality corresponds to an economic damage of €$5 \cdot 10^7$ (note: this is not equal to the value of a human life). To calculate the economic optimum for the example we assume arbitrary values of $r=0.025$ and  €$5 \cdot 10^6$ $B=0.33$. {numref}`combined_risk_criteria` below shows the combination for the three criteria. 
 
+For a given number of fatalities in a dike ring the acceptable failure probability according to the three criteria can be  derived. The individual risk criterion is independent on the  number of fatalities. The economic criterion shows a linear relation between the failure probability and damage or number of fatalities. The societal criterion is risk averse so shows a decreasing quadratic relationship between acceptable failure probability and consequences.
+
 For a given number of inhabitants and potential fatalities for a dike ring, the acceptable failure probability can be determined. For dike rings with between 1 and 10 fatalities – generally small areas-the individual risk criterion is the most stringent. For dike rings with large numbers of fatalities, the risk averse societal risk criterion becomes dominant. 
 
 Several extensions of this model are possible. One can consider to add the economic value of life loss or consider a different distribution of the nationally acceptable societal risk over dike rings with different sizes. 
 
 
-```{figure} ../figures/combined_risk_criteria.png
+<!-- ````{toggle}
+```{eval-rst}
+.. literalinclude:: ../code/risk_types.py
+   :language: python
+```
+```` -->
+
+```{figure} ../figures/risk_types_py.svg
 ---
-width: 400px
+width: 400
 name: combined_risk_criteria
 ---
-Combination of the individual, societal and economic risk criteria for a hypothetical example.
+Combination of individual, societal and economic risk criteria for a
+hypothetical example.
 ```
 ````
 

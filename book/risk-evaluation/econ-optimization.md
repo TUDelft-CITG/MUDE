@@ -36,7 +36,18 @@ $$
     I = I(P_f)
 $$
 
-⚠️Figure 3.10 shows the costs and risks as a function of the accepted failure probability of a system. The economic optimum is found when the total costs are minimal. For this situation the following is valid:
+{numref}`economic_optimum` shows the costs and risks as a function of the accepted failure probability of a system. The economic optimum is found when the total costs are minimal.
+
+```{figure} ../figures/economic_opt.svg
+---
+height: 400px
+name: economic_optimum
+---
+Economic optimization: costs, risks and total costs as a function of the
+failure probability of the system. 
+```
+
+For this situation the following is valid:
 
 $$
     \frac{d C_{tot}}{d P_f} = 0

@@ -11,7 +11,7 @@ An often-used definition considers risk as an expected value:
 The unit of risk now depends on the units of probability and consequences, where probability of an event is generally expressed as the probability per unit time, for example per year. The consequences of an undesired event often measure a diverse array of damages, such as material, ecological, injuries and fatalities. In many applications engineering consequences are expressed by means of a monetary value, in which case the unit of the risk (or expected value, $E(d)$) then becomes € per year. For a case with one event scenario $i$ with probability $p_{i}$ it yields:
 
  $$
- E(d_i) = p_{i}d_{i} 
+ E(d_i) = p_{i} \cdot d_{i} 
  $$ 
  
 A more general definition of risk has been given by Kaplan and Garrick (1981):  
@@ -19,7 +19,7 @@ A more general definition of risk has been given by Kaplan and Garrick (1981):
 >Risk is a set of scenarios, $s_{i}$, each of which has a probability, $p_{i}$, and a consequence, $d_{i}$.
 
 
-This definition of Kaplan and Garrick allows the use of various so-called risk metrics (or risk measures) to quantify or depict the risk. The expected value of the damage for a set of multiple discrete scenarios $i=1,....,n$ , can be expressed as:
+This definition allows the use of various so-called risk metrics (or risk measures) to quantify or depict risk. The expected value of the damage for a set of multiple discrete scenarios $i=1,....,n$ , can be expressed as:
 
 <!-- $$
 E(d) = \sum_{S_{i=1}}^{n}p_{i}d_{i}
@@ -28,9 +28,9 @@ $$ (eq_risk_definition) -->
 ```{math}
 :label: eq_risk_definition
 
-E(d) = \sum_{S_{i=1}}^{n}p_{i}d_{i}
+E(d) = \sum_{S_{i=1}}^{n}p_{i} \cdot d_{i}
 ```
-For the set of scenarios considered, the expected value quantifies risk precisely, however, it does not give insight in the magnitude of probability and consequences and the contribution of individual scenarios. For example, a single value does not indicate whether the risk is governed by a large number of scenarios with small consequences, or a few scenarios with large consequences and low probabilities. Therefore, an often-used companion risk-based tool is the risk curve, which shows the probability of exceedance and consequence for all scenarios. A well-known example of such a risk curve is the *FN curve*, which displays the probability of exceedance associated with $N$ (human) fatalities, schematized in {numref}`FN-curve-simple`. It is easy to compare the probability of exceeding a relatively low or high 
+For the set of scenarios considered, the expected value quantifies risk precisely; however, it does not give insight in the magnitude of probability and consequences and the contribution of individual scenarios. For example, a single value does not indicate whether the risk is governed by a large number of scenarios with small consequences, or a few scenarios with large consequences and low probabilities. Therefore, an often-used companion risk-based tool is the risk curve, which shows the probability of exceedance and consequence for all scenarios. A well-known example of such a risk curve is the *FN curve*, which displays the probability of exceedance associated with $N$ (human) fatalities, schematized in {numref}`FN-curve-simple`. It is easy to compare the probability of exceeding a relatively low or high nuumber of fatalities.
 
 ```{figure} ../figures/FN-simple.PNG
 ---
@@ -40,7 +40,7 @@ name: FN-curve-simple
 FN curve, showing the probability of exceedance of a certain number of fatalities N on Log-Log scale.
 ```
 
-The FN curve was originally introduced in the 1960's for the assessment of the risks in the nuclear industry (Farmer, 1967; Kendall et al., 1977) and is now used to display and limit risks in a wide variety of industries around the world. It is an extremely useful way to quantitatively compare risk associated with a broad range of scenarios, and to make decisions. A famous example of this is shown in {numref}`risk-curve-baecher`, which compares the risk estimated for a wide variety of engineering infrastructure. This figure is described further in the {ref}`risk_curve_examples` Section, and also illustrates the concept of acceptable risk, which is discussed in the Section on {ref}`safety_standards`. In short, it allows one to begin answering the question 'how safe is safe enough?'
+The FN curve was originally introduced in the 1960's for the assessment of risks in the nuclear industry (Farmer, 1967; Kendall et al., 1977) and is now used to display and limit risks in a wide variety of industries around the world. It is an extremely useful way to quantitatively compare risk associated with a broad range of scenarios, and to make decisions. A famous example of this is shown in {numref}`risk-curve-baecher`, which compares the risk estimated for a wide variety of engineering infrastructure. This figure is described further in the {ref}`risk_curve` Section, and also illustrates the concept of acceptable risk, which is discussed in the Section on {ref}`safety_standards`. In short, it allows one to begin answering the question 'how safe is safe enough?'
 
 ```{figure} ../figures/risk-curve-baecher.PNG
 ---
@@ -55,8 +55,7 @@ Risk curve for various engineering projects, showing probability of exceeding a 
 Engineering disciplines that are focused on decision making where natural hazards play a significant role often define risk as the combination of hazard, exposure and vulnerability, as shown in {numref}`risk-hazard`. 
 * Hazard: A dangerous phenomenon, substance, human activity or condition that may cause loss of life, injury or other health impacts, property damage, loss of livelihoods and services, social and economic disruption, or environmental damage
 * Vulnerability: The characteristics and circumstances of a community, system or asset that make it susceptible to the damaging effects of a hazard
-* People, property, systems, or other elements present in hazard zones that are thereby subject to potential losses
-
+* Exposure: People, property, systems, or other elements present in hazard zones that are thereby subject to potential losses
 
 ```{figure} ../figures/risk-hazard.svg
 ---
@@ -65,27 +64,32 @@ name: risk-hazard
 ---
 Alternative definition of risk as intersection of hazard, exposure and vulnerability.
 ```
-Often these terms are useful for framing qualitative discussions around complex topics where a quantitative analysis may be out of reach, for example, as done in IPCC reports on climate change {cite:p}`cardona2012`. However, they can also be used to simplify the risk analysis by subdividing it into parts that are (computationally) independent. An analytical expression can easily be formulated by extending Equation {eq}`eq_risk_definition`:
+Often these terms are useful for framing qualitative discussions around complex topics where a quantitative analysis may be out of reach, for example, as done in IPCC reports on climate change {cite:p}`cardona2012`. However, they can also be used to simplify the risk analysis by subdividing it into parts that are (computationally) independent. An analytic expression can easily be formulated by expanding the probability term of Equation {eq}`eq_risk_definition`:
 
-$$
-RISK INTEGRAL WITH CONDITIONAL
-$$
+```{math}
+:label: eq_risk_definition_HEV
 
-```{warning}
-Point out that this formulation simplifies the calculation, promots the use of tools like fragility curves, and give earthquake hazard assessment as an example (DRMS?).
+p_{i} = P(N_i,E_j,H_k) = P(N_i|E_j,H_k) \cdot P(E_j|H_k) \cdot P(H_k)
 ```
+
+where $N_i$, $E_j$ and $H_k$ are the vulnerability (fatalities), exposure and hazard of scenario $i$, respectively. Combining with Equation {eq}`eq_risk_definition` and taking the sum over all combinations of variables ($i$, $j$, $k$) would give the total risk. In the case of our flood management case, an example of each term could be:
+- Hazard, $H_k$: a high water level.
+- Exposure, $E_j|H_k$: breach (failure) of a dike due to the high water level, $H_i$.
+- Vulnerability, $N_i|E_j,H_k$: fatalities given the broken dike and high water level. $N$ is usually modeled as a random variable as it is dependent on factors such as evacuation effectiveness and flood warning systems.
+
+% Point out that this formulation simplifies the calculation, promots the use of tools like fragility curves, and give earthquake hazard assessment as an example (DRMS?).
 
 ## Other Risk Definitions
 
 This book uses Equation {eq}`eq_risk_definition` as the primary definition of risk. However, it is useful to highlight some risk concepts used in other domains.
 
-Within economics, risk is generally associated with a deviation from the expected return or the probability of loss. In social sciences risk is often considered as a contextual notion or social construct. Vlek (1996) has summarized 11 formal definitions used in social sciences, see Table {numref}`risk-definitions`. In some of these definitions (e.g. numbers 2 and 4) the perceived seriousness of the undesired consequences plays an important role. Examples of other, more informal risk definitions used in psychology are “the lack of perceived controllability”, “set of possible negative consequences” and “fear of loss” (Vlek, 1996). 
+Within economics, risk is generally associated with a deviation from the expected return or the probability of loss. In social sciences risk is often considered as a contextual notion or social construct. Vlek (1996) has summarized 11 formal definitions used in social sciences, see Table {numref}`risk_definitions`. In some of these definitions (e.g. numbers 2 and 4) the perceived seriousness of the undesired consequences plays an important role. Examples of other, more informal risk definitions used in psychology are “the lack of perceived controllability”, “set of possible negative consequences” and “fear of loss” (Vlek, 1996). 
 
-Substantial research has focused on factors that determine the perception of risk (e.g. Slovic, 1987, Vlek, 1996). Examples of factors that influence risk perception include: the degree of damage, the controllability of and familiarity with the hazards, the extent of benefits from an activity, and voluntariness of exposure. 
+Substantial research has also focused on factors that determine the perception of risk (e.g. Slovic, 1987, Vlek, 1996) including: degree of damage, controllability of and familiarity with hazards, extent of benefits from an activity, and voluntariness of exposure. 
 
 ```{list-table} Formal definitions of risk used in social sciences (Vlek, 1996)
 :header-rows: 1
-:name: risk-definitions
+:name: risk_definitions
 
 * - No.
   - Definition

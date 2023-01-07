@@ -52,7 +52,7 @@ Risk and reliability concepts have been organized into five primary chapters to 
 - **Probabilistic Design** describes how probability is used in the design process and illustrates key concepts through simple examples and 'patterns' (analytic expressions and visual representations).
 - **Risk Analysis** as a process is formally defined and quantitative risk measures are introduced.
 - **Component Reliability** and **System Reliability** briefly introduce approaches for evaluating reliability, or $\text{P}_\text{bad thing}$, in order to carry out probabilistic assessment and design quantitatively. This is the *quantitative analysis* step of a risk analysis.
-- **Risk Assessment** provides simple quantitative tools and a framework for establishing risk-based safety standards and economic risk criteria. This is a key step in the risk analysis process.
+- **Risk evaluation** provides simple quantitative tools and a framework for establishing risk-based safety standards and economic risk criteria. This is a key step in the risk analysis process.
 
 Additional chapters are provided to put these concepts into context, explain industry-specific characteristics or indicate possibilities of additional study for the student.
 ### MUDE Module Information
@@ -61,17 +61,18 @@ This book is prepared for CEGM1000: Modeling, Uncertainty and Data for Engineers
 
 ```{admonition} MUDE exam information
 :class: tip, dropdown
-Key concepts from this book that will be assessed on the MUDE exam are:
+
+Exam tips like this one are included throughout this book, mostly on the front page of each chapter (but there are exceptions). They describe the key concepts from this book that will be assessed on the Q2 MUDE exam, specifically:
 - Definitions of risk and steps of a risk analysis
 - Simple system and component reliability (quantitative risk analysis methods)
 - Use of probability to design and assess engineering systems and components
 - Influence of dependence on simple systems and components
-- Decision analysis, [cost-benefit analysis](cost_benefit) and economic optimization (risk assessment methods)
-- Assessment and quantification of risks for a system with three different risk metrics: individual, societal and economic
+- Decision analysis, cost-benefit analysis and economic optimization (risk evaluation methods)
+- Evaluation and quantification of risks for a system with three different risk metrics: individual, societal and economic
 - Application and derivation of standards for human safety (individual and societal risk)
 - Application and derivation of standards based on economic risk
 
-Although the list is long, the methods are introduced in a simple form and are applied to simplified systems of engineering problems within Civil and Environmental Engineering and Geosciences.
+Although the list is long, the methods are introduced in a simple form and are always applied to simplified systems of engineering problems within Civil and Environmental Engineering and Geosciences.
 ```
 
 ```{admonition} MUDE not-on-the-exam information
@@ -81,7 +82,11 @@ The following concepts or methods are used in this book to illustrate key subjec
 - Set up a decision tree yourself (note that you may be given a tree with values filled in and asked to interpret it)
 - Schematize system reliability problems (we will give you one)
 - Define a limit-state function yourself and calculate failure probability
-- 
+- Evaluate risk curves with more than three scenarios
+- Perform complicated cost benefit analyses
+- By now this list should give you a good enough idea of what to (not) expect...
+
+Exam questions are also designed such that specialized knowledge is not needed to solve them; however, you should be able to recognize loads and resistances and series and parallel systems for any simple civil engineering and geoscience application provided on the exam.
 ```
 
 ### Updates and Citation
@@ -100,7 +105,7 @@ This book is a Jupyter Book that is written using Markdown, Jupyter notebooks an
 
 ### Acknowledgements
 
-This book is primarily written by Robert Lanzafame, but uses adapted excerpts from the lecture notes of a previous course, CIE4130 Probabilistic Design, which was last taught at Delft University of Technology in 2022. In particular, the introduction, risk analysis and risk assessment chapters reuse modified material from Professor Bas Jonkman. This book, and the included exercises, would not be possible without the efforts of CIE4130 teachers over the last decades (in alphabetical order): Bas Jonkman, Han Vrijling, Oswaldo Morales Napoles, Pieter van Gelder, Raphaël Steenbergen, Robert Lanzafame, Ton Vrouwenvelder.
+This book is primarily written by Robert Lanzafame, but uses adapted excerpts from the lecture notes of a previous course, CIE4130 Probabilistic Design, which was last taught at Delft University of Technology in 2022. In particular, the introduction, risk analysis and risk evaluation chapters reuse modified material from Professor Bas Jonkman. This book, and the included exercises, would not be possible without the efforts of CIE4130 teachers over the last decades (in alphabetical order): Bas Jonkman, Han Vrijling, Oswaldo Morales Napoles, Pieter van Gelder, Raphaël Steenbergen, Robert Lanzafame, Ton Vrouwenvelder.
 
 Special thanks goes to Caspar Jungbacker, who set up the JupyterBook and GitHub repository to make this book and website possible, and Benjamin Ramousse, who brought the bivariate "patterns" to life with Python.
 
