@@ -25,7 +25,7 @@ Within a series system, failure of a single component will always lead to the fa
 height: 400px
 name: sys-series-parallel-ex
 ---
-Example of series (top row) and parallel (bottom row) systems, illustrated with a chain and dike ring.
+Example of series (top row) and parallel (bottom row) systems, illustrated with a chain and dike ring. Each component in the parallel case is itself a series system: links in the chain and dike segments in the dike ring.
 ```
 
 Systems are often schematized using a system diagram, as in {numref}`sys-series-parallel`. This also illustrates the function of a system as an input-output diagram, where one can considers the ability to travel from left to right on the figure. It is analagous to many scenarios involving flow: electricity ({numref}`sys-lightbulbs`), water in pipes or transportation routes.
@@ -37,6 +37,7 @@ name: sys-lightbulbs
 ---
 Series (left) and parallel (right) systems illustrated as a string of lightbulbs.
 ```
+
 ### Definition of Failure
 
 Whereas in component reliabiity problems we defined failure using a function of random variables, in system reliabiltiy problems, we define failure based on the continuity of the system diagram. Failure occurs when we are not able to travel from left to right on the diagram due to one or more broken links.
@@ -47,13 +48,15 @@ This chapter contains a brief introduction to the computation of failure probabi
 
 ```{admonition} MUDE Exam Information
 :class: tip, dropdown
-For the exam, you should be able to recognize and solve simple series and parallel systems, as well as describe the influence dependence between components may have on the calculated probability of interest. You will not need to draw a system diagram for anything more complex than those illustrated on this page.
+For the exam, you should be able to recognize and solve simple series and parallel systems, as well as describe the influence that dependence between components may have on the calculated probability of interest. You will not need to draw or evaluate a system more complex than those illustrated on this page.
 ```
 ### Additional Information
 
 The word 'system' in the title of this chapter refers to a reliability analyses made up of more than one distinct components. It may or may not be the same as the system for which the risk analysis is being done. For example, in the flood risk case we look at a dike ring, which is a series system of dike segments. Each dike segment can fail in a variety of ways (e.g., sliding or eroding), where if *any* of these types of failure occurs, the dike fails; a series system. Thus, the dike ring is a series system, where each component also a series system.
 
-Sometimes the distinction is made because components are very different. Sometimes it is a matter of convenience, as two components may share a number of random variables through their respective limit-state functions that influence failure.
+% add a note about systems of systems, and being able to simplify problems. add figure too (there was one in Chapter 3, originally)
+
+%Sometimes the distinction between system and component reliability is made because components are very different. Sometimes it is a matter of convenience, as two components may share a number of random variables through their respective limit-state functions that influence failure.
 
 System reliability analysis can look very similar to component reliability problems, especially when various combinations of discrete and continuous random variables are incorporated. In reality, all of these problems are generalized by the concept of a multivariate probability distribution. The concepts are separated following conventions in engineering practice, as well as for the convenience of illustrating analytic and numerical solutions.
 

@@ -22,20 +22,18 @@ parts:
       - file: reliability-system/system-series.md
       - file: reliability-system/system-parallel.md
       - file: reliability-system/exercise-simple-city.md
-    - file: risk-assessment/overview.md
+    - file: risk-evaluation/overview.md
       sections:
-      - file: risk-assessment/decision.md
-      - file: risk-assessment/cost-benefit.md
-      - file: risk-assessment/econ-optimization.md
-      - file: risk-assessment/example-dike-height.md
-      - file: risk-assessment/safety-standards.md
-      - file: risk-assessment/example-types-of-risk.md
-      - file: risk-assessment/exercise-fn-curve.md
-      - file: risk-assessment/exercise-paint.md
-      - file: risk-assessment/exercise-dam.md
-    - file: other-topics/overview.md
+      - file: risk-evaluation/decision.md
+      - file: risk-evaluation/cost-benefit.md
+      - file: risk-evaluation/econ-optimization.md
+      - file: risk-evaluation/example-dike-height.md
+      - file: risk-evaluation/safety-standards.md
+    - file: exercises/overview.md
       sections:
-      - file: other-topics/exercise-sample-exam.md
-      - file: other-topics/exercise-sample-exam-solution.md
-      - file: other-topics/xx-quiz.ipynb
+      - file: exercises/exercise-fn-curve.md
+      - file: exercises/exercise-paint.md
+      - file: exercises/exercise-dam.md
+      - file: exercises/exercise-sample-exam.md
+      - file: exercises/exercise-sample-exam-solution.md
     - file: references.md

@@ -52,7 +52,7 @@ Risk and reliability concepts have been organized into five primary chapters to 
 - **Probabilistic Design** describes how probability is used in the design process and illustrates key concepts through simple examples and 'patterns' (analytic expressions and visual representations).
 - **Risk Analysis** as a process is formally defined and quantitative risk measures are introduced.
 - **Component Reliability** and **System Reliability** briefly introduce approaches for evaluating reliability, or $\text{P}_\text{bad thing}$, in order to carry out probabilistic assessment and design quantitatively. This is the *quantitative analysis* step of a risk analysis.
-- **Risk Assessment** provides simple quantitative tools and a framework for establishing risk-based safety standards and economic risk criteria. This is a key step in the risk analysis process.
+- **Risk evaluation** provides simple quantitative tools and a framework for establishing risk-based safety standards and economic risk criteria. This is a key step in the risk analysis process.
 
 Additional chapters are provided to put these concepts into context, explain industry-specific characteristics or indicate possibilities of additional study for the student.
 ### MUDE Module Information
@@ -66,8 +66,8 @@ Key concepts from this book that will be assessed on the MUDE exam are:
 - Simple system and component reliability (quantitative risk analysis methods)
 - Use of probability to design and assess engineering systems and components
 - Influence of dependence on simple systems and components
-- Decision analysis, [cost-benefit analysis](cost_benefit) and economic optimization (risk assessment methods)
-- Assessment and quantification of risks for a system with three different risk metrics: individual, societal and economic
+- Decision analysis, [cost-benefit analysis](cost_benefit) and economic optimization (risk evaluation methods)
+- evaluation and quantification of risks for a system with three different risk metrics: individual, societal and economic
 - Application and derivation of standards for human safety (individual and societal risk)
 - Application and derivation of standards based on economic risk
 
@@ -100,7 +100,7 @@ This book is a Jupyter Book that is written using Markdown, Jupyter notebooks an
 
 ### Acknowledgements
 
-This book is primarily written by Robert Lanzafame, but uses adapted excerpts from the lecture notes of a previous course, CIE4130 Probabilistic Design, which was last taught at Delft University of Technology in 2022. In particular, the introduction, risk analysis and risk assessment chapters reuse modified material from Professor Bas Jonkman. This book, and the included exercises, would not be possible without the efforts of CIE4130 teachers over the last decades (in alphabetical order): Bas Jonkman, Han Vrijling, Oswaldo Morales Napoles, Pieter van Gelder, Raphaël Steenbergen, Robert Lanzafame, Ton Vrouwenvelder.
+This book is primarily written by Robert Lanzafame, but uses adapted excerpts from the lecture notes of a previous course, CIE4130 Probabilistic Design, which was last taught at Delft University of Technology in 2022. In particular, the introduction, risk analysis and risk evaluation chapters reuse modified material from Professor Bas Jonkman. This book, and the included exercises, would not be possible without the efforts of CIE4130 teachers over the last decades (in alphabetical order): Bas Jonkman, Han Vrijling, Oswaldo Morales Napoles, Pieter van Gelder, Raphaël Steenbergen, Robert Lanzafame, Ton Vrouwenvelder.
 
 Special thanks goes to Caspar Jungbacker, who set up the JupyterBook and GitHub repository to make this book and website possible, and Benjamin Ramousse, who brought the bivariate "patterns" to life with Python.
 

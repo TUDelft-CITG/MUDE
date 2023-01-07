@@ -9,8 +9,8 @@ Although the FN curve is widely used, the risk curve is not exclusively applied 
 :class: tip, dropdown
 In some cases it is useful for planning and design purposes to equate $N$ and $D$, but this places a specific financial value on human life, which raises difficult moral and ethical concerns. This topic is discussed further in the {ref}`value_human_life` Section.
 ```
-(risk_curve_examples)=
-## Risk Curve Examples
+%(risk_curve_examples)=
+<!-- ## Risk Curve Examples
 
 
 Why is an FN Curve useful?
@@ -21,10 +21,10 @@ Add Dike Ring 14 and nuclear (with EQ?) case.
 
 ### Flood Risk in South Holland
 
-### Nuclear Power Plants
+### Nuclear Power Plants -->
 
 (risk_curve_famous)=
-### A Famous Risk Curve
+## A Famous Risk Curve
 
 A risk curve is often useful because it can convey a large amount of complex information in an easily recognizable format. University lectures and conference presentations around the world which focus on risk, especially for civil engineering applications, will often begin with a casual reminder that 'risk is probability times consequences' and show some version of a risk curve. {numref}`risk-curve-baecher-2` is the most famous risk curve, having been shared widely over the last decades, perhaps because it so nicely compares a wide range of engineering projects. 
 

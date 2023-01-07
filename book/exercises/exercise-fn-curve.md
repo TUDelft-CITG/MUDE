@@ -1,5 +1,5 @@
 (ex_fn_curve)=
-# Exercise: FN-curve
+# FN Curve
 
 A small town is located in a seismic region threatened by two faults. Fault A has a 10% probability of occurring each year, which would cause 10 fatalities, and Fault B has a 1% chance of occurring, which would cause 100 fatalities. Construct an FN curve for the town. Assume that the town is risk averse and that the tolerable risk limit is governed using a constant of C=1.
 

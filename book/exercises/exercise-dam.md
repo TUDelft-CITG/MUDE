@@ -1,4 +1,4 @@
-# Exercise: Dam and River
+# Dam and River
 
 ```{admonition} MUDE Exam Information
 :class: tip, dropdown

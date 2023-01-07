@@ -1,4 +1,4 @@
-# Exercise: Paint System
+# Paint System
 
 In this assignment we will consider a paint system that prevents rust and corrosion on a steel structure. A high quality paint system costs €40 per square meter and has a failure probability of 0.002, which assumes that the old paint system is completely stripped off and the steel surface is cleaned prior to installation, which has an additional cost of €20 per square meter. 
 
