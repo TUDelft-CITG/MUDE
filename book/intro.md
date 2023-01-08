@@ -80,8 +80,8 @@ Although the list is long, the methods are introduced in a simple form and are a
 The following concepts or methods are used in this book to illustrate key subjects and examples, but you will *not* be asked to do them on the exam:
 - List from memory the steps of a risk analysis and describe all aspects in detail
 - Set up a decision tree yourself (note that you may be given a tree with values filled in and asked to interpret it)
-- Schematize system reliability problems (we will give you one)
 - Define a limit-state function yourself and calculate failure probability
+- Schematize system reliability problems (we will give you one)
 - Evaluate risk curves with more than three scenarios
 - Perform complicated cost benefit analyses
 - By now this list should give you a good enough idea of what to (not) expect...
