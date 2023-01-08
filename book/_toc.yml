@@ -19,8 +19,8 @@ parts:
       - file: reliability-component/case-r-s.md
     - file: reliability-system/overview.md
       sections:
-      - file: reliability-system/system-series.md
-      - file: reliability-system/system-parallel.md
+      # - file: reliability-system/system-series.md
+      # - file: reliability-system/system-parallel.md
       - file: reliability-system/exercise-simple-city.md
     - file: risk-evaluation/overview.md
       sections:
