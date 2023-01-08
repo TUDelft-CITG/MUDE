@@ -81,7 +81,7 @@ $$
 p_{f,sys} = 1 - P(\bar{F}_1 \cap \bar{F}_2 \cap ... \cap \bar{F}_n)
 $$
 
-As $\bar{F}_i=1-F_i, we arrive at the following simple relationship:
+As $\bar{F}_i=1-F_i$, we arrive at the following simple relationship:
 
 $$
 p_{f,sys} = 1 - \prod_i^n \left(1-P(F_i)\right)
