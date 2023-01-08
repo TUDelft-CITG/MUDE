@@ -502,9 +502,9 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="cost-benefit-analysis">
 <span id="cost-benefit"></span><h1>Cost Benefit Analysis<a class="headerlink" href="#cost-benefit-analysis" title="Permalink to this headline">#</a></h1>
 <p>This section deals with simplified cost benefit analysis for risk reduction interventions in the engineering domain. An important question in evaluating (engineering) projects is whether the benefits outweigh the costs. Cost benefit analysis (CBA) is generally used for appraisal of a wide range of effects of projects or interventions in order to support decision making. The cost benefit analysis starts with defining the system and existing situation. Then, a broad range of effects of the proposed project and intervention can be identified.</p>
-<p><a class="reference internal" href="#costs-and-benefits"><span class="std std-numref">Table 4</span></a> below shows an overview of effects of the Delta works that were built after the 1953 flood disaster in the Netherlands. The main aim of the delta works was to provide flood protection to the Southwest of the Netherlands. However, other effects included the agricultural benefits to the region (benefits) and the effects on environmental quality in the estuaries in which dams were built (costs or negative effects).</p>
+<p><a class="reference internal" href="#costs-and-benefits"><span class="std std-numref">Table 5</span></a> below shows an overview of effects of the Delta works that were built after the 1953 flood disaster in the Netherlands. The main aim of the delta works was to provide flood protection to the Southwest of the Netherlands. However, other effects included the agricultural benefits to the region (benefits) and the effects on environmental quality in the estuaries in which dams were built (costs or negative effects).</p>
 <table class="table" id="costs-and-benefits">
-<caption><span class="caption-number">Table 4 </span><span class="caption-text">Costs and benefits of the delta works</span><a class="headerlink" href="#costs-and-benefits" title="Permalink to this table">#</a></caption>
+<caption><span class="caption-number">Table 5 </span><span class="caption-text">Costs and benefits of the delta works</span><a class="headerlink" href="#costs-and-benefits" title="Permalink to this table">#</a></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -599,7 +599,7 @@ I &lt; P_{f,0}(D_0 - D_{new})
 <li><p><span class="math notranslate nohighlight">\(C_t\)</span> the costs in year <span class="math notranslate nohighlight">\(t\)</span> [€]</p></li>
 <li><p><span class="math notranslate nohighlight">\(T\)</span> the reference period [years]</p></li>
 </ul>
-<p>The contribution of costs in a certain year to the net present value depend on the discount rate and the reference year. Costs or benefits closest to the present will have the greatest contribution. <a class="reference internal" href="#present-value"><span class="std std-numref">Fig. 21</span></a> below shows the value of <span class="math notranslate nohighlight">\(1/(1+r)^t\)</span> for a given year <span class="math notranslate nohighlight">\(t\)</span> for different discount rates. The higher the discount rate, the smaller the contribution to the net present value of costs or benefits that are far away from the present. For an infinite time horizon it can be shown that <span class="math notranslate nohighlight">\(\sum 1/(1+r)^t \approx 1/r\)</span>. This approximation can be used in evaluating engineering projects with a long life time.</p>
+<p>The contribution of costs in a certain year to the net present value depend on the discount rate and the reference year. Costs or benefits closest to the present will have the greatest contribution. <a class="reference internal" href="#present-value"><span class="std std-numref">Fig. 25</span></a> below shows the value of <span class="math notranslate nohighlight">\(1/(1+r)^t\)</span> for a given year <span class="math notranslate nohighlight">\(t\)</span> for different discount rates. The higher the discount rate, the smaller the contribution to the net present value of costs or benefits that are far away from the present. For an infinite time horizon it can be shown that <span class="math notranslate nohighlight">\(\sum 1/(1+r)^t \approx 1/r\)</span>. This approximation can be used in evaluating engineering projects with a long life time.</p>
 <div class="toggle docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -623,7 +623,7 @@ I &lt; P_{f,0}(D_0 - D_{new})
 <figure class="align-default" id="present-value">
 <a class="reference internal image-reference" href="../_images/present_value_py.svg"><img alt="../_images/present_value_py.svg" src="../_images/present_value_py.svg" width="400" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 21 </span><span class="caption-text">Normalized present value of a cost or benefit in year <span class="math notranslate nohighlight">\(t\)</span> for different discount rates.</span><a class="headerlink" href="#present-value" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Normalized present value of a cost or benefit in year <span class="math notranslate nohighlight">\(t\)</span> for different discount rates.</span><a class="headerlink" href="#present-value" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>

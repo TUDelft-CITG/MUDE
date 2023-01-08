@@ -1,129 +1,157 @@
 (prob_design_2_rv)=
 # Two Random Variables
 
-The previous section illustrated the how a decision for dike height, $h_{dike}$, can take into account uncertainty in river discharge. We used a maximum allowable probability of flooding to derive the specific value of discharge, $q_{design}$, that should be used to choose $h_{dike}$. This was necessary because there was otherwise no way of establishing what the maximum discharge should be. The only variable considered to be random was the maximum river discharge that occurs each year. This Section considers how the design process becomes more complicated when *two* random variables are considered (two load variables).
+The previous section illustrated the how a decision for dike height, $h_{dike}$, can take into account uncertainty in river discharge. We used a maximum allowable probability of flooding to derive the specific value of discharge, $q_{design}$, that should be used to choose $h_{dike}$. This was necessary because there was otherwise no way of establishing what the maximum discharge should be. The only variable considered to be random was the maximum river discharge that occurs each year. This section considers how the design process becomes more complicated when *two* random variables are considered (two load variables).
 
 ## Discharge from Two Rivers
 
 In this scenario our objective for choosing $h_{dike}$ is still the same, except now we recognize that our location on the river is downstream of a confluence of two smaller rivers. The discharge at the location of our dike is thus the sum of the dicharge from Rivers 1 and 2:
 
 $$
-Q_{dike}=Q_1+Q_2
+q=q_1+q_2
 $$
 
-where the same rating curve applies, giving $h_w$ as a function of $Q_{dike}$. As before, acknowledging that the maximum discharge per year in each river is a random variable, we can approach the design problem in the same way: choose $h_{dike}$ such that it retains water when $Q_{dike}$ takes a value with probability of exceedance 0.001. For now, we can assume the distribution for River 1 and River 2 are the same as in the previous Section, and that they are independent.
+where the same rating curve applies, giving $h_w$ as a function of $q$. As before, acknowledging that the maximum discharge per year in each river is a random variable, we can approach the design problem in the same way: choose $h_{dike}$ such that it retains water when $q$ takes a value with probability of exceedance 0.01. For now, we can assume the distribution for River 1 and River 2 are the same as in the previous Section, and that they are independent.
 
-But now we have two distributions, how do we do it?
+*Compared to the previous example, now there are two distributions---how do we find the design discharge and dike height?*
+
+Before presenting the correct approach, 3 common mistakes are illustrated.
 
 ### Incorrect Approach 1
 
-Find the discharge $Q$ in each River 1 and River 2 such that the probability of exceeding the discharge is 0.001.
+Find the discharge in each river, $q_1$ and $q_2$, such that the probability of exceeding each discharge is 0.01. As in the previous section,
 
 $$
-1-F_{Q}(Q_{\mathrm{design}})=0.001
-$$
-
-$$
-q_{\mathrm{design}}=F_{Q}^{-1}(1-0.001)
-$$
-
-$$
-q_1=q_2=q_{\mathrm{design}}
+q_{1,\mathrm{design}}=q_{2,\mathrm{design}}=F_{Q}^{-1}(1-0.001)=155\:\text{m}^3\text{/s} \;\rightarrow\; q_{design}=310\:\text{m}^3\text{/s} 
 $$
 
 *Why is this approach incorrect?*
 
-The probability of these two conditions occurring is not 0.001, it's actualy 0.001$^2$=0.000001.
+It considers the simultaneous occurrence of *both* rivers exceeding a design discharge with probability 0.01. This is a joint probability of occurrence, $P(Q_1>q_{1,design},Q_2>q_{2,design})$, which can be evaluated with a multivariate probability distribution (or the marginal distributions in the independent case). The scenario is equivalent to observing two sixes after tossing two dice simultaneously: if the dice are fair, the probability is $1/36$. Thus, for this incorrect case the probability $P(Q_1>q_{1,design},Q_2>q_{2,design})$ is not 0.01, it's actualy 0.01$^2$=0.0001, illustrated in the figure below.
 
-```{figure} ../figures/temp.svg
+```{figure} ../figures/design_2_rv_error_1.svg
 ---
 height: 400px
-name: two-rv-and-discharge
+name: design_2_rv_error_1
 ---
-And probability for 2 random variables.
+'And' probability for Incorrect Approach 1.
 ```
 
 ### Incorrect Approach 2
 
-Find the discharge $Q$ in each River 1 and River 2 such that the joint probability of exceeding these values is 0.001. Since the two rivers are independent, we can solve for our design probability, $p_{design}$:
+Find the discharge in each river, $q_1$ and $q_2$, such that the joint probability of exceeding these values is 0.01. Since the two rivers are independent, we can solve for our design probability, $p_{design}$:
 
 $$
-\left(p_{design}\right)^2=0.001\: \rightarrow \: p_{design}=\sqrt{0.001}=0.0316
-$$
-
-$$
-1-F_{Q}(Q_{\mathrm{design}})=0.0316
+\left(p_{design}\right)^2=0.01\: \rightarrow \: p_{design}=\sqrt{0.01}=0.1
 $$
 
 $$
-q_{\mathrm{design}}=F_{Q}^{-1}(1-0.0316)
+q_{1,\mathrm{design}}=q_{2,\mathrm{design}}=F_{Q}^{-1}(1-0.1)=126\:\text{m}^3\text{/s} \;\rightarrow\; q_{design}=252\:\text{m}^3\text{/s} 
 $$
 
-$$
-q_1=q_2=q_{\mathrm{design}}
-$$
+```{figure} ../figures/design_2_rv_error_2a.svg
+---
+height: 400px
+name: design_2_rv_error_2a
+---
+'And' probability for Incorrect Approach 2.
+```
 
 *Why is this approach incorrect?*
 
 It only considers one scenario! 
 
-There are infinite alternative scenarios that also result in a joint probability of exceedance of 0.001, for example 0.1 and 0.01:
+There are infinite alternative scenarios that also result in a joint probability of exceedance of 0.01, for example, $0.2\cdot 0.05 = 0.01$:
 
 $$
-P(Q_1) \cdot P(Q_2) = 0.1 \cdot 0.01 = 0.001
+q_1=F_Q^{-1}(0.20)=116\:\text{m}^3\text{/s}\;\; \text{and}\;\; q_2=F_Q^{-1}(0.05)=136\:\text{m}^3\text{/s}
 $$
 
 which results in a totally different dike height.
 
-```{figure} ../figures/temp.svg
+```{figure} ../figures/design_2_rv_error_2b.svg
 ---
 height: 400px
-name: two-rv-and-discharge-2
+name: design_2_rv_error_2b
 ---
-And probability for 2 random variables.
+Comparison of two 'and' probabilities for Incorrect Approach 2.
 ```
 
 ### Incorrect Approach 3
 
-We can use the 'OR' probability, or union! In other words, Find the discharge $Q$ for each River 1 and River 2 such that the probability of either of them being exceeded is 0.001.
+Since the 'and' case didn't work we can use the 'or' probability, or union! In other words: find the discharge in each river, $q_1$ and $q_2$, such that the probability of either of them being exceeded is 0.01.
 
-The union probability is:
-
-$$
-P(Q_1 \cup Q_1)=P(Q_1)+P(Q_1)-P(Q_1,Q_2)=0.001
-$$
-
-given the assumtion of independence, the exceedance probability for each river is simply 0.001/2-0.0005:
+The union probability can be found as follows:
 
 $$
-1-F_{Q}(Q_{\mathrm{design}})=0.0005
+P(Q_1>q_1 \cup Q_2>q_2)=1-P(Q_1<q_1,Q_2<q_2)
 $$
 
-$$
-q_{\mathrm{design}}=F_{Q}^{-1}(1-0.0005)
-$$
+given the assumtion of independence, the union probability is:
 
 $$
-q_1=q_2=q_{\mathrm{design}}
+P(Q_1>q_1 \cup Q_2>q_2)=1-P(Q_1<q_1)\cdot P(Q_2<q_2)
 $$
+
+Solving for the case where $P(Q_1>q_1 \cup Q_2>q_2)=0.01$ implies the exceedance probability for each river discharge is $\sqrt{1-0.01}=\sqrt{0.99}=0.995$, thus:
+
+$$
+q_{1,\mathrm{design}}=q_{2,\mathrm{design}}=F_{Q}^{-1}(0.995)=163\:\text{m}^3\text{/s} \;\rightarrow\; q_{design}=326\:\text{m}^3\text{/s} 
+$$
+
+```{figure} ../figures/design_2_rv_error_3.svg
+---
+height: 400px
+name: design_2_rv_error_3
+---
+'Or' probability for Incorrect Approach 3.
+```
 
 *Why is this approach incorrect?*
 
-As with the first two incorrect approaches, it also only considers one specific scenario!
-
-There are infinite combinations of $Q_1$ and $Q_2$ such that the union is 0.001.
-
-```{figure} ../figures/temp.svg
----
-height: 400px
-name: two-rv-or-discharge
----
-Or probability for 2 random variables.
-```
+As with the first two incorrect approaches, it also only considers one specific scenario! There are infinite combinations of $Q_1$ and $Q_2$ such that the union is 0.01.
 
 ### Correct Approach
 
-Function of random variables. Get distribution of $Q_{dike}$ directly.
+The discharge in the main river is the sum of the discharge of its tributaries, thus it is a function of random variables which has a distribution $f_Q(q)$. Thus we can use the distribution of $Q$ to find the design value $q_{design}$ directly. Unfortunately, although $q$ is a linear combination of $q_1$ and $q_2$, because they are lognormally distributed we cannot find a simple analytic expression for the distribution of $q$. However, using Monte Carlo sampling from the distributions of $q_1$ and $q_2$ gives:
+
+$$
+q_{design}=F_Q^{-1}(1-0.01)=275\:\text{m}^3\text{/s}
+$$
+
+This is equivalent to integrating the joint probability distribution of $q_1$ and $q_2$ over the region $\Omega$ where $q>275\:\text{m}^3\text{/s}$, illustrated in the figure below, along with the contours of joint probability density.
+
+```{figure} ../figures/design_2_rv_correct.svg
+---
+height: 400px
+name: design_2_rv_correct
+---
+Correct approach: $P(Q>275\:\text{m}^3\text{/s})=0.01$. Also illustrated is the region $\Omega$ where $q>275\:\text{m}^3\text{/s}$ and contours of joint probability density.
+```
+### Comparison of Approaches
+
+All four design values of $Q$ are collected in the table below, along with the required dike height. Clearly the method of incorporating uncertainty makes a difference, as the height varies over 1 m across all options, which is a significant increase in cost for a structure that is many kilometers long.
+
+```{list-table} Comparison of design values for all four approaches.
+:header-rows: 1
+:name: design_2_rv_comparison
+
+* - Approach
+  - Design Value, $q_{design}$ [m$^3$/s]
+  - Design Value, $h_{dike}$ [m]
+* - Incorrect 1
+  - 310
+  - 8.80
+* - Incorrect 2
+  - 252
+  - 7.94
+* - Incorrect 3
+  - 326
+  - 9.03
+* - **Correct**
+  - **275**
+  - 8.29
+```
 
 ## Reflections on the Simple Example
 

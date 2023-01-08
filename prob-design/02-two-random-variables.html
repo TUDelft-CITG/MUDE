@@ -455,6 +455,11 @@ title="Print to PDF"
      Correct Approach
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comparison-of-approaches">
+     Comparison of Approaches
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -506,6 +511,11 @@ title="Print to PDF"
      Correct Approach
     </a>
    </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comparison-of-approaches">
+     Comparison of Approaches
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -525,108 +535,142 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="two-random-variables">
 <span id="prob-design-2-rv"></span><h1>Two Random Variables<a class="headerlink" href="#two-random-variables" title="Permalink to this headline">#</a></h1>
-<p>The previous section illustrated the how a decision for dike height, <span class="math notranslate nohighlight">\(h_{dike}\)</span>, can take into account uncertainty in river discharge. We used a maximum allowable probability of flooding to derive the specific value of discharge, <span class="math notranslate nohighlight">\(q_{design}\)</span>, that should be used to choose <span class="math notranslate nohighlight">\(h_{dike}\)</span>. This was necessary because there was otherwise no way of establishing what the maximum discharge should be. The only variable considered to be random was the maximum river discharge that occurs each year. This Section considers how the design process becomes more complicated when <em>two</em> random variables are considered (two load variables).</p>
+<p>The previous section illustrated the how a decision for dike height, <span class="math notranslate nohighlight">\(h_{dike}\)</span>, can take into account uncertainty in river discharge. We used a maximum allowable probability of flooding to derive the specific value of discharge, <span class="math notranslate nohighlight">\(q_{design}\)</span>, that should be used to choose <span class="math notranslate nohighlight">\(h_{dike}\)</span>. This was necessary because there was otherwise no way of establishing what the maximum discharge should be. The only variable considered to be random was the maximum river discharge that occurs each year. This section considers how the design process becomes more complicated when <em>two</em> random variables are considered (two load variables).</p>
 <section id="discharge-from-two-rivers">
 <h2>Discharge from Two Rivers<a class="headerlink" href="#discharge-from-two-rivers" title="Permalink to this headline">#</a></h2>
 <p>In this scenario our objective for choosing <span class="math notranslate nohighlight">\(h_{dike}\)</span> is still the same, except now we recognize that our location on the river is downstream of a confluence of two smaller rivers. The discharge at the location of our dike is thus the sum of the dicharge from Rivers 1 and 2:</p>
 <div class="math notranslate nohighlight">
 \[
-Q_{dike}=Q_1+Q_2
+q=q_1+q_2
 \]</div>
-<p>where the same rating curve applies, giving <span class="math notranslate nohighlight">\(h_w\)</span> as a function of <span class="math notranslate nohighlight">\(Q_{dike}\)</span>. As before, acknowledging that the maximum discharge per year in each river is a random variable, we can approach the design problem in the same way: choose <span class="math notranslate nohighlight">\(h_{dike}\)</span> such that it retains water when <span class="math notranslate nohighlight">\(Q_{dike}\)</span> takes a value with probability of exceedance 0.001. For now, we can assume the distribution for River 1 and River 2 are the same as in the previous Section, and that they are independent.</p>
-<p>But now we have two distributions, how do we do it?</p>
+<p>where the same rating curve applies, giving <span class="math notranslate nohighlight">\(h_w\)</span> as a function of <span class="math notranslate nohighlight">\(q\)</span>. As before, acknowledging that the maximum discharge per year in each river is a random variable, we can approach the design problem in the same way: choose <span class="math notranslate nohighlight">\(h_{dike}\)</span> such that it retains water when <span class="math notranslate nohighlight">\(q\)</span> takes a value with probability of exceedance 0.01. For now, we can assume the distribution for River 1 and River 2 are the same as in the previous Section, and that they are independent.</p>
+<p><em>Compared to the previous example, now there are two distributions—how do we find the design discharge and dike height?</em></p>
+<p>Before presenting the correct approach, 3 common mistakes are illustrated.</p>
 <section id="incorrect-approach-1">
 <h3>Incorrect Approach 1<a class="headerlink" href="#incorrect-approach-1" title="Permalink to this headline">#</a></h3>
-<p>Find the discharge <span class="math notranslate nohighlight">\(Q\)</span> in each River 1 and River 2 such that the probability of exceeding the discharge is 0.001.</p>
+<p>Find the discharge in each river, <span class="math notranslate nohighlight">\(q_1\)</span> and <span class="math notranslate nohighlight">\(q_2\)</span>, such that the probability of exceeding each discharge is 0.01. As in the previous section,</p>
 <div class="math notranslate nohighlight">
 \[
-1-F_{Q}(Q_{\mathrm{design}})=0.001
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-q_{\mathrm{design}}=F_{Q}^{-1}(1-0.001)
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-q_1=q_2=q_{\mathrm{design}}
+q_{1,\mathrm{design}}=q_{2,\mathrm{design}}=F_{Q}^{-1}(1-0.001)=155\:\text{m}^3\text{/s} \;\rightarrow\; q_{design}=310\:\text{m}^3\text{/s} 
 \]</div>
 <p><em>Why is this approach incorrect?</em></p>
-<p>The probability of these two conditions occurring is not 0.001, it’s actualy 0.001<span class="math notranslate nohighlight">\(^2\)</span>=0.000001.</p>
-<figure class="align-default" id="two-rv-and-discharge">
-<a class="reference internal image-reference" href="../_images/temp.svg"><img alt="../_images/temp.svg" height="400px" src="../_images/temp.svg" /></a>
+<p>It considers the simultaneous occurrence of <em>both</em> rivers exceeding a design discharge with probability 0.01. This is a joint probability of occurrence, <span class="math notranslate nohighlight">\(P(Q_1&gt;q_{1,design},Q_2&gt;q_{2,design})\)</span>, which can be evaluated with a multivariate probability distribution (or the marginal distributions in the independent case). The scenario is equivalent to observing two sixes after tossing two dice simultaneously: if the dice are fair, the probability is <span class="math notranslate nohighlight">\(1/36\)</span>. Thus, for this incorrect case the probability <span class="math notranslate nohighlight">\(P(Q_1&gt;q_{1,design},Q_2&gt;q_{2,design})\)</span> is not 0.01, it’s actualy 0.01<span class="math notranslate nohighlight">\(^2\)</span>=0.0001, illustrated in the figure below.</p>
+<figure class="align-default" id="design-2-rv-error-1">
+<a class="reference internal image-reference" href="../_images/design_2_rv_error_1.svg"><img alt="../_images/design_2_rv_error_1.svg" height="400px" src="../_images/design_2_rv_error_1.svg" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 1 </span><span class="caption-text">And probability for 2 random variables.</span><a class="headerlink" href="#two-rv-and-discharge" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">‘And’ probability for Incorrect Approach 1.</span><a class="headerlink" href="#design-2-rv-error-1" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="incorrect-approach-2">
 <h3>Incorrect Approach 2<a class="headerlink" href="#incorrect-approach-2" title="Permalink to this headline">#</a></h3>
-<p>Find the discharge <span class="math notranslate nohighlight">\(Q\)</span> in each River 1 and River 2 such that the joint probability of exceeding these values is 0.001. Since the two rivers are independent, we can solve for our design probability, <span class="math notranslate nohighlight">\(p_{design}\)</span>:</p>
+<p>Find the discharge in each river, <span class="math notranslate nohighlight">\(q_1\)</span> and <span class="math notranslate nohighlight">\(q_2\)</span>, such that the joint probability of exceeding these values is 0.01. Since the two rivers are independent, we can solve for our design probability, <span class="math notranslate nohighlight">\(p_{design}\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
-\left(p_{design}\right)^2=0.001\: \rightarrow \: p_{design}=\sqrt{0.001}=0.0316
+\left(p_{design}\right)^2=0.01\: \rightarrow \: p_{design}=\sqrt{0.01}=0.1
 \]</div>
 <div class="math notranslate nohighlight">
 \[
-1-F_{Q}(Q_{\mathrm{design}})=0.0316
+q_{1,\mathrm{design}}=q_{2,\mathrm{design}}=F_{Q}^{-1}(1-0.1)=126\:\text{m}^3\text{/s} \;\rightarrow\; q_{design}=252\:\text{m}^3\text{/s} 
 \]</div>
-<div class="math notranslate nohighlight">
-\[
-q_{\mathrm{design}}=F_{Q}^{-1}(1-0.0316)
-\]</div>
-<div class="math notranslate nohighlight">
-\[
-q_1=q_2=q_{\mathrm{design}}
-\]</div>
+<figure class="align-default" id="design-2-rv-error-2a">
+<a class="reference internal image-reference" href="../_images/design_2_rv_error_2a.svg"><img alt="../_images/design_2_rv_error_2a.svg" height="400px" src="../_images/design_2_rv_error_2a.svg" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">‘And’ probability for Incorrect Approach 2.</span><a class="headerlink" href="#design-2-rv-error-2a" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
 <p><em>Why is this approach incorrect?</em></p>
 <p>It only considers one scenario!</p>
-<p>There are infinite alternative scenarios that also result in a joint probability of exceedance of 0.001, for example 0.1 and 0.01:</p>
+<p>There are infinite alternative scenarios that also result in a joint probability of exceedance of 0.01, for example, <span class="math notranslate nohighlight">\(0.2\cdot 0.05 = 0.01\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
-P(Q_1) \cdot P(Q_2) = 0.1 \cdot 0.01 = 0.001
+q_1=F_Q^{-1}(0.20)=116\:\text{m}^3\text{/s}\;\; \text{and}\;\; q_2=F_Q^{-1}(0.05)=136\:\text{m}^3\text{/s}
 \]</div>
 <p>which results in a totally different dike height.</p>
-<figure class="align-default" id="two-rv-and-discharge-2">
-<a class="reference internal image-reference" href="../_images/temp.svg"><img alt="../_images/temp.svg" height="400px" src="../_images/temp.svg" /></a>
+<figure class="align-default" id="design-2-rv-error-2b">
+<a class="reference internal image-reference" href="../_images/design_2_rv_error_2b.svg"><img alt="../_images/design_2_rv_error_2b.svg" height="400px" src="../_images/design_2_rv_error_2b.svg" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 2 </span><span class="caption-text">And probability for 2 random variables.</span><a class="headerlink" href="#two-rv-and-discharge-2" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Comparison of two ‘and’ probabilities for Incorrect Approach 2.</span><a class="headerlink" href="#design-2-rv-error-2b" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="incorrect-approach-3">
 <h3>Incorrect Approach 3<a class="headerlink" href="#incorrect-approach-3" title="Permalink to this headline">#</a></h3>
-<p>We can use the ‘OR’ probability, or union! In other words, Find the discharge <span class="math notranslate nohighlight">\(Q\)</span> for each River 1 and River 2 such that the probability of either of them being exceeded is 0.001.</p>
-<p>The union probability is:</p>
+<p>Since the ‘and’ case didn’t work we can use the ‘or’ probability, or union! In other words: find the discharge in each river, <span class="math notranslate nohighlight">\(q_1\)</span> and <span class="math notranslate nohighlight">\(q_2\)</span>, such that the probability of either of them being exceeded is 0.01.</p>
+<p>The union probability can be found as follows:</p>
 <div class="math notranslate nohighlight">
 \[
-P(Q_1 \cup Q_1)=P(Q_1)+P(Q_1)-P(Q_1,Q_2)=0.001
+P(Q_1&gt;q_1 \cup Q_2&gt;q_2)=1-P(Q_1&lt;q_1,Q_2&lt;q_2)
 \]</div>
-<p>given the assumtion of independence, the exceedance probability for each river is simply 0.001/2-0.0005:</p>
+<p>given the assumtion of independence, the union probability is:</p>
 <div class="math notranslate nohighlight">
 \[
-1-F_{Q}(Q_{\mathrm{design}})=0.0005
+P(Q_1&gt;q_1 \cup Q_2&gt;q_2)=1-P(Q_1&lt;q_1)\cdot P(Q_2&lt;q_2)
 \]</div>
+<p>Solving for the case where <span class="math notranslate nohighlight">\(P(Q_1&gt;q_1 \cup Q_2&gt;q_2)=0.01\)</span> implies the exceedance probability for each river discharge is <span class="math notranslate nohighlight">\(\sqrt{1-0.01}=\sqrt{0.99}=0.995\)</span>, thus:</p>
 <div class="math notranslate nohighlight">
 \[
-q_{\mathrm{design}}=F_{Q}^{-1}(1-0.0005)
+q_{1,\mathrm{design}}=q_{2,\mathrm{design}}=F_{Q}^{-1}(0.995)=163\:\text{m}^3\text{/s} \;\rightarrow\; q_{design}=326\:\text{m}^3\text{/s} 
 \]</div>
-<div class="math notranslate nohighlight">
-\[
-q_1=q_2=q_{\mathrm{design}}
-\]</div>
-<p><em>Why is this approach incorrect?</em></p>
-<p>As with the first two incorrect approaches, it also only considers one specific scenario!</p>
-<p>There are infinite combinations of <span class="math notranslate nohighlight">\(Q_1\)</span> and <span class="math notranslate nohighlight">\(Q_2\)</span> such that the union is 0.001.</p>
-<figure class="align-default" id="two-rv-or-discharge">
-<a class="reference internal image-reference" href="../_images/temp.svg"><img alt="../_images/temp.svg" height="400px" src="../_images/temp.svg" /></a>
+<figure class="align-default" id="design-2-rv-error-3">
+<a class="reference internal image-reference" href="../_images/design_2_rv_error_3.svg"><img alt="../_images/design_2_rv_error_3.svg" height="400px" src="../_images/design_2_rv_error_3.svg" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 3 </span><span class="caption-text">Or probability for 2 random variables.</span><a class="headerlink" href="#two-rv-or-discharge" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">‘Or’ probability for Incorrect Approach 3.</span><a class="headerlink" href="#design-2-rv-error-3" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
+<p><em>Why is this approach incorrect?</em></p>
+<p>As with the first two incorrect approaches, it also only considers one specific scenario! There are infinite combinations of <span class="math notranslate nohighlight">\(Q_1\)</span> and <span class="math notranslate nohighlight">\(Q_2\)</span> such that the union is 0.01.</p>
 </section>
 <section id="correct-approach">
 <h3>Correct Approach<a class="headerlink" href="#correct-approach" title="Permalink to this headline">#</a></h3>
-<p>Function of random variables. Get distribution of <span class="math notranslate nohighlight">\(Q_{dike}\)</span> directly.</p>
+<p>The discharge in the main river is the sum of the discharge of its tributaries, thus it is a function of random variables which has a distribution <span class="math notranslate nohighlight">\(f_Q(q)\)</span>. Thus we can use the distribution of <span class="math notranslate nohighlight">\(Q\)</span> to find the design value <span class="math notranslate nohighlight">\(q_{design}\)</span> directly. Unfortunately, although <span class="math notranslate nohighlight">\(q\)</span> is a linear combination of <span class="math notranslate nohighlight">\(q_1\)</span> and <span class="math notranslate nohighlight">\(q_2\)</span>, because they are lognormally distributed we cannot find a simple analytic expression for the distribution of <span class="math notranslate nohighlight">\(q\)</span>. However, using Monte Carlo sampling from the distributions of <span class="math notranslate nohighlight">\(q_1\)</span> and <span class="math notranslate nohighlight">\(q_2\)</span> gives:</p>
+<div class="math notranslate nohighlight">
+\[
+q_{design}=F_Q^{-1}(1-0.01)=275\:\text{m}^3\text{/s}
+\]</div>
+<p>This is equivalent to integrating the joint probability distribution of <span class="math notranslate nohighlight">\(q_1\)</span> and <span class="math notranslate nohighlight">\(q_2\)</span> over the region <span class="math notranslate nohighlight">\(\Omega\)</span> where <span class="math notranslate nohighlight">\(q&gt;275\:\text{m}^3\text{/s}\)</span>, illustrated in the figure below, along with the contours of joint probability density.</p>
+<figure class="align-default" id="design-2-rv-correct">
+<a class="reference internal image-reference" href="../_images/design_2_rv_correct.svg"><img alt="../_images/design_2_rv_correct.svg" height="400px" src="../_images/design_2_rv_correct.svg" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 7 </span><span class="caption-text">Correct approach: <span class="math notranslate nohighlight">\(P(Q&gt;275\:\text{m}^3\text{/s})=0.01\)</span>. Also illustrated is the region <span class="math notranslate nohighlight">\(\Omega\)</span> where <span class="math notranslate nohighlight">\(q&gt;275\:\text{m}^3\text{/s}\)</span> and contours of joint probability density.</span><a class="headerlink" href="#design-2-rv-correct" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="comparison-of-approaches">
+<h3>Comparison of Approaches<a class="headerlink" href="#comparison-of-approaches" title="Permalink to this headline">#</a></h3>
+<p>All four design values of <span class="math notranslate nohighlight">\(Q\)</span> are collected in the table below, along with the required dike height. Clearly the method of incorporating uncertainty makes a difference, as the height varies over 1 m across all options, which is a significant increase in cost for a structure that is many kilometers long.</p>
+<table class="table" id="design-2-rv-comparison">
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">Comparison of design values for all four approaches.</span><a class="headerlink" href="#design-2-rv-comparison" title="Permalink to this table">#</a></caption>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Approach</p></th>
+<th class="head"><p>Design Value, <span class="math notranslate nohighlight">\(q_{design}\)</span> [m<span class="math notranslate nohighlight">\(^3\)</span>/s]</p></th>
+<th class="head"><p>Design Value, <span class="math notranslate nohighlight">\(h_{dike}\)</span> [m]</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Incorrect 1</p></td>
+<td><p>310</p></td>
+<td><p>8.80</p></td>
+</tr>
+<tr class="row-odd"><td><p>Incorrect 2</p></td>
+<td><p>252</p></td>
+<td><p>7.94</p></td>
+</tr>
+<tr class="row-even"><td><p>Incorrect 3</p></td>
+<td><p>326</p></td>
+<td><p>9.03</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Correct</strong></p></td>
+<td><p><strong>275</strong></p></td>
+<td><p>8.29</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 </section>
 <section id="reflections-on-the-simple-example">
