@@ -69,6 +69,21 @@ With this in mind, a generic procedure for using component reliability analysis 
 ```{note}
 The term 'failure' here, widely used in civil engineering, is used here as a matter of convenience. Component reliability methods can also be used to find the probability of something that has nothing to do with failure, as long as it can be desribed with a function of random variables.
 ```
+## Two Random Variables
+
+The example with discharge from two rivers in the Probabilistic Design Chapter can be considered a component reliability problem with two random variables. The discharge of both tributary rivers act as loads because they both are proportional to the main design variable, $q$ or $h_{dike}$. The reliability integral is thus
+
+$$
+p_f=\int_\Omega f_{Q_1,Q_2}(q_1,q_2)\:\mathrm{d}x
+$$
+
+where the failure region $\Omega$ contains all values of $Q_1$ and $Q_2$ such that the river level exceeds the dike height:
+
+$$
+\Omega: h_{dike} \leq h_w(Q_1,Q_2)
+$$
+
+Note that if the dike were constructed to a height of 8.29 m, the component reliability would be 0.01 and the failure region would be equivalent to {numref}`design_2_rv_correct`.
 
 <!-- Component reliability Analysis:  
 - limit states (servicability, ultimate) and limit-state functions; failure definition
@@ -89,10 +104,16 @@ Overview of non-linear problems (distribution and LSF); explanation of LSF; form
 
 %To simple slope problem: *this example is borrowed from Moss, which is borrowed from Baecher and Christian. Both are excellent texts on risk and reliability analysis in civil and geotechnical engineering.*
 
+% THIS IS REMOVED FOR 2022-23 SINCE THE SEPARATE PAGES WERE NOT COMPLETED
 ```{admonition} Exam Information
 :class: tip, dropdown
-You are expected to recognize the role of random variables (e.g., loads and resistances) within the function of random variables for a component and visualize it on a bivariate plot. You may be asked to solve simple component reliability problems, limited to linear functions of normally distributed random variables, and evaluate the role of dependence between variables. You can produce a probabilistic design by modifying the component such that the probability of interest meets a specific criteria.
+You are expected to recognize the role of random variables (e.g., loads and resistances) within the function of random variables for a component and visualize it on a bivariate plot. Component reliability problems will limited to linear functions of normally distributed random variables; although you will *not* be asked to compute reliability.
 ```
+
+<!-- ```{admonition} Exam Information
+:class: tip, dropdown
+You are expected to recognize the role of random variables (e.g., loads and resistances) within the function of random variables for a component and visualize it on a bivariate plot. You may be asked to solve simple component reliability problems, limited to linear functions of normally distributed random variables, and evaluate the role of dependence between variables. You can produce a probabilistic design by modifying the component such that the probability of interest meets a specific criteria.
+``` -->
 
 <!-- ```{admonition} Exam Information
 :class: tip, dropdown
