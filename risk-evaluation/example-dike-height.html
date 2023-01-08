@@ -175,9 +175,14 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../reliability-component/overview.html">
    Component Reliability
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../reliability-system/overview.html">
+   System Reliability
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -185,38 +190,6 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../reliability-component/case-two-loads.html">
-     Case 1: Two Loads
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../reliability-component/case-r-s.html">
-     Case 2: Load and Resistance
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../reliability-system/overview.html">
-   System Reliability
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../reliability-system/system-series.html">
-     Series Systems
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../reliability-system/system-parallel.html">
-     Parallel Systems
-    </a>
-   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../reliability-system/exercise-simple-city.html">
      Example System
@@ -228,8 +201,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="overview.html">
    Risk Evaluation
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -265,8 +238,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../exercises/overview.html">
    Exercises
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -507,7 +480,7 @@ title="Print to PDF"
 <h2>Probability and Risk<a class="headerlink" href="#probability-and-risk" title="Permalink to this headline">#</a></h2>
 <p>The approach only considers failure of the dikes due to overtopping. The probability distribution of water levels along the Dutch coast can be approximated by an exponential distribution.</p>
 <div class="math notranslate nohighlight" id="equation-prob-dist-water-levels">
-<span class="eqno">(5)<a class="headerlink" href="#equation-prob-dist-water-levels" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(6)<a class="headerlink" href="#equation-prob-dist-water-levels" title="Permalink to this equation">#</a></span>\[
     F(h) = 1 - e^{(-\frac{h-A}{B})}
 \]</div>
 <p>In which:</p>
@@ -517,46 +490,46 @@ title="Print to PDF"
 </ul>
 <p>Neglecting wave run-up, the probability of failure of the dikes - leading to flooding -  can be approximated by the probability of exceedance of the dike height <span class="math notranslate nohighlight">\(h_d\)</span>, i.e.</p>
 <div class="math notranslate nohighlight" id="equation-exceedence-dike-height">
-<span class="eqno">(6)<a class="headerlink" href="#equation-exceedence-dike-height" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(7)<a class="headerlink" href="#equation-exceedence-dike-height" title="Permalink to this equation">#</a></span>\[
     P_f = P(h&gt;h_d) = e^{(-\frac{h_d - A}{B})}
 \]</div>
 <p>It is assumed that there is total damage   to all objects and infrastructures in the flooded area if the dikes fail. For the discount rate Van Dantzig applied a reduced interest rate  <span class="math notranslate nohighlight">\(r^\prime\)</span> = economic growth – inflation. The net present value of the expected damages (i.e., the risk) is found as follows, assuming an infinite time horizon:</p>
 <div class="math notranslate nohighlight" id="equation-dike-height-risk">
-<span class="eqno">(7)<a class="headerlink" href="#equation-dike-height-risk" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(8)<a class="headerlink" href="#equation-dike-height-risk" title="Permalink to this equation">#</a></span>\[
     R = \frac{P_fD}{r^\prime} = \frac{e^{-\frac{h_d-A}{B}}D}{r^\prime}
 \]</div>
 </section>
 <section id="costs-and-benefits">
 <h2>Costs and Benefits<a class="headerlink" href="#costs-and-benefits" title="Permalink to this headline">#</a></h2>
-<p>As the risk is dependent on height, the dikes can be heightened further to limit the failure probability and thus risks. Investments in dike heightening are determined by initial costs for mobilization and variable costs that are dependent on the level of dike heightening (see also <a class="reference internal" href="#dike-heightening-schematic"><span class="std std-numref">Fig. 27</span></a>):</p>
+<p>As the risk is dependent on height, the dikes can be heightened further to limit the failure probability and thus risks. Investments in dike heightening are determined by initial costs for mobilization and variable costs that are dependent on the level of dike heightening (see also <a class="reference internal" href="#dike-heightening-schematic"><span class="std std-numref">Fig. 28</span></a>):</p>
 <div class="math notranslate nohighlight" id="equation-dike-investments">
-<span class="eqno">(8)<a class="headerlink" href="#equation-dike-investments" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(9)<a class="headerlink" href="#equation-dike-investments" title="Permalink to this equation">#</a></span>\[
     I = I_0 + I(h_d - h0)
 \]</div>
 <figure class="align-default" id="dike-heightening-schematic">
 <a class="reference internal image-reference" href="../_images/dike_heightening_schematic.png"><img alt="../_images/dike_heightening_schematic.png" src="../_images/dike_heightening_schematic.png" style="height: 200px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 27 </span><span class="caption-text">Schematic view of dike heightening</span><a class="headerlink" href="#dike-heightening-schematic" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 28 </span><span class="caption-text">Schematic view of dike heightening</span><a class="headerlink" href="#dike-heightening-schematic" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>Now, the total costs <span class="math notranslate nohighlight">\(C_{tot}\)</span> are the sum of the investment costs and the risk.</p>
 <div class="math notranslate nohighlight" id="equation-total-costs">
-<span class="eqno">(9)<a class="headerlink" href="#equation-total-costs" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(10)<a class="headerlink" href="#equation-total-costs" title="Permalink to this equation">#</a></span>\[
     C_{tot} = I_0 + I(h_d - h_0) + \frac{e^{-\frac{h_d-A}{B}}D}{r^\prime}
 \]</div>
 <p>The optimal dike height is found when the total costs are minimal. This is the case when <span class="math notranslate nohighlight">\(dC_{tot}/dh_d=0\)</span>.</p>
 <div class="math notranslate nohighlight" id="equation-optimal-dike-costs">
-<span class="eqno">(10)<a class="headerlink" href="#equation-optimal-dike-costs" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(11)<a class="headerlink" href="#equation-optimal-dike-costs" title="Permalink to this equation">#</a></span>\[
     \frac{dC_{tot}}{dh_d} = I - \frac{e^{-\frac{h_d-A}{B}}D}{Br^\prime} = 0
 \]</div>
 <p>Since the <span class="math notranslate nohighlight">\(P_f = e^{-(h_d-A)/B}\)</span>, we can find the optimal flooding probability <span class="math notranslate nohighlight">\(P_{f,opt}\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-optimal-flooding-prob">
-<span class="eqno">(11)<a class="headerlink" href="#equation-optimal-flooding-prob" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(12)<a class="headerlink" href="#equation-optimal-flooding-prob" title="Permalink to this equation">#</a></span>\[
     P_{f,opt} = \frac{IBr^\prime}{D}
 \]</div>
-<p>The larger the damage <span class="math notranslate nohighlight">\(D\)</span>, the smaller the optimal failure probability and thus the higher the level of protection. If incremental protection is expensive – i.e. for high values of <span class="math notranslate nohighlight">\(I\)</span> – a higher optimal failure probability and thus a lower level of optimal safety will be found. The optimal failure probability is also dependent on the discount rate. Combination with <a class="reference internal" href="#equation-exceedence-dike-height">(6)</a> gives the optimal dike height <span class="math notranslate nohighlight">\(h_{d,opt}\)</span>:</p>
+<p>The larger the damage <span class="math notranslate nohighlight">\(D\)</span>, the smaller the optimal failure probability and thus the higher the level of protection. If incremental protection is expensive – i.e. for high values of <span class="math notranslate nohighlight">\(I\)</span> – a higher optimal failure probability and thus a lower level of optimal safety will be found. The optimal failure probability is also dependent on the discount rate. Combination with <a class="reference internal" href="#equation-exceedence-dike-height">(7)</a> gives the optimal dike height <span class="math notranslate nohighlight">\(h_{d,opt}\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-optimal-dike-height">
-<span class="eqno">(12)<a class="headerlink" href="#equation-optimal-dike-height" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(13)<a class="headerlink" href="#equation-optimal-dike-height" title="Permalink to this equation">#</a></span>\[
     h_{d,opt} = A - B \cdot \ln(P_{f,opt})
 \]</div>
 </section>
@@ -564,7 +537,7 @@ title="Print to PDF"
 <h2>Verification<a class="headerlink" href="#verification" title="Permalink to this headline">#</a></h2>
 <p>In addition to the determination of the optimal dike height the cost benefit criterion should still be verified by checking whether the benefits of risk reduction are larger than the costs of dike heightening.</p>
 <div class="math notranslate nohighlight" id="equation-risk-reduction-check">
-<span class="eqno">(13)<a class="headerlink" href="#equation-risk-reduction-check" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(14)<a class="headerlink" href="#equation-risk-reduction-check" title="Permalink to this equation">#</a></span>\[
     I(h_{d,opt})&lt;\frac{(P_{f,0} - P_{f,opt})D}{r^\prime}
 \]</div>
 <p>Where <span class="math notranslate nohighlight">\(P_{f,0}\)</span> the flooding probability in the initial situation. It can be easily shown that this is equivalent to a check of whether the total costs in the optimal situation are smaller than those in the original situation. The first Delta committee used the following values for South Holland:</p>
@@ -585,21 +558,21 @@ title="Print to PDF"
 </section>
 <section id="discussion">
 <h2>Discussion<a class="headerlink" href="#discussion" title="Permalink to this headline">#</a></h2>
-<p>Although the optimal safety level was determined at a failure probability of <span class="math notranslate nohighlight">\(P_{f,opt}\)</span> =  1/125,000 per year, in later political discussions a value of 1/10,000 per year was selected for the probability of exceedance of design water levels. This implied that the dikes of South Holland would need to be designed for hydraulic conditions (water levels and waves) with a probability of exceedance of—on average—1/10,000 per year. In later decision-making, safety standards were derived for other dike rings (see <a class="reference internal" href="#dike-rings"><span class="std std-numref">Fig. 28</span></a>), for example, flood defenses in the river system are designed for a safety standard of 1/1250 per year.</p>
+<p>Although the optimal safety level was determined at a failure probability of <span class="math notranslate nohighlight">\(P_{f,opt}\)</span> =  1/125,000 per year, in later political discussions a value of 1/10,000 per year was selected for the probability of exceedance of design water levels. This implied that the dikes of South Holland would need to be designed for hydraulic conditions (water levels and waves) with a probability of exceedance of—on average—1/10,000 per year. In later decision-making, safety standards were derived for other dike rings (see <a class="reference internal" href="#dike-rings"><span class="std std-numref">Fig. 29</span></a>), for example, flood defenses in the river system are designed for a safety standard of 1/1250 per year.</p>
 <figure class="align-default" id="dike-rings">
 <a class="reference internal image-reference" href="../_images/dike_rings.jpg"><img alt="../_images/dike_rings.jpg" src="../_images/dike_rings.jpg" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 28 </span><span class="caption-text">Dike Rings in the Netherlands, showing probability of exceedance of the design water levels per dike ring. Note that dike rings along the River Meuse are not shown on this map. Most of these dike rings have a safety standard of 1/250 per year. This map defined design levels until the safety standards changed in 2017.</span><a class="headerlink" href="#dike-rings" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 29 </span><span class="caption-text">Dike Rings in the Netherlands, showing probability of exceedance of the design water levels per dike ring. Note that dike rings along the River Meuse are not shown on this map. Most of these dike rings have a safety standard of 1/250 per year. This map defined design levels until the safety standards changed in 2017.</span><a class="headerlink" href="#dike-rings" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>It was expected that the actual failure probability for dikes designed for this design load, would be smaller than 1/10,000 per year. Recent risk analysis in the project VNK have shown that this is not the case due to the geotechnical failure mechanisms. For most dike rings the estimated failure probabilities are larger than the probability of exceeding the design loads. For example, for riverine dike rings that have been designed for design levels with a probability of exceedance of 1/1250 per year, failure probabilities are often in the order of magnitude of 1/100 per year <span id="id2">[<a class="reference internal" href="../references.html#id11" title="Veiligheid Nederland in Kaart. De veiligheid van nederland in kaart. Rijkswaterstaat, 2014. URL: https://www.helpdeskwater.nl/publish/pages/131663/eindrapport_vnk.pdf.">Veiligheid Nederland in Kaart, 2014</a>]</span>. This is part of the reason for revising the safety standards and flood defence assessment criteria in the Netherlands, which since 2017 is based on an allowable probability of flooding rather than a load-based exceedance probability approach.</p>
 <p>Historic discussions and developments in the Netherlands illustrate how the risk analaysis and risk management for a given system can change over time. Several extensions and additions to the van Dantzig model have been proposed over the years. For example, the inclusion of sea level rise <span id="id3">[<a class="reference internal" href="../references.html#id12" title="J.K. Vrijling and J.A. van Beurden. Sealevel rise: a probabilistic design problem. Proceedings of the International Conference on Coastal Engineering, 1990.">Vrijling and van Beurden, 1990</a>]</span>, modelling of the damage as dependent on the water depth in the polder <span id="id4">[<a class="reference internal" href="../references.html#id10" title="D. van Dantzig. Economic decision problems for flood prevention. Econometrica, 1956.">van Dantzig, 1956</a>]</span>, the inclusion of the economic value of loss of life as part of the damage, and inclusion of risk aversion by giving quadratic weight to the damages <span id="id5">[<a class="reference internal" href="../references.html#id13" title="P.H.A.J.M. Van Gelder, J.K. Vrijling, and K.A.H. Slijkhuis. Coping with uncertainty in the economical optimization of a dike design. Water for a Changing Global Community, pages 554-559, 1997.">Gelder <em>et al.</em>, 1997</a>]</span>.</p>
 <p>The model by van Dantzig was primarily focused on finding what the optimal safety at that time (when van Dantzig published his model in the 1960’s) should have been. However, a single optimal level is not always the best solution. While considering longer timescales and changing conditions, such as economic growth and sea level rise, the model needs to address the possibility of multiple interventions during the period considered. This leads to questions regarding the timing of interventions (when? At which intervals?), as well as the optimal strengthening or raising of the dikes (how much?).  <span id="id6">Eijgenraam [<a class="reference internal" href="../references.html#id8" title="C.J.J. Eijgenraam. Optimal safety standards for dike ring areas. CPB discussion paper, 2006.">2006</a>]</span> developed an economic decision model that takes into account both questions.</p>
-<p><a class="reference internal" href="#periodic-investments"><span class="std std-numref">Fig. 29</span></a> below depicts the “saw-tooth” curve that shows the periodic interventions: both the extent of the intervention (vertical) as well as the timing between interventions (horizontal). In between interventions, the safety will gradually decrease due to sea level rise and / or subsidence of the dike. Over a longer period of time, the dike heightening (or strengthening) should follow sea level rise. Additional dike heightening (lower the failure probability even further) could be considered in case of economic growth, which will lead to an increase of damages and increase of protection standards. The length of the optimal interval between interventions is largely dependent on the initial or mobilization costs. If these are high, for example in the case of structural interventions such as storm surge barriers, a long interval or life time of almost 100 years can be chosen. For regular dike reinforcements this interval will be more in the range of several decades (e.g. 50 years). For interventions with no or very small initial costs, such as nourishments along the coast, it is optimal to intervene more frequently.</p>
+<p><a class="reference internal" href="#periodic-investments"><span class="std std-numref">Fig. 30</span></a> below depicts the “saw-tooth” curve that shows the periodic interventions: both the extent of the intervention (vertical) as well as the timing between interventions (horizontal). In between interventions, the safety will gradually decrease due to sea level rise and / or subsidence of the dike. Over a longer period of time, the dike heightening (or strengthening) should follow sea level rise. Additional dike heightening (lower the failure probability even further) could be considered in case of economic growth, which will lead to an increase of damages and increase of protection standards. The length of the optimal interval between interventions is largely dependent on the initial or mobilization costs. If these are high, for example in the case of structural interventions such as storm surge barriers, a long interval or life time of almost 100 years can be chosen. For regular dike reinforcements this interval will be more in the range of several decades (e.g. 50 years). For interventions with no or very small initial costs, such as nourishments along the coast, it is optimal to intervene more frequently.</p>
 <figure class="align-default" id="periodic-investments">
 <a class="reference internal image-reference" href="../_images/periodic_investments.png"><img alt="../_images/periodic_investments.png" src="../_images/periodic_investments.png" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 29 </span><span class="caption-text">Periodic investments in dike reinforcement for a situation with sea level rise.</span><a class="headerlink" href="#periodic-investments" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 30 </span><span class="caption-text">Periodic investments in dike reinforcement for a situation with sea level rise.</span><a class="headerlink" href="#periodic-investments" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>

@@ -175,9 +175,14 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../reliability-component/overview.html">
    Component Reliability
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../reliability-system/overview.html">
+   System Reliability
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -185,38 +190,6 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../reliability-component/case-two-loads.html">
-     Case 1: Two Loads
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../reliability-component/case-r-s.html">
-     Case 2: Load and Resistance
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../reliability-system/overview.html">
-   System Reliability
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../reliability-system/system-series.html">
-     Series Systems
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../reliability-system/system-parallel.html">
-     Parallel Systems
-    </a>
-   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../reliability-system/exercise-simple-city.html">
      Example System
@@ -228,8 +201,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="overview.html">
    Risk Evaluation
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -265,8 +238,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../exercises/overview.html">
    Exercises
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -543,7 +516,7 @@ title="Print to PDF"
 <h2>Risk Reduction via Probability<a class="headerlink" href="#risk-reduction-via-probability" title="Permalink to this headline">#</a></h2>
 <p>When considering investments that primarily focus on risk reduction (e.g. dike reinforcement or reinforcing of buildings for earthquakes), the main benefits will consist of the reduction of expected economic damages. For a measure to be cost effective, the investments should be smaller than the risk reduction.</p>
 <div class="math notranslate nohighlight" id="equation-investment">
-<span class="eqno">(3)<a class="headerlink" href="#equation-investment" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(4)<a class="headerlink" href="#equation-investment" title="Permalink to this equation">#</a></span>\[
 I &lt; \Delta E(D)
 \]</div>
 <p>where:</p>
@@ -552,7 +525,7 @@ I &lt; \Delta E(D)
 <li><p><span class="math notranslate nohighlight">\(\Delta E(D)\)</span> present value of risk reduction</p></li>
 </ul>
 <p>This formula can also be used to calculated the benefit/cost ratio, i.e. <span class="math notranslate nohighlight">\(\Delta E(D)/I\)</span>, which should be greater than 1 for cost effective projects. Note that all costs and the risk reduction are given in terms of present value with a unit of €.</p>
-<p>For investments that focus on prevention (i.e. reducing the failure probability of the system) <a class="reference internal" href="#equation-investment">(3)</a> can be formulated as follows.</p>
+<p>For investments that focus on prevention (i.e. reducing the failure probability of the system) <a class="reference internal" href="#equation-investment">(4)</a> can be formulated as follows.</p>
 <div class="math notranslate nohighlight">
 \[
   I &lt; (P_{f,0} - P_{f, new}) D
@@ -589,9 +562,9 @@ I &lt; P_{f,0}(D_0 - D_{new})
 <section id="net-present-value">
 <h2>Net Present Value<a class="headerlink" href="#net-present-value" title="Permalink to this headline">#</a></h2>
 <p>The foregoing assumes that both the costs and benefits are expressed in the same unit, generally in the form of a present value [€]. The net present value represents the sum of the present values of the benefit and cost cash flows over a period of time. In engineering we often deal with situations with larger initial investments, whereas the risk reduction benefits are spread out over a longer time period. For example, when a government invests this year in flood protection, the costs are made in year 0, but the benefits will be spread over the coming decades.</p>
-<p>For such situations the failure probability is generally expressed per unit of time, mostly per year. That means that the risk (reduction) is expressed in terms of € per year, whereas the initial investments have the unit of €. The net present value of cost or benefit values over a future range of years can be calculated with <a class="reference internal" href="#equation-npv">(4)</a>. To calculate the net present value NPV [€] a discount rate  should be used. The discount rate represents a required return on an investment.</p>
+<p>For such situations the failure probability is generally expressed per unit of time, mostly per year. That means that the risk (reduction) is expressed in terms of € per year, whereas the initial investments have the unit of €. The net present value of cost or benefit values over a future range of years can be calculated with <a class="reference internal" href="#equation-npv">(5)</a>. To calculate the net present value NPV [€] a discount rate  should be used. The discount rate represents a required return on an investment.</p>
 <div class="math notranslate nohighlight" id="equation-npv">
-<span class="eqno">(4)<a class="headerlink" href="#equation-npv" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(5)<a class="headerlink" href="#equation-npv" title="Permalink to this equation">#</a></span>\[
   NPV = \sum_{t=1}^{T} \frac{C_t}{(1+r)^t}
 \]</div>
 <p>where:</p>
@@ -599,7 +572,7 @@ I &lt; P_{f,0}(D_0 - D_{new})
 <li><p><span class="math notranslate nohighlight">\(C_t\)</span> the costs in year <span class="math notranslate nohighlight">\(t\)</span> [€]</p></li>
 <li><p><span class="math notranslate nohighlight">\(T\)</span> the reference period [years]</p></li>
 </ul>
-<p>The contribution of costs in a certain year to the net present value depend on the discount rate and the reference year. Costs or benefits closest to the present will have the greatest contribution. <a class="reference internal" href="#present-value"><span class="std std-numref">Fig. 25</span></a> below shows the value of <span class="math notranslate nohighlight">\(1/(1+r)^t\)</span> for a given year <span class="math notranslate nohighlight">\(t\)</span> for different discount rates. The higher the discount rate, the smaller the contribution to the net present value of costs or benefits that are far away from the present. For an infinite time horizon it can be shown that <span class="math notranslate nohighlight">\(\sum 1/(1+r)^t \approx 1/r\)</span>. This approximation can be used in evaluating engineering projects with a long life time.</p>
+<p>The contribution of costs in a certain year to the net present value depend on the discount rate and the reference year. Costs or benefits closest to the present will have the greatest contribution. <a class="reference internal" href="#present-value"><span class="std std-numref">Fig. 26</span></a> below shows the value of <span class="math notranslate nohighlight">\(1/(1+r)^t\)</span> for a given year <span class="math notranslate nohighlight">\(t\)</span> for different discount rates. The higher the discount rate, the smaller the contribution to the net present value of costs or benefits that are far away from the present. For an infinite time horizon it can be shown that <span class="math notranslate nohighlight">\(\sum 1/(1+r)^t \approx 1/r\)</span>. This approximation can be used in evaluating engineering projects with a long life time.</p>
 <div class="toggle docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -623,7 +596,7 @@ I &lt; P_{f,0}(D_0 - D_{new})
 <figure class="align-default" id="present-value">
 <a class="reference internal image-reference" href="../_images/present_value_py.svg"><img alt="../_images/present_value_py.svg" src="../_images/present_value_py.svg" width="400" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 25 </span><span class="caption-text">Normalized present value of a cost or benefit in year <span class="math notranslate nohighlight">\(t\)</span> for different discount rates.</span><a class="headerlink" href="#present-value" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 26 </span><span class="caption-text">Normalized present value of a cost or benefit in year <span class="math notranslate nohighlight">\(t\)</span> for different discount rates.</span><a class="headerlink" href="#present-value" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>

@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Case 1: Two Loads" href="case-two-loads.html" />
+    <link rel="next" title="System Reliability" href="../reliability-system/overview.html" />
     <link rel="prev" title="Risk Curve" href="../risk-analysis/risk-curves.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -175,48 +175,21 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Component Reliability
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="case-two-loads.html">
-     Case 1: Two Loads
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="case-r-s.html">
-     Case 2: Load and Resistance
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../reliability-system/overview.html">
    System Reliability
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../reliability-system/system-series.html">
-     Series Systems
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../reliability-system/system-parallel.html">
-     Parallel Systems
-    </a>
-   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../reliability-system/exercise-simple-city.html">
      Example System
@@ -228,8 +201,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../risk-evaluation/overview.html">
    Risk Evaluation
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -265,8 +238,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../exercises/overview.html">
    Exercises
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -445,6 +418,11 @@ title="Print to PDF"
    Not Simple Cases
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#two-random-variables">
+   Two Random Variables
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -477,6 +455,11 @@ title="Print to PDF"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#not-simple-cases">
    Not Simple Cases
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#two-random-variables">
+   Two Random Variables
   </a>
  </li>
 </ul>
@@ -553,6 +536,20 @@ p_f=F_{h_w}(2)=\Phi\left[ \frac{2-\mu}{\sigma}\right] =\Phi[-3]=0.13
 <p class="admonition-title">Note</p>
 <p>The term ‘failure’ here, widely used in civil engineering, is used here as a matter of convenience. Component reliability methods can also be used to find the probability of something that has nothing to do with failure, as long as it can be desribed with a function of random variables.</p>
 </div>
+</section>
+<section id="two-random-variables">
+<h2>Two Random Variables<a class="headerlink" href="#two-random-variables" title="Permalink to this headline">#</a></h2>
+<p>The example with discharge from two rivers in the Probabilistic Design Chapter can be considered a component reliability problem with two random variables. The discharge of both tributary rivers act as loads because they both are proportional to the main design variable, <span class="math notranslate nohighlight">\(q\)</span> or <span class="math notranslate nohighlight">\(h_{dike}\)</span>. The reliability integral is thus</p>
+<div class="math notranslate nohighlight">
+\[
+p_f=\int_\Omega f_{Q_1,Q_2}(q_1,q_2)\:\mathrm{d}x
+\]</div>
+<p>where the failure region <span class="math notranslate nohighlight">\(\Omega\)</span> contains all values of <span class="math notranslate nohighlight">\(Q_1\)</span> and <span class="math notranslate nohighlight">\(Q_2\)</span> such that the river level exceeds the dike height:</p>
+<div class="math notranslate nohighlight">
+\[
+\Omega: h_{dike} \leq h_w(Q_1,Q_2)
+\]</div>
+<p>Note that if the dike were constructed to a height of 8.29 m, the component reliability would be 0.01 and the failure region would be equivalent to <a class="reference internal" href="../prob-design/02-two-random-variables.html#design-2-rv-correct"><span class="std std-numref">Fig. 7</span></a>.</p>
 <!-- Component reliability Analysis:  
 - limit states (servicability, ultimate) and limit-state functions; failure definition
 - Design frameworks 
@@ -569,16 +566,16 @@ p_f=F_{h_w}(2)=\Phi\left[ \frac{2-\mu}{\sigma}\right] =\Phi[-3]=0.13
 Overview of non-linear problems (distribution and LSF); explanation of LSF; formulations of structural reliability. the area under the curve. Solution techniquest. Partial safety factor approach / LRFD / beta and reliability index. -->
 <div class="tip dropdown admonition">
 <p class="admonition-title">Exam Information</p>
-<p>You are expected to recognize the role of random variables (e.g., loads and resistances) within the function of random variables for a component and visualize it on a bivariate plot. You may be asked to solve simple component reliability problems, limited to linear functions of normally distributed random variables, and evaluate the role of dependence between variables. You can produce a probabilistic design by modifying the component such that the probability of interest meets a specific criteria.</p>
+<p>You are expected to recognize the role of random variables (e.g., loads and resistances) within the function of random variables for a component and visualize it on a bivariate plot. Component reliability problems will limited to linear functions of normally distributed random variables; although you will <em>not</em> be asked to compute reliability.</p>
 </div>
 <!-- ```{admonition} Exam Information
 :class: tip, dropdown
-For the exam, you will be expected to be able to recognize and solve simple component reliability problems, and describe the influence that dependence between random variables may have on the calculated probability of interest. Given a specific problem of interest, you should be able to describe failure (or non-failure) analytically as a function of random variables and visually in a bivariate plot. Using these simple frameworks, you can modify the component such that the probability of interest meets a specific criteria.
+You are expected to recognize the role of random variables (e.g., loads and resistances) within the function of random variables for a component and visualize it on a bivariate plot. You may be asked to solve simple component reliability problems, limited to linear functions of normally distributed random variables, and evaluate the role of dependence between variables. You can produce a probabilistic design by modifying the component such that the probability of interest meets a specific criteria.
 ``` -->
-<p>Table of contents:</p>
-</section>
-<div class="toctree-wrapper compound">
-</div>
+<!-- ```{admonition} Exam Information
+:class: tip, dropdown
+For the exam, you will be expected to be able to recognize and solve simple component reliability problems, and describe the influence that dependence between random variables may have on the calculated probability of interest. Given a specific problem of interest, you should be able to describe failure (or non-failure) analytically as a function of random variables and visually in a bivariate plot. Using these simple frameworks, you can modify the component such that the probability of interest meets a specific criteria.
+``` --></section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -615,10 +612,10 @@ For the exam, you will be expected to be able to recognize and solve simple comp
             <p class="prev-next-title">Risk Curve</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="case-two-loads.html" title="next page">
+    <a class='right-next' id="next-link" href="../reliability-system/overview.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Case 1: Two Loads</p>
+        <p class="prev-next-title">System Reliability</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

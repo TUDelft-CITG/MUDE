@@ -1,3 +1,0 @@
-# Case 2: Load and Resistance
-
-Consider a city that gets drinking water from a river, just downstream from the confluence of two tributaries...

@@ -175,9 +175,14 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../reliability-component/overview.html">
    Component Reliability
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../reliability-system/overview.html">
+   System Reliability
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
@@ -185,38 +190,6 @@ const thebe_selector_output = ".output, .cell_output"
    </i>
   </label>
   <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../reliability-component/case-two-loads.html">
-     Case 1: Two Loads
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../reliability-component/case-r-s.html">
-     Case 2: Load and Resistance
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../reliability-system/overview.html">
-   System Reliability
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../reliability-system/system-series.html">
-     Series Systems
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../reliability-system/system-parallel.html">
-     Parallel Systems
-    </a>
-   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../reliability-system/exercise-simple-city.html">
      Example System
@@ -228,8 +201,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="overview.html">
    Risk Evaluation
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -265,8 +238,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../exercises/overview.html">
    Exercises
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -691,16 +664,16 @@ title="Print to PDF"
 </tr>
 </tbody>
 </table>
-<p>Societal risk can be evaluated by means of an FN limit line. The calculated FN curve of the system should, in principle, not exceed the limit line. An FN-criterion is defined by three variables: (1) its base point (the exceedance probability of 1 fatality, i.e. C), (2) its slope (<span class="math notranslate nohighlight">\(\alpha\)</span>), and (3) its probability and/or consequence cut-off (<span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>). <a class="reference internal" href="#limit-line"><span class="std std-numref">Fig. 30</span></a> shows the different constraints that could make up an FN limit line.</p>
+<p>Societal risk can be evaluated by means of an FN limit line. The calculated FN curve of the system should, in principle, not exceed the limit line. An FN-criterion is defined by three variables: (1) its base point (the exceedance probability of 1 fatality, i.e. C), (2) its slope (<span class="math notranslate nohighlight">\(\alpha\)</span>), and (3) its probability and/or consequence cut-off (<span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span>). <a class="reference internal" href="#limit-line"><span class="std std-numref">Fig. 31</span></a> shows the different constraints that could make up an FN limit line.</p>
 <figure class="align-default" id="limit-line">
 <a class="reference internal image-reference" href="../_images/fn_limit_eq.png"><img alt="../_images/fn_limit_eq.png" src="../_images/fn_limit_eq.png" style="height: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 30 </span><span class="caption-text">Schematic FN curve illustrating limit line formulation.</span><a class="headerlink" href="#limit-line" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 31 </span><span class="caption-text">Schematic FN curve illustrating limit line formulation.</span><a class="headerlink" href="#limit-line" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <p>The general formulation for such a limit line without horizontal of vertical cut-off equals:</p>
 <div class="math notranslate nohighlight" id="equation-limit-line">
-<span class="eqno">(14)<a class="headerlink" href="#equation-limit-line" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(15)<a class="headerlink" href="#equation-limit-line" title="Permalink to this equation">#</a></span>\[
   1 - F_N(n) \leq \frac{C}{n^\alpha}
 \]</div>
 <p>where:</p>
@@ -712,11 +685,11 @@ title="Print to PDF"
 <p>For different applications limit lines have been developed with varying constants and steepness. Examples of application areas include industrial risks in the Netherlands (next section), dams in the United States and Canada, and chemical risks in Hongkong and the UK ⚠️(Jonkman et al., 2003).</p>
 <div class="admonition-exaple-risk-matrix admonition">
 <p class="admonition-title">Exaple: Risk Matrix</p>
-<p>Risk matrices are often used in various industries for risk evaluation and decision support, for example, to quickly prioritize actions, especially in time-sensitive situations. For a given undesired event the extent of probability and consequences are estimated on a qualitative or semi-quantitative scale, see <a class="reference internal" href="#risk-matrix"><span class="std std-numref">Fig. 31</span></a> for an example. Ranges of failure probabilities or consequences can be assigned to the qualitative terms on the axes in the example. The combination of probability and consequence determines the level of risk, and depending on the application, whether it is acceptable or whether it requires more attention and risk reduction efforts. However, unlike the FN curve, the cumulative effects of multiple possible events are generally not considered in a risk matrix.</p>
+<p>Risk matrices are often used in various industries for risk evaluation and decision support, for example, to quickly prioritize actions, especially in time-sensitive situations. For a given undesired event the extent of probability and consequences are estimated on a qualitative or semi-quantitative scale, see <a class="reference internal" href="#risk-matrix"><span class="std std-numref">Fig. 32</span></a> for an example. Ranges of failure probabilities or consequences can be assigned to the qualitative terms on the axes in the example. The combination of probability and consequence determines the level of risk, and depending on the application, whether it is acceptable or whether it requires more attention and risk reduction efforts. However, unlike the FN curve, the cumulative effects of multiple possible events are generally not considered in a risk matrix.</p>
 <figure class="align-default" id="risk-matrix">
 <a class="reference internal image-reference" href="figures/risk_matrix.PNG"><img alt="figures/risk_matrix.PNG" src="figures/risk_matrix.PNG" style="width: 500px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 31 </span><span class="caption-text">Example of a risk matrix used by various engineering and military branches of the United States Army Corps of Engineers (Source: Corps <a class="reference external" href="https://www.rmc.usace.army.mil/">Risk Management Center</a> or <a class="reference external" href="https://www.iwr.usace.army.mil/Missions/Risk-Analysis-Gateway/Risk-Assessment/">Risk Analysis Gateway</a>).</span><a class="headerlink" href="#risk-matrix" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 32 </span><span class="caption-text">Example of a risk matrix used by various engineering and military branches of the United States Army Corps of Engineers (Source: Corps <a class="reference external" href="https://www.rmc.usace.army.mil/">Risk Management Center</a> or <a class="reference external" href="https://www.iwr.usace.army.mil/Missions/Risk-Analysis-Gateway/Risk-Assessment/">Risk Analysis Gateway</a>).</span><a class="headerlink" href="#risk-matrix" title="Permalink to this image">#</a></p>
 <div class="legend">
 </div>
 </figcaption>
@@ -727,11 +700,11 @@ title="Print to PDF"
 <h2>Case Study: Industrial Hazards<a class="headerlink" href="#case-study-industrial-hazards" title="Permalink to this headline">#</a></h2>
 <p>The Dutch major hazards policy deals with the risks to those living in the vicinity of major industrial hazards such as chemical plants and LPG-fuelling stations. The development of the Dutch major hazards policy was strongly incident driven, as were European efforts aimed at the prevention of major industrial accidents. After a number of severe industrial accidents, including the Bhopal accident in 1984 which killed an estimated 3000 people and severely injured over 200.000, a European directive was drafted concerning the prevention of major accidents: the 1982 Seveso Directive. This was later replaced by the Seveso II Directive.
 The cornerstones of the Dutch major hazards policy are a) the use of quantitative risk analysis (QRA); b) comparison of QRA outcomes with limits to individual and societal risks ⚠️(Bottelberghs, 2000).</p>
-<p>Within the Dutch major hazards policy, individual risk is defined as the probability of death of an average, unprotected person that is constantly present at a certain location. It is thereby a property of location and iso-risk contours can be plotted on a map (see <a class="reference internal" href="#risk-contour"><span class="std std-numref">Fig. 32</span></a>). Individual risk is therefore also named local risk (“plaatsgebonden risico”) in the Netherlands. The shape of the risk contours for other applications will look different. For airports the contours will follow the shape of the runway and flight paths, for polders and flooding the risk contours will be highest in the deepest part of the polder.</p>
+<p>Within the Dutch major hazards policy, individual risk is defined as the probability of death of an average, unprotected person that is constantly present at a certain location. It is thereby a property of location and iso-risk contours can be plotted on a map (see <a class="reference internal" href="#risk-contour"><span class="std std-numref">Fig. 33</span></a>). Individual risk is therefore also named local risk (“plaatsgebonden risico”) in the Netherlands. The shape of the risk contours for other applications will look different. For airports the contours will follow the shape of the runway and flight paths, for polders and flooding the risk contours will be highest in the deepest part of the polder.</p>
 <figure class="align-default" id="risk-contour">
 <a class="reference internal image-reference" href="../_images/risk_contour.png"><img alt="../_images/risk_contour.png" src="../_images/risk_contour.png" style="height: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 32 </span><span class="caption-text">Example of a schematic individual risk contour (circles) for a chemical installation.</span><a class="headerlink" href="#risk-contour" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 33 </span><span class="caption-text">Example of a schematic individual risk contour (circles) for a chemical installation.</span><a class="headerlink" href="#risk-contour" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 <table class="table" id="individual-risk-criteria">
@@ -767,11 +740,11 @@ The cornerstones of the Dutch major hazards policy are a) the use of quantitativ
 </tbody>
 </table>
 <p>A distinction is made between vulnerable objects such as schools and houses and limitedly vulnerable objects such as small offices. The following criteria apply. For new situations a limit of <span class="math notranslate nohighlight">\(10^{-6}\)</span> per year applies. A comparison with <a class="reference internal" href="#individual-risk-criteria"><span class="std std-numref">Table 9</span></a> shows that this individual risk value has a negligible effect on life expectancy.</p>
-<p>The criterion for societal risk that is used in the Netherlands for evaluating the third party risks posed by major industrial hazards is shown in <a class="reference internal" href="#fn-limit"><span class="std std-numref">Fig. 33</span></a> below. It serves as a reference in the broader assessment of third party risks by competent authorities. Exceedances of the criterion line also have to be motivated by competent authorities. When the criterion line is not exceeded, the acceptability of the third party risk still has to be motivated. The limit line is characterized by <span class="math notranslate nohighlight">\(C=10^{-3}\)</span> and a steepness of <span class="math notranslate nohighlight">\(\alpha = 2\)</span>, making it a risk averse criterion. The criterion is used to assess the acceptability of the risks of individual facilities.</p>
+<p>The criterion for societal risk that is used in the Netherlands for evaluating the third party risks posed by major industrial hazards is shown in <a class="reference internal" href="#fn-limit"><span class="std std-numref">Fig. 34</span></a> below. It serves as a reference in the broader assessment of third party risks by competent authorities. Exceedances of the criterion line also have to be motivated by competent authorities. When the criterion line is not exceeded, the acceptability of the third party risk still has to be motivated. The limit line is characterized by <span class="math notranslate nohighlight">\(C=10^{-3}\)</span> and a steepness of <span class="math notranslate nohighlight">\(\alpha = 2\)</span>, making it a risk averse criterion. The criterion is used to assess the acceptability of the risks of individual facilities.</p>
 <figure class="align-default" id="fn-limit">
 <a class="reference internal image-reference" href="../_images/fn_limit.png"><img alt="../_images/fn_limit.png" src="../_images/fn_limit.png" style="width: 400px;" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 33 </span><span class="caption-text">FN limit line used for installations in the Netherlands</span><a class="headerlink" href="#fn-limit" title="Permalink to this image">#</a></p>
+<p><span class="caption-number">Fig. 34 </span><span class="caption-text">FN limit line used for installations in the Netherlands</span><a class="headerlink" href="#fn-limit" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -833,12 +806,12 @@ The cornerstones of the Dutch major hazards policy are a) the use of quantitativ
 </table>
 <p>The proposed individual risk limit becomes:</p>
 <div class="math notranslate nohighlight" id="equation-individual-risk">
-<span class="eqno">(15)<a class="headerlink" href="#equation-individual-risk" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(16)<a class="headerlink" href="#equation-individual-risk" title="Permalink to this equation">#</a></span>\[
   IR &lt; \beta \cdot 10^{-4}
 \]</div>
 <p>An appropriate value for the policy factor <span class="math notranslate nohighlight">\(\beta\)</span> can be chosen depending on the characteristics of the activity. If the conditional probability of death due to an accident <span class="math notranslate nohighlight">\(P(d|f)\)</span> is known, the acceptable failure probability can be computed:</p>
 <div class="math notranslate nohighlight" id="equation-acceptable-failure-prob">
-<span class="eqno">(16)<a class="headerlink" href="#equation-acceptable-failure-prob" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(17)<a class="headerlink" href="#equation-acceptable-failure-prob" title="Permalink to this equation">#</a></span>\[
   P_f \leq \frac{\beta \cdot 10^{-4}}{P_{d|f}}
 \]</div>
 <p>Note that the Dutch individual risk criterion for hazardous installations would be obtained for <span class="math notranslate nohighlight">\(\beta = 0.01\)</span> and a conditional probability of death of 1 (<span class="math notranslate nohighlight">\(P_{d|f} = 1\)</span>).</p>
@@ -847,7 +820,7 @@ The cornerstones of the Dutch major hazards policy are a) the use of quantitativ
 <h3>Societal risk<a class="headerlink" href="#societal-risk" title="Permalink to this headline">#</a></h3>
 <p>The societal risk criterion proposed by the TAW is based on the thought that societal risk should be evaluated primarily at a national level as local developments may lead to a situation that is considered unacceptable by society as a whole ⚠️(Vrijling et al., 1995). The societal risk criterion at a national scale proposed by the TAW is:</p>
 <div class="math notranslate nohighlight" id="equation-societal-risk-criterion">
-<span class="eqno">(17)<a class="headerlink" href="#equation-societal-risk-criterion" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(18)<a class="headerlink" href="#equation-societal-risk-criterion" title="Permalink to this equation">#</a></span>\[
   E(N) + k \sigma(N) \leq \beta \cdot 100
 \]</div>
 <p>where:</p>
@@ -867,7 +840,7 @@ The cornerstones of the Dutch major hazards policy are a) the use of quantitativ
 </ol>
 <p>For both systems a Bernoulli distribution of the number of fatalities is applied meaning that the number of fatalities in case of failure is exactly known. The expected value and standard deviation of the number of fatalities are found as follows:</p>
 <div class="math notranslate nohighlight" id="equation-bernoulli">
-<span class="eqno">(18)<a class="headerlink" href="#equation-bernoulli" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(19)<a class="headerlink" href="#equation-bernoulli" title="Permalink to this equation">#</a></span>\[
   E(N) = P_fN
   \sigma^2(N) = P_f(1-P_f)N^2
 \]</div>
@@ -904,7 +877,7 @@ The cornerstones of the Dutch major hazards policy are a) the use of quantitativ
 </tr>
 </tbody>
 </table>
-<p>The next step would be to distribute this maximum allowable level of societal risk over individual installations. After all, locally imposed societal risk criteria are necessary for achieving the desired national level of societal risk. The translation of the nationally acceptable level of risk to a criterion for a single local installation depends on the type of probability distribution of the number of fatalities. In ⚠️Vrijling et al (1998) a formulation of the risk acceptance at a local level is presented conform <a class="reference internal" href="#equation-limit-line">(14)</a>:️</p>
+<p>The next step would be to distribute this maximum allowable level of societal risk over individual installations. After all, locally imposed societal risk criteria are necessary for achieving the desired national level of societal risk. The translation of the nationally acceptable level of risk to a criterion for a single local installation depends on the type of probability distribution of the number of fatalities. In ⚠️Vrijling et al (1998) a formulation of the risk acceptance at a local level is presented conform <a class="reference internal" href="#equation-limit-line">(15)</a>:️</p>
 <div class="math notranslate nohighlight">
 \[
   1 - F_n(n) \leq \frac{C}{n^\alpha}
@@ -925,15 +898,15 @@ The cornerstones of the Dutch major hazards policy are a) the use of quantitativ
 <p>We consider application of the three criteria to the case of dike rings in the Netherlands. There are about 100 dike rings in the Netherlands of different sizes. A dike ring is a flood prone area protected from flooding by flood defences and high grounds. The conditional probability of death given flooding depends on the depth of the polder and flood characteristics. Research on loss of life due to floods shows that a conservative estimate would lead to <span class="math notranslate nohighlight">\(P_{d|f} = 0.1\)</span>.</p>
 <p>First, we consider the individual risk. A value of <span class="math notranslate nohighlight">\(\beta = 0.1\)</span> is proposed as being exposed is considered as an involuntary activity with some benefit (i.e. living in a prosperous delta). This leads to an acceptable individual risk value of <span class="math notranslate nohighlight">\(10^{-5}\)</span> per year. This limit has also been proposed by the Dutch government in the year 2014 (“basisveiligheid”). The acceptable flooding probability according to the individual risk becomes:</p>
 <div class="math notranslate nohighlight" id="equation-acceptable-flooding-probability">
-<span class="eqno">(19)<a class="headerlink" href="#equation-acceptable-flooding-probability" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">(20)<a class="headerlink" href="#equation-acceptable-flooding-probability" title="Permalink to this equation">#</a></span>\[
     P_f \leq \frac{\beta \cdot 10^{-4}}{P_{d|f}} = \frac{0.1 \cdot 10^{-4}}{0.1} = 10^{-4}\text{ per year}
 \]</div>
-<p>The societal risk criterion can be determined according to <a class="reference internal" href="#equation-limit-line">(14)</a>. Assuming a risk averse criterion <span class="math notranslate nohighlight">\(\alpha=2\)</span>. We can determine the constant <span class="math notranslate nohighlight">\(C\)</span> of the limit line for <span class="math notranslate nohighlight">\(N_a = 100\)</span> installations and <span class="math notranslate nohighlight">\(\beta=0.1\)</span>.</p>
+<p>The societal risk criterion can be determined according to <a class="reference internal" href="#equation-limit-line">(15)</a>. Assuming a risk averse criterion <span class="math notranslate nohighlight">\(\alpha=2\)</span>. We can determine the constant <span class="math notranslate nohighlight">\(C\)</span> of the limit line for <span class="math notranslate nohighlight">\(N_a = 100\)</span> installations and <span class="math notranslate nohighlight">\(\beta=0.1\)</span>.</p>
 <div class="math notranslate nohighlight">
 \[
     C = \left( \frac{\beta \cdot 100}{k \sqrt{N_a}} \right)^2 = \left( \frac{0.1 \cdot 1000}{3 \sqrt{100}} \right)^2 = 0.11
 \]</div>
-<p>The limit line for societal risk becomes <span class="math notranslate nohighlight">\(1 - F_N(n) \leq 0.11/n^2\)</span>. Both the individual and societal risk criteria are plotted in  below. As a third criterion the economic optimization can be added. The optimal or acceptable probability of failure depends on the damage and investment costs. A relationship with the graph below can be established by assuming that the number of fatalities is related to the economic damages. A dike ring with many inhabitants and potential fatalities will generally also represent a large economic value. For the sake of the example we assume that every fatality corresponds to an economic damage of €<span class="math notranslate nohighlight">\(5 \cdot 10^7\)</span> (note: this is not equal to the value of a human life). To calculate the economic optimum for the example we assume arbitrary values of <span class="math notranslate nohighlight">\(r=0.025\)</span> and  €<span class="math notranslate nohighlight">\(5 \cdot 10^6\)</span> <span class="math notranslate nohighlight">\(B=0.33\)</span>. <a class="reference internal" href="#combined-risk-criteria"><span class="std std-numref">Fig. 34</span></a> below shows the combination for the three criteria.</p>
+<p>The limit line for societal risk becomes <span class="math notranslate nohighlight">\(1 - F_N(n) \leq 0.11/n^2\)</span>. Both the individual and societal risk criteria are plotted in  below. As a third criterion the economic optimization can be added. The optimal or acceptable probability of failure depends on the damage and investment costs. A relationship with the graph below can be established by assuming that the number of fatalities is related to the economic damages. A dike ring with many inhabitants and potential fatalities will generally also represent a large economic value. For the sake of the example we assume that every fatality corresponds to an economic damage of €<span class="math notranslate nohighlight">\(5 \cdot 10^7\)</span> (note: this is not equal to the value of a human life). To calculate the economic optimum for the example we assume arbitrary values of <span class="math notranslate nohighlight">\(r=0.025\)</span> and  €<span class="math notranslate nohighlight">\(5 \cdot 10^6\)</span> <span class="math notranslate nohighlight">\(B=0.33\)</span>. <a class="reference internal" href="#combined-risk-criteria"><span class="std std-numref">Fig. 35</span></a> below shows the combination for the three criteria.</p>
 <p>For a given number of fatalities in a dike ring the acceptable failure probability according to the three criteria can be  derived. The individual risk criterion is independent on the  number of fatalities. The economic criterion shows a linear relation between the failure probability and damage or number of fatalities. The societal criterion is risk averse so shows a decreasing quadratic relationship between acceptable failure probability and consequences.</p>
 <p>For a given number of inhabitants and potential fatalities for a dike ring, the acceptable failure probability can be determined. For dike rings with between 1 and 10 fatalities – generally small areas-the individual risk criterion is the most stringent. For dike rings with large numbers of fatalities, the risk averse societal risk criterion becomes dominant.</p>
 <p>Several extensions of this model are possible. One can consider to add the economic value of life loss or consider a different distribution of the nationally acceptable societal risk over dike rings with different sizes.</p>
@@ -946,7 +919,7 @@ The cornerstones of the Dutch major hazards policy are a) the use of quantitativ
 <figure class="align-default" id="combined-risk-criteria">
 <a class="reference internal image-reference" href="../_images/risk_types_py.svg"><img alt="../_images/risk_types_py.svg" src="../_images/risk_types_py.svg" width="400" /></a>
 <figcaption>
-<p><span class="caption-number">Fig. 34 </span><span class="caption-text">Combination of individual, societal and economic risk criteria for a
+<p><span class="caption-number">Fig. 35 </span><span class="caption-text">Combination of individual, societal and economic risk criteria for a
 hypothetical example.</span><a class="headerlink" href="#combined-risk-criteria" title="Permalink to this image">#</a></p>
 </figcaption>
 </figure>

@@ -50,10 +50,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Series Systems" href="system-series.html" />
-    <link rel="prev" title="Case 2: Load and Resistance" href="../reliability-component/case-r-s.html" />
+    <link rel="next" title="Example System" href="exercise-simple-city.html" />
+    <link rel="prev" title="Component Reliability" href="../reliability-component/overview.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -173,48 +175,21 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1">
   <a class="reference internal" href="../reliability-component/overview.html">
    Component Reliability
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../reliability-component/case-two-loads.html">
-     Case 1: Two Loads
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../reliability-component/case-r-s.html">
-     Case 2: Load and Resistance
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="current reference internal" href="#">
    System Reliability
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="system-series.html">
-     Series Systems
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="system-parallel.html">
-     Parallel Systems
-    </a>
-   </li>
    <li class="toctree-l2">
     <a class="reference internal" href="exercise-simple-city.html">
      Example System
@@ -226,8 +201,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../risk-evaluation/overview.html">
    Risk Evaluation
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
-  <label for="toctree-checkbox-5">
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -263,8 +238,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../exercises/overview.html">
    Exercises
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
-  <label for="toctree-checkbox-6">
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -441,6 +416,28 @@ title="Print to PDF"
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reliability-calculations">
+   Reliability Calculations
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parallel-system">
+     Parallel System
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#series-system">
+     Series System
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quantification-of-dependence">
+     Quantification of Dependence
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#chapter-overview">
    Chapter Overview
   </a>
@@ -479,6 +476,28 @@ title="Print to PDF"
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#definition-of-failure">
      Definition of Failure
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reliability-calculations">
+   Reliability Calculations
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#parallel-system">
+     Parallel System
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#series-system">
+     Series System
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quantification-of-dependence">
+     Quantification of Dependence
     </a>
    </li>
   </ul>
@@ -527,7 +546,7 @@ title="Print to PDF"
 </figure>
 <p>Systems are often schematized using a system diagram, as in <a class="reference internal" href="#sys-series-parallel"><span class="std std-numref">Fig. 17</span></a>. This also illustrates the function of a system as an input-output diagram, where one can considers the ability to travel from left to right on the figure. It is analagous to many scenarios involving flow: electricity (<a class="reference internal" href="#sys-lightbulbs"><span class="std std-numref">Fig. 19</span></a>), water in pipes or transportation routes.</p>
 <figure class="align-default" id="sys-lightbulbs">
-<a class="reference internal image-reference" href="figures/system_lightbulbs.PNG"><img alt="figures/system_lightbulbs.PNG" src="figures/system_lightbulbs.PNG" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../_images/system_lightbulbs.png"><img alt="../_images/system_lightbulbs.png" src="../_images/system_lightbulbs.png" style="width: 400px;" /></a>
 <figcaption>
 <p><span class="caption-number">Fig. 19 </span><span class="caption-text">Series (left) and parallel (right) systems illustrated as a string of lightbulbs.</span><a class="headerlink" href="#sys-lightbulbs" title="Permalink to this image">#</a></p>
 </figcaption>
@@ -537,13 +556,71 @@ title="Print to PDF"
 <p>Whereas in component reliabiity problems we defined failure using a function of random variables, in system reliabiltiy problems, we define failure based on the continuity of the system diagram. Failure occurs when we are not able to travel from left to right on the diagram due to one or more broken links.</p>
 </section>
 </section>
+<section id="reliability-calculations">
+<h2>Reliability Calculations<a class="headerlink" href="#reliability-calculations" title="Permalink to this headline">#</a></h2>
+<p>Equations for computing parallel and series system reliability are described here with the notation <span class="math notranslate nohighlight">\(F_i\)</span> and <span class="math notranslate nohighlight">\(\bar{F_i}\)</span> to denote failure and non-failure of component <span class="math notranslate nohighlight">\(i\)</span>, respectively. A system is made up of <span class="math notranslate nohighlight">\(i=1,...,n\)</span> components where the probability of failure of component <span class="math notranslate nohighlight">\(i\)</span> is <span class="math notranslate nohighlight">\(P(F_i)\)</span>. System reliability is quantified using failure probability of the system, <span class="math notranslate nohighlight">\(p_{f,sys}\)</span> (i.e., the complement of reliability).</p>
+<section id="parallel-system">
+<h3>Parallel System<a class="headerlink" href="#parallel-system" title="Permalink to this headline">#</a></h3>
+<p>A parallel system is often described as redundant since <em>all</em> components must fail to cause system failure. This is also simple to calculate as it can be described mathematically as the joint failure probability, or intersection, of all components:</p>
+<div class="math notranslate nohighlight">
+\[
+p_{f,sys} = P(F_1 \cap F_2 \cap ... \cap F_n)
+\]</div>
+<p>If the components are independent, this becomes</p>
+<div class="math notranslate nohighlight">
+\[
+p_{f,sys} = \prod_i^n P(F_i)
+\]</div>
+<p>Although we will not quantify the effect of dependence in depth here, it is easy to see semi-quantitatively that positive dependence increases the intersection probability, and therefore also increases <span class="math notranslate nohighlight">\(p_{f,sys}\)</span>. Negative dependence has the opposite effect. In fact, if parallel components are mutually exclusive the system is guaranteed to survive. The case of negative dependence is trivial in engineering reliability computation, but something that is used to motivate the incorporation of resilience or robustness in our risk reduction decisions.</p>
+</section>
+<section id="series-system">
+<h3>Series System<a class="headerlink" href="#series-system" title="Permalink to this headline">#</a></h3>
+<p>A series system fails if <em>any</em> component fails, which is</p>
+<div class="math notranslate nohighlight">
+\[
+p_{f,sys} = P(F_1 \cup F_2 \cup ... \cup F_n)
+\]</div>
+<p>For two components this can easily be re-written as</p>
+<div class="math notranslate nohighlight" id="equation-sys-p-series">
+<span class="eqno">(3)<a class="headerlink" href="#equation-sys-p-series" title="Permalink to this equation">#</a></span>\[
+p_{f,sys} = P(F_1) + P(F_2) - P(F_1 \cap F_2)
+\]</div>
+<p>Although it is straightforward to write out terms for 3 or more components, it is easier to re-write the union formulation as the complement of joint <em>survival</em> of the system:</p>
+<div class="math notranslate nohighlight">
+\[
+p_{f,sys} = 1 - P(\bar{F}_1 \cap \bar{F}_2 \cap ... \cap \bar{F}_n)
+\]</div>
+<p>As $\bar{F}_i=1-F_i, we arrive at the following simple relationship:</p>
+<div class="math notranslate nohighlight">
+\[
+p_{f,sys} = 1 - \prod_i^n \left(1-P(F_i)\right)
+\]</div>
+<p>The influence of dependence on a series system is most easily understood through consideration of <a class="reference internal" href="#equation-sys-p-series">(3)</a>, which allows a direct analogy to the parallel case through the intersection term. With positive dependence, the system failure probability decreases</p>
+</section>
+<section id="quantification-of-dependence">
+<h3>Quantification of Dependence<a class="headerlink" href="#quantification-of-dependence" title="Permalink to this headline">#</a></h3>
+<p><a class="reference internal" href="#sys-dependence"><span class="std std-numref">Fig. 20</span></a> quantifies the effect of dependence on the join probability of failure of two components. The joint failure probability is calculated using the multivariate normal distribution which has a linear dependence measure, the correlation coefficient, <span class="math notranslate nohighlight">\(\rho\)</span>. The blue line shows the series system failure probability, equivalent to <a class="reference internal" href="#equation-sys-p-series">(3)</a>. The figure allows one to evaluate the quantitative effect of dependence on series and parallel systems, and even illustrates the bound of <span class="math notranslate nohighlight">\(p_{f,sys}=P(F_1)\)</span> for the case of <span class="math notranslate nohighlight">\(\rho=+1\)</span>.</p>
+<figure class="align-default" id="sys-dependence">
+<a class="reference internal image-reference" href="../_images/system-corr-coeff.PNG"><img alt="../_images/system-corr-coeff.PNG" src="../_images/system-corr-coeff.PNG" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 20 </span><span class="caption-text">Effect of correlation coefficient on failure probability for a series system via joint failure, <span class="math notranslate nohighlight">\(P(F1 \cap F2)\)</span> (computed with a Gaussian copula). The arrow is located at <span class="math notranslate nohighlight">\(\rho=+0.9\)</span>, where <span class="math notranslate nohighlight">\(P(F1 \cap F2)=0.003\)</span>.</span><a class="headerlink" href="#sys-dependence" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
 <section id="chapter-overview">
 <h2>Chapter Overview<a class="headerlink" href="#chapter-overview" title="Permalink to this headline">#</a></h2>
-<p>This chapter contains a brief introduction to the computation of failure probability for series and parallel systems, and illustrates the role of dependence. The final section illustrates these concepts with a simple exercise.</p>
+<p>This page contains a brief introduction to the computation of failure probability for series and parallel systems, and describes the role of dependence. The following section illustrates these concepts with a simple exercise.</p>
 <div class="tip dropdown admonition">
 <p class="admonition-title">MUDE Exam Information</p>
 <p>For the exam, you should be able to recognize and solve simple series and parallel systems, as well as describe the influence that dependence between components may have on the calculated probability of interest. You will not need to draw or evaluate a system more complex than those illustrated on this page.</p>
 </div>
+<!-- This chapter contains a brief introduction to the computation of failure probability for series and parallel systems, and illustrates the role of dependence. The final section illustrates these concepts with a simple exercise.
+
+```{admonition} MUDE Exam Information
+:class: tip, dropdown
+For the exam, you should be able to recognize and solve simple series and parallel systems, as well as describe the influence that dependence between components may have on the calculated probability of interest. You will not need to draw or evaluate a system more complex than those illustrated on this page.
+``` -->
 <section id="additional-information">
 <h3>Additional Information<a class="headerlink" href="#additional-information" title="Permalink to this headline">#</a></h3>
 <p>The word ‘system’ in the title of this chapter refers to a reliability analyses made up of more than one distinct components. It may or may not be the same as the system for which the risk analysis is being done. For example, in the flood risk case we look at a dike ring, which is a series system of dike segments. Each dike segment can fail in a variety of ways (e.g., sliding or eroding), where if <em>any</em> of these types of failure occurs, the dike fails; a series system. Thus, the dike ring is a series system, where each component also a series system.</p>
@@ -581,17 +658,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../reliability-component/case-r-s.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../reliability-component/overview.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Case 2: Load and Resistance</p>
+            <p class="prev-next-title">Component Reliability</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="system-series.html" title="next page">
+    <a class='right-next' id="next-link" href="exercise-simple-city.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Series Systems</p>
+        <p class="prev-next-title">Example System</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
