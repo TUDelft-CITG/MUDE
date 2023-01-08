@@ -1,5 +1,10 @@
 # Sample Exam Questions
 
+```{admonition} Sample Exam Answers
+:class: tip
+
+Answers to the sample exam will be made available on this page after Monday of Week 2.8.
+```
 ## General Questions
 
 **Question 1:** Indicate which of the following statements is true (multiple answers possible):
@@ -9,11 +14,11 @@
    4. A flood defence system that is a single line of defence composed of multiple dike sections would best be characterized as a series sytem, not as a parallel system.
    5. A prison with multiple walls and fences would best be characterized as a series system, not as a parallel system.
 
-```{admonition} Answer
+<!-- ```{admonition} Answer
 :class: tip, dropdown
 
 Options 3 and 4 are true.
-```
+``` -->
 
 ## Flood Protection for a Bay
 
@@ -32,36 +37,36 @@ b. parallel system
 c. component system
 d. none of the above
 
-```{admonition} Answer
+<!-- ```{admonition} Answer
 :class: tip, dropdown
 
 Option b is true.
-```
+``` -->
 
 **Question 2:** how will dependence between the dam and dike change the system failure probability? (choose one)
 a. increase
 b. decrease
 c. no change
 
-```{admonition} Answer
+<!-- ```{admonition} Answer
 :class: tip, dropdown
 
 Option a is true.
-```
+``` -->
 
 **Question 3:** describe whether or not there is dependence between the dam and dike, and what the source could be.
 
-```{admonition} Answer
+<!-- ```{admonition} Answer
 :class: tip, dropdown
 
 It is likely that both structures are constructed of the same material (e.g., local soil), which would respond in a similar way to the storm surge and waves. The structures are also likely to be operated and maintained by the same government agency, which would result in dependence due to human error and maintenance problems.
-```
+``` -->
 
 The damage in case of flood protection system failure is 1 billion $10^9$ Euros. We compare two different investments in the system. In strategy 1 the system failure probability becomes $10^{-3}$ per year at a cost of 10 million ($10 \cdot 10^{6}$). In strategy 2 the system failure probability becomes $3 \cdot 10^{-4}$ per year at a cost of 50 million.
 
 **Question 4:** for which value of the interest rate $r$ is strategy 2 the most interesting? (You may consider an infinite lifetime of investments).
 
-```{admonition} Answer
+<!-- ```{admonition} Answer
 :class: tip, dropdown
 
 Find $r$ such that the difference in expected damage between strategy 1 and 2, $\Delta p_{f,sys}D/r$, is greater than the difference between the investments, $I_2-I_1$, where the net present value over an infinite lifetime is $1/r$.
@@ -75,13 +80,13 @@ Can also set up as solving for $r$ when comparing total costs:
 $$
 I_1+\frac{p_1 D}{r}>I_2+\frac{p_2 D}{r}
 $$
-```
+``` -->
 
  A full scale risk assessment is made for the systemw ith probabilities $P(N>10)=10^{-3}$ per year and $P(N>100)=5 \cdot 10^{-5}$ per year. A so-called limit line is given with values with $C = 10^{-1}$; and $\alpha = 2$.
 
 **Question 5:** determine whether this situation is acceptable. You may answer using a few sentences, calculations or by submitting a sketch, but either way, you must support your answer quantitatively. If you use a sketch, indicate the scale and relevant points on the plot. 
 
-````{admonition} Answer
+<!-- ````{admonition} Answer
 :class: tip, dropdown
 
 First create an FN curve for the risk assessment
@@ -90,7 +95,7 @@ First create an FN curve for the risk assessment
 ---
 width: 400px
 name: limit-line
----
+--- -->
 ```
 
 Next, check that each point on the line is below the limit line:
@@ -131,7 +136,7 @@ The table below indicates the costs of the strategies and how much they reduce t
 2. Strategy B
 3. neither A nor B
 
-````{admonition} Answer
+<!-- ````{admonition} Answer
 :class: tip, dropdown
 
 Strategy B is best.
@@ -143,7 +148,7 @@ Various costs (NPV value) are calculated in the table below, and Strategy B is t
 width: 500px
 ---
 ```
-````
+```` -->
 
 Consider the individual risk in two areas of the city by the bay, above. The acceptable individual risk is $10^{-5}$ per year. The conditional probability of death due to flooding is dependent on the water depth and indicated next to the graph. The individual risk level in area A is $10^{-5}$ per year and the water depth is 3 m. The individual risk level in area B is $10^{-5}$ per year and the water depth is 2 m.
 
@@ -155,7 +160,7 @@ width: 400px
 ---
 ```
 
-````{admonition} Answer
+<!-- ````{admonition} Answer
 :class: tip, dropdown
 
 Individual risk is:
@@ -172,7 +177,7 @@ width: 500px
 ---
 ```
 The norm is governed by the most strict safety requirement, thus, $P_{\text{flooding}}$ should be 0.0002 per year.
-````
+```` -->
 
 ## Component Reliability
 
@@ -186,19 +191,27 @@ $$
 
 Where $x$ and $y$ are random variables and $f(x,y)$ is the joint PDF.
 
-```{figure} ../figures/exercise-sample-exam-failure-domain.png
+<!-- ```{figure} ../figures/exercise-sample-exam-failure-domain.png
 ---
 width: 400px
 name: failure-domain
 ---
-```
+``` -->
 
 **Question 1:**  identify a specific real-life object of your choosing (it can be anything!) that can be described by this diagram and failure probability. Describe the object and provide a definition of failure using words only, no equations. Mention whether $X$ and $Y$ each acts as a load or a resistance.
 
-```{admonition} Answer
+<!-- ```{admonition} Answer
 :class: tip, dropdown
 
 It is clear that $X$ and $Y$ are both loads, since high values of both variables lead to failure. There are many possible ‘objects’ that are governed by two loads:
+
+- Dike: x and y are water level and wave load, failure is excessive overtopping
+- Steel rod: 2 loads exceed strength
+- Beam: self-weight and length are loads (but this is non-linear)
+- Island: x and y are sea level rise and settlement, capacity is elevation; failure is flooding
+- 2 things on object with limiting capacity. E.g.: people on a couch or bench, birds on a tree branch
+- Literally any two loads would be acceptable, as long as the capacity of the object was a sum of both of them (if not a sum, it’s non-linear)
+%Honorable mentions: exam grading, stoof pot, student knowledge on exam material, ear damage at a music festival, dog and cat in box, exam desk stability, fingers squeezing a pen, 2 heaters in a room	 -->
 
 <!-- see below for a list of examples. 
 
@@ -230,10 +243,3 @@ Comments about answers that were not quite right (points were not deduced for th
 
 Common ‘objects’: -->
 
-- Dike: x and y are water level and wave load, failure is excessive overtopping
-- Steel rod: 2 loads exceed strength
-- Beam: self-weight and length are loads (but this is non-linear)
-- Island: x and y are sea level rise and settlement, capacity is elevation; failure is flooding
-- 2 things on object with limiting capacity. E.g.: people on a couch or bench, birds on a tree branch
-- Literally any two loads would be acceptable, as long as the capacity of the object was a sum of both of them (if not a sum, it’s non-linear)
-%Honorable mentions: exam grading, stoof pot, student knowledge on exam material, ear damage at a music festival, dog and cat in box, exam desk stability, fingers squeezing a pen, 2 heaters in a room	
