@@ -30,7 +30,7 @@ Example of series (top row) and parallel (bottom row) systems, illustrated with 
 
 Systems are often schematized using a system diagram, as in {numref}`sys-series-parallel`. This also illustrates the function of a system as an input-output diagram, where one can considers the ability to travel from left to right on the figure. It is analagous to many scenarios involving flow: electricity ({numref}`sys-lightbulbs`), water in pipes or transportation routes.
 
-```{figure} ../figures/system_lightbulbs.PNG
+```{figure} ../figures/system_lightbulbs.png
 ---
 width: 400px
 name: sys-lightbulbs
