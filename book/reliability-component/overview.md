@@ -105,6 +105,7 @@ Overview of non-linear problems (distribution and LSF); explanation of LSF; form
 %To simple slope problem: *this example is borrowed from Moss, which is borrowed from Baecher and Christian. Both are excellent texts on risk and reliability analysis in civil and geotechnical engineering.*
 
 % THIS IS REMOVED FOR 2022-23 SINCE THE SEPARATE PAGES WERE NOT COMPLETED
+
 ```{admonition} Exam Information
 :class: tip, dropdown
 You are expected to recognize the role of random variables (e.g., loads and resistances) within the function of random variables for a component and visualize it on a bivariate plot. Component reliability problems will limited to linear functions of normally distributed random variables; although you will *not* be asked to compute reliability.
@@ -119,5 +120,3 @@ You are expected to recognize the role of random variables (e.g., loads and resi
 :class: tip, dropdown
 For the exam, you will be expected to be able to recognize and solve simple component reliability problems, and describe the influence that dependence between random variables may have on the calculated probability of interest. Given a specific problem of interest, you should be able to describe failure (or non-failure) analytically as a function of random variables and visually in a bivariate plot. Using these simple frameworks, you can modify the component such that the probability of interest meets a specific criteria.
 ``` -->
-
-Table of contents:
