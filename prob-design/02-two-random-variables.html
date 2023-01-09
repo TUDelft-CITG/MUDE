@@ -509,6 +509,24 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="two-random-variables">
 <span id="prob-design-2-rv"></span><h1>Two Random Variables<a class="headerlink" href="#two-random-variables" title="Permalink to this headline">#</a></h1>
 <p>The previous section illustrated the how a decision for dike height, <span class="math notranslate nohighlight">\(h_{dike}\)</span>, can take into account uncertainty in river discharge. We used a maximum allowable probability of flooding to derive the specific value of discharge, <span class="math notranslate nohighlight">\(q_{design}\)</span>, that should be used to choose <span class="math notranslate nohighlight">\(h_{dike}\)</span>. This was necessary because there was otherwise no way of establishing what the maximum discharge should be. The only variable considered to be random was the maximum river discharge that occurs each year. This section considers how the design process becomes more complicated when <em>two</em> random variables are considered (two load variables).</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Distribution for <span class="math notranslate nohighlight">\(q_1\)</span> and <span class="math notranslate nohighlight">\(q_2\)</span></p>
+<p>On this page all calculations assume the same lognormal distribution for random variables <span class="math notranslate nohighlight">\(q_1\)</span> and <span class="math notranslate nohighlight">\(q_1\)</span>, where the first and second moments of the distribution are:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mu &amp;= 100\\
+\sigma &amp;= 20
+\end{split}\]</div>
+<p>The shape, location and scale parameters and usage for the <code class="docutils literal notranslate"><span class="pre">lognorm</span></code> method in <code class="docutils literal notranslate"><span class="pre">scipy.stats</span></code>are:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">st</span>
+<span class="n">s</span> <span class="o">=</span> <span class="mf">0.198</span>
+<span class="n">loc</span> <span class="o">=</span> <span class="mf">0.000</span>
+<span class="n">scale</span> <span class="o">=</span> <span class="mf">98.058</span>
+<span class="n">q_1</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">lognorm</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="n">s</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="n">loc</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">scale</span><span class="p">)</span>
+<span class="n">q_1</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">lognorm</span><span class="p">(</span><span class="n">s</span><span class="o">=</span><span class="n">s</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="n">loc</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="n">scale</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 <section id="discharge-from-two-rivers">
 <h2>Discharge from Two Rivers<a class="headerlink" href="#discharge-from-two-rivers" title="Permalink to this headline">#</a></h2>
 <p>In this scenario our objective for choosing <span class="math notranslate nohighlight">\(h_{dike}\)</span> is still the same, except now we recognize that our location on the river is downstream of a confluence of two smaller rivers. The discharge at the location of our dike is thus the sum of the dicharge from Rivers 1 and 2:</p>
@@ -524,7 +542,7 @@ q=q_1+q_2
 <p>Find the discharge in each river, <span class="math notranslate nohighlight">\(q_1\)</span> and <span class="math notranslate nohighlight">\(q_2\)</span>, such that the probability of exceeding each discharge is 0.01. As in the previous section,</p>
 <div class="math notranslate nohighlight">
 \[
-q_{1,\mathrm{design}}=q_{2,\mathrm{design}}=F_{Q}^{-1}(1-0.001)=155\:\text{m}^3\text{/s} \;\rightarrow\; q_{design}=310\:\text{m}^3\text{/s} 
+q_{1,\mathrm{design}}=q_{2,\mathrm{design}}=F_{Q}^{-1}(1-0.01)=155\:\text{m}^3\text{/s} \;\rightarrow\; q_{design}=310\:\text{m}^3\text{/s} 
 \]</div>
 <p><em>Why is this approach incorrect?</em></p>
 <p>It considers the simultaneous occurrence of <em>both</em> rivers exceeding a design discharge with probability 0.01. This is a joint probability of occurrence, <span class="math notranslate nohighlight">\(P(Q_1&gt;q_{1,design},Q_2&gt;q_{2,design})\)</span>, which can be evaluated with a multivariate probability distribution (or the marginal distributions in the independent case). The scenario is equivalent to observing two sixes after tossing two dice simultaneously: if the dice are fair, the probability is <span class="math notranslate nohighlight">\(1/36\)</span>. Thus, for this incorrect case the probability <span class="math notranslate nohighlight">\(P(Q_1&gt;q_{1,design},Q_2&gt;q_{2,design})\)</span> is not 0.01, it’s actualy 0.01<span class="math notranslate nohighlight">\(^2\)</span>=0.0001, illustrated in the figure below.</p>
@@ -557,7 +575,7 @@ q_{1,\mathrm{design}}=q_{2,\mathrm{design}}=F_{Q}^{-1}(1-0.1)=126\:\text{m}^3\te
 <p>There are infinite alternative scenarios that also result in a joint probability of exceedance of 0.01, for example, <span class="math notranslate nohighlight">\(0.2\cdot 0.05 = 0.01\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[
-q_1=F_Q^{-1}(0.20)=116\:\text{m}^3\text{/s}\;\; \text{and}\;\; q_2=F_Q^{-1}(0.05)=136\:\text{m}^3\text{/s}
+q_1=F_Q^{-1}(1-0.20)=116\:\text{m}^3\text{/s}\;\; \text{and}\;\; q_2=F_Q^{-1}(1-0.05)=136\:\text{m}^3\text{/s}
 \]</div>
 <p>which results in a totally different dike height.</p>
 <figure class="align-default" id="design-2-rv-error-2b">
