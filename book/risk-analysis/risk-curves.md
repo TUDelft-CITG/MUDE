@@ -44,7 +44,7 @@ The origin of this figure was described a Terzaghi Lecture by Professor Gregory 
 
 The following three figures illustrate the computation of an FN curve for a system with two mutually exclusive event scenarios:
 - Accident 1 with $N_{1}=10$ fatalities and a probability of $P_{1} = 10^{-2}$ per year
-- Accident 2 with $N_{2}=100$ fatalities and a probability of $P_{1} = 10^{-3}$ per year
+- Accident 2 with $N_{2}=100$ fatalities and a probability of $P_{2} = 10^{-3}$ per year
 
 First, the probability mass function is created $f_N(n)=P(N=n)$, taking care that the probability of no fatalities is included:
 
