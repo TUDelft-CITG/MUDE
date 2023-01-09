@@ -82,7 +82,7 @@ It only considers one scenario!
 There are infinite alternative scenarios that also result in a joint probability of exceedance of 0.01, for example, $0.2\cdot 0.05 = 0.01$:
 
 $$
-q_1=F_Q^{-1}(1-0.20)=116\:\text{m}^3\text{/s}\;\; \text{and}\;\; q_2=F_Q^{-1}(0.05)=136\:\text{m}^3\text{/s}
+q_1=F_Q^{-1}(1-0.20)=116\:\text{m}^3\text{/s}\;\; \text{and}\;\; q_2=F_Q^{-1}(1-0.05)=136\:\text{m}^3\text{/s}
 $$
 
 which results in a totally different dike height.
