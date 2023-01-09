@@ -48,7 +48,7 @@ The following three figures illustrate the computation of an FN curve for a syst
 
 First, the probability mass function is created $f_N(n)=P(N=n)$, taking care that the probability of no fatalities is included:
 
-$$ P(0) = 1 - P_{1} + P_{2} = 1 - 0.01 - 0.001 = 0.989 $$
+$$ P(0) = 1 - P_{1} - P_{2} = 1 - 0.01 - 0.001 = 0.989 $$
 
 The cumulative  distribution function, $F_N(n)=P(N\leq n)$, can thus be easily computed, as well as the probability of exceedance, $1-F_N(n)$, also known as the *FN curve.* Note that if a risk metric such as damage in Euros was being used, we would call this the *FD curve* and use $D$ to denote the random variable, as in $f_D(d)$ and $F_D(d)$
 
