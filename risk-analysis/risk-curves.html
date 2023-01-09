@@ -489,11 +489,11 @@ Add Dike Ring 14 and nuclear (with EQ?) case.
 <p>The following three figures illustrate the computation of an FN curve for a system with two mutually exclusive event scenarios:</p>
 <ul class="simple">
 <li><p>Accident 1 with <span class="math notranslate nohighlight">\(N_{1}=10\)</span> fatalities and a probability of <span class="math notranslate nohighlight">\(P_{1} = 10^{-2}\)</span> per year</p></li>
-<li><p>Accident 2 with <span class="math notranslate nohighlight">\(N_{2}=100\)</span> fatalities and a probability of <span class="math notranslate nohighlight">\(P_{1} = 10^{-3}\)</span> per year</p></li>
+<li><p>Accident 2 with <span class="math notranslate nohighlight">\(N_{2}=100\)</span> fatalities and a probability of <span class="math notranslate nohighlight">\(P_{2} = 10^{-3}\)</span> per year</p></li>
 </ul>
 <p>First, the probability mass function is created <span class="math notranslate nohighlight">\(f_N(n)=P(N=n)\)</span>, taking care that the probability of no fatalities is included:</p>
 <div class="math notranslate nohighlight">
-\[ P(0) = 1 - P_{1} + P_{2} = 1 - 0.01 - 0.001 = 0.989 \]</div>
+\[ P(0) = 1 - P_{1} - P_{2} = 1 - 0.01 - 0.001 = 0.989 \]</div>
 <p>The cumulative  distribution function, <span class="math notranslate nohighlight">\(F_N(n)=P(N\leq n)\)</span>, can thus be easily computed, as well as the probability of exceedance, <span class="math notranslate nohighlight">\(1-F_N(n)\)</span>, also known as the <em>FN curve.</em> Note that if a risk metric such as damage in Euros was being used, we would call this the <em>FD curve</em> and use <span class="math notranslate nohighlight">\(D\)</span> to denote the random variable, as in <span class="math notranslate nohighlight">\(f_D(d)\)</span> and <span class="math notranslate nohighlight">\(F_D(d)\)</span></p>
 <p>While the curves below illustrate probability and consequences associated with specific scenarios, the expected value of the distribution can be computed, which is equivalent to the area under the FN curve. This is useful can be used to assess the entire system. For this example, the expected value of fatalities per year for all scenarios can be computed as follows:</p>
 <div class="math notranslate nohighlight">
