@@ -1,0 +1,1167 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Flood Risk &#8212; Modelling, Uncertainty and Data for Engineers (MUDE)</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="References" href="../references.html" />
+    <link rel="prev" title="Notebooks" href="overview.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/MUDE_Logo-small.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Modelling, Uncertainty and Data for Engineers (MUDE)</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../prob-design/overview.html">
+   Probabilistic Design
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../prob-design/01-one-random-variable.html">
+     One Random Variable
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../prob-design/02-two-random-variables.html">
+     Two Random Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../prob-design/example-river-system.html">
+     Flood Management Case Study
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../risk-analysis/overview.html">
+   Risk Analysis
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../risk-analysis/definition.html">
+     Definition of Risk
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../risk-analysis/steps.html">
+     Steps in a Risk Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../risk-analysis/risk-curves.html">
+     Risk Curve
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reliability-component/overview.html">
+   Component Reliability
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../reliability-system/overview.html">
+   System Reliability
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../reliability-system/exercise-simple-city.html">
+     Example System
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../risk-evaluation/overview.html">
+   Risk Evaluation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../risk-evaluation/decision.html">
+     Decision Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../risk-evaluation/cost-benefit.html">
+     Cost Benefit Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../risk-evaluation/econ-optimization.html">
+     Economic Optimization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../risk-evaluation/example-dike-height.html">
+     Optimization Example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../risk-evaluation/safety-standards.html">
+     Safety Standards
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../exercises/overview.html">
+   Exercises
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../exercises/exercise-fn-curve.html">
+     FN Curve
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../exercises/exercise-paint.html">
+     Paint System
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../exercises/exercise-dam.html">
+     Dam and River
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../exercises/exercise-sample-exam.html">
+     Sample Exam Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="overview.html">
+   Notebooks
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Flood Risk
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../references.html">
+   References
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebooks/Exercise_Flood_Risk_Render.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/notebooks/Exercise_Flood_Risk_Render.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dike-ring-14">
+   Dike Ring 14
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview-of-the-case-study">
+   Overview of the case study
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-does-a-flood-risk-analysis-work">
+     How does a flood risk analysis work?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-instructions">
+   Exercise Instructions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#evacuations-labeled-case-1-4">
+     Evacuations (labeled Case 1-4)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compute-exceedance-probabilities">
+   Compute exceedance probabilities
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modify-the-system-and-see-how-the-fn-or-fd-curve-changes">
+   Modify the system and see how the FN (or FD) curve changes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#assignment-answers">
+   Assignment Answers
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Flood Risk</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dike-ring-14">
+   Dike Ring 14
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview-of-the-case-study">
+   Overview of the case study
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-does-a-flood-risk-analysis-work">
+     How does a flood risk analysis work?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exercise-instructions">
+   Exercise Instructions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#evacuations-labeled-case-1-4">
+     Evacuations (labeled Case 1-4)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compute-exceedance-probabilities">
+   Compute exceedance probabilities
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modify-the-system-and-see-how-the-fn-or-fd-curve-changes">
+   Modify the system and see how the FN (or FD) curve changes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#assignment-answers">
+   Assignment Answers
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="flood-risk">
+<h1>Flood Risk<a class="headerlink" href="#flood-risk" title="Permalink to this headline">#</a></h1>
+<section id="dike-ring-14">
+<h2>Dike Ring 14<a class="headerlink" href="#dike-ring-14" title="Permalink to this headline">#</a></h2>
+<figure>
+  <IMG SRC="https://gitlab.tudelft.nl/mude/public/-/raw/main/tu-logo/TU_P1_full-color.png" WIDTH=200 ALIGN="right">
+</figure>
+<figure>
+  <IMG SRC="https://gitlab.tudelft.nl/mude/public/-/raw/main/mude-logo/MUDE_Logo-small.png" WIDTH=200 ALIGN="right">
+</figure><p>This page is generated from the <code class="docutils literal notranslate"><span class="pre">*.ipynb</span></code> file. To dowload the code for this exercise use the link below.</p>
+<p><a class="reference download internal" download="" href="../_downloads/439ebb9a92be12b37ef0fb792b4ceb74/exercise_flood_risk.zip"><code class="xref download docutils literal notranslate"><span class="pre">Link</span> <span class="pre">to</span> <span class="pre">download</span> <span class="pre">zip</span> <span class="pre">file</span> <span class="pre">for</span> <span class="pre">completing</span> <span class="pre">exercise</span></code></a></p>
+<p>The overall objective of this assignment is to make a step from the simple FN/FD curves we have in the book to work on something ‘real’ and to make ‘real’ engineering decisions about how to modify a dike ring to meet safety standards. This exercise is based on a risk assessment of the Netherlands from around 10 years ago called VNK (veiligheid Nederland in kaart, or mapping Dutch (flood) safety. It was done in the runup to changing the safety standards in 2017. You can find more about the project <a class="reference external" href="https://www.helpdeskwater.nl/onderwerpen/waterveiligheid/programma-projecten/veiligheid-nederland/publicaties/">here</a>, and a report specifically about the case <a class="reference external" href="https://www.helpdeskwater.nl/onderwerpen/waterveiligheid/programma-projecten/veiligheid-nederland/publicaties/dijkringrapporten/dijkringrapporten/fase-1a/14-zuid-holland/">here</a>. The first website has some English reports, but unfortunately the Dike Ring 14 report is only in Dutch.</p>
+<p><em>First the case is introduced, then some examples using the pre-prepared code are given to show you how to use it. Then you are asked to use the code to decide which repairs to specific dike segments should be done to see if you can meet the safety criteria!</em></p>
+<p><em>Our apologies in advance that the code does not meet the Golden Rules. Although it might not look pretty, we trust that it is clear enough to be able to learn about risk!</em></p>
+</section>
+<section id="overview-of-the-case-study">
+<h2>Overview of the case study<a class="headerlink" href="#overview-of-the-case-study" title="Permalink to this headline">#</a></h2>
+<p>The entire dike ring that protects South Holland is divided into 13 segments, which have been chosen such that the flooding that occurs after a breach is not dependent on the location of the breach itself. This results in significantly fewer flooding analyses that must be carried out. In addition, all possible breach locations within a single segment do not have to be considered. For South Holland, 7 segments are defined along the Nieuwe Waterweg (i.e., the river, behind the Maeslant Barrier) and 6 segments are defined along the coast.</p>
+<figure class="align-default" id="map-segments">
+<a class="reference internal image-reference" href="notebooks/figures/map-dike-segments.png"><img alt="notebooks/figures/map-dike-segments.png" src="notebooks/figures/map-dike-segments.png" style="width: 500px;" /></a>
+</figure>
+<p>All segments along the river are dikes and segments along the sea are dunes, with the following exceptions:</p>
+<ul class="simple">
+<li><p>Segment 3: Park Sluices in Rotterdam</p></li>
+<li><p>Segment 10: Scheveningen outlet sluice</p></li>
+<li><p>Segment 11: Scheveningen Bouldevard</p></li>
+</ul>
+<section id="how-does-a-flood-risk-analysis-work">
+<h3>How does a flood risk analysis work?<a class="headerlink" href="#how-does-a-flood-risk-analysis-work" title="Permalink to this headline">#</a></h3>
+<p>We are essentially creating a probability mass function, where the random variable is fatalities or economic damage. Since we can’t wait a few million years watch the dike ring fail to get a good estimate of the actual distribution, we try to simulate all possible combinations of floods. However, the actual flooding process is complicated: due to the river or sea conditions a dike or dune is broken (this is called a breach), water rushes into the protected area, depending on the flooding depth people may die and infrastructure is damaged. Sometimes we are able to warn and evacuate people, but there is a chance these systems do not work. Reality is extremely complex, so we simplify the process in our flood modeling studies, using the following steps:
+a. assume a levee or dune is breached
+b. estimate the resulting flood depth in the (formerly) protected area
+c. calculated economic damage and fatalities as a function of water depth
+d. modify the above value depending on the status of warning and evacuation systems
+e. repeat this for many breach locations</p>
+<p>As such, each scenario returns a finite number of fatalities or damage, which is why the distribution is discrete. Of course, we need to also quantify the probability of each scenario. Although it sounds complex, it is actually simple to represent using conditional probability if we can assume:
+$<span class="math notranslate nohighlight">\(\textrm{P}(x_i)=\textrm{P}(x_i|D,W,E)\cdot\textrm{P}(D)\cdot\textrm{P}(W)\cdot\textrm{P}(E)\)</span>$</p>
+<p>where <span class="math notranslate nohighlight">\(x_i\)</span> is our risk metric of choice (i.e., economic damage or fatalities) and <span class="math notranslate nohighlight">\(D\)</span>, <span class="math notranslate nohighlight">\(W\)</span> and <span class="math notranslate nohighlight">\(E\)</span> represnt water depth, warning and evacuation status, respectively. Given the scenario-based approach where a fixed value is determined for <span class="math notranslate nohighlight">\(x_i\)</span>, it is clear that this type of analysis creates a descrete random variable. Furthermore, the equation above indicates that single values of <span class="math notranslate nohighlight">\(D\)</span>, <span class="math notranslate nohighlight">\(W\)</span> and <span class="math notranslate nohighlight">\(E\)</span> are used, but in theory one could integrate over each of these variables.</p>
+<p>An example of the flood depth analysis is shown below for a breach in segment 12:</p>
+<figure class="align-default" id="flood-depth-12">
+<a class="reference internal image-reference" href="notebooks/figures/flood-depth-12.png"><img alt="notebooks/figures/flood-depth-12.png" src="notebooks/figures/flood-depth-12.png" style="width: 500px;" /></a>
+</figure>
+</section>
+</section>
+<section id="exercise-instructions">
+<h2>Exercise Instructions<a class="headerlink" href="#exercise-instructions" title="Permalink to this headline">#</a></h2>
+<p>An Excel file has been prepared that includes the results from the risk analysis. Each row is a scenario, with a <code class="docutils literal notranslate"><span class="pre">Scenario_ID</span></code> and associated probability of occurrence (<code class="docutils literal notranslate"><span class="pre">scenario_probability</span></code>). The column <code class="docutils literal notranslate"><span class="pre">failed_segments</span></code> lists which dike segments are assumed to have failed in the particular scenario. Consequences are specifies in the last 8 columns (described below).</p>
+<p>Your task is to determine which <strong>dike segments</strong> you should repair to improve the safety of Dike Ring 14. Unfortunately due to the available budget, <strong>you can only afford to repair 3 segments.</strong> Thus, your task is to identify 3 segments to repair and justify your decision for doing so (there are some cells below where you can type your answer). You are free to consider both life loss and economic damage in your evaluation.</p>
+<p>The next set of cells will get you started with the helper functions, then you are free to use them to work on the assignment. First, start by importing the required packages:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Import special functions created to help with this assignment:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">functions</span> <span class="kn">import</span> <span class="n">find_scenarios_with_segment_i</span>
+<span class="kn">from</span> <span class="nn">functions</span> <span class="kn">import</span> <span class="n">assemble_analysis_cases</span>
+<span class="kn">from</span> <span class="nn">functions</span> <span class="kn">import</span> <span class="n">exceedance_prob</span>
+<span class="kn">from</span> <span class="nn">functions</span> <span class="kn">import</span> <span class="n">plot_curves</span>
+<span class="kn">from</span> <span class="nn">functions</span> <span class="kn">import</span> <span class="n">sensitivity_analysis</span>
+<span class="kn">from</span> <span class="nn">functions</span> <span class="kn">import</span> <span class="n">compute_benefit</span>
+<span class="kn">from</span> <span class="nn">functions</span> <span class="kn">import</span> <span class="n">set_TUDstyle</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">functions</span> <span class="kn">import</span> <span class="n">find_scenarios_with_segment_i</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">functions</span> <span class="kn">import</span> <span class="n">assemble_analysis_cases</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">functions</span> <span class="kn">import</span> <span class="n">exceedance_prob</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;functions&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Load data and take a look at it:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Prob_Cons.xlsx&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Scenario_ID</th>
+      <th>scenario_probability</th>
+      <th>failed_segments</th>
+      <th>case_1_d</th>
+      <th>case_1_n</th>
+      <th>case_2_d</th>
+      <th>case_2_n</th>
+      <th>case_3_d</th>
+      <th>case_3_n</th>
+      <th>case_4_d</th>
+      <th>case_4_n</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>0.000021</td>
+      <td>12</td>
+      <td>5700</td>
+      <td>600</td>
+      <td>5700</td>
+      <td>460</td>
+      <td>5700</td>
+      <td>420</td>
+      <td>5700</td>
+      <td>300</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>0.000016</td>
+      <td>2</td>
+      <td>1400</td>
+      <td>200</td>
+      <td>1400</td>
+      <td>150</td>
+      <td>1400</td>
+      <td>140</td>
+      <td>1400</td>
+      <td>99</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>0.000005</td>
+      <td>2,7</td>
+      <td>1800</td>
+      <td>210</td>
+      <td>1800</td>
+      <td>160</td>
+      <td>1800</td>
+      <td>150</td>
+      <td>1800</td>
+      <td>110</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>0.000004</td>
+      <td>5</td>
+      <td>1600</td>
+      <td>3700</td>
+      <td>1600</td>
+      <td>2800</td>
+      <td>1600</td>
+      <td>2600</td>
+      <td>1600</td>
+      <td>1800</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>0.000004</td>
+      <td>6</td>
+      <td>720</td>
+      <td>40</td>
+      <td>720</td>
+      <td>30</td>
+      <td>720</td>
+      <td>30</td>
+      <td>710</td>
+      <td>20</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<section id="evacuations-labeled-case-1-4">
+<h3>Evacuations (labeled Case 1-4)<a class="headerlink" href="#evacuations-labeled-case-1-4" title="Permalink to this headline">#</a></h3>
+<p><em>As you can see above, the dataframe has 8 columns labeled <code class="docutils literal notranslate"><span class="pre">case_*_*</span></code>. The last character denotes either fatalities or damage with <code class="docutils literal notranslate"><span class="pre">n</span></code> or <code class="docutils literal notranslate"><span class="pre">d</span></code>, respectively.</em></p>
+<p>The consequences in each scenario are dependent on whether or not there is a flood warning and time for an ordered evacuation or not. To account for this, 4 sub-scenarios are considered, and the probability of each is weighted equally in the total FN curve (cases are combined in <code class="docutils literal notranslate"><span class="pre">exceedance_prob</span></code>). For the response to a dike breach there are 4 conditions considered (in order of table on Page 139, Bijlage I):</p>
+<ul class="simple">
+<li><p>flood unexpected and no evacuation</p></li>
+<li><p>flood unexpected with an unorganized evacuation</p></li>
+<li><p>flood expected with an unorganized evacuation</p></li>
+<li><p>flood expected with an organized evacuation</p></li>
+</ul>
+<p>It is interesting to know how this is incorporated in the analysis, but you can ignore this when going through the exercise, since it becomes unecessarily complicated.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Scenario_ID</th>
+      <th>scenario_probability</th>
+      <th>case_1_d</th>
+      <th>case_1_n</th>
+      <th>case_2_d</th>
+      <th>case_2_n</th>
+      <th>case_3_d</th>
+      <th>case_3_n</th>
+      <th>case_4_d</th>
+      <th>case_4_n</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>50.00000</td>
+      <td>5.000000e+01</td>
+      <td>50.000000</td>
+      <td>50.000000</td>
+      <td>50.000000</td>
+      <td>50.000000</td>
+      <td>50.000000</td>
+      <td>50.00000</td>
+      <td>50.000000</td>
+      <td>50.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>25.50000</td>
+      <td>1.290931e-06</td>
+      <td>12549.780000</td>
+      <td>8603.360000</td>
+      <td>12493.000000</td>
+      <td>6631.500000</td>
+      <td>12491.000000</td>
+      <td>5988.66000</td>
+      <td>12471.100000</td>
+      <td>4269.280000</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>14.57738</td>
+      <td>3.822669e-06</td>
+      <td>8887.756677</td>
+      <td>8037.445146</td>
+      <td>8839.023921</td>
+      <td>6213.314184</td>
+      <td>8839.795512</td>
+      <td>5578.15815</td>
+      <td>8835.288088</td>
+      <td>3965.545056</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>1.00000</td>
+      <td>8.830000e-09</td>
+      <td>230.000000</td>
+      <td>8.000000</td>
+      <td>230.000000</td>
+      <td>6.000000</td>
+      <td>230.000000</td>
+      <td>6.00000</td>
+      <td>230.000000</td>
+      <td>4.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>13.25000</td>
+      <td>4.402500e-08</td>
+      <td>5475.000000</td>
+      <td>2225.000000</td>
+      <td>5475.000000</td>
+      <td>1700.000000</td>
+      <td>5475.000000</td>
+      <td>1600.00000</td>
+      <td>5475.000000</td>
+      <td>1100.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>25.50000</td>
+      <td>1.125000e-07</td>
+      <td>11000.000000</td>
+      <td>3800.000000</td>
+      <td>11000.000000</td>
+      <td>2950.000000</td>
+      <td>11000.000000</td>
+      <td>2700.00000</td>
+      <td>11000.000000</td>
+      <td>1900.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>37.75000</td>
+      <td>4.797500e-07</td>
+      <td>17000.000000</td>
+      <td>15750.000000</td>
+      <td>17000.000000</td>
+      <td>11750.000000</td>
+      <td>17000.000000</td>
+      <td>10750.00000</td>
+      <td>17000.000000</td>
+      <td>7775.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>50.00000</td>
+      <td>2.140000e-05</td>
+      <td>33000.000000</td>
+      <td>29000.000000</td>
+      <td>33000.000000</td>
+      <td>22000.000000</td>
+      <td>33000.000000</td>
+      <td>20000.00000</td>
+      <td>33000.000000</td>
+      <td>14000.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>The function <code class="docutils literal notranslate"><span class="pre">find_scenarios_with_segment_i</span></code> will ask for the dike segment(s) of interest (as a list) and return all of the scenarios where a breach in this segment is considered.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">find_scenarios_with_segment_i</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+<span class="n">find_scenarios_with_segment_i</span><span class="p">([</span><span class="mi">12</span><span class="p">],</span> <span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Given a list of segments, return set of dependent scenarios.
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Scenario_ID</th>
+      <th>scenario_probability</th>
+      <th>failed_segments</th>
+      <th>case_1_d</th>
+      <th>case_1_n</th>
+      <th>case_2_d</th>
+      <th>case_2_n</th>
+      <th>case_3_d</th>
+      <th>case_3_n</th>
+      <th>case_4_d</th>
+      <th>case_4_n</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>2.140000e-05</td>
+      <td>12</td>
+      <td>5700</td>
+      <td>600</td>
+      <td>5700</td>
+      <td>460</td>
+      <td>5700</td>
+      <td>420</td>
+      <td>5700</td>
+      <td>300</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>9</td>
+      <td>9.480000e-07</td>
+      <td>12,13</td>
+      <td>11000</td>
+      <td>2000</td>
+      <td>11000</td>
+      <td>1600</td>
+      <td>11000</td>
+      <td>1400</td>
+      <td>11000</td>
+      <td>1000</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>50</td>
+      <td>2.450000e-08</td>
+      <td>8,12,13</td>
+      <td>19000</td>
+      <td>2700</td>
+      <td>19000</td>
+      <td>2100</td>
+      <td>19000</td>
+      <td>1900</td>
+      <td>19000</td>
+      <td>1400</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+</section>
+<section id="compute-exceedance-probabilities">
+<h2>Compute exceedance probabilities<a class="headerlink" href="#compute-exceedance-probabilities" title="Permalink to this headline">#</a></h2>
+<p>Now that we have explored the database of scenarios, let’s move towards evaluating risk. Before assembling the risk curves, we will extract the probability associated with each scenario, and use a prepared function (<code class="docutils literal notranslate"><span class="pre">assemble_analysis_cases</span></code>) to make the process easier.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scenario_prob</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">damage_and_fatality_cases</span> <span class="o">=</span> <span class="n">assemble_analysis_cases</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="n">choose_damage_or_fatality</span> <span class="o">=</span> <span class="s1">&#39;fatality&#39;</span>
+<span class="n">case</span> <span class="o">=</span> <span class="n">damage_and_fatality_cases</span><span class="p">[</span><span class="n">choose_damage_or_fatality</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The function <code class="docutils literal notranslate"><span class="pre">exceedance_prob</span></code> computes the FN or FD curve depending on the case that is provided. And the function <code class="docutils literal notranslate"><span class="pre">plot_curves</span></code> will plot them with the limit line.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N_D_ordered_test</span><span class="p">,</span> <span class="n">exceed_prob_test</span><span class="p">,</span> <span class="n">complete_table</span> <span class="o">=</span> <span class="n">exceedance_prob</span><span class="p">(</span><span class="n">case</span><span class="p">,</span> <span class="n">scenario_prob</span><span class="p">)</span>
+<span class="n">plot_curves</span><span class="p">(</span><span class="n">N_D_ordered_test</span><span class="p">,</span> <span class="n">exceed_prob_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/Exercise_Flood_Risk_Render_17_0.png" src="../_images/Exercise_Flood_Risk_Render_17_0.png" />
+</div>
+</div>
+</section>
+<section id="modify-the-system-and-see-how-the-fn-or-fd-curve-changes">
+<h2>Modify the system and see how the FN (or FD) curve changes<a class="headerlink" href="#modify-the-system-and-see-how-the-fn-or-fd-curve-changes" title="Permalink to this headline">#</a></h2>
+<p>The function above allows the user to choose which dike segments to repair, then the relevant scenarios are removed from consideration. Play with the segments and see what the most important repairs should be to improve the system risk.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Segment 12 (Katwijk scenarios) used at idx: [0,8,49]</span>
+<span class="n">segment_repaired</span> <span class="o">=</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">]</span>
+<span class="n">segment_table</span> <span class="o">=</span> <span class="n">find_scenarios_with_segment_i</span><span class="p">(</span><span class="n">segment_repaired</span><span class="p">,</span> <span class="n">df</span><span class="p">)</span>
+<span class="n">idx_segment</span> <span class="o">=</span> <span class="n">segment_table</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Segment </span><span class="si">{</span><span class="n">segment_repaired</span><span class="si">}</span><span class="s2"> in scenarios </span><span class="si">{</span><span class="n">idx_segment</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># idx_segment = [0, 8, 49]  # enter index of segment of interest</span>
+<span class="n">N_D_ordered_new</span><span class="p">,</span> <span class="n">exceed_prob_new</span><span class="p">,</span> <span class="n">complete_table_new</span> <span class="o">=</span> <span class="n">sensitivity_analysis</span><span class="p">(</span><span class="n">case</span><span class="p">,</span> <span class="n">scenario_prob</span><span class="p">,</span> <span class="n">idx_segment</span><span class="p">,</span> <span class="n">N_D_ordered_test</span><span class="p">,</span> <span class="n">exceed_prob_test</span><span class="p">,</span> <span class="n">complete_table</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Segment [12, 13] in scenarios [ 0  7  8 49]
+</pre></div>
+</div>
+<img alt="../_images/Exercise_Flood_Risk_Render_19_1.png" src="../_images/Exercise_Flood_Risk_Render_19_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">old_costs</span><span class="p">,</span> <span class="n">new_costs</span><span class="p">,</span> <span class="n">result</span> <span class="o">=</span> <span class="n">compute_benefit</span><span class="p">(</span><span class="n">complete_table</span><span class="p">,</span> <span class="n">complete_table_new</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Old </span><span class="si">{</span><span class="n">choose_damage_or_fatality</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">old_costs</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Old </span><span class="si">{</span><span class="n">choose_damage_or_fatality</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">new_costs</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Difference: </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Old fatality: 3.04187862305
+Old fatality: 2.6691130726399996
+Difference: 0.3727655504100005
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="assignment-answers">
+<h2>Assignment Answers<a class="headerlink" href="#assignment-answers" title="Permalink to this headline">#</a></h2>
+<p><em>You don’t need to answer all of these questions, but they will probably help you arrive at a desicion.</em></p>
+<ol class="simple">
+<li><p>Which scenario contributes the most to risk?</p></li>
+<li><p>Which dike segment contributes the most to risk?</p></li>
+<li><p>Is there a certain region that seems to contribute more to risk?</p></li>
+<li><p>The above questions look at risk, but you can also consider probability and consequences separately. If you look through these details, do you notice any segments or scenarios that stand out as contributing a lot (or a little)?</p></li>
+<li><p>Which dike segments do you choose to repair, and why?</p></li>
+<li><p>What is the total reduction in expected damages?</p></li>
+<li><p>Could you get the entire curve to satisfy the safety criteria? What is needed in order to do so?</p></li>
+<li><p>Consider the dike segments you chose to repair. How might you actually go about repairing them: would you focus on reducing the probability or the consequences? Make a few suggestions for how you would do each improvement and comment on the feasibility.</p></li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="overview.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Notebooks</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../references.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">References</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By the MUDE Team<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
