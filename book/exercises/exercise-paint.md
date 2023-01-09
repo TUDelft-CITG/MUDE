@@ -94,7 +94,7 @@ $$C_{paint} + C_{cleaning} + P_{f,10y} \cdot (C_{paint} + C_{cleaning} + C_{repa
 High Quality Paint + High Quality Cleaning
 ```
 
-Assume the owner has decided to use the cheap paint system, and is simply going to sand it off (i.e. the cheap cleaning method) and re-apply the same system every year (i.e., for these problems consider a 1-year reference period). You have been asked to assess whether it is worthwhile to use a quick sonic test system to prevent failures during the year, and if it is, the number of tests that should be performed per year. Each test costs about €3 per m2, and if a weak spot is found, a new layer of paint can be easily applied, lowering the failure probability by a factor of 0.45.
+Assume the owner has decided to use the cheap paint system, and is simply going to sand it off (i.e. the cheap cleaning method) and re-apply the same system every year (i.e., for these problems consider a 1-year reference period). You have been asked to assess whether it is worthwhile to use a quick sonic test system to prevent failures during the year, and if it is, the number of tests that should be performed per year. Each test costs about €3 per m2, and if a weak spot is found, a new layer of paint can be easily applied, lowering the failure probability by a factor of 0.50.
 
 **Question 6:**	What is the annual expected cost due to paint failure if no sonic inspections are done?
 
