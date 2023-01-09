@@ -22,7 +22,7 @@ Before presenting the correct approach, 3 common mistakes are illustrated.
 Find the discharge in each river, $q_1$ and $q_2$, such that the probability of exceeding each discharge is 0.01. As in the previous section,
 
 $$
-q_{1,\mathrm{design}}=q_{2,\mathrm{design}}=F_{Q}^{-1}(1-0.001)=155\:\text{m}^3\text{/s} \;\rightarrow\; q_{design}=310\:\text{m}^3\text{/s} 
+q_{1,\mathrm{design}}=q_{2,\mathrm{design}}=F_{Q}^{-1}(1-0.01)=155\:\text{m}^3\text{/s} \;\rightarrow\; q_{design}=310\:\text{m}^3\text{/s} 
 $$
 
 *Why is this approach incorrect?*
@@ -64,7 +64,7 @@ It only considers one scenario!
 There are infinite alternative scenarios that also result in a joint probability of exceedance of 0.01, for example, $0.2\cdot 0.05 = 0.01$:
 
 $$
-q_1=F_Q^{-1}(0.20)=116\:\text{m}^3\text{/s}\;\; \text{and}\;\; q_2=F_Q^{-1}(0.05)=136\:\text{m}^3\text{/s}
+q_1=F_Q^{-1}(1-0.20)=116\:\text{m}^3\text{/s}\;\; \text{and}\;\; q_2=F_Q^{-1}(0.05)=136\:\text{m}^3\text{/s}
 $$
 
 which results in a totally different dike height.
