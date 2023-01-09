@@ -5,7 +5,7 @@
 Questions 1, 3 and 4 are representative for the Q2 MUDE exam. Question 2 is related.
 ```
 
-You are tasked to analyse the safety of a dam and the downstream river system. Downstream of the dam there is an area protected by two main dike sections which must be able to contain water released from the reservoir. Let $P(F_1)$, $P(F_2)$ denote failure probability of dike section 1 and section 2 respectively. There appears to be a correlation between failures of both sections, $\rho_{1,2}=0.9$, and the figure below shows the effect of the correlation coefficient on the joint failure of the two sections.
+You are tasked to analyse the safety of a dam and the downstream river system. Downstream of the dam there is an area protected by two main dike sections which must be able to contain water released from the reservoir. Let $P(F_1)=0.01$ and $P(F_2)=0.01$ denote failure probability of dike section 1 and section 2 respectively. There appears to be a correlation between failures of both sections, $\rho_{1,2}=0.9$, and the figure below shows the effect of the correlation coefficient on the joint failure of the two sections.
 
 
 % commented paragraphs were used for an exam question with a fault tree
