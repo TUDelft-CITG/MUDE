@@ -74,7 +74,7 @@ p_{i} = P(N_i,E_j,H_k) = P(N_i|E_j,H_k) \cdot P(E_j|H_k) \cdot P(H_k)
 
 where $N_i$, $E_j$ and $H_k$ are the vulnerability (fatalities), exposure and hazard of scenario $i$, respectively. Combining with Equation {eq}`eq_risk_definition` and taking the sum over all combinations of variables ($i$, $j$, $k$) would give the total risk. In the case of our flood management case, an example of each term could be:
 - Hazard, $H_k$: a high water level.
-- Exposure, $E_j|H_k$: breach (failure) of a dike due to the high water level, $H_i$.
+- Exposure, $E_j|H_k$: breach (failure) of a dike due to the high water level, $H_k$.
 - Vulnerability, $N_i|E_j,H_k$: fatalities given the broken dike and high water level. $N$ is usually modeled as a random variable as it is dependent on factors such as evacuation effectiveness and flood warning systems.
 
 % Point out that this formulation simplifies the calculation, promots the use of tools like fragility curves, and give earthquake hazard assessment as an example (DRMS?).
