@@ -8,3 +8,4 @@ jupyterquiz
 pytest
 seaborn
 sympy
+openpyxl
