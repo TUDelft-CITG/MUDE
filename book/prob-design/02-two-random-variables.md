@@ -3,6 +3,24 @@
 
 The previous section illustrated the how a decision for dike height, $h_{dike}$, can take into account uncertainty in river discharge. We used a maximum allowable probability of flooding to derive the specific value of discharge, $q_{design}$, that should be used to choose $h_{dike}$. This was necessary because there was otherwise no way of establishing what the maximum discharge should be. The only variable considered to be random was the maximum river discharge that occurs each year. This section considers how the design process becomes more complicated when *two* random variables are considered (two load variables).
 
+````{admonition} Distribution for $q_1$ and $q_2$
+:class: dropdown
+On this page all calculations assume the same lognormal distribution for random variables $q_1$ and $q_1$, where the first and second moments of the distribution are:
+
+$$
+\mu &= 100\\
+\sigma &= 20
+$$
+The shape, location and scale parameters and usage for the `lognorm` method in `scipy.stats`are:
+```python
+import scipy.stats as st
+s = 0.198
+loc = 0.000
+scale = 98.058
+q_1 = st.lognorm(s=s, loc=loc, scale=scale)
+q_1 = st.lognorm(s=s, loc=loc, scale=scale)
+```
+````
 ## Discharge from Two Rivers
 
 In this scenario our objective for choosing $h_{dike}$ is still the same, except now we recognize that our location on the river is downstream of a confluence of two smaller rivers. The discharge at the location of our dike is thus the sum of the dicharge from Rivers 1 and 2:
