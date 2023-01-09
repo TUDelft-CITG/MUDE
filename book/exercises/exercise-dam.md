@@ -21,7 +21,7 @@ You are tasked to analyse the safety of a dam and the downstream river system. D
 width: 400px
 name: corr-coeff-or
 ---
-Effect of correlation coefficient joint failure, $\mathrm{P}(A \cap B)$ (assume that $\mathrm{P}(A \cap B)=0.003$ at $\rho=+0.9$, where the arrow is located).
+Effect of correlation coefficient joint failure, $P(A \cap B)$ (assume that $P(A \cap B)=0.003$ at $\rho=+0.9$, where the arrow is located).
 ```
 
 **Question 1:** Estimate the probability of flooding of the area protected by the two dike sections.
