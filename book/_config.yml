@@ -7,7 +7,7 @@ logo: _static/MUDE_Logo-small.png
 ################################################################################
 # Notebook execution on compiling
 execute:
-  execute_notebooks: auto
+  execute_notebooks: false
   timeout: 60 
   allow_errors: false
 
