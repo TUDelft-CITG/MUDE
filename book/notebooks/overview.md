@@ -4,5 +4,5 @@ This chapter contains notebooks that can be used to put your risk and reliabilit
 
 ```{admonition} MUDE exam information
 :class: tip
-The exercises in this chapter are useful for improving your understanding of the examtopics, but the application itself will not be covered. IN other words: highly recommended, but not required :).
+The exercises in this chapter are useful for improving your understanding of the exam topics, but the application itself will not be covered. In other words: highly recommended, but not required.
 ```
