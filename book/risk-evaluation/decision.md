@@ -163,7 +163,7 @@ The flooding of the construction site will result in estimated damages of €5,0
 
 The set of actions A consists of:
 - $\textit a_{1}$= excavation without drainage    
-- $\textit a_{1}$= excavation with drainage
+- $\textit a_{2}$= excavation with drainage
 
 The set of circumstances N is formed by:    
 - $\theta_{1}$= the sealing layer remains intact     
@@ -192,7 +192,7 @@ Costs and probabilities can also be shown in the decision tree (see Figure {numr
 
 This implies that the construction of the drainage system is rationally speaking the best decision for a risk neutral decision maker.
  
-```{figure} ../figures/example-river-excavation-3.png
+```{figure} ../figures/example-river-excavation-3.PNG
 ---
 height: 300px
 name: example-river-excavation-3
