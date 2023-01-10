@@ -37,5 +37,5 @@ parts:
       - file: exercises/exercise-sample-exam.md
     - file: notebooks/overview.md
       sections:
-      - file: notebooks/Exercise_Flood_Risk_Render.ipynb
+      - file: notebooks/flood-risk/Exercise_Flood_Risk_Render.ipynb
     - file: references.md
