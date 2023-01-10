@@ -112,9 +112,9 @@ Since the bridges have identical designs and have all been manufactured by the s
 Increase.
 
 The probability of failure would increase because the system mainly works like a parallel system. In this case, when there is full dependence between the elements, the probability of failure equals the probability of failure of the strongest element. For instance, $P_{f_{\text{bridges 2, 3}}}=0.01$ for independent case and 0.1 for full dependence case.
+```
 
 Assume each prefabricated bridge is made up of a single road deck and 5 separate frames that are joined together. Each bridge will fail if either the road deck fails, or 1 of the frames fails.
-```
 
 **Question 9:** If the probability of a frame failure is 0.01, what is the required failure probability of the road deck to make sure the bridge failure probability is no more than 0.1?
 
