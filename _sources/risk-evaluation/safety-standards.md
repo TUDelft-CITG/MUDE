@@ -131,7 +131,7 @@ For different applications limit lines have been developed with varying constant
 
 ````{admonition} Exaple: Risk Matrix
 Risk matrices are often used in various industries for risk evaluation and decision support, for example, to quickly prioritize actions, especially in time-sensitive situations. For a given undesired event the extent of probability and consequences are estimated on a qualitative or semi-quantitative scale, see {numref}`risk_matrix` for an example. Ranges of failure probabilities or consequences can be assigned to the qualitative terms on the axes in the example. The combination of probability and consequence determines the level of risk, and depending on the application, whether it is acceptable or whether it requires more attention and risk reduction efforts. However, unlike the FN curve, the cumulative effects of multiple possible events are generally not considered in a risk matrix.
-```{figure} ../figures/risk_matrix.PNG
+```{figure} ../figures/risk_matrix.png
 ---
 width: 500px
 name: risk_matrix
