@@ -40,7 +40,7 @@ Series (left) and parallel (right) systems illustrated as a string of lightbulbs
 
 ### Definition of Failure
 
-Whereas in component reliabiity problems we defined failure using a function of random variables, in system reliabiltiy problems, we define failure based on the continuity of the system diagram. Failure occurs when we are not able to travel from left to right on the diagram due to one or more broken links.
+Whereas in component reliability problems we defined failure using a function of random variables, in system reliability problems, we define failure based on the continuity of the system diagram. Failure occurs when we are not able to travel from left to right on the diagram due to one or more broken links.
 
 ## Reliability Calculations
 
