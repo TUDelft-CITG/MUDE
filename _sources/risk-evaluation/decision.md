@@ -19,7 +19,7 @@ Within a decision problem the following characteristics can be distinguished:
 
   - the set of all possible actions or decisions $a$, from which the decision maker can choose
   - the set of all (natural) circumstances, $\theta$ that influence the outcomes*
-  - the  set of the set of all possible results, $\omega$, which are functions of the actions and circumstances: $\omega = f(a,\omega)$.
+  - the  set of the set of all possible results, $\omega$, which are functions of the actions and circumstances: $\omega = f(a,\theta)$.
 
 The actions, natural circumstances and the outcomes can be shown in a so-called decision tree (Figure {numref}`decision-tree-blank`}).
 
