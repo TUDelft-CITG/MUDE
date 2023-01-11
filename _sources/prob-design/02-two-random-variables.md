@@ -18,7 +18,7 @@ s = 0.198
 loc = 0.000
 scale = 98.058
 q_1 = st.lognorm(s=s, loc=loc, scale=scale)
-q_1 = st.lognorm(s=s, loc=loc, scale=scale)
+q_2 = st.lognorm(s=s, loc=loc, scale=scale)
 ```
 ````
 ## Discharge from Two Rivers

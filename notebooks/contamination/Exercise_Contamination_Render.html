@@ -1,0 +1,1105 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Contaminant Transport &#8212; Modelling, Uncertainty and Data for Engineers (MUDE)</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="References" href="../../references.html" />
+    <link rel="prev" title="Flood Risk" href="../flood-risk/Exercise_Flood_Risk_Render.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/MUDE_Logo-small.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Modelling, Uncertainty and Data for Engineers (MUDE)</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Introduction
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Contents
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../prob-design/overview.html">
+   Probabilistic Design
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prob-design/01-one-random-variable.html">
+     One Random Variable
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prob-design/02-two-random-variables.html">
+     Two Random Variables
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../prob-design/example-river-system.html">
+     Flood Management Case Study
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../risk-analysis/overview.html">
+   Risk Analysis
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../risk-analysis/definition.html">
+     Definition of Risk
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../risk-analysis/steps.html">
+     Steps in a Risk Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../risk-analysis/risk-curves.html">
+     Risk Curve
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reliability-component/overview.html">
+   Component Reliability
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../reliability-system/overview.html">
+   System Reliability
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../reliability-system/exercise-simple-city.html">
+     Example System
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../risk-evaluation/overview.html">
+   Risk Evaluation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../risk-evaluation/decision.html">
+     Decision Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../risk-evaluation/cost-benefit.html">
+     Cost Benefit Analysis
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../risk-evaluation/econ-optimization.html">
+     Economic Optimization
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../risk-evaluation/example-dike-height.html">
+     Optimization Example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../risk-evaluation/safety-standards.html">
+     Safety Standards
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../exercises/overview.html">
+   Exercises
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../exercises/exercise-fn-curve.html">
+     FN Curve
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../exercises/exercise-paint.html">
+     Paint System
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../exercises/exercise-dam.html">
+     Dam and River
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../exercises/exercise-sample-exam.html">
+     Sample Exam Questions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../overview.html">
+   Notebooks
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../flood-risk/Exercise_Flood_Risk_Render.html">
+     Flood Risk
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Contaminant Transport
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../references.html">
+   References
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebooks/contamination/Exercise_Contamination_Render.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/notebooks/contamination/Exercise_Contamination_Render.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction-of-case-study">
+   Introduction of Case Study
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Contaminant Transport
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-of-limit-states">
+     Definition of Limit States
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analysis-approach">
+     Analysis Approach
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#references">
+     References
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defining-the-limit-states">
+   Defining the Limit States
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-randomvariabledistribution">
+   Class
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     RandomVariableDistribution
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setting-up-the-problem">
+   Setting up the problem
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#monte-carlo-analysis">
+   Monte Carlo analysis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#case-2-exceeding-the-health-threshold">
+   Case 2: exceeding the health threshold
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gradient-vector">
+     Gradient Vector
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#your-turn">
+   Your turn!
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Contaminant Transport</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction-of-case-study">
+   Introduction of Case Study
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Contaminant Transport
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#definition-of-limit-states">
+     Definition of Limit States
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analysis-approach">
+     Analysis Approach
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#references">
+     References
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#defining-the-limit-states">
+   Defining the Limit States
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-randomvariabledistribution">
+   Class
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     RandomVariableDistribution
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setting-up-the-problem">
+   Setting up the problem
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#monte-carlo-analysis">
+   Monte Carlo analysis
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#case-2-exceeding-the-health-threshold">
+   Case 2: exceeding the health threshold
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gradient-vector">
+     Gradient Vector
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#your-turn">
+   Your turn!
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="contaminant-transport">
+<h1>Contaminant Transport<a class="headerlink" href="#contaminant-transport" title="Permalink to this headline">#</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This page is generated from an <code class="docutils literal notranslate"><span class="pre">*.ipynb</span></code> file which requires several auxiliary files, all of which can be downloaded using the link below.</p>
+<p><a class="reference download internal" download="" href="../../_downloads/969ecc5da6c195895293410a17897de1/exercise_contamination.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">zip</span> <span class="pre">file</span> <span class="pre">for</span> <span class="pre">this</span> <span class="pre">exercise.</span></code></a></p>
+</div>
+<p>The purpose of this exercise is to:</p>
+<ul class="simple">
+<li><p>evaluate component reliability</p></li>
+<li><p>illustrate functions of random variables</p></li>
+<li><p>see the effect of random variable distributions on reliability</p></li>
+<li><p>consider ‘sensitivity’ as a functional and/or stochastic influence on the limit-state function</p></li>
+</ul>
+<p>You should accomplish this by playing with the code that is provided with the notebook and trying to answer the following questions:</p>
+<ol class="simple">
+<li><p>Which random variables have the biggest influence on reliability?</p></li>
+<li><p>How does the assumption of probability distribution influence reliability?</p></li>
+<li><p>Do the random variables act as loads or resistances?</p></li>
+</ol>
+<section id="introduction-of-case-study">
+<h2>Introduction of Case Study<a class="headerlink" href="#introduction-of-case-study" title="Permalink to this headline">#</a></h2>
+<p>The case study is a contaminant transport problem, illustrated in the figure below. A factory located near a town produces hazardous waste, which can threaten the drinking water supply of the town that is extracted from groundwater wells (C). The regional groundwater system has a gradient that causes water to flow in the direction of the town from the factory, thus any spilled hazardous waste that enters the ground will eventually be transported to the wells. In order to mitigate the consequences of a spill a ditch is constructed around the factory to collect it (A). Unfortunately, even with powerful pumps, there will still be some waste that reaches the groundwater table. Our task is to quantify the probability that the waste concentration exceeds the maximum exposure level to prevent the drinking water becoming unhealthy.</p>
+<figure class="align-default" id="sketch-contaminant">
+<a class="reference internal image-reference" href="../../_images/sketch.png"><img alt="../../_images/sketch.png" src="../../_images/sketch.png" style="width: 600px;" /></a>
+</figure>
+<section id="id1">
+<h3>Contaminant Transport<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<p>Once the ditch becomes contaminated it is cleaned quickly, but unfortunately a ‘pulse’ of contamination enters the ground, after which the regional gradient carries it towards the town (advection). The pulse also disperses due to diffusion, which results in a classic advection-diffusion problem (see red shapes in diagram, at three different times, <span class="math notranslate nohighlight">\(t\)</span>). Because the ditch extends a long distance in the lateral direction and the contaminant is buoyant (it floats on the groundwater table and we neglect vertical dispersion), the problem can be analyzed in 1 dimension with the following analytic expression:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{C}{C_0} = \frac{1}{2} \mathrm{erf}\left(\frac{x-(q/n)t}{2\sqrt{a(q/n)t}}\right)
+\]</div>
+<p>Where <span class="math notranslate nohighlight">\(C\)</span> contaminant concentration (e.g., parts per million, ppm) at distance <span class="math notranslate nohighlight">\(x\)</span> from the ditch at time <span class="math notranslate nohighlight">\(t\)</span> after the spill, and <span class="math notranslate nohighlight">\(C_0\)</span> is the concentration in the ditch (just prior to cleanup). <span class="math notranslate nohighlight">\(\mathrm{erf}\)</span> is the error function. There are three parameters in the equation which are related to soil properties and groundwater flow:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(q\)</span> is the horizontal groundwater flow velocity (specific discharge) [m/day]</p></li>
+<li><p><span class="math notranslate nohighlight">\(n\)</span> is the soil porosity [<span class="math notranslate nohighlight">\(-\)</span>]</p></li>
+<li><p><span class="math notranslate nohighlight">\(a\)</span> is the longitudinal dispersivity, which describes dispersion in the left to right direction in the image [m]</p></li>
+</ul>
+<p>Unfortunately there is not a lot of soil information, so we have to take into account uncertainty in these three variables, using the following probability distributions with first and second moments (i.e., <span class="math notranslate nohighlight">\(\mu\)</span> and <span class="math notranslate nohighlight">\(\sigma\)</span>).</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(q\sim\mathrm{N}\left(\mu_q=1.00,\sigma_q=0.10\right)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(n\sim\mathrm{N}\left(\mu_n=0.20,\sigma_n=0.02\right)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(a\sim\mathrm{N}\left(\mu_a=10.0,\sigma_a=1.00\right)\)</span></p></li>
+</ul>
+<p>It is important to check the sensitivity of the reliability analysis to the distribution type and moments. We will use the concentration ratio <span class="math notranslate nohighlight">\(C/C_0\)</span> to evaluate this problem and compare it to a threshold defined by health regulations: <span class="math notranslate nohighlight">\(\mathrm{threshold}=1e-4\)</span>.</p>
+</section>
+<section id="definition-of-limit-states">
+<h3>Definition of Limit States<a class="headerlink" href="#definition-of-limit-states" title="Permalink to this headline">#</a></h3>
+<p>As shown in the figure above, there are two locations of interest: the monitoring station (<span class="math notranslate nohighlight">\(x=100\)</span> m from the ditch, point B) and the town well (<span class="math notranslate nohighlight">\(x=500\)</span> m, point C). We are interested in evaluating two cases with a reliability analysis:</p>
+<ol class="simple">
+<li><p>Whether the contamination can be detected at the monitoring station above the threshold level within 1 week of the spill, and</p></li>
+<li><p>If the contamination level at the town groundwater well exceeds the threshold level within 1 month of the spill (30 days)</p></li>
+</ol>
+<p>Relating these descriptions to our variables of interest:</p>
+<ol class="simple">
+<li><p>find the probability that <span class="math notranslate nohighlight">\(C/C_0\)</span> &gt; threshold</p></li>
+<li><p>find the probability that <span class="math notranslate nohighlight">\(C/C_0\)</span> &lt; threshold</p></li>
+</ol>
+<p>We will refer to these values as ‘failure probabilities’, even though case 1 technically doesn’t correspond to failure—it’s just the way we refer to things in practice.</p>
+<p>Next we will convert these into functions that will allow us to quantify the ‘failure’ conditions. For convenience, it is often useful to define the limit state as a function, <span class="math notranslate nohighlight">\(Z\)</span>, such that failure occurs when <span class="math notranslate nohighlight">\(Z&lt;0\)</span>. It follows from the descriptions above, that the limit state functions for both cases are:</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(Z=C/C_0 - \mathrm{threshold}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(Z=\mathrm{threshold} - C/C_0\)</span></p></li>
+</ol>
+<p>NB: <em>in the book another notation used for <span class="math notranslate nohighlight">\(Z\)</span> is <span class="math notranslate nohighlight">\(g_X(X)\)</span>.</em></p>
+</section>
+<section id="analysis-approach">
+<h3>Analysis Approach<a class="headerlink" href="#analysis-approach" title="Permalink to this headline">#</a></h3>
+<p>Our programming task is to create a function of random variables to represent these two limit-states, define the random variables, then evaluate the reliability with Monte Carlo simulation. In other words, we will numerically approximate the probability distribution of <span class="math notranslate nohighlight">\(Z\)</span>, then evaluate reliability as <span class="math notranslate nohighlight">\(P(Z&lt;0)\)</span>.</p>
+<p>This is a lot of work, but fortunately a number of helper functions and a Class are provided in the auxiliary file <code class="docutils literal notranslate"><span class="pre">exercise_setup.py</span></code>!</p>
+</section>
+<section id="references">
+<h3>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h3>
+<p>This example draws inspiration from Case 2 of the paper <a class="reference external" href="https://doi.org/10.1029/WR023i005p00794">Sitar et al. (1987)</a>. Note that the paper focuses on the first order reliability method (FORM) and the design point, concepts which are not part of MUDE.</p>
+<p>Sitar, N., Cawlfield, J. D., &amp; Der Kiureghian, A. (1987). First‐order reliability approach to stochastic analysis of subsurface flow and contaminant transport. Water Resources Research, 23(5), 794-804.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">scipy.special</span> <span class="kn">import</span> <span class="n">erfc</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+
+<span class="kn">from</span> <span class="nn">exercise_setup</span> <span class="kn">import</span> <span class="n">process_negative_values</span>
+<span class="kn">from</span> <span class="nn">exercise_setup</span> <span class="kn">import</span> <span class="n">RandomVariableDistribution</span>
+<span class="kn">from</span> <span class="nn">exercise_setup</span> <span class="kn">import</span> <span class="n">pdf_of_function_of_RV</span>
+<span class="kn">from</span> <span class="nn">exercise_setup</span> <span class="kn">import</span> <span class="n">monte_carlo</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="defining-the-limit-states">
+<h2>Defining the Limit States<a class="headerlink" href="#defining-the-limit-states" title="Permalink to this headline">#</a></h2>
+<p>We only define limit state Case 2 below, and will use a simple multiplying factor of <span class="math notranslate nohighlight">\(-1\)</span> to switch to Case 1 using a multiplying factor <code class="docutils literal notranslate"><span class="pre">flip_LSF</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">C_C0</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Contaminant concentration ratio.&quot;&quot;&quot;</span>
+    <span class="n">q</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">a</span> <span class="o">=</span> <span class="n">process_negative_values</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+    <span class="k">return</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">erfc</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">q</span><span class="o">/</span><span class="n">n</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="p">(</span><span class="n">q</span><span class="o">/</span><span class="n">n</span><span class="p">)</span><span class="o">*</span><span class="n">t</span><span class="p">)))</span>
+
+<span class="k">def</span> <span class="nf">limit_state_fun</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">threshold</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Limit state fxn, Case 2 (multiply by flip_LSF=-1 for Case 1).&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">threshold</span> <span class="o">-</span> <span class="n">C_C0</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="class-randomvariabledistribution">
+<h2>Class <code class="docutils literal notranslate"><span class="pre">RandomVariableDistribution</span></code><a class="headerlink" href="#class-randomvariabledistribution" title="Permalink to this headline">#</a></h2>
+<p>The class <code class="docutils literal notranslate"><span class="pre">RandomVariableDistribution</span></code> makes it very easy to define Normal and Lognormal distributions for the random variables. See documentation and example below.</p>
+<p>NB: <em>you can use the code in <code class="docutils literal notranslate"><span class="pre">exercisesetup.py</span></code> and this notebook to confirm the result of the 2 random variable case in the Probabilistic Design chapter, and recreate the figures.</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">RandomVariableDistribution</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Define a N or LN probability to use in MUDE week 2.7 exercise.
+    
+    Usage:
+    -----
+    Create an instance of the class
+        by default, the random variable is ~N(0,1)
+    Specify distribution using 1st and 2nd moments for N or LN:
+        --&gt; use method define_distribution to change it!
+             (the method prints a summary of the change)
+        for example, copy/paste the following:
+            test = RandomVariableDistribution()
+            test.print_status()
+            test.define_distribution(mean=5, stddev=1, dist_type=&#39;LN&#39;)
+    An instance will include the following attributes:
+        - distribution moment and (scipy) parameters shape, location, scale
+        - dist_object: distribution object (scipy.stats)
+        - get_sample: method for getting random samples from the distribution
+        - plot_pdf_or_cdf:
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">example_random_variable</span> <span class="o">=</span> <span class="n">RandomVariableDistribution</span><span class="p">()</span>
+<span class="n">example_random_variable</span><span class="o">.</span><span class="n">define_distribution</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>
+                                            <span class="n">dist_type</span><span class="o">=</span><span class="s1">&#39;LN&#39;</span><span class="p">,</span>
+                                            <span class="n">print_new_dist</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">example_random_variable</span><span class="o">.</span><span class="n">plot_pdf_or_cdf</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The mean is 5.000e+00
+The standard deviation is 1.000e+00
+The distribution is Lognormal
+</pre></div>
+</div>
+<img alt="../../_images/Exercise_Contamination_Render_8_1.png" src="../../_images/Exercise_Contamination_Render_8_1.png" />
+</div>
+</div>
+</section>
+<section id="setting-up-the-problem">
+<h2>Setting up the problem<a class="headerlink" href="#setting-up-the-problem" title="Permalink to this headline">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">10000</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">threshold</span> <span class="o">=</span> <span class="mf">1e-4</span>
+
+<span class="n">flip_LSF</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+
+<span class="n">q_rv</span> <span class="o">=</span> <span class="n">RandomVariableDistribution</span><span class="p">()</span>
+<span class="n">q_rv</span><span class="o">.</span><span class="n">define_distribution</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="mf">1.</span><span class="p">,</span> <span class="n">stddev</span><span class="o">=</span><span class="mf">.1</span><span class="p">)</span>
+<span class="n">n_rv</span> <span class="o">=</span> <span class="n">RandomVariableDistribution</span><span class="p">()</span>
+<span class="n">n_rv</span><span class="o">.</span><span class="n">define_distribution</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">stddev</span><span class="o">=</span><span class="mf">.02</span><span class="p">)</span>
+<span class="n">a_rv</span> <span class="o">=</span> <span class="n">RandomVariableDistribution</span><span class="p">()</span>
+<span class="n">a_rv</span><span class="o">.</span><span class="n">define_distribution</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="mf">10.</span><span class="p">,</span> <span class="n">stddev</span><span class="o">=</span><span class="mf">1.</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="monte-carlo-analysis">
+<h2>Monte Carlo analysis<a class="headerlink" href="#monte-carlo-analysis" title="Permalink to this headline">#</a></h2>
+<p>The Monte Carlo procedure for estimating failure probability, <span class="math notranslate nohighlight">\(p_f\)</span>, is:</p>
+<ul class="simple">
+<li><p>For each random variable <span class="math notranslate nohighlight">\(X_i\)</span> (<span class="math notranslate nohighlight">\(i = 1, …, n\)</span>) one simulates N realizations, <span class="math notranslate nohighlight">\(x_{i,1}, x_{i,1}, ..., x_{i,N}\)</span>.</p></li>
+<li><p>For each set of simulations <span class="math notranslate nohighlight">\(j\)</span> (<span class="math notranslate nohighlight">\(j = 1, ..., N\)</span>) one calculates <span class="math notranslate nohighlight">\(g(x_{1,j}, x_{2,j}, …, x_{n,j})\)</span></p></li>
+<li><p>In case <span class="math notranslate nohighlight">\(g(.) &lt; 0\)</span> a counter <span class="math notranslate nohighlight">\(N_f\)</span> is increased by one. After <span class="math notranslate nohighlight">\(N\)</span> simulations one calculates: <span class="math notranslate nohighlight">\(\hat{p_f}=N_f/N\)</span></p></li>
+<li><p>In case <span class="math notranslate nohighlight">\(N\rightarrow+\infty\)</span> one obtains the failure probability <span class="math notranslate nohighlight">\(p_f\)</span>.</p></li>
+</ul>
+<p>The number of simulations <span class="math notranslate nohighlight">\(N\)</span> directly influences the accuracy of <span class="math notranslate nohighlight">\(\hat{p_f}\)</span>, which is an estimate of the ‘true’ value <span class="math notranslate nohighlight">\(p_f\)</span>. As an infinite number of simulations is not possible, one must choose a value for <span class="math notranslate nohighlight">\(N\)</span> that balances total computation time, which increases linearly with <span class="math notranslate nohighlight">\(N\)</span>, and accuracy of the estimator <span class="math notranslate nohighlight">\(\hat{p_f}\)</span>, which can be determined as the number of significant digits desired for <span class="math notranslate nohighlight">\(p_f\)</span>, or based on relative error (coefficient of variation, <span class="math notranslate nohighlight">\(V=\sigma/\mu\)</span>. The failure observations, <span class="math notranslate nohighlight">\(N_f\)</span>, within the Monte Carlo procedure are the result of a sequence of statistically independent and identically distributed random trials in a Bernoulli process. Using the binomial distribution, the standard deviation of of <span class="math notranslate nohighlight">\(\hat{p_f}\)</span> can be written</p>
+<div class="math notranslate nohighlight">
+\[\sigma_\hat{p_f}=\sqrt{\frac{p_f(1-p_f)}{N}}\]</div>
+<p>As <span class="math notranslate nohighlight">\(\hat{p_f}\rightarrow1\)</span> this leads to the coefficient of variation, <span class="math notranslate nohighlight">\(V_\hat{p_f}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[V_\hat{p_f}=\frac{\sigma_\hat{p_f}}{\hat{p_f}}=\frac{1}{\sqrt{N\hat{p_f}}}\]</div>
+<p>The coefficient of variation is a useful measure for gauging the accuracy of a Monte Carlo simulation: values of 0.01 are ideal, but 0.1 can be sufficient in many applications, depending on the need for accuracy. For example, consider <span class="math notranslate nohighlight">\(V=0.1\)</span> for a target failure probability of <span class="math notranslate nohighlight">\(0.01\)</span>. Assuming the samples follow a Gaussian distribution implies a probability of 0.997 that the ‘true’ failure probability is within the interval 0.007-0.013. It is also useful to plot the calculated values of <span class="math notranslate nohighlight">\(V\)</span> and <span class="math notranslate nohighlight">\(\hat{p_f}\)</span> for every realization <span class="math notranslate nohighlight">\(j = 1, ..., N\)</span>, as shown below. The figure clearly shows convergence to a stable value of <span class="math notranslate nohighlight">\(\hat{p_f}\)</span> after X simulations, indicating that for future analyses that are similar can use a lower number of simulations instead (<span class="math notranslate nohighlight">\(N\sim X\)</span>).</p>
+<p>In case of a target coefficient of variation the number of required simulations <span class="math notranslate nohighlight">\(N\)</span> increases as <span class="math notranslate nohighlight">\(p_f\)</span> decreases. As an example, for <span class="math notranslate nohighlight">\(V = 0.01\)</span> and <span class="math notranslate nohighlight">\(p_f=1e-5\)</span> one has to execute <span class="math notranslate nohighlight">\(10^9\)</span> simulations. As for this case on average only one of 10^5 simulations leads to an increase of <span class="math notranslate nohighlight">\(N_f\)</span>, the frequency of obtaining a ‘success’ (realization in the unsafe domain) is very low. In addition, for low failure probabilities the number of function evaluations is quite high, which may be practically impossible if there is a high function evaluation time, for example with a complex finite element model. To address this problem, variance reducing techniques have been developed which allow the simulations to be performed in a more effective way. In the following the so-called importance sampling or Latin hypercube sampling.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_q</span> <span class="o">=</span> <span class="n">q_rv</span><span class="o">.</span><span class="n">get_sample</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+<span class="n">sample_n</span> <span class="o">=</span> <span class="n">n_rv</span><span class="o">.</span><span class="n">get_sample</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+<span class="n">sample_a</span> <span class="o">=</span> <span class="n">a_rv</span><span class="o">.</span><span class="n">get_sample</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+<span class="n">sample_C_C0</span> <span class="o">=</span> <span class="n">C_C0</span><span class="p">(</span><span class="n">sample_q</span><span class="p">,</span> <span class="n">sample_n</span><span class="p">,</span> <span class="n">sample_a</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+<span class="n">sample_Z</span> <span class="o">=</span> <span class="n">flip_LSF</span><span class="o">*</span><span class="n">limit_state_fun</span><span class="p">(</span><span class="n">sample_q</span><span class="p">,</span>
+                                    <span class="n">sample_n</span><span class="p">,</span>
+                                    <span class="n">sample_a</span><span class="p">,</span>
+                                    <span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">threshold</span><span class="p">)</span>
+
+<span class="n">monte_carlo</span><span class="p">(</span><span class="n">sample_Z</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MONTE CARLO RESULTS
+--------------------------------------------------
+    N = 10000, number of samples
+   Nf = 18, number of failed realizations
+   pf = 1.800e-03, estimated failure probability
+    V = 0.236, c.o.v. of estimated pf
+</pre></div>
+</div>
+<img alt="../../_images/Exercise_Contamination_Render_12_1.png" src="../../_images/Exercise_Contamination_Render_12_1.png" />
+<img alt="../../_images/Exercise_Contamination_Render_12_2.png" src="../../_images/Exercise_Contamination_Render_12_2.png" />
+</div>
+</div>
+<p>The method <code class="docutils literal notranslate"><span class="pre">pdf_of_function_of_RV</span></code> makes it easy to see what the distribution of <span class="math notranslate nohighlight">\(C/C_0\)</span> and the limit state function for different distributions of q, n or a. Below a second distribution of a is considered:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">C_C0_cases</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">Z_cases</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">C_C0_cases</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sample_C_C0</span><span class="p">)</span>
+<span class="n">Z_cases</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sample_Z</span><span class="p">)</span>
+
+<span class="n">a_2</span> <span class="o">=</span> <span class="n">RandomVariableDistribution</span><span class="p">()</span>
+<span class="n">a_2</span><span class="o">.</span><span class="n">define_distribution</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">stddev</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">dist_type</span><span class="o">=</span><span class="s1">&#39;N&#39;</span><span class="p">)</span>
+<span class="n">C_C0_cases</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">C_C0</span><span class="p">(</span><span class="n">sample_q</span><span class="p">,</span> <span class="n">sample_n</span><span class="p">,</span> <span class="n">a_2</span><span class="o">.</span><span class="n">get_sample</span><span class="p">(</span><span class="n">N</span><span class="p">),</span> <span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">))</span>
+<span class="n">Z_cases</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">flip_LSF</span><span class="o">*</span><span class="n">limit_state_fun</span><span class="p">(</span><span class="n">sample_q</span><span class="p">,</span>
+                                        <span class="n">sample_n</span><span class="p">,</span>
+                                        <span class="n">a_2</span><span class="o">.</span><span class="n">get_sample</span><span class="p">(</span><span class="n">N</span><span class="p">),</span>
+                                        <span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">threshold</span><span class="p">))</span>
+
+<span class="n">a_rv</span><span class="o">.</span><span class="n">print_status</span><span class="p">()</span>
+<span class="n">a_2</span><span class="o">.</span><span class="n">print_status</span><span class="p">()</span>
+
+<span class="n">pdf_of_function_of_RV</span><span class="p">(</span><span class="n">C_C0_cases</span><span class="p">)</span>
+<span class="n">pdf_of_function_of_RV</span><span class="p">(</span><span class="n">Z_cases</span><span class="p">,</span> <span class="n">case_C</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a has 61 negative values that have been set to 1.0e-03.
+a has 54 negative values that have been set to 1.0e-03.
+The mean is 1.000e+01
+The standard deviation is 1.000e+00
+The distribution is Normal
+The mean is 1.000e+01
+The standard deviation is 4.000e+00
+The distribution is Normal
+</pre></div>
+</div>
+<img alt="../../_images/Exercise_Contamination_Render_14_1.png" src="../../_images/Exercise_Contamination_Render_14_1.png" />
+<img alt="../../_images/Exercise_Contamination_Render_14_2.png" src="../../_images/Exercise_Contamination_Render_14_2.png" />
+</div>
+</div>
+<p>This is the density of the function of random variables, <span class="math notranslate nohighlight">\(C/C_0\)</span>, two values of <span class="math notranslate nohighlight">\(\sigma_a\)</span>, and a third with the uniform distribution (not using the <code class="docutils literal notranslate"><span class="pre">RandomVariableDistribution</span></code> class).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">values_of_RV_1</span> <span class="o">=</span> <span class="n">sample_q</span>
+<span class="n">values_of_RV_2</span> <span class="o">=</span> <span class="n">sample_a</span>
+
+<span class="n">g</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">JointGrid</span><span class="p">()</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">values_of_RV_1</span><span class="p">,</span>
+            <span class="n">y</span><span class="o">=</span><span class="n">values_of_RV_2</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">g</span><span class="o">.</span><span class="n">ax_joint</span><span class="p">,</span> <span class="n">bw_adjust</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">values_of_RV_1</span><span class="p">[</span><span class="n">sample_Z</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">],</span>
+                <span class="n">y</span><span class="o">=</span><span class="n">values_of_RV_2</span><span class="p">[</span><span class="n">sample_Z</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">],</span> <span class="n">ax</span><span class="o">=</span><span class="n">g</span><span class="o">.</span><span class="n">ax_joint</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ax_joint</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Random Variable 1 (chosen by you)&#39;</span><span class="p">)</span>
+<span class="n">g</span><span class="o">.</span><span class="n">ax_joint</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Random Variable 2 (chosen by you)&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Joint density of 2 RVs with failure realizations&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Joint density of 2 RVs with failure realizations
+</pre></div>
+</div>
+<img alt="../../_images/Exercise_Contamination_Render_17_1.png" src="../../_images/Exercise_Contamination_Render_17_1.png" />
+</div>
+</div>
+</section>
+<section id="case-2-exceeding-the-health-threshold">
+<h2>Case 2: exceeding the health threshold<a class="headerlink" href="#case-2-exceeding-the-health-threshold" title="Permalink to this headline">#</a></h2>
+<p>Now we return to the failure definition of exceeding the threshold (<code class="docutils literal notranslate"><span class="pre">flip_LSF</span></code> = 1).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">N</span> <span class="o">=</span> <span class="mi">100000</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">500</span>
+<span class="n">threshold</span> <span class="o">=</span> <span class="mf">1e-4</span>
+
+<span class="n">flip_LSF</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="n">sample_q</span> <span class="o">=</span> <span class="n">q_rv</span><span class="o">.</span><span class="n">get_sample</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+<span class="n">sample_n</span> <span class="o">=</span> <span class="n">n_rv</span><span class="o">.</span><span class="n">get_sample</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+<span class="n">sample_a</span> <span class="o">=</span> <span class="n">a_rv</span><span class="o">.</span><span class="n">get_sample</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+
+<span class="n">sample_C_C0</span> <span class="o">=</span> <span class="n">C_C0</span><span class="p">(</span><span class="n">sample_q</span><span class="p">,</span> <span class="n">sample_n</span><span class="p">,</span> <span class="n">sample_a</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+<span class="n">sample_Z</span> <span class="o">=</span> <span class="n">flip_LSF</span><span class="o">*</span><span class="n">limit_state_fun</span><span class="p">(</span><span class="n">sample_q</span><span class="p">,</span>
+                                    <span class="n">sample_n</span><span class="p">,</span>
+                                    <span class="n">sample_a</span><span class="p">,</span>
+                                    <span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">threshold</span><span class="p">)</span>
+
+<span class="n">monte_carlo</span><span class="p">(</span><span class="n">sample_Z</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MONTE CARLO RESULTS
+--------------------------------------------------
+    N = 100000, number of samples
+   Nf = 65, number of failed realizations
+   pf = 6.500e-04, estimated failure probability
+    V = 0.124, c.o.v. of estimated pf
+</pre></div>
+</div>
+<img alt="../../_images/Exercise_Contamination_Render_19_1.png" src="../../_images/Exercise_Contamination_Render_19_1.png" />
+<img alt="../../_images/Exercise_Contamination_Render_19_2.png" src="../../_images/Exercise_Contamination_Render_19_2.png" />
+</div>
+</div>
+<p>NB: <em>the joint density and failure point plot is commented out here to prevent slowing down the kernel. When N=100000 (1e5) or higher, it will take around a minute to run.</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># values_of_RV_1 = sample_q</span>
+<span class="c1"># values_of_RV_2 = sample_a</span>
+
+<span class="c1"># g = sns.JointGrid()</span>
+<span class="c1"># sns.kdeplot(x=values_of_RV_1,</span>
+<span class="c1">#             y=values_of_RV_2, ax=g.ax_joint, bw_adjust=3)</span>
+<span class="c1"># sns.scatterplot(x=values_of_RV_1[sample_Z&lt;0],</span>
+<span class="c1">#                 y=values_of_RV_2[sample_Z&lt;0], ax=g.ax_joint)</span>
+<span class="c1"># g.ax_joint.set_xlabel(&#39;Random Variable 1 (chosen by you)&#39;)</span>
+<span class="c1"># g.ax_joint.set_ylabel(&#39;Random Variable 2 (chosen by you)&#39;)</span>
+<span class="c1"># print(&#39;Joint density of 2 RVs with failure realizations&#39;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="gradient-vector">
+<h3>Gradient Vector<a class="headerlink" href="#gradient-vector" title="Permalink to this headline">#</a></h3>
+<p>Partial derivatives will be useful for evaluating the functional influence of the variables on the limit states. The gradient vector is defined as:</p>
+<p><span class="math notranslate nohighlight">\(\nabla_{\mathbf{y}} G(\mathbf{y})=\left(\frac{\partial G(\mathbf{y})}{\partial \mathbf{y}_1}, \cdots, \frac{\partial G(\mathbf{y})}{\partial \mathbf{y}_n}\right) \)</span></p>
+<p>To find the gradient vector we need to find the partial derivatives of <span class="math notranslate nohighlight">\(\frac{C}{C_0}\)</span></p>
+<p><span class="math notranslate nohighlight">\(\frac{C}{C_0} = \frac{1}{2} \mathrm{erfc}\left(\frac{x-(q/n)t}{2\sqrt{a(q/n)t}}\right)=\frac{1}{2} \left(1-\mathrm{erf}\frac{x-(q/n)t}{2\sqrt{a(q/n)t}}\right)\)</span></p>
+<p>Using <span class="math notranslate nohighlight">\(\frac{\partial}{\partial x} (\mathrm{erf} x) = \frac{2}{\sqrt{\pi}}e^{-x^2} \)</span> and <span class="math notranslate nohighlight">\(\Omega = \frac{1}{\sqrt{\pi}}e^{-\left(\frac{x-(q/n)t}{2\sqrt{a(q/n)t}}\right)^2}  \)</span>, the derivatives are:</p>
+<p><span class="math notranslate nohighlight">\(\frac{\partial (C/C_0)}{\partial x} = \Omega\left(-\frac{1}{2\sqrt{a(q/n)t}}\right)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\frac{\partial (C/C_0)}{\partial t} =\Omega\left(\frac{x}{4\sqrt{a(q/n)t^3}}+\frac{q}{4n\sqrt{a(q/n)t}}\right)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\frac{\partial (C/C_0)}{\partial q} = \Omega\left(\frac{x}{4\sqrt{a(1/n)tq^3}}+\frac{t}{4n\sqrt{a(q/n)t}}\right)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\frac{\partial (C/C_0)}{\partial n} = \Omega\left(-\frac{x}{4\sqrt{aqtn}}-\frac{qt}{4\sqrt{qatn^3}}\right)\)</span></p>
+<p><span class="math notranslate nohighlight">\(\frac{\partial (C/C_0)}{\partial a} = \Omega\left(\frac{x-q/nt}{4\sqrt{(q/n)ta^3}}\right)\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">gradient</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
+    <span class="n">Om</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">q</span><span class="o">/</span><span class="n">n</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">q</span><span class="o">/</span><span class="n">n</span><span class="o">*</span><span class="n">t</span><span class="p">)))</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">dx</span> <span class="o">=</span> <span class="n">Om</span><span class="o">*</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">q</span><span class="o">/</span><span class="n">n</span><span class="o">*</span><span class="n">t</span><span class="p">)))</span>
+    <span class="n">dt</span> <span class="o">=</span> <span class="n">Om</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">q</span><span class="o">/</span><span class="n">n</span><span class="o">*</span><span class="n">t</span><span class="o">**</span><span class="mi">3</span><span class="p">))</span> <span class="o">+</span> <span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">n</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">q</span><span class="o">/</span><span class="n">n</span><span class="o">*</span><span class="n">t</span><span class="p">)))</span>
+    <span class="n">dq</span> <span class="o">=</span> <span class="n">Om</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">/</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">q</span><span class="o">**</span><span class="mi">3</span><span class="o">/</span><span class="n">n</span><span class="o">*</span><span class="n">t</span><span class="p">))</span> <span class="o">+</span> <span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">n</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">q</span><span class="o">/</span><span class="n">n</span><span class="o">*</span><span class="n">t</span><span class="p">)))</span>
+    <span class="n">dn</span> <span class="o">=</span> <span class="n">Om</span><span class="o">*</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="o">/</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">q</span><span class="o">*</span><span class="n">n</span><span class="o">*</span><span class="n">t</span><span class="p">))</span> <span class="o">-</span> <span class="p">(</span><span class="n">q</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">q</span><span class="o">*</span><span class="n">n</span><span class="o">**</span><span class="mi">3</span><span class="o">*</span><span class="n">t</span><span class="p">)))</span>
+    <span class="n">da</span> <span class="o">=</span> <span class="n">Om</span><span class="o">*</span><span class="p">((</span><span class="n">x</span> <span class="o">-</span> <span class="n">q</span><span class="o">/</span><span class="n">n</span><span class="o">*</span><span class="n">t</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="o">**</span><span class="mi">3</span> <span class="o">*</span><span class="n">q</span><span class="o">/</span><span class="n">n</span><span class="o">*</span><span class="n">t</span><span class="p">)))</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">dq</span><span class="p">,</span><span class="n">dn</span><span class="p">,</span><span class="n">da</span><span class="p">,</span><span class="n">dx</span><span class="p">,</span><span class="n">dt</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">gradient</span><span class="p">(</span><span class="mf">2.5</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">t</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 2.84464056e-01 -3.55580070e+00  1.01594306e-02 -1.62550889e-03
+  2.37053380e-02]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="your-turn">
+<h2>Your turn!<a class="headerlink" href="#your-turn" title="Permalink to this headline">#</a></h2>
+<p>Now try and use the code to answer the questions posed at the beginning of the notebook, which are repeated here:</p>
+<ol class="simple">
+<li><p>Which random variables have the biggest influence on reliability?</p></li>
+<li><p>How does the assumption of probability distribution influence reliability?</p></li>
+<li><p>Do the random variables act as loads or resistances?</p></li>
+</ol>
+<p>In particular, to evaluate sensitivity, you can consider two quantitative aspects:</p>
+<ol class="simple">
+<li><p>What is the functional influence of the random variables and x and t on the limit-state function?</p></li>
+<li><p>What is the stochastic influence of the random variables,</p></li>
+<li><p>What is the combined influence of the two aspects above?</p></li>
+</ol>
+<p>Hint: note the striking similarity of these terms to the material you have already seen in the variance propagation part of MUDE, where the variance of a function of random variables is proportional to <span class="math notranslate nohighlight">\(\sigma_x\cdot \frac{\partial Z}{\partial x}\)</span>. The variable with the biggest influence on reliability will have the highest value of this term. Also, the sign of the partial derivative will indicate whether a variable acts as a load or resistance.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebooks/contamination"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../flood-risk/Exercise_Flood_Risk_Render.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Flood Risk</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../../references.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">References</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By the MUDE Team<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

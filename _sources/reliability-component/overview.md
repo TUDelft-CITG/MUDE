@@ -40,7 +40,7 @@ $$
 Which is easily evaluated with the CDF of $h_w$:
 
 $$
-p_f=F_{h_w}(2)=\Phi\left[ \frac{2-\mu}{\sigma}\right] =\Phi[-3]=0.13
+p_f=F_{h_w}(2)=\Phi\left[ \frac{2-\mu}{\sigma}\right] =\Phi[-3]=0.00135
 $$
 
 This is nearly equivalent to the {ref}`prob_design_1_rv` example using river discharge from the {ref}`prob_design` Chapter, the only difference is there a load variable was considered and therefore evaluated with the complementary CDF.
