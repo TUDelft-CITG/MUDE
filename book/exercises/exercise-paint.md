@@ -13,6 +13,10 @@ Construct a decision tree to evaluate the different options for steel preparatio
 ````{admonition} Decision Tree (not part of MUDE exam)
 :class: tip, dropdown
 
+This problem can be visualized using a decision tree as shown below. However, it results in a different interpretation of the problem than that shown in the solution. For example, consider the top branch at the far right, where 'No rust spot' is assigned a probability of 0.998. This is consistent with the formulation of a decision tree, but not consistent with the problem statement, which implies that the €60 cost associated with cleaning and painting is always done when replacing the paint system (thus a probability of 1.0). This is why the values in the decision tree are slightly different than those in Question 3, for example.
+
+Although the decision tree is not part of the exam, this illustrates an important lesson: it is very easy to accidentally make probability calculations that are inconsistent with the situation you are trying to evaluate!
+
 ```{figure} ../figures/exercise-decision-tree.png
 ---
 width: 600px
