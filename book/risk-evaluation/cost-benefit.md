@@ -97,7 +97,7 @@ where:
 
 ```{admonition} Interest Rates
 :class: tip, dropdown
-The discount rate is analagous to opportunity costs and interest rates that you may be familiar with from the field of economics. It provides a way to evaluate the true cost of investing in a particular project over a long time period, for example: if the value of a stock market increases with an annual interest rate of 4%, how does that compare to the expected earnings on the alternative investment under consideration?
+The discount rate, $r$, is analagous to opportunity costs and interest rates that you may be familiar with from the field of economics. It provides a way to evaluate the true cost of investing in a particular project over a long time period, for example: if the value of a stock market increases with an annual interest rate of 4%, how does that compare to the expected earnings on the alternative investment under consideration?
 
 Although civil engineering projects are typically not associated with financial investments like stocks and bonds, the need to consider the time value of money is identical. In fact, many governments use the financial instruments like bonds to finance projects, which is easy to see the relationship to interest rates.
 ```
