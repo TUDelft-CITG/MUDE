@@ -82,7 +82,7 @@ where:
 
 ## Net Present Value
 
-The foregoing assumes that both the costs and benefits are expressed in the same unit, generally in the form of a present value [€]. The net present value represents the sum of the present values of the benefit and cost cash flows over a period of time. In engineering we often deal with situations with larger initial investments, whereas the risk reduction benefits are spread out over a longer time period. For example, when a government invests this year in flood protection, the costs are made in year 0, but the benefits will be spread over the coming decades. 
+The foregoing assumes that both the costs and benefits are expressed in the same unit, generally in the form of a present value [€]. The net present value (NPV) represents the sum of the present values of the benefit and cost cash flows over a period of time. In engineering we often deal with situations with larger initial investments, whereas the risk reduction benefits are spread out over a longer time period. For example, when a government invests this year in flood protection, the costs are made in year 0, but the benefits will be spread over the coming decades. 
 
 For such situations the failure probability is generally expressed per unit of time, mostly per year. That means that the risk (reduction) is expressed in terms of € per year, whereas the initial investments have the unit of €. The net present value of cost or benefit values over a future range of years can be calculated with {eq}`npv`. To calculate the net present value NPV [€] a discount rate  should be used. The discount rate represents a required return on an investment.
 
@@ -94,6 +94,13 @@ where:
 
 - $C_t$ the costs in year $t$ [€]
 - $T$ the reference period [years]
+
+```{admonition} Interest Rates
+:class: tip, dropdown
+The discount rate is analagous to opportunity costs and interest rates that you may be familiar with from the field of economics. It provides a way to evaluate the true cost of investing in a particular project over a long time period, for example: if the value of a stock market increases with an annual interest rate of 4%, how does that compare to the expected earnings on the alternative investment under consideration?
+
+Although civil engineering projects are typically not associated with financial investments like stocks and bonds, the need to consider the time value of money is identical. In fact, many governments use the financial instruments like bonds to finance projects, which is easy to see the relationship to interest rates.
+```
 
 The contribution of costs in a certain year to the net present value depend on the discount rate and the reference year. Costs or benefits closest to the present will have the greatest contribution. {numref}`present-value` below shows the value of $1/(1+r)^t$ for a given year $t$ for different discount rates. The higher the discount rate, the smaller the contribution to the net present value of costs or benefits that are far away from the present. For an infinite time horizon it can be shown that $\sum 1/(1+r)^t \approx 1/r$. This approximation can be used in evaluating engineering projects with a long life time.
 
