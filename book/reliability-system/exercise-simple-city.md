@@ -86,7 +86,7 @@ I would locate the extra bridge next to Bridge 4. In this case, adding an extra 
 I would remove Bridge 2 or 3. If bridge 1 or 4 is removed, a whole path is removed from the system, while by removing only Bridge 2 or 3, there is still an available bridge to cross that river.
 ```
 
-**Question 7:** What should the probability of each bridge be in order to make the probability of crossing from C1 to C3 less than 0.01?
+**Question 7:** What should the probability of each bridge be in order to make the probability of not crossing from C1 to C3 less than 0.01?
 
 ```{admonition} Answer
 :class: tip, dropdown
