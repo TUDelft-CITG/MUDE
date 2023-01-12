@@ -88,6 +88,9 @@ The following concepts or methods are used in this book to illustrate key subjec
 
 Exam questions are also designed such that specialized knowledge is not needed to solve them; however, you should be able to recognize loads and resistances and series and parallel systems for any simple civil engineering and geoscience application provided on the exam.
 ```
+### Additional Resources
+
+If you are in need of a quick refresher on fundamental probability and statistics topics, you may find the online course [Probability and Statistics Applications for MUDE](https://tudelft-citg.github.io/learn-probability/) helpful. This course was created for incoming students to the MSc program. If you have no background in proability and statistics you will need to take a more thorough course: begninning in Summer 2023 two online courses, one on probability the other on statistics, will be available on EdX from the TU Delft Mathematics Department.
 
 ### Updates and Citation
 
