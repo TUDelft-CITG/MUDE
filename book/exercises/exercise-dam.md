@@ -82,7 +82,7 @@ Applying the inverse CDF allows us to solve for $\mu_1$:
 
 $$
 \frac{12-\mu_T}{\sigma_T} &=\Phi^{-1}[0.9] \\
-\frac{12-(\mu_1 + \mu_2)}{\sigma_T} &=0.3159
+\frac{12-(\mu_1 + \mu_2)}{\sigma_T} &=1.2816
 $$
 
 $$
