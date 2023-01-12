@@ -104,6 +104,20 @@ name: sys_dependence
 Effect of correlation coefficient on failure probability for a series system via joint failure, $P(F1 \cap F2)$ (computed with a Gaussian copula). The arrow is located at $\rho=+0.9$, where $P(F1 \cap F2)=0.003$.
 ```
 
+````{admonition} Tips for Interpreting the Figure
+:class: tip, dropdown
+
+{numref}`sys_dependence` is interesting because it shows the effect of dependence on *both* series and parallel systems, since they are related with {eq}`sys_p_series`, the value that is shown in the blue line. Note that the distance between the blue line and the top reference line is the value of the intersection, $P(F1\cap F2)$ (also called the "joint" or "and" probability). Note that without a joint probability distribution (in this case a bivariate Gaussian), you can't compute the joint probability of two events, except for three special cases, the vertical black lines in the figure---do you know what those values are? This is related to the concepts of dependent, mutually exclusive and statistically independent events, which are easy to confuse with each other.
+
+It is also common to think about dependence in the sense of how "one event happens given that the other event has happened," but this is not quite right. Dependence is describged simply by the definition of conditional probability
+
+$$
+P(F1 \cap F2) = P(F1|F2)\cdot P(F2)
+$$
+
+which means the correct statement is that dependence quantifies how the "*probability* of one event *changes* (or not) given that the other event has happened."
+````
+
 ## Chapter Overview
 
 This page contains a brief introduction to the computation of failure probability for series and parallel systems, and describes the role of dependence. The following section illustrates these concepts with a simple exercise.

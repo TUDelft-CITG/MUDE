@@ -51,6 +51,10 @@ $$
 
 **Question 4:**	Create an FN curve for this situation, including the limit line. Be sure to clearly label the axes and the values of key points on your diagram.
 
+```{note}
+If you are not sure what the limit line is, wait for this question until you read the Safety Standards Section (Risk Evaluation chapter).
+```
+
 ````{admonition} Answer
 :class: tip, dropdown
 
