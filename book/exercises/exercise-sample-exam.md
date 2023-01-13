@@ -95,7 +95,7 @@ First create an FN curve for the risk assessment
 ---
 width: 400px
 name: limit-line
---- -->
+---
 ```
 
 Next, check that each point on the line is below the limit line:
@@ -103,8 +103,9 @@ Next, check that each point on the line is below the limit line:
 $$
 1-F_N(n)<\frac{C}{N^α}
 $$ 
+
 The probability of exceeding 100 fatalities is too high since $5E-3>0.1/100^2=1E-5$. The same is true for 10 fatalities.
-````
+```` -->
 
 The flooding probability is 1/50 per year and damage is 150 million € ($10^6$). It is questioned whether additional protection is needed and what would be the best solution between the following:
 
