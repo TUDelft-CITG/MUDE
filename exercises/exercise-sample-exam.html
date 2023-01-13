@@ -537,6 +537,7 @@ Option a is true.
 
 It is likely that both structures are constructed of the same material (e.g., local soil), which would respond in a similar way to the storm surge and waves. The structures are also likely to be operated and maintained by the same government agency, which would result in dependence due to human error and maintenance problems.
 ``` -->
+<hr class="docutils" />
 <p>The damage in case of flood protection system failure is 1 billion <span class="math notranslate nohighlight">\(10^9\)</span> Euros. We compare two different investments in the system. In strategy 1 the system failure probability becomes <span class="math notranslate nohighlight">\(10^{-3}\)</span> per year at a cost of 10 million (<span class="math notranslate nohighlight">\(10 \cdot 10^{6}\)</span>). In strategy 2 the system failure probability becomes <span class="math notranslate nohighlight">\(3 \cdot 10^{-4}\)</span> per year at a cost of 50 million.</p>
 <p><strong>Question 4:</strong> for which value of the interest rate <span class="math notranslate nohighlight">\(r\)</span> is strategy 2 the most interesting? (You may consider an infinite lifetime of investments).</p>
 <!-- ```{admonition} Answer
@@ -554,7 +555,8 @@ $$
 I_1+\frac{p_1 D}{r}>I_2+\frac{p_2 D}{r}
 $$
 ``` -->
-<p>A full scale risk assessment is made for the systemw ith probabilities <span class="math notranslate nohighlight">\(P(N&gt;10)=10^{-3}\)</span> per year and <span class="math notranslate nohighlight">\(P(N&gt;100)=5 \cdot 10^{-5}\)</span> per year. A so-called limit line is given with values with <span class="math notranslate nohighlight">\(C = 10^{-1}\)</span>; and <span class="math notranslate nohighlight">\(\alpha = 2\)</span>.</p>
+<hr class="docutils" />
+<p>A full scale risk assessment is made for the system with probabilities <span class="math notranslate nohighlight">\(P(N&gt;10)=10^{-3}\)</span> per year and <span class="math notranslate nohighlight">\(P(N&gt;100)=5 \cdot 10^{-5}\)</span> per year. A so-called limit line is given with values with <span class="math notranslate nohighlight">\(C = 10^{-1}\)</span>; and <span class="math notranslate nohighlight">\(\alpha = 2\)</span>.</p>
 <p><strong>Question 5:</strong> determine whether this situation is acceptable. You may answer using a few sentences, calculations or by submitting a sketch, but either way, you must support your answer quantitatively. If you use a sketch, indicate the scale and relevant points on the plot.</p>
 <!-- ````{admonition} Answer
 :class: tip, dropdown
@@ -565,16 +567,18 @@ First create an FN curve for the risk assessment
 ---
 width: 400px
 name: limit-line
---- -->
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+---
+```
+
 Next, check that each point on the line is below the limit line:
 
 $$
-1-F_N(n)&lt;\frac{C}{N^α}
+1-F_N(n)<\frac{C}{N^α}
 $$ 
-The probability of exceeding 100 fatalities is too high since $5E-3&gt;0.1/100^2=1E-5$. The same is true for 10 fatalities.
-</pre></div>
-</div>
+
+The probability of exceeding 100 fatalities is too high since $5E-3>0.1/100^2=1E-5$. The same is true for 10 fatalities.
+```` -->
+<hr class="docutils" />
 <p>The flooding probability is 1/50 per year and damage is 150 million € (<span class="math notranslate nohighlight">\(10^6\)</span>). It is questioned whether additional protection is needed and what would be the best solution between the following:</p>
 <ul class="simple">
 <li><p>Strategy A: raise the dike</p></li>
@@ -628,6 +632,7 @@ width: 500px
 ---
 ```
 ```` -->
+<hr class="docutils" />
 <p>Consider the individual risk in two areas of the city by the bay, above. The acceptable individual risk is <span class="math notranslate nohighlight">\(10^{-5}\)</span> per year. The conditional probability of death due to flooding is dependent on the water depth and indicated next to the graph. The individual risk level in area A is <span class="math notranslate nohighlight">\(10^{-5}\)</span> per year and the water depth is 3 m. The individual risk level in area B is <span class="math notranslate nohighlight">\(10^{-5}\)</span> per year and the water depth is 2 m.</p>
 <p><strong>Question 7:</strong> what should be the maximum allowable failure probability of the dike on the bay, <span class="math notranslate nohighlight">\(P_{\text{flooding}}\)</span>, to meet the standard for individual risk, <span class="math notranslate nohighlight">\(IR\)</span>?</p>
 <figure class="align-default">
