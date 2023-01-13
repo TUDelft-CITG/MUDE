@@ -61,7 +61,7 @@ Option a is true.
 
 It is likely that both structures are constructed of the same material (e.g., local soil), which would respond in a similar way to the storm surge and waves. The structures are also likely to be operated and maintained by the same government agency, which would result in dependence due to human error and maintenance problems.
 ``` -->
-
+---
 The damage in case of flood protection system failure is 1 billion $10^9$ Euros. We compare two different investments in the system. In strategy 1 the system failure probability becomes $10^{-3}$ per year at a cost of 10 million ($10 \cdot 10^{6}$). In strategy 2 the system failure probability becomes $3 \cdot 10^{-4}$ per year at a cost of 50 million.
 
 **Question 4:** for which value of the interest rate $r$ is strategy 2 the most interesting? (You may consider an infinite lifetime of investments).
@@ -81,8 +81,8 @@ $$
 I_1+\frac{p_1 D}{r}>I_2+\frac{p_2 D}{r}
 $$
 ``` -->
-
- A full scale risk assessment is made for the systemw ith probabilities $P(N>10)=10^{-3}$ per year and $P(N>100)=5 \cdot 10^{-5}$ per year. A so-called limit line is given with values with $C = 10^{-1}$; and $\alpha = 2$.
+---
+ A full scale risk assessment is made for the system with probabilities $P(N>10)=10^{-3}$ per year and $P(N>100)=5 \cdot 10^{-5}$ per year. A so-called limit line is given with values with $C = 10^{-1}$; and $\alpha = 2$.
 
 **Question 5:** determine whether this situation is acceptable. You may answer using a few sentences, calculations or by submitting a sketch, but either way, you must support your answer quantitatively. If you use a sketch, indicate the scale and relevant points on the plot. 
 
@@ -106,7 +106,7 @@ $$
 
 The probability of exceeding 100 fatalities is too high since $5E-3>0.1/100^2=1E-5$. The same is true for 10 fatalities.
 ```` -->
-
+---
 The flooding probability is 1/50 per year and damage is 150 million € ($10^6$). It is questioned whether additional protection is needed and what would be the best solution between the following:
 
 - Strategy A: raise the dike
@@ -150,7 +150,7 @@ width: 500px
 ---
 ```
 ```` -->
-
+---
 Consider the individual risk in two areas of the city by the bay, above. The acceptable individual risk is $10^{-5}$ per year. The conditional probability of death due to flooding is dependent on the water depth and indicated next to the graph. The individual risk level in area A is $10^{-5}$ per year and the water depth is 3 m. The individual risk level in area B is $10^{-5}$ per year and the water depth is 2 m.
 
 **Question 7:** what should be the maximum allowable failure probability of the dike on the bay, $P_{\text{flooding}}$, to meet the standard for individual risk, $IR$?
