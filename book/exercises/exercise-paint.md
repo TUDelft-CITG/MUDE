@@ -132,10 +132,12 @@ $$
 
 ```{admonition} Answer
 :class: tip, dropdown
+The expected damage is:
+$$
+E(D)=P_f \cdot D={0.5}^3 \cdot 0.1 \cdot 525=6.56
+$$
+But the 3 inspections cost €9, thus the total expected cost is €15.56. It is incorrect to multiply the inspection cost by the failure probability. NB: this calculation implies the inspections occur regardles of when the failure happens. 
 
-$$
-\Delta E(D)=P_f \cdot D={0.5}^3 \cdot 0.1 \cdot 525=6.56
-$$
 ```
 
 **Question 10:**	What is the maximum number of inspections per year that can be performed that are cost-effective? Note: Round your answer towards the smallest integer.
