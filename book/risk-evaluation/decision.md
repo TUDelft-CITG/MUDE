@@ -44,7 +44,7 @@ Although these decision rules are helpful in some cases, the probability of occu
 Therefore it is necessary to include information on the probabilities of circumstances and outcomes, in order to determine a rational action with the highest expected value of the benefit. This theory is known as the Bayesian decision theory. In a probabilistic or Bayesian decision framework the optimal action $a*$ is defined as the one maximizing the expected utility. The following formula is found for the case with discrete outcomes.
 
 $$
-a^*: \max_a E(u(a, \theta))=\max _a \sum_\theta u(a, \theta) P(\theta_i)
+a^*: \max_a E(u(a, \theta))=\max _a \sum_\theta u(a, \theta_i) P(\theta_i)
 $$                                                                                                                                                  
 In which $u(a, \theta)$ is the utility of action a under circumstance $\theta$ and $P(\theta)$ is the probability that circumstance $\theta_{i}$ occurs.
 
