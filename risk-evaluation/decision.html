@@ -50,6 +50,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -286,6 +288,11 @@ const thebe_selector_output = ".output, .cell_output"
      Contaminant Transport
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../notebooks/traffic/Exercise_Traffic_Render.html">
+     Traffic and Transport Reliability
+    </a>
+   </li>
   </ul>
  </li>
  <li class="toctree-l1">
@@ -511,7 +518,7 @@ title="Print to PDF"
 <p>Therefore it is necessary to include information on the probabilities of circumstances and outcomes, in order to determine a rational action with the highest expected value of the benefit. This theory is known as the Bayesian decision theory. In a probabilistic or Bayesian decision framework the optimal action <span class="math notranslate nohighlight">\(a*\)</span> is defined as the one maximizing the expected utility. The following formula is found for the case with discrete outcomes.</p>
 <div class="math notranslate nohighlight">
 \[
-a^*: \max_a E(u(a, \theta))=\max _a \sum_\theta u(a, \theta) P(\theta_i)
+a^*: \max_a E(u(a, \theta))=\max _a \sum_\theta u(a, \theta_i) P(\theta_i)
 \]</div>
 <p>In which <span class="math notranslate nohighlight">\(u(a, \theta)\)</span> is the utility of action a under circumstance <span class="math notranslate nohighlight">\(\theta\)</span> and <span class="math notranslate nohighlight">\(P(\theta)\)</span> is the probability that circumstance <span class="math notranslate nohighlight">\(\theta_{i}\)</span> occurs.</p>
 <p>A rational decision is choosing the action with the highest expected (utility) value or highest benefit if outcomes are expressed in monetary values. This is illustrated in the example below. Note that other examples in these lecture notes will also be based on monetary values.</p>
