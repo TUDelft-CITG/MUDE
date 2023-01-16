@@ -39,4 +39,5 @@ parts:
       sections:
       - file: notebooks/flood-risk/Exercise_Flood_Risk_Render.ipynb
       - file: notebooks/contamination/Exercise_Contamination_Render.ipynb
+      - file: notebooks/traffic/Exercise_Traffic_Render.ipynb
     - file: references.md

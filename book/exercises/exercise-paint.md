@@ -46,7 +46,7 @@ Decision tree.
 
 $$P_{f,10y} = 1 - (1 - p_{f,1y})^{10}$$
 
-| Paint            | Cleaning   | $p_f$ [1/yr] |
+| Paint            | Cleaning   | $p_f$ [1/10-yr] |
 |-------           |---         | ---        |
 |   High-Quality   | Stripping  | 0.02       |
 |   High-Quality   | Sanding    | 0.18       |
