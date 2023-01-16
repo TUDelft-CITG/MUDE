@@ -113,7 +113,7 @@ $$ -->
 The government wants to study the acceptable risk and the acceptable probability of dam failure. Two criteria are used for acceptable risk:
 
 - Societal risk (SR): an FN limit line: $P_f \leq 10^{-2}/n^2$.
-- Individual risk (IR): $IR \leq 10^{-6}$ per year.
+- Individual risk (IR): $IR \leq 10^{-4}$ per year.
 
 We know that mortality in case of dam failure is $F_{d|f} = 0.1$ and that the population living downstream of the dam is 1000 people. 
 
@@ -143,7 +143,7 @@ $$
 where $P_{d|f}=0.1$. Hence, the acceptable probability of failure is:
 
 $$
-    P_f \leq \frac{IR_{acc}}{P_{d|f}} = \frac{10^{-5}}{0.1} = 10^{-4} \: \mathrm{/year}
+    P_f \leq \frac{IR_{acc}}{P_{d|f}} = \frac{10^{-4}}{0.1} = 10^{-3} \: \mathrm{/year}
 $$
 
 Based on societal risk criterion (FN-Curve):

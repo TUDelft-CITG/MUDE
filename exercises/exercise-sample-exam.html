@@ -493,10 +493,11 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="sample-exam-questions">
 <h1>Sample Exam Questions<a class="headerlink" href="#sample-exam-questions" title="Permalink to this headline">#</a></h1>
-<div class="tip admonition">
-<p class="admonition-title">Sample Exam Answers</p>
-<p>Answers to the sample exam will be made available on this page after Monday of Week 2.8.</p>
-</div>
+<!-- ```{admonition} Sample Exam Answers
+:class: tip
+
+Answers to the sample exam will be made available on this page after Monday of Week 2.8.
+``` -->
 <section id="general-questions">
 <h2>General Questions<a class="headerlink" href="#general-questions" title="Permalink to this headline">#</a></h2>
 <p><strong>Question 1:</strong> Indicate which of the following statements is true (multiple answers possible):</p>
@@ -507,11 +508,10 @@ title="Print to PDF"
 <li><p>A flood defence system that is a single line of defence composed of multiple dike sections would best be characterized as a series sytem, not as a parallel system.</p></li>
 <li><p>A prison with multiple walls and fences would best be characterized as a series system, not as a parallel system.</p></li>
 </ol>
-<!-- ```{admonition} Answer
-:class: tip, dropdown
-
-Options 3 and 4 are true.
-``` -->
+<div class="tip dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>Options 3 and 4 are true.</p>
+</div>
 </section>
 <section id="flood-protection-for-a-bay">
 <h2>Flood Protection for a Bay<a class="headerlink" href="#flood-protection-for-a-bay" title="Permalink to this headline">#</a></h2>
@@ -524,67 +524,55 @@ a. series system
 b. parallel system
 c. component system
 d. none of the above</p>
-<!-- ```{admonition} Answer
-:class: tip, dropdown
-
-Option b is true.
-``` -->
+<div class="tip dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>Option b is true.</p>
+</div>
 <p><strong>Question 2:</strong> how will dependence between the dam and dike change the system failure probability? (choose one)
 a. increase
 b. decrease
 c. no change</p>
-<!-- ```{admonition} Answer
-:class: tip, dropdown
-
-Option a is true.
-``` -->
+<div class="tip dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>Option a is true.</p>
+</div>
 <p><strong>Question 3:</strong> describe whether or not there is dependence between the dam and dike, and what the source could be.</p>
-<!-- ```{admonition} Answer
-:class: tip, dropdown
-
-It is likely that both structures are constructed of the same material (e.g., local soil), which would respond in a similar way to the storm surge and waves. The structures are also likely to be operated and maintained by the same government agency, which would result in dependence due to human error and maintenance problems.
-``` -->
+<div class="tip dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>It is likely that both structures are constructed of the same material (e.g., local soil), which would respond in a similar way to the storm surge and waves. The structures are also likely to be operated and maintained by the same government agency, which would result in dependence due to human error and maintenance problems.</p>
+</div>
 <hr class="docutils" />
 <p>The damage in case of flood protection system failure is 1 billion <span class="math notranslate nohighlight">\(10^9\)</span> Euros. We compare two different investments in the system. In strategy 1 the system failure probability becomes <span class="math notranslate nohighlight">\(10^{-3}\)</span> per year at a cost of 10 million (<span class="math notranslate nohighlight">\(10 \cdot 10^{6}\)</span>). In strategy 2 the system failure probability becomes <span class="math notranslate nohighlight">\(3 \cdot 10^{-4}\)</span> per year at a cost of 50 million.</p>
 <p><strong>Question 4:</strong> for which value of the interest rate <span class="math notranslate nohighlight">\(r\)</span> is strategy 2 the most interesting? (You may consider an infinite lifetime of investments).</p>
-<!-- ```{admonition} Answer
-:class: tip, dropdown
-
-Find $r$ such that the difference in expected damage between strategy 1 and 2, $\Delta p_{f,sys}D/r$, is greater than the difference between the investments, $I_2-I_1$, where the net present value over an infinite lifetime is $1/r$.
-
-$$
-r < \frac{\Delta p_{f,sys} D}{I_2-I_1} = \frac{(0.0010-0.0003)\cdot 1000 \text{m€}}{50\: \text{m€}-10\: \text{m€}}=0.0175
-$$
-
-Can also set up as solving for $r$ when comparing total costs:
-
-$$
-I_1+\frac{p_1 D}{r}>I_2+\frac{p_2 D}{r}
-$$
-``` -->
+<div class="tip dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>Find <span class="math notranslate nohighlight">\(r\)</span> such that the difference in expected damage between strategy 1 and 2, <span class="math notranslate nohighlight">\(\Delta p_{f,sys}D/r\)</span>, is greater than the difference between the investments, <span class="math notranslate nohighlight">\(I_2-I_1\)</span>, where the net present value over an infinite lifetime is <span class="math notranslate nohighlight">\(1/r\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+r &lt; \frac{\Delta p_{f,sys} D}{I_2-I_1} = \frac{(0.0010-0.0003)\cdot 1000 \text{m€}}{50\: \text{m€}-10\: \text{m€}}=0.0175
+\]</div>
+<p>Can also set up as solving for <span class="math notranslate nohighlight">\(r\)</span> when comparing total costs:</p>
+<div class="math notranslate nohighlight">
+\[
+I_1+\frac{p_1 D}{r}&gt;I_2+\frac{p_2 D}{r}
+\]</div>
+</div>
 <hr class="docutils" />
 <p>A full scale risk assessment is made for the system with probabilities <span class="math notranslate nohighlight">\(P(N&gt;10)=10^{-3}\)</span> per year and <span class="math notranslate nohighlight">\(P(N&gt;100)=5 \cdot 10^{-5}\)</span> per year. A so-called limit line is given with values with <span class="math notranslate nohighlight">\(C = 10^{-1}\)</span>; and <span class="math notranslate nohighlight">\(\alpha = 2\)</span>.</p>
 <p><strong>Question 5:</strong> determine whether this situation is acceptable. You may answer using a few sentences, calculations or by submitting a sketch, but either way, you must support your answer quantitatively. If you use a sketch, indicate the scale and relevant points on the plot.</p>
-<!-- ````{admonition} Answer
-:class: tip, dropdown
-
-First create an FN curve for the risk assessment
-
-```{figure} ../figures/exercise-sample-exam-limit-line.png
----
-width: 400px
-name: limit-line
----
-```
-
-Next, check that each point on the line is below the limit line:
-
-$$
-1-F_N(n)<\frac{C}{N^α}
-$$ 
-
-The probability of exceeding 100 fatalities is too high since $5E-3>0.1/100^2=1E-5$. The same is true for 10 fatalities.
-```` -->
+<div class="tip dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>First create an FN curve for the risk assessment</p>
+<figure class="align-default" id="limit-line">
+<a class="reference internal image-reference" href="../_images/exercise-sample-exam-limit-line.png"><img alt="../_images/exercise-sample-exam-limit-line.png" src="../_images/exercise-sample-exam-limit-line.png" style="width: 400px;" /></a>
+</figure>
+<p>Next, check that each point on the line is below the limit line:</p>
+<div class="math notranslate nohighlight">
+\[
+1-F_N(n)&lt;\frac{C}{N^α}
+\]</div>
+<p>The probability of exceeding 100 fatalities is too high since <span class="math notranslate nohighlight">\(5E-3&gt;0.1/100^2=1E-5\)</span>. The same is true for 10 fatalities.</p>
+</div>
 <hr class="docutils" />
 <p>The flooding probability is 1/50 per year and damage is 150 million € (<span class="math notranslate nohighlight">\(10^6\)</span>). It is questioned whether additional protection is needed and what would be the best solution between the following:</p>
 <ul class="simple">
@@ -626,43 +614,33 @@ The probability of exceeding 100 fatalities is too high since $5E-3>0.1/100^2=1E
 <li><p>Strategy B</p></li>
 <li><p>neither A nor B</p></li>
 </ol>
-<!-- ````{admonition} Answer
-:class: tip, dropdown
-
-Strategy B is best.
-
-Various costs (NPV value) are calculated in the table below, and Strategy B is the lowest total cost we well as highest risk reduction.
-
-```{figure} ../figures/exercise_sample_opt.png
----
-width: 500px
----
-```
-```` -->
+<div class="tip dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>Strategy B is best.</p>
+<p>Various costs (NPV value) are calculated in the table below, and Strategy B is the lowest total cost we well as highest risk reduction.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/exercise_sample_opt.png"><img alt="../_images/exercise_sample_opt.png" src="../_images/exercise_sample_opt.png" style="width: 500px;" /></a>
+</figure>
+</div>
 <hr class="docutils" />
 <p>Consider the individual risk in two areas of the city by the bay, above. The acceptable individual risk is <span class="math notranslate nohighlight">\(10^{-5}\)</span> per year. The conditional probability of death due to flooding is dependent on the water depth and indicated next to the graph. The individual risk level in area A is <span class="math notranslate nohighlight">\(10^{-5}\)</span> per year and the water depth is 3 m. The individual risk level in area B is <span class="math notranslate nohighlight">\(10^{-5}\)</span> per year and the water depth is 2 m.</p>
 <p><strong>Question 7:</strong> what should be the maximum allowable failure probability of the dike on the bay, <span class="math notranslate nohighlight">\(P_{\text{flooding}}\)</span>, to meet the standard for individual risk, <span class="math notranslate nohighlight">\(IR\)</span>?</p>
 <figure class="align-default">
 <a class="reference internal image-reference" href="../_images/exercise-sample-exam-mortality.png"><img alt="../_images/exercise-sample-exam-mortality.png" src="../_images/exercise-sample-exam-mortality.png" style="width: 400px;" /></a>
 </figure>
-<!-- ````{admonition} Answer
-:class: tip, dropdown
-
-Individual risk is:
-
-$$
+<div class="tip dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>Individual risk is:</p>
+<div class="math notranslate nohighlight">
+\[
 IR = P_{\text{flooding}} \cdot P_{\text{death}|\text{flooding}}
-$$
-
-where the values for the conditional term can be found using the mortality figure, and solve for $P_{\text{flooding}}$.
-
-```{figure} ../figures/exercise_sample_opt.png
----
-width: 500px
----
-```
-The norm is governed by the most strict safety requirement, thus, $P_{\text{flooding}}$ should be 0.0002 per year.
-```` -->
+\]</div>
+<p>where the values for the conditional term can be found using the mortality figure, and solve for <span class="math notranslate nohighlight">\(P_{\text{flooding}}\)</span>.</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../_images/exercise_sample_opt.png"><img alt="../_images/exercise_sample_opt.png" src="../_images/exercise_sample_opt.png" style="width: 500px;" /></a>
+</figure>
+<p>The norm is governed by the most strict safety requirement, thus, <span class="math notranslate nohighlight">\(P_{\text{flooding}}\)</span> should be 0.0002 per year.</p>
+</div>
 </section>
 <section id="component-reliability">
 <h2>Component Reliability<a class="headerlink" href="#component-reliability" title="Permalink to this headline">#</a></h2>
@@ -672,25 +650,21 @@ The norm is governed by the most strict safety requirement, thus, $P_{\text{floo
     p_f = \iint_\Omega f(x,y)dxdy
 \]</div>
 <p>Where <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> are random variables and <span class="math notranslate nohighlight">\(f(x,y)\)</span> is the joint PDF.</p>
-<!-- ```{figure} ../figures/exercise-sample-exam-failure-domain.png
----
-width: 400px
-name: failure-domain
----
-``` -->
+<figure class="align-default" id="failure-domain">
+<a class="reference internal image-reference" href="../_images/exercise-sample-exam-failure-domain.png"><img alt="../_images/exercise-sample-exam-failure-domain.png" src="../_images/exercise-sample-exam-failure-domain.png" style="width: 400px;" /></a>
+</figure>
 <p><strong>Question 1:</strong>  identify a specific real-life object of your choosing (it can be anything!) that can be described by this diagram and failure probability. Describe the object and provide a definition of failure using words only, no equations. Mention whether <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> each acts as a load or a resistance.</p>
-<!-- ```{admonition} Answer
-:class: tip, dropdown
-
-It is clear that $X$ and $Y$ are both loads, since high values of both variables lead to failure. There are many possible ‘objects’ that are governed by two loads:
-
-- Dike: x and y are water level and wave load, failure is excessive overtopping
-- Steel rod: 2 loads exceed strength
-- Beam: self-weight and length are loads (but this is non-linear)
-- Island: x and y are sea level rise and settlement, capacity is elevation; failure is flooding
-- 2 things on object with limiting capacity. E.g.: people on a couch or bench, birds on a tree branch
-- Literally any two loads would be acceptable, as long as the capacity of the object was a sum of both of them (if not a sum, it’s non-linear)
-%Honorable mentions: exam grading, stoof pot, student knowledge on exam material, ear damage at a music festival, dog and cat in box, exam desk stability, fingers squeezing a pen, 2 heaters in a room	 -->
+<div class="tip dropdown admonition">
+<p class="admonition-title">Answer</p>
+<p>It is clear that <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> are both loads, since high values of both variables lead to failure. There are many possible ‘objects’ that are governed by two loads:</p>
+<ul class="simple">
+<li><p>Dike: x and y are water level and wave load, failure is excessive overtopping</p></li>
+<li><p>Steel rod: 2 loads exceed strength</p></li>
+<li><p>Beam: self-weight and length are loads (but this is non-linear)</p></li>
+<li><p>Island: x and y are sea level rise and settlement, capacity is elevation; failure is flooding</p></li>
+<li><p>2 things on object with limiting capacity. E.g.: people on a couch or bench, birds on a tree branch</p></li>
+<li><p>Literally any two loads would be acceptable, as long as the capacity of the object was a sum of both of them (if not a sum, it’s non-linear)</p></li>
+</ul>
 <!-- see below for a list of examples. 
 
 *The following text is included in the exaplanation of this sample exam question to give extra insight; you are not expected to reproduce this on the MUDE exam:
@@ -720,6 +694,7 @@ Comments about answers that were not quite right (points were not deduced for th
 - Creating an object and/or limit state function that was non-linear (e.g., X*Y instead of X+Y) 
 
 Common ‘objects’: -->
+</div>
 </section>
 </section>
 
