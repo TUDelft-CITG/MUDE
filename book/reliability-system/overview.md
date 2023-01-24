@@ -44,7 +44,7 @@ Whereas in component reliability problems we defined failure using a function of
 
 ## Reliability Calculations
 
-Equations for computing parallel and series system reliability are described here with the notation $F_i$ and $\bar{F_i}$ to denote failure and non-failure of component $i$, respectively. A system is made up of $i=1,...,n$ components where the probability of failure of component $i$ is $P(F_i)$. Note that as a concept, "system reliability" is almost always going to be quantified using the failure probability of the system, $p_{f,sys}$. This is sometimes misleading or confusing because the mathematical definition of reliability is the complement of reliability, $1-p_{f,sys}$.
+Equations for computing parallel and series system reliability are described here with the notation $F_i$ and $\bar{F_i}$ to denote failure and non-failure of component $i$, respectively. A system is made up of $i=1,...,n$ components where the probability of failure of component $i$ is $P(F_i)$. Note that as a concept, "system reliability" is almost always going to be quantified using the failure probability of the system, $p_{f,sys}$. This is sometimes misleading or confusing because the mathematical definition of reliability is the complement of failure probability, $1-p_{f,sys}$.
 ### Parallel System
 
 A parallel system is often described as redundant since *all* components must fail to cause system failure. This is also simple to calculate as it can be described mathematically as the joint failure probability, or intersection, of all components:
