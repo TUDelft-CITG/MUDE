@@ -271,12 +271,11 @@ We consider two sytems
 1. This sytem has a high failure probability of 0.01 per year and 1 fatality
 2. The second system has a smaller failure probability of 0.0001 per year but a higher number of 100 fatalities.
 
-For both systems a Bernoulli distribution of the number of fatalities is applied meaning that the number of fatalities in case of failure is exactly known. The expected value and standard deviation of the number of fatalities are found as follows:
+For both systems a binomical distribution of the number of fatalities is applied meaning that the number of fatalities in case of failure is exactly known. The expected value and standard deviation of the number of fatalities are found as follows:
 
 $$
-  E(N) = P_fN
-  \sigma^2(N) = P_f(1-P_f)N^2
-$$ (bernoulli)
+  E(N) = P_fN \;\;\;\; \sigma^2(N) = P_f(1-P_f)N
+$$ (binomial_moments)
 
 The resulting expected value and standard deviation are shown in {numref}`exp_val_std_dev_two_activities` below. Although both systems have the same expected value, the standard deviation for the “small probability – large consequence” event for system 2 is higher. Taking into account the standard deviation in the TAW criterion thus accounts for risk aversion against accidents with large numbers of fatalities.
 
@@ -293,12 +292,12 @@ The resulting expected value and standard deviation are shown in {numref}`exp_va
   - $10^{-2}$
   - 1
   - $10^{-2}$
-  - 0.099
+  - 0.0099
 * - 2 
   - $10^{-4}$
   - 100
   - $10^{-2}$
-  - 0.99
+  - 0.995
 ```
 
 The next step would be to distribute this maximum allowable level of societal risk over individual installations. After all, locally imposed societal risk criteria are necessary for achieving the desired national level of societal risk. The translation of the nationally acceptable level of risk to a criterion for a single local installation depends on the type of probability distribution of the number of fatalities. In ⚠️Vrijling et al (1998) a formulation of the risk acceptance at a local level is presented conform {eq}`limit_line`:️
