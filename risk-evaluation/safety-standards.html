@@ -867,11 +867,10 @@ The cornerstones of the Dutch major hazards policy are a) the use of quantitativ
 <li><p>This sytem has a high failure probability of 0.01 per year and 1 fatality</p></li>
 <li><p>The second system has a smaller failure probability of 0.0001 per year but a higher number of 100 fatalities.</p></li>
 </ol>
-<p>For both systems a Bernoulli distribution of the number of fatalities is applied meaning that the number of fatalities in case of failure is exactly known. The expected value and standard deviation of the number of fatalities are found as follows:</p>
-<div class="math notranslate nohighlight" id="equation-bernoulli">
-<span class="eqno">(19)<a class="headerlink" href="#equation-bernoulli" title="Permalink to this equation">#</a></span>\[
-  E(N) = P_fN
-  \sigma^2(N) = P_f(1-P_f)N^2
+<p>For both systems a binomical distribution of the number of fatalities is applied meaning that the number of fatalities in case of failure is exactly known. The expected value and standard deviation of the number of fatalities are found as follows:</p>
+<div class="math notranslate nohighlight" id="equation-binomial-moments">
+<span class="eqno">(19)<a class="headerlink" href="#equation-binomial-moments" title="Permalink to this equation">#</a></span>\[
+  E(N) = P_fN \;\;\;\; \sigma^2(N) = P_f(1-P_f)N
 \]</div>
 <p>The resulting expected value and standard deviation are shown in <a class="reference internal" href="#exp-val-std-dev-two-activities"><span class="std std-numref">Table 11</span></a> below. Although both systems have the same expected value, the standard deviation for the “small probability – large consequence” event for system 2 is higher. Taking into account the standard deviation in the TAW criterion thus accounts for risk aversion against accidents with large numbers of fatalities.</p>
 <table class="table" id="exp-val-std-dev-two-activities">
@@ -896,13 +895,13 @@ The cornerstones of the Dutch major hazards policy are a) the use of quantitativ
 <td><p><span class="math notranslate nohighlight">\(10^{-2}\)</span></p></td>
 <td><p>1</p></td>
 <td><p><span class="math notranslate nohighlight">\(10^{-2}\)</span></p></td>
-<td><p>0.099</p></td>
+<td><p>0.0099</p></td>
 </tr>
 <tr class="row-odd"><td><p>2</p></td>
 <td><p><span class="math notranslate nohighlight">\(10^{-4}\)</span></p></td>
 <td><p>100</p></td>
 <td><p><span class="math notranslate nohighlight">\(10^{-2}\)</span></p></td>
-<td><p>0.99</p></td>
+<td><p>0.995</p></td>
 </tr>
 </tbody>
 </table>
