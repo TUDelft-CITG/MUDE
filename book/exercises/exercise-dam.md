@@ -69,7 +69,7 @@ $T = T1 + T2$ is also normally distributed, where
 
 $$
 \mu_T &= \mu_1 + \mu_2 \\
-\sigma_T &= \sqrt{\sigma_1^2 + \sigma_2^2} = \sqrt{5} = 2.326
+\sigma_T &= \sqrt{\sigma_1^2 + \sigma_2^2} = \sqrt{5} = 2.236
 $$
 
 The probability of project duration greater than 12 months can be found with the complementary standard normal CDF, and should be a maximum of 0.1:
