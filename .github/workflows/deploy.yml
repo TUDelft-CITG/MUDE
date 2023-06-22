@@ -3,7 +3,7 @@ name: deploy
 on:
   push:
     branches:
-      - main
+      - publish
     paths:
       - "book/**"
       - ".github/workflows/**"
