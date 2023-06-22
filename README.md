@@ -1,6 +1,10 @@
-# Jupyter Book project for weeks 2.7 and 2.8
+# Probabilistic Design Textbook
 
-This repository hosts the source code of the Jupyter Book that is used in weeks 2.7 and 2.8 of the course Modelling, Uncertainty and Data for Engineers (CEGM1000). The website is currently hosted via GitHub pages at [tudelft-citg.github.io/MUDE](https://tudelft-citg.github.io/MUDE).
+This repository hosts the source code of the Jupyter Book that was originally used in weeks 2.7 and 2.8 of the course Modelling, Uncertainty and Data for Engineers (CEGM1000) at Delft University of Technology. The website is currently hosted via GitHub pages at [tudelft-citg.github.io/MUDE](https://tudelft-citg.github.io/MUDE).
+
+With the exception of a few corrections, development on this repository will cease after the 2022-23 academcic year and the contents will be moved to a new MUDE book hosted on GitLab and/or a separate (but related) repository on the GitHub organization [prob-design](https://github.com/prob-design/). 
+
+The book was written by Robert Lanzafame, but draws heavily from an older set of lecture notes from our prior courses (see book Introduction). Caspar Jungbacker set up the GitHub repository and provided invaluable support creating the first book and translating some of the older material.
 
 ## Contributing to the website
 
